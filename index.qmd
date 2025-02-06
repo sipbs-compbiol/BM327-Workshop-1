@@ -6,7 +6,7 @@ This is the first presentation of this material, and we would be very grateful t
 
 ## Overview
 
-This workshop asks you to carry out common bioinformatics analyses to trace the likely source of _Pseudomonas aeruginosa_ infection in a hospital burns unit.
+This workshop asks you to carry out common bioinformatics analyses to trace the likely source of a _Pseudomonas aeruginosa_ infection in a hospital burns unit.
 You will be using online bioinformatics services to do this.
 
 ::: { .callout-warning title="Important Note"}

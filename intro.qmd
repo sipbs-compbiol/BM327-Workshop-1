@@ -1,21 +1,57 @@
 # Introduction
 
-The Introduction page is intended as a short introduction to the book.
+## Sick burns
 
-Like most Quarto books, this is a book created from markdown and executable code. 
+It's been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (@fig-mayor).
 
-This kind of book is an example of literate programming - the intertwining of nicely-formatted text and images, and executable code. For example, the `R` code cell below executes and produces output when the book is compiled:
+::: {.column-margin}
+![This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.](assets/images/mayor_opens_burns_unit.jpg){#fig-mayor}
+:::
 
-```{r}
-1 + 1
-```
+The unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (@fig-ward-layout). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.
 
-But the `R` code cell below does not:
+Unfortunately, _Pseudomonas aeruginosa_ is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with _P. aeruginosa_, typically leading to bacteraemia, soft tissue infection or pneumonia (@Mahar2010-xu, @Reynolds2021-zs, @Roy2024-vj, @fig-effects).
 
-```{r}
-#| eval: false
+::: {.column-margin}
+![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout .lightbox}
+:::
 
-summary(cars)
-```
+![Burn wound infection microbes and their effects on burns patients. Reproduced from @Roy2024-vj (CC-BY-NC-4.0)](assets/images/acc-2023-01571f1.png){#fig-effects width=80% .lightbox}
 
-See @knuth84 for additional discussion of literate programming.
+## The study
+
+In a nosocomial setting _P. aeruginosa_ especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (@Trautmann2005-qp, @Breathnach2012-nn). Outbreaks transmitted _via_ water have resulted in fatal cases such as at a [neonatal critical care unit in Belfast](https://doi.org/10.1136/bmj.e592) (@Wise2012-wb).
+
+You are part of a team conducting an observational, prospective study into the occurrence and spread of _P. aeruginosa_ on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.
+
+All recruited patients were screened for whether they already carried _P. aeruginosa_ in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If _P. aeruginosa_ was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.
+
+::: { .callout-important }
+## Patient samples
+
+- wound swabs
+- urine
+- stool
+:::
+
+Samples were also taken from the patient's environment and water from outlets in their bed space, at weekly intervals, during their stay.
+
+::: { .callout-note }
+## Environment samples
+
+- shower head rosette
+- shower drain
+- shower chair/trolley
+- tap
+- bedside table
+- patient chair
+- instruments
+:::
+
+## The samples
+
+During the course of the study, five patients and a number of individual samples were found to be positive for _P. aeruginosa_ (@fig-results).
+
+![A schematic view of samples found to be positive for _P. aeruginosa_ in the study. Time in days is shown along the _x_ axis. The _y_ axis shows bed numbers in the burns unit (upper, @fig-ward-layout) and the critical care unity. Each circular icon indicates a positive isolate of _P. aeruginosa_. The letter in the icon indicates the MLST clade to which the _P. aeruginosa_ sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with _P. aeruginosa_.](assets/images/sampling.jpg){#fig-results width=80% .lightbox}
+
+Your role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of _P. aeruginosa_ to patients.
