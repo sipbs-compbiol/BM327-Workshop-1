@@ -14,7 +14,7 @@
     "href": "index.html#overview",
     "title": "BM327 Workshop 1: Seeking the Source of Hospital Infection",
     "section": "Overview",
-    "text": "Overview\nThis workshop asks you to carry out common bioinformatics analyses to trace the likely source of Pseudomonas aeruginosa infection in a hospital burns unit. You will be using online bioinformatics services to do this.\n\n\n\n\n\n\nImportant Note\n\n\n\nThere is new material in this workshop that is not covered in lectures, and this material is examinable. Please take care to read the text in the expandable callout boxes, as well as that for the workshop, to be sure you have understood the topic and obtain full value from the exercise.\nThe workshop material will remain live online for the duration of BM327, and you can revisit it whenever you wish, for practice or revision.\n\n\nYou should be able to complete this workshop in under two hours.",
+    "text": "Overview\nThis workshop asks you to carry out common bioinformatics analyses to trace the likely source of a Pseudomonas aeruginosa infection in a hospital burns unit. You will be using online bioinformatics services to do this.\n\n\n\n\n\n\nImportant Note\n\n\n\nThere is new material in this workshop that is not covered in lectures, and this material is examinable. Please take care to read the text in the expandable callout boxes, as well as that for the workshop, to be sure you have understood the topic and obtain full value from the exercise.\nThe workshop material will remain live online for the duration of BM327, and you can revisit it whenever you wish, for practice or revision.\n\n\nYou should be able to complete this workshop in under two hours.",
     "crumbs": [
       "Preface to the {{< var ay >}} presentation"
     ]
@@ -44,7 +44,37 @@
     "href": "intro.html",
     "title": "1  Introduction",
     "section": "",
-    "text": "The Introduction page is intended as a short introduction to the book.\nLike most Quarto books, this is a book created from markdown and executable code.\nThis kind of book is an example of literate programming - the intertwining of nicely-formatted text and images, and executable code. For example, the R code cell below executes and produces output when the book is compiled:\n\n1 + 1\n\n[1] 2\n\n\nBut the R code cell below does not:\n\nsummary(cars)\n\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "1.1 Sick burns\nIt’s been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (Figure 1.1).\nThe unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (Figure 1.2). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.\nUnfortunately, Pseudomonas aeruginosa is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with P. aeruginosa, typically leading to bacteraemia, soft tissue infection or pneumonia (Mahar et al. (2010), Reynolds and Kollef (2021), Roy et al. (2024), Figure 1.3).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#sick-burns",
+    "href": "intro.html#sick-burns",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "Figure 1.1: This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1.2: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines\n\n\n\n\n\n\n\n\n\nFigure 1.3: Burn wound infection microbes and their effects on burns patients. Reproduced from Roy et al. (2024) (CC-BY-NC-4.0)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#the-study",
+    "href": "intro.html#the-study",
+    "title": "1  Introduction",
+    "section": "1.2 The study",
+    "text": "1.2 The study\nIn a nosocomial setting P. aeruginosa especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (Trautmann, Lepper, and Haller (2005), Breathnach et al. (2012)). Outbreaks transmitted via water have resulted in fatal cases such as at a neonatal critical care unit in Belfast (Wise (2012)).\nYou are part of a team conducting an observational, prospective study into the occurrence and spread of P. aeruginosa on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.\nAll recruited patients were screened for whether they already carried P. aeruginosa in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If P. aeruginosa was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.\n\n\n\n\n\n\nPatient samples\n\n\n\n\nwound swabs\nurine\nstool\n\n\n\nSamples were also taken from the patient’s environment and water from outlets in their bed space, at weekly intervals, during their stay.\n\n\n\n\n\n\nEnvironment samples\n\n\n\n\nshower head rosette\nshower drain\nshower chair/trolley\ntap\nbedside table\npatient chair\ninstruments",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#the-samples",
+    "href": "intro.html#the-samples",
+    "title": "1  Introduction",
+    "section": "1.3 The samples",
+    "text": "1.3 The samples\nDuring the course of the study, five patients and a number of individual samples were found to be positive for P. aeruginosa (Figure 1.4).\n\n\n\n\n\n\nFigure 1.4: A schematic view of samples found to be positive for P. aeruginosa in the study. Time in days is shown along the x axis. The y axis shows bed numbers in the burns unit (upper, Figure 1.2) and the critical care unity. Each circular icon indicates a positive isolate of P. aeruginosa. The letter in the icon indicates the MLST clade to which the P. aeruginosa sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with P. aeruginosa.\n\n\n\nYour role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of P. aeruginosa to patients.\n\n\n\n\nBreathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche. 2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two Hospitals: Association with Contaminated Hospital Waste-Water Systems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul, Melissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa Bacteraemia in Burns Patients: Risk Factors and Outcomes.” Burns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and Pathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An Update.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder, Vivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial Infections in Burn Patients.” Acute Crit. Care 39 (2): 214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005. “Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and the Evolving Role of Water Outlets as a Reservoir of the Organism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at Belfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -118,7 +148,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "text": "Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche.\n2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two\nHospitals: Association with Contaminated Hospital Waste-Water\nSystems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul,\nMelissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa\nBacteraemia in Burns Patients: Risk Factors and Outcomes.”\nBurns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and\nPathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An\nUpdate.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder,\nVivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial\nInfections in Burn Patients.” Acute Crit. Care 39 (2):\n214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005.\n“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and\nthe Evolving Role of Water Outlets as a Reservoir of the\nOrganism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at\nBelfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
       "References"
     ]

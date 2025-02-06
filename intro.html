@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -97,6 +63,9 @@ div.csl-indent {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-72c93205fb41c15e2e398b4f9a505ee2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -128,7 +97,7 @@ div.csl-indent {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -227,11 +196,19 @@ div.csl-indent {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#sick-burns" id="toc-sick-burns" class="nav-link active" data-scroll-target="#sick-burns"><span class="header-section-number">1.1</span> Sick burns</a></li>
+  <li><a href="#the-study" id="toc-the-study" class="nav-link" data-scroll-target="#the-study"><span class="header-section-number">1.2</span> The study</a></li>
+  <li><a href="#the-samples" id="toc-the-samples" class="nav-link" data-scroll-target="#the-samples"><span class="header-section-number">1.3</span> The samples</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -252,27 +229,128 @@ div.csl-indent {
 </header>
 
 
-<p>The Introduction page is intended as a short introduction to the book.</p>
-<p>Like most Quarto books, this is a book created from markdown and executable code.</p>
-<p>This kind of book is an example of literate programming - the intertwining of nicely-formatted text and images, and executable code. For example, the <code>R</code> code cell below executes and produces output when the book is compiled:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<section id="sick-burns" class="level2 page-columns page-full" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="sick-burns"><span class="header-section-number">1.1</span> Sick burns</h2>
+<p>It’s been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (<a href="#fig-mayor" class="quarto-xref">Figure&nbsp;<span>1.1</span></a>).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-mayor" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mayor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/mayor_opens_burns_unit.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mayor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1: This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.
+</figcaption>
+</figure>
+</div>
+</div></div><p>The unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (<a href="#fig-ward-layout" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.</p>
+<p>Unfortunately, <em>Pseudomonas aeruginosa</em> is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with <em>P. aeruginosa</em>, typically leading to bacteraemia, soft tissue infection or pneumonia (<span class="citation" data-cites="Mahar2010-xu">Mahar et al. (<a href="references.html#ref-Mahar2010-xu" role="doc-biblioref">2010</a>)</span>, <span class="citation" data-cites="Reynolds2021-zs">Reynolds and Kollef (<a href="references.html#ref-Reynolds2021-zs" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="Roy2024-vj">Roy et al. (<a href="references.html#ref-Roy2024-vj" role="doc-biblioref">2024</a>)</span>, <a href="#fig-effects" class="quarto-xref">Figure&nbsp;<span>1.3</span></a>).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div id="fig-ward-layout" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ward-layout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="assets/images/ward_layout.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1.2: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines"><img src="assets/images/ward_layout.png" class="img-fluid figure-img"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ward-layout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.2: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines
+</figcaption>
+</figure>
+</div>
+</div></div><div id="fig-effects" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="assets/images/acc-2023-01571f1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1.3: Burn wound infection microbes and their effects on burns patients. Reproduced from @Roy2024-vj (CC-BY-NC-4.0)"><img src="assets/images/acc-2023-01571f1.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-effects-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.3: Burn wound infection microbes and their effects on burns patients. Reproduced from <span class="citation" data-cites="Roy2024-vj">Roy et al. (<a href="references.html#ref-Roy2024-vj" role="doc-biblioref">2024</a>)</span> (CC-BY-NC-4.0)
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-study" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="the-study"><span class="header-section-number">1.2</span> The study</h2>
+<p>In a nosocomial setting <em>P. aeruginosa</em> especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (<span class="citation" data-cites="Trautmann2005-qp">Trautmann, Lepper, and Haller (<a href="references.html#ref-Trautmann2005-qp" role="doc-biblioref">2005</a>)</span>, <span class="citation" data-cites="Breathnach2012-nn">Breathnach et al. (<a href="references.html#ref-Breathnach2012-nn" role="doc-biblioref">2012</a>)</span>). Outbreaks transmitted <em>via</em> water have resulted in fatal cases such as at a <a href="https://doi.org/10.1136/bmj.e592">neonatal critical care unit in Belfast</a> (<span class="citation" data-cites="Wise2012-wb">Wise (<a href="references.html#ref-Wise2012-wb" role="doc-biblioref">2012</a>)</span>).</p>
+<p>You are part of a team conducting an observational, prospective study into the occurrence and spread of <em>P. aeruginosa</em> on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.</p>
+<p>All recruited patients were screened for whether they already carried <em>P. aeruginosa</em> in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If <em>P. aeruginosa</em> was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Patient samples
 </div>
 </div>
-<p>But the <code>R</code> code cell below does not:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(cars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>wound swabs</li>
+<li>urine</li>
+<li>stool</li>
+</ul>
 </div>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+</div>
+<p>Samples were also taken from the patient’s environment and water from outlets in their bed space, at weekly intervals, during their stay.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Environment samples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>shower head rosette</li>
+<li>shower drain</li>
+<li>shower chair/trolley</li>
+<li>tap</li>
+<li>bedside table</li>
+<li>patient chair</li>
+<li>instruments</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="the-samples" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="the-samples"><span class="header-section-number">1.3</span> The samples</h2>
+<p>During the course of the study, five patients and a number of individual samples were found to be positive for <em>P. aeruginosa</em> (<a href="#fig-results" class="quarto-xref">Figure&nbsp;<span>1.4</span></a>).</p>
+<div id="fig-results" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="assets/images/sampling.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;1.4: A schematic view of samples found to be positive for P. aeruginosa in the study. Time in days is shown along the x axis. The y axis shows bed numbers in the burns unit (upper, Figure&nbsp;fig-ward-layout) and the critical care unity. Each circular icon indicates a positive isolate of P. aeruginosa. The letter in the icon indicates the MLST clade to which the P. aeruginosa sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with P. aeruginosa."><img src="assets/images/sampling.jpg" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-results-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.4: A schematic view of samples found to be positive for <em>P. aeruginosa</em> in the study. Time in days is shown along the <em>x</em> axis. The <em>y</em> axis shows bed numbers in the burns unit (upper, <a href="#fig-ward-layout" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>) and the critical care unity. Each circular icon indicates a positive isolate of <em>P. aeruginosa</em>. The letter in the icon indicates the MLST clade to which the <em>P. aeruginosa</em> sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with <em>P. aeruginosa</em>.
+</figcaption>
+</figure>
+</div>
+<p>Your role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of <em>P. aeruginosa</em> to patients.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
+<div id="ref-Breathnach2012-nn" class="csl-entry" role="listitem">
+Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche. 2012. <span>“Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two Hospitals: Association with Contaminated Hospital Waste-Water Systems.”</span> <em>J. Hosp. Infect.</em> 82 (1): 19–24.
+</div>
+<div id="ref-Mahar2010-xu" class="csl-entry" role="listitem">
+Mahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul, Melissa Hinrichs, and Jason Wasiak. 2010. <span>“Pseudomonas Aeruginosa Bacteraemia in Burns Patients: Risk Factors and Outcomes.”</span> <em>Burns</em> 36 (8): 1228–33.
+</div>
+<div id="ref-Reynolds2021-zs" class="csl-entry" role="listitem">
+Reynolds, Dan, and Marin Kollef. 2021. <span>“The Epidemiology and Pathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An Update.”</span> <em>Drugs</em> 81 (18): 2117–31.
+</div>
+<div id="ref-Roy2024-vj" class="csl-entry" role="listitem">
+Roy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder, Vivek Raychaudhuri, and Lopamudra Choudhury. 2024. <span>“Microbial Infections in Burn Patients.”</span> <em>Acute Crit. Care</em> 39 (2): 214–25.
+</div>
+<div id="ref-Trautmann2005-qp" class="csl-entry" role="listitem">
+Trautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005. <span>“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and the Evolving Role of Water Outlets as a Reservoir of the Organism.”</span> <em>Am. J. Infect. Control</em> 33 (5 Suppl 1): S41–9.
+</div>
+<div id="ref-Wise2012-wb" class="csl-entry" role="listitem">
+Wise, Jacqui. 2012. <span>“Three Babies Die in Pseudomonas Outbreak at Belfast Neonatal Unit.”</span> <em>BMJ</em> 344 (jan24 1): e592.
 </div>
 </div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -712,12 +790,44 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
