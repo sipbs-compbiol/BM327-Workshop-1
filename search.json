@@ -4,9 +4,39 @@
     "href": "index.html",
     "title": "BM327 Workshop 1: Seeking the Source of Hospital Infection",
     "section": "",
-    "text": "Preface\nThis is a Quarto book, generated using the sipbs-compbiol-book-template GitHub template.\nThe Preface page is intended as a frontispiece with brief introductory information about the book and, maybe, its authors.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Preface to the 2024-25 presentation\nWelcome to the BM327 (Being a Biomolecular Scientist 3) bioinformatics workshop 1 for 2024-25.\nThis is the first presentation of this material, and we would be very grateful to hear feedback about it by email or through the GitHub repository Issues page.",
     "crumbs": [
-      "Preface"
+      "Preface to the {{< var ay >}} presentation"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "BM327 Workshop 1: Seeking the Source of Hospital Infection",
+    "section": "Overview",
+    "text": "Overview\nThis workshop asks you to carry out common bioinformatics analyses to trace the likely source of Pseudomonas aeruginosa infection in a hospital burns unit. You will be using online bioinformatics services to do this.\n\n\n\n\n\n\nImportant Note\n\n\n\nThere is new material in this workshop that is not covered in lectures, and this material is examinable. Please take care to read the text in the expandable callout boxes, as well as that for the workshop, to be sure you have understood the topic and obtain full value from the exercise.\nThe workshop material will remain live online for the duration of BM327, and you can revisit it whenever you wish, for practice or revision.\n\n\nYou should be able to complete this workshop in under two hours.",
+    "crumbs": [
+      "Preface to the {{< var ay >}} presentation"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-objectives",
+    "href": "index.html#learning-objectives",
+    "title": "BM327 Workshop 1: Seeking the Source of Hospital Infection",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this workshop, students will be able to:\n\nPerform quality control on Illumina sequencing data\nMap Illumina-sequenced reads to a reference genome, to identify sequence variants\nGenerate and annotate a phylogenetic tree\nUse genomic data to make an informed judgement about the likely source of a nosocomial infection",
+    "crumbs": [
+      "Preface to the {{< var ay >}} presentation"
+    ]
+  },
+  {
+    "objectID": "index.html#assessment",
+    "href": "index.html#assessment",
+    "title": "BM327 Workshop 1: Seeking the Source of Hospital Infection",
+    "section": "Assessment",
+    "text": "Assessment\nThis workshop activity itself is not formally assessed although, as noted, all the material it contains is examinable. There is a formative assessment in the form of short answer questions on MyPlace, which you should complete as part of the workshop.",
+    "crumbs": [
+      "Preface to the {{< var ay >}} presentation"
     ]
   },
   {
