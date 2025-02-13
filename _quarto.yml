@@ -45,6 +45,11 @@ book:
         - download-data.qmd
         - upload-data.qmd  
 
+    - part: workshop.qmd
+      chapters: 
+        - fastqc.qmd
+        - trimmomatic.qmd
+
     - references.qmd
 
 # Location of BibTeX format reference file; may not need to be changed
