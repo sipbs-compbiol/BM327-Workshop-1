@@ -49,6 +49,8 @@ book:
       chapters: 
         - fastqc.qmd
         - trimmomatic.qmd
+        
+    - part: mapping.qmd
 
     - references.qmd
 

@@ -66,4 +66,4 @@ You can inspect the contents of these files by clicking on the filename in the `
 
 ## Next steps
 
-Now that we have clean, high-quality sequencing reads, we can move on to mapping the reads to a reference genome, in @sec-map-reference.
+Now that we have clean, high-quality sequencing reads, we can move on to mapping the reads to a reference genome, in @sec-mapping.
