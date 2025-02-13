@@ -1,0 +1,127 @@
+# Inspect Read Quality {#sec-fastqc}
+
+Using good quality input data improves our chance of getting a good quality output assembly.
+
+We call the set of sequenced reads we obtain from the sequencer the _raw reads_. Modern sequencing technologies usually give us high quality data, but it is still possible for some low-quality read sequences to be produced among the raw reads. So that these do not detrimentally affect the quality of our assembly, we first _assess the quality_ of our read data, and then _remove low-quality reads and low-quality parts of read sequences_. The resulting dataset is often called the _cleaned reads_ or _processed reads_.
+
+::: { .callout-important }
+## Good practice
+
+It is good practice always to inspect the quality of your sequencing read data, and remove low-quality reads, before assembly.
+
+When describing your sequencing experiment in a manuscript or dissertation, you should always state:
+
+1. The sequencing technology used, and the sequencing platform
+2. The number of raw reads obtained, and a measure of average read length
+:::
+
+::: { .callout-tip }
+The main kind of low-quality data we might have in our raw reads are:
+
+1. Contamination: reads that derive from an organism we didn't intend to sequence; these are usually identified by querying against a database and removed
+2. Low-confidence basecalls: reads containing base calls that the basecaller is unsure about; these are usually found towards the end of the read sequence and are removed by _trimming_ the read
+3. Low-confidence reads: reads where a large proportion of the base calls are low quality; these are usually removed
+4. Adapter sequence: these are sections of sequence left over from library preparation and do not derive from the sequenced organism; they are removed by trimming
+:::
+
+This part of the workshop will cover the use of `Falco` to inspect the quality of your sequence reads.
+
+## Using `Falco`
+
+1. Navigate to the `Falco` tool using the `Tools` sidebar in `Galaxy`
+  - You can use the `search tools` field to find `Falco`
+  - Alternatively, you will find it under `GENOMIC FILE MANIPULATION`/`FASTA/FASTQ` in the sidebar
+2. Select the `Falco` tool
+3. Run the `Falco` tool on each of your `FASTQ` input files
+  - These are the `ERR531380_1.fastq` and `ERR531380_2.fastq` files.
+  - With the `Falco` tool options in the main `Workspace` window, select the file you want to run `Falco` on.
+  - Click on the `Run Tool` button.
+
+::: { .callout-important }
+**Make sure you run `FastQC` on both the forward and reverse read sets.**
+:::
+
+::: { .callout-note }
+## Video: Using `FastQC` to assess the quality of your sequencing reads
+
+{{< video assets/movies/galaxy-06-falco.mp4 title="Assessing sequencing read quality with `Falco`" >}}
+:::
+
+::: { .callout-important }
+`Falco` takes a few moments to run (but is faster than `FastQC`, which it has superseded.
+
+When the run is complete, click on the `eye` icon of the `Webpage` result to inspect the `FastQC` output.
+
+::: { .callout-tip }
+You can press and hold **CTRL** (on a PC) or **CMD ⌘** (macOS) when clicking the `eye` icon to open the result in its own window.
+:::
+:::
+
+
+## `Falco` output
+
+The output of `Falco` tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:
+
+- [Official `FastQC` documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- [Official `Falco` documentation](https://falco.readthedocs.io/en/latest/)
+- [Michigan State University (MSU) `FastQC` tutorial](https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx)
+
+::: { .callout-warning }
+## `Falco` and `FastQC`
+
+`Falco` and `FastQC` are two different tools, but they perform the same task and give equivalent, if visually distinct, output. `Falco` output is interpreted in exactly the same way as `FastQC` output, so it can be helpful to refer to `FastQC` tutorials and documentation.
+:::
+
+::: { .callout-note }
+## Video: Inspecting `Falco` output in Galaxy
+
+{{< video assets/movies/galaxy-07-falco.mp4 title="Inspecting `Falco` output in Galaxy" >}}
+:::
+
+### `Falco` Summary
+
+The `Falco` summary (@fig-falco-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (green, with a tick), a _warning_ (amber, with exclamation mark), or a _fail_ (red, with a cross) mark.
+
+::: { .column-margin }
+![Example `Falco` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Sequence Length Distribution," and a fail for "Per tile sequence quality"](assets/images/falco_summary.png){#fig-falco-summary fig-alt="Summary section of a Falco report showing passes for most sections, warnings for some sections, and failure for two sections." width="80%"}
+:::
+
+### Per base sequence quality
+
+The _per base sequence quality_ plot (@fig-falco-perbase) presents the ranges of individual base quality calls across the lengths of the input sequence reads. Higher scores (near 40) indicate better quality.
+
+::: { .callout-tip }
+For good-quality sequence read data, we are looking for a graph where the mean quality (see @fig-falco-perbase) is always showing green, with a score greater than 29.
+:::
+
+![Per base sequence quality score plot from `Falco` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range.](assets/images/falco_perbase.png){#fig-falco-perbase width=80%}
+
+::: { .callout-caution }
+It is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.
+
+It is also typical for the quality score to be slightly lower in the first 5-7 bases of the read.
+
+If mean quality per base falls below 29, there may be a problem with the sequencing data.
+:::
+
+### Per sequence quality scores
+
+The _per sequence quality_ score (@fig-falco-perseq) summarises the distribution of high quality (higher scores, near 40) and lower quality reads in the complete dataset.
+
+::: { .callout-tip }
+In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.
+:::
+
+![Per sequence quality score plot from `Falco` indicating overall high quality sequencing reads.](assets/images/falco_perseq.png){#fig-fastqc-perseq width=80%}
+
+::: { .callout-caution }
+If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.
+:::
+
+## What do we do about sequencing data problems?
+
+`Falco` does a great job of alerting us to problems with our sequencing data sets. But, by itself, it cannot remedy these problems.
+
+Modern sequencing methods produce so much read data that the usual approach to excluding poor data is either to exclude (or _drop_) the read itself, or to _trim_ (throw away) the section of the read sequence that is low quality.
+
+A popular tool for removing poor quality read data is `trimmomatic` and you will meet this in @sec-trimmomatic.
