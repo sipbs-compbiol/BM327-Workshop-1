@@ -18,7 +18,7 @@
 
 ## Room 8 isolate assembly for SNP comparison
 
-- [GridION reads for March 2020 Dutch isolate](assets/workshop_downloads/ERR531413_asm.fasta.gz)(`ERR531413_asm.fasta.gz`)
+- [`SPAdes` assembly of isolate 1031 (`ERR531413`), from the room 8 shower hose](assets/workshop_downloads/ERR531413_asm.fasta.gz)(`ERR531413_asm.fasta.gz`)
 
 ::: { .callout-note }
 ## Your Working Directory
