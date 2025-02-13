@@ -1,0 +1,29 @@
+# Download Workshop Data {#sec-download-data}
+
+::: { .callout-tip }
+## Download the workshop data
+
+1. Create a new folder on your computer desktop called `BM327_Workshop`
+2. Download the files from the sections below into this new folder.
+:::
+
+## Sequencing reads for your isolate
+
+- [Illumina paired-end reads, forward direction](assets/workshop_downloads/ERR531380_1.fastq.gz)(`ERR531380_1.fastq.gz`)
+- [Illumina paired-end reads, reverse direction](assets/workshop_downloads/ERR531380_2.fastq.gz)(`ERR531380_2.fastq.gz`)
+
+## _Pseudomonas aeruginosa_ reference strain for SNP comparison
+
+- [_P. aeruginosa_ PA01 genome sequence (`.fasta`)](assets/workshop_downloads/GCF_000006765.1_ASM676v1_genomic.fna.gz)(`GCF_000006765.1_ASM676v1_genomic.fna.gz`)
+
+## Room 8 isolate assembly for SNP comparison
+
+- [GridION reads for March 2020 Dutch isolate](assets/workshop_downloads/ERR531413_asm.fasta.gz)(`ERR531413_asm.fasta.gz`)
+
+::: { .callout-note }
+## Your Working Directory
+
+When you have downloaded all the files required for the workshop, the contents of the `BM327_Workshop` folder should resemble the image in @fig-working-directory.
+
+![macOS `BM327_Workshop` folder with all files downloaded.](assets/images/working_directory.png){#fig-working-directory fig-alt="macOS folder called BM327_Workshop, containing the downloaded files required for this workshop."}
+:::
