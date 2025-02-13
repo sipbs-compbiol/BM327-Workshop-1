@@ -1,0 +1,123 @@
+# Upload Data to Galaxy {#sec-upload-data}
+
+::: { .callout-important }
+## Using data in Galaxy
+
+For Galaxy to be able to use your data, that **data must be in your _history_ on the Galaxy instance**.
+:::
+
+::: { .callout-caution }
+Data is not shared between Galaxy instances. For instance, if you upload data to `usegalaxy.eu` it will _not_ automatically be available on `usegalaxy.org` or `usegalaxy.au`.
+:::
+
+## Uploading your data
+
+There are three main routes to uploading your data onto the Galaxy instance.
+
+### Use the `You can load your own data` link in an empty workflow
+
+This option is only visible when you have an empty workflow. Click on the `You can load your own data` link under `This history is empty`. This will bring up a dialogue box. You can drag and drop a file or files into the dialogue box, or use the `Choose local file` button to navigate to the location of your files.
+
+1. Click on the `You can load your own data` link.
+2. Drag the two workshop data files ending with `.fastq.gz` into the dialogue box.
+3. Click on the `Start` button.
+4. The files will appear in the `History` sidebar.
+5. Click the `Close` button in the file dialogue.
+
+::: { .callout-caution collapse="true" }
+## Data file colours
+
+When the data files are first added to the workflow, they have a grey background. This indicates that Galaxy knows about the files, and is preparing to upload them.
+
+When Galaxy begins to upload the files, the background changes to orange.
+
+When the upload is complete, the background turns green.
+
+If there is a problem with uploading, the background turns red (please signal to a demonstrator if this happens for you).
+:::
+
+::: { .callout-tip collapse="true" }
+## Data file types
+
+You will have noticed the `Auto-detect` dropdown boxes when you uploaded your files. Galaxy is able to process files that describe many _data types_, including genome sequence data, transcriptome data, mass spectrometry data, and so on. Each individual file contains a single type of data.
+
+Galaxy is usually clever enough to determine for itself what data is in a particular file, but sometimes it cannot recognise the contents, and you may have to specify the file type by choosing from the options in this drop-down box.
+:::
+
+::: { .callout-note }
+## Video: Uploading files with the `You can load your own data` link
+
+{{< video assets/movies/galaxy-02-upload.mp4 title="Uploading data via the 'You can load your own data' link" >}}
+:::
+
+### Use the `Upload Data` button in the `Tools` sidebar
+
+There is an `Upload` button at the top left of the Galaxy window, in the left-most toolbar. It has a green background and an upload icon. At any point in the analysis, you can click on this button to upload data into the workflow.
+
+1. Click on the `Upload` button.
+2. Drag the `GCF_000006765.1_ASM676v1_genomic.fna.gz` file into the dialogue box.
+3. Click on the `Start` button.
+4. The file will appear in the `History` sidebar.
+5. Click the `Close` button in the file dialogue.
+
+This file is smaller than the files you uploaded above, and should take less time to turn orange, and then green, to indicate that it has uploaded correctly.
+
+::: { .callout-note }
+## Video: Uploading files with the `Upload` button
+
+{{< video assets/movies/galaxy-03-upload.mp4 title="Uploading data via the 'Upload' button" >}}
+:::
+
+### Drag and drop data onto the workspace
+
+You can also drag and drop data files directly into the central workspace window of Galaxy. This will trigger the file upload dialogue box.
+
+1. Drag the `ERR531413_asm.fasta.gz` file into the Galaxy workspace.
+2. A `Drag files here to upload` overlay will appear.
+3. Drop the file in the overlay. A file upload dialogue box will appear.
+4. Click on the `Start` button.
+5. The file will appear in the `History` sidebar.
+6. Click the `Close` button in the file dialogue.
+
+::: { .callout-note }
+## Video: Uploading files by dragging them into the workspace
+
+{{< video assets/movies/galaxy-04-upload.mp4 title="Uploading data by dragging it into the Workspace" >}}
+:::
+
+## Inspecting Data
+
+You can inspect the data you have uploaded to Galaxy visually in two ways.
+
+### In the `History`
+
+To view the contents of an uploaded data file in the `History`.
+
+1. Click on the file name (e.g. `GCF_000006765.1_ASM676v1_genomic.fna.gz`). The file descriptor will enlarge.
+  - The descriptor shows the file's datatype (e.g. "format `fasta`")
+  - At the bottom of the descriptor, a preview of the dataset is shown, with the first few lines of the data.
+2. Click on the file name again to close the file descriptor.
+
+### In the `Workspace`
+
+You can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the `eye` icon in the file descriptor.
+
+1. Click on the `eye` icon of one of the file descriptors (e.g. `ERR531413_asm.fasta.gz`). A representation of the data in the file will be shown in the workspace window.
+
+### Using additional tools
+
+The open file descriptor presents several icons, just above the data preview. These allow you to:
+
+1. Download the dataset to your computer
+2. Obtain a direct URL link to the data
+3. View details about the dataset
+4. Visualise the data interactively using an appropriate tool
+5. Show related datasets
+
+View the video below to see some examples of this output.
+
+::: { .callout-note }
+## Video: Using interactive data inspection tools
+
+{{< video assets/movies/galaxy-05-inspect.mp4 title="Inspecting data in the History and Workspace, and using the interactive data inspection tools" >}}
+:::
