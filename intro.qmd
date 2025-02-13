@@ -12,10 +12,6 @@ The unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual
 
 Unfortunately, _Pseudomonas aeruginosa_ is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with _P. aeruginosa_, typically leading to bacteraemia, soft tissue infection or pneumonia (@Mahar2010-xu, @Reynolds2021-zs, @Roy2024-vj, @fig-effects).
 
-::: {.column-margin}
-![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout .lightbox}
-:::
-
 ![Burn wound infection microbes and their effects on burns patients. Reproduced from @Roy2024-vj (CC-BY-NC-4.0)](assets/images/acc-2023-01571f1.png){#fig-effects width=80% .lightbox}
 
 ## The study
@@ -25,6 +21,11 @@ In a nosocomial setting _P. aeruginosa_ especially affects patients with impaire
 You are part of a team conducting an observational, prospective study into the occurrence and spread of _P. aeruginosa_ on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.
 
 All recruited patients were screened for whether they already carried _P. aeruginosa_ in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If _P. aeruginosa_ was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.
+
+::: {.column-margin}
+![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout .lightbox}
+:::
+
 
 ::: { .callout-important }
 ## Patient samples
