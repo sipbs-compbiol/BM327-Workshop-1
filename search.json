@@ -40,137 +40,193 @@
     ]
   },
   {
-    "objectID": "galaxy-registration.html",
-    "href": "galaxy-registration.html",
-    "title": "1  Register An Account with Galaxy",
-    "section": "",
-    "text": "1.1 Introduction\nIn this workshop you will be working on Galaxy, an open source scientific workflow and data integration platform (Galaxy Community (2024)). Galaxy is a framework for performing reproducible computational biology and bioinformatics, democratising the field so that scientists with no programming or other computing experience can still carry out bioinformatic analyses on their own data, in their web browser.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
-    ]
-  },
-  {
-    "objectID": "galaxy-registration.html#introduction",
-    "href": "galaxy-registration.html#introduction",
-    "title": "1  Register An Account with Galaxy",
-    "section": "",
-    "text": "Galaxy instances\n\n\n\n\n\nThe Galaxy software is open source and can be downloaded and installed freely on any computer that it can run on. Each such installation is called a Galaxy instance. The Galaxy instance that you will be working on is the EU Galaxy instance at https://usegalaxy.eu/. This is the largest Galaxy instance in Europe and gives access to over 2500 scientific tools. It is free to use, and is maintained by the Galaxy team at Freiburg.\nThere are many other Galaxy instances, some private, and some public and free for anyone to use, such as:\n\nhttps://usegalaxy.org/: The Galaxy Project public server, supporting biomedical research.\nhttps://galaxyproject.org/use/usegalaxy-fr/: A general-purpose Galaxy server, based in France\nhttps://galaxyproject.org/use/usegalaxy-au/: The Australian UseGalaxy server\n\nGalaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contain differing collections of books, each Galaxy instance may make available different sets of tools, or different versions of similar tools. As a result some analyses may be possible on one Galaxy instance, but not another.\nWhen you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool was used in the analysis.\n\n\n\n\n1.1.1 Workflows\nThe key concept in Galaxy is the workflow. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (Figure 1.1).\n\n\n\n\n\n\nFigure 1.1: Galaxy workflow editor view of a Galaxy workflow that runs the same tool (RXLR Motifs) with three different settings, and compares the results using a Venn diagram (reproduced from Cock et al. (2013)). The workflow runs from left to right. A single Input dataset is fed into the RXLR Motifs tool three times, applying a different method each time. Each run of the RXLR Motifs tool generates a different set of output sequences, which are passed as input to the Filter tool. The output from all three runs of the Filter tool is passed to the Venn Diagram tool, along with the original input dataset, to generate a Venn Diagram\n\n\n\nUsing Galaxy, you will build up a powerful bioinformatic analysis workflow to analyse your data, step-by-step, using a web browser. Galaxy allows you to save and share your workflows, to encourage reuse and reproducibility.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
-    ]
-  },
-  {
-    "objectID": "galaxy-registration.html#registering-with-galaxy",
-    "href": "galaxy-registration.html#registering-with-galaxy",
-    "title": "1  Register An Account with Galaxy",
-    "section": "1.2 Registering with Galaxy",
-    "text": "1.2 Registering with Galaxy\n\n\n\n\n\n\nRegister with usegalaxy.eu\n\n\n\nThe first action you should take in this workshop, if you do not already have an account at https://usegalaxy.eu/, is to create an account at https://usegalaxy.eu/.\n\n\n\nGo to the Galaxy login/registration page\nIf you have a usegalaxy.eu account already, then log in using your details and move on to the workshop proper.\nIf you do not already have a usegalaxy.eu account, then click on the Register here link.\nEnter your university email address in the Email address field.\nChoose a secure password and enter it into the Password and Confirm password fields.\nChoose a public name to show (other people will be able to see this) and enter it in the Public name field.\nClick on the Create button.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou will receive a validation email at the account you register with. You must confirm your email to proceed.\n\n\n\n\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton Pritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis with Applications in Molecular Plant Pathology.” PeerJ 1 (September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible, Reproducible, and Collaborative Data Analyses: 2024 Update.” Nucleic Acids Res. 52 (W1): W83–94.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
-    ]
-  },
-  {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "2  Workshop Introduction",
+    "title": "1  Workshop Introduction",
     "section": "",
-    "text": "2.1 Sick burns\nIt’s been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (Figure 2.1).\nThe unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (Figure 2.2). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.\nUnfortunately, Pseudomonas aeruginosa is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with P. aeruginosa, typically leading to bacteraemia, soft tissue infection or pneumonia (Mahar et al. (2010), Reynolds and Kollef (2021), Roy et al. (2024), Figure 2.3).",
+    "text": "1.1 Sick burns\nIt’s been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (Figure 1.1).\nThe unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (Figure 1.2). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.\nUnfortunately, Pseudomonas aeruginosa is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with P. aeruginosa, typically leading to bacteraemia, soft tissue infection or pneumonia (Mahar et al. (2010), Reynolds and Kollef (2021), Roy et al. (2024), Figure 1.3).",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
     "objectID": "intro.html#sick-burns",
     "href": "intro.html#sick-burns",
-    "title": "2  Workshop Introduction",
+    "title": "1  Workshop Introduction",
     "section": "",
-    "text": "Figure 2.1: This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines\n\n\n\n\n\n\n\n\n\nFigure 2.3: Burn wound infection microbes and their effects on burns patients. Reproduced from Roy et al. (2024) (CC-BY-NC-4.0)",
+    "text": "Figure 1.1: This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1.2: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines\n\n\n\n\n\n\n\n\n\nFigure 1.3: Burn wound infection microbes and their effects on burns patients. Reproduced from Roy et al. (2024) (CC-BY-NC-4.0)",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
     "objectID": "intro.html#the-study",
     "href": "intro.html#the-study",
-    "title": "2  Workshop Introduction",
-    "section": "2.2 The study",
-    "text": "2.2 The study\nIn a nosocomial setting P. aeruginosa especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (Trautmann, Lepper, and Haller (2005), Breathnach et al. (2012)). Outbreaks transmitted via water have resulted in fatal cases such as at a neonatal critical care unit in Belfast (Wise (2012)).\nYou are part of a team conducting an observational, prospective study into the occurrence and spread of P. aeruginosa on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.\nAll recruited patients were screened for whether they already carried P. aeruginosa in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If P. aeruginosa was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.\n\n\n\n\n\n\nPatient samples\n\n\n\n\nwound swabs\nurine\nstool\n\n\n\nSamples were also taken from the patient’s environment and water from outlets in their bed space, at weekly intervals, during their stay.\n\n\n\n\n\n\nEnvironment samples\n\n\n\n\nshower head rosette\nshower drain\nshower chair/trolley\ntap\nbedside table\npatient chair\ninstruments",
+    "title": "1  Workshop Introduction",
+    "section": "1.2 The study",
+    "text": "1.2 The study\nIn a nosocomial setting P. aeruginosa especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (Trautmann, Lepper, and Haller (2005), Breathnach et al. (2012)). Outbreaks transmitted via water have resulted in fatal cases such as at a neonatal critical care unit in Belfast (Wise (2012)).\nYou are part of a team conducting an observational, prospective study into the occurrence and spread of P. aeruginosa on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.\nAll recruited patients were screened for whether they already carried P. aeruginosa in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If P. aeruginosa was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.\n\n\n\n\n\n\nPatient samples\n\n\n\n\nwound swabs\nurine\nstool\n\n\n\nSamples were also taken from the patient’s environment and water from outlets in their bed space, at weekly intervals, during their stay.\n\n\n\n\n\n\nEnvironment samples\n\n\n\n\nshower head rosette\nshower drain\nshower chair/trolley\ntap\nbedside table\npatient chair\ninstruments",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
     "objectID": "intro.html#the-samples",
     "href": "intro.html#the-samples",
-    "title": "2  Workshop Introduction",
-    "section": "2.3 The samples",
-    "text": "2.3 The samples\nDuring the course of the study, five patients and a number of individual samples were found to be positive for P. aeruginosa (Figure 2.4).\n\n\n\n\n\n\nFigure 2.4: A schematic view of samples found to be positive for P. aeruginosa in the study. Time in days is shown along the x axis. The y axis shows bed numbers in the burns unit (upper, Figure 2.2) and the critical care unity. Each circular icon indicates a positive isolate of P. aeruginosa. The letter in the icon indicates the MLST clade to which the P. aeruginosa sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with P. aeruginosa.\n\n\n\nYour role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of P. aeruginosa to patients.\n\n\n\n\nBreathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche. 2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two Hospitals: Association with Contaminated Hospital Waste-Water Systems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul, Melissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa Bacteraemia in Burns Patients: Risk Factors and Outcomes.” Burns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and Pathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An Update.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder, Vivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial Infections in Burn Patients.” Acute Crit. Care 39 (2): 214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005. “Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and the Evolving Role of Water Outlets as a Reservoir of the Organism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at Belfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
+    "title": "1  Workshop Introduction",
+    "section": "1.3 The samples",
+    "text": "1.3 The samples\nDuring the course of the study, five patients and a number of individual samples were found to be positive for P. aeruginosa (Figure 1.4).\n\n\n\n\n\n\nFigure 1.4: A schematic view of samples found to be positive for P. aeruginosa in the study. Time in days is shown along the x axis. The y axis shows bed numbers in the burns unit (upper, Figure 1.2) and the critical care unity. Each circular icon indicates a positive isolate of P. aeruginosa. The letter in the icon indicates the MLST clade to which the P. aeruginosa sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with P. aeruginosa.\n\n\n\nYour role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of P. aeruginosa to patients.\n\n\n\n\nBreathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche. 2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two Hospitals: Association with Contaminated Hospital Waste-Water Systems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul, Melissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa Bacteraemia in Burns Patients: Risk Factors and Outcomes.” Burns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and Pathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An Update.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder, Vivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial Infections in Burn Patients.” Acute Crit. Care 39 (2): 214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005. “Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and the Evolving Role of Water Outlets as a Reservoir of the Organism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at Belfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
-    "objectID": "early-section.html",
-    "href": "early-section.html",
-    "title": "Early Section",
+    "objectID": "galaxy-registration.html",
+    "href": "galaxy-registration.html",
+    "title": "2  Register An Account with Galaxy",
     "section": "",
-    "text": "This .qmd file introduces a Part of the Quarto book. We use the {#sec-REFERENCE} option to make it cross-referenceable elsewhere in the text, and the {.unnumbered} option to avoid giving it a section number.",
+    "text": "2.1 Introduction\nIn this workshop you will be working on Galaxy, an open source scientific workflow and data integration platform (Galaxy Community (2024)). Galaxy is a framework for performing reproducible computational biology and bioinformatics, democratising the field so that scientists with no programming or other computing experience can still carry out bioinformatic analyses on their own data, in their web browser.",
     "crumbs": [
-      "Early Section"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
     ]
   },
   {
-    "objectID": "early-section-topic.html",
-    "href": "early-section-topic.html",
-    "title": "3  Early Section Topic",
+    "objectID": "galaxy-registration.html#introduction",
+    "href": "galaxy-registration.html#introduction",
+    "title": "2  Register An Account with Galaxy",
     "section": "",
-    "text": "This .qmd file represents some topic-related text. We use the {#sec-REFERENCE} option to make it cross-referenceable elsewhere in the text.",
+    "text": "Galaxy instances\n\n\n\n\n\nThe Galaxy software is open source and can be downloaded and installed freely on any computer that it can run on. Each such installation is called a Galaxy instance. The Galaxy instance that you will be working on is the EU Galaxy instance at https://usegalaxy.eu/. This is the largest Galaxy instance in Europe and gives access to over 2500 scientific tools. It is free to use, and is maintained by the Galaxy team at Freiburg.\nThere are many other Galaxy instances, some private, and some public and free for anyone to use, such as:\n\nhttps://usegalaxy.org/: The Galaxy Project public server, supporting biomedical research.\nhttps://galaxyproject.org/use/usegalaxy-fr/: A general-purpose Galaxy server, based in France\nhttps://galaxyproject.org/use/usegalaxy-au/: The Australian UseGalaxy server\n\nGalaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contain differing collections of books, each Galaxy instance may make available different sets of tools, or different versions of similar tools. As a result some analyses may be possible on one Galaxy instance, but not another.\nWhen you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool was used in the analysis.\n\n\n\n\n2.1.1 Workflows\nThe key concept in Galaxy is the workflow. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (Figure 2.1).\n\n\n\n\n\n\nFigure 2.1: Galaxy workflow editor view of a Galaxy workflow that runs the same tool (RXLR Motifs) with three different settings, and compares the results using a Venn diagram (reproduced from Cock et al. (2013)). The workflow runs from left to right. A single Input dataset is fed into the RXLR Motifs tool three times, applying a different method each time. Each run of the RXLR Motifs tool generates a different set of output sequences, which are passed as input to the Filter tool. The output from all three runs of the Filter tool is passed to the Venn Diagram tool, along with the original input dataset, to generate a Venn Diagram\n\n\n\nUsing Galaxy, you will build up a powerful bioinformatic analysis workflow to analyse your data, step-by-step, using a web browser. Galaxy allows you to save and share your workflows, to encourage reuse and reproducibility.",
     "crumbs": [
-      "Early Section",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Early Section Topic</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
     ]
   },
   {
-    "objectID": "late-section.html",
-    "href": "late-section.html",
-    "title": "Late Section",
+    "objectID": "galaxy-registration.html#registering-with-galaxy",
+    "href": "galaxy-registration.html#registering-with-galaxy",
+    "title": "2  Register An Account with Galaxy",
+    "section": "2.2 Registering with Galaxy",
+    "text": "2.2 Registering with Galaxy\n\n\n\n\n\n\nRegister with usegalaxy.eu\n\n\n\nThe first action you should take in this workshop, if you do not already have an account at https://usegalaxy.eu/, is to create an account at https://usegalaxy.eu/.\n\n\n\nGo to the Galaxy login/registration page\nIf you have a usegalaxy.eu account already, then log in using your details and move on to the workshop proper.\nIf you do not already have a usegalaxy.eu account, then click on the Register here link.\nEnter your university email address in the Email address field.\nChoose a secure password and enter it into the Password and Confirm password fields.\nChoose a public name to show (other people will be able to see this) and enter it in the Public name field.\nClick on the Create button.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou will receive a validation email at the account you register with. You must confirm your email to proceed.\n\n\n\n\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton Pritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis with Applications in Molecular Plant Pathology.” PeerJ 1 (September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible, Reproducible, and Collaborative Data Analyses: 2024 Update.” Nucleic Acids Res. 52 (W1): W83–94.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "galaxy.html",
+    "href": "galaxy.html",
+    "title": "Galaxy",
     "section": "",
-    "text": "This .qmd file introduces a Part of the Quarto book. We use the {#sec-REFERENCE} option to make it cross-referenceable elsewhere in the text, and the {.unnumbered} option to avoid giving it a section number.",
+    "text": "The chapters in this section of the workshop will guide you through registering an account with Galaxy EU, and uploading workshop data to the Galaxy instance.\n\n3  Join the Training Session at https://usegalaxy.eu/join-training/\n4  Download Workshop Data to your computer\n5  Upload Data to Galaxy to your Galaxy history\n\n\n\n\n\n\n\nFigure 1: Today’s workshop is enabled by Galaxy EU Teaching Infrastructure as a Service.",
     "crumbs": [
-      "Late Section"
+      "Galaxy"
     ]
   },
   {
-    "objectID": "webr-example.html",
-    "href": "webr-example.html",
-    "title": "4  R Playground",
+    "objectID": "join-session.html",
+    "href": "join-session.html",
+    "title": "3  Join the Training Session",
     "section": "",
-    "text": "4.1 Introduction\nThis page provides a WebR cell for you to use as a playground to experiment with some example datasets. You can use this page to explore data management and visualisation in R.",
+    "text": "3.1 The Galaxy workspace layout\nAfter you join the session, you will see the Galaxy workspace, which should look similar to Figure 3.1. There are three sections to the workspace: the Tools sidebar, the History/Workflow sidebar, and the central Workspace area. You will become more familiar with these as you move through the workshop.",
     "crumbs": [
-      "Late Section",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>`R` Playground</span>"
+      "Galaxy",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Join the Training Session</span>"
     ]
   },
   {
-    "objectID": "webr-example.html#playground",
-    "href": "webr-example.html#playground",
-    "title": "4  R Playground",
-    "section": "4.2 Playground",
-    "text": "4.2 Playground\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "objectID": "join-session.html#the-galaxy-workspace-layout",
+    "href": "join-session.html#the-galaxy-workspace-layout",
+    "title": "3  Join the Training Session",
+    "section": "",
+    "text": "Figure 3.1: An empty Galaxy workspace. The workspace is divided into three sections. On the left is the Tools sidebar, which presents the software tools available on the current Galaxy instance. On the right is the History or Workflow sidebar, which describes the data and steps being used in the current Galaxy workflow. The largest section, in the centre, shows details of a selected tool including options to set or change parameters, or the contents of the dataset, depending what is selected from the History sidebar.\n\n\n\n\n\n\n\n\n\nThe Tools sidebar\n\n\n\n\n\nThe Tools sidebar on the left of the window initially presents all the tools available on the Galaxy instance being used. These are grouped into sections by the kind of task they can be used for, such as manipulating text, or assembling sequenced reads.\nThis sidebar also provides useful links, such as for uploading your own data to the Galaxy instance (Upload Data), and for importing data from public databases, like Ensembl. There is also a search field at the top of the sidebar which initially contains the text search tools. You can enter the name of a tool or action into this field, and the sidebar will present the matching software on the Galaxy instance.\n\n\n\n\n\n\n\n\n\nThe History/Workflow sidebar\n\n\n\n\n\nThe History/Workflow sidebar at the right of the window will initially be empty. As you work through the exercises this sidebar will become populated with your data, the actions you take on the data, and the results of those actions. The History will have no name specified, so you should see the placeholder Unnamed history, and the text This history is empty.\nWhen you log into a Galaxy instance that you have used before, you may see the most recent history/workflow that you used, and you may have options for loading previous histories/workflows into the current workspace.\n\n\n\n\n\n\n\n\n\nThe Workspace\n\n\n\n\n\nThe largest, central region of the window is the Workspace. This is an area that presents several kinds of information. Depending on context, it may provide information about the Galaxy instance, present datasets (or summaries/visualisations of datasets), or ways to interact with the individual tools that you will use.\n\n\n\n\n\n\n\n\n\n\n\n(a) News and information\n\n\n\n\n\n\n\n\n\n\n\n(b) Inspecting data\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Interactive visualisations\n\n\n\n\n\n\n\n\n\n\n\n(d) Setting parameters for software and analyses\n\n\n\n\n\n\n\nFigure 3.2: Four uses of the Workspace area in Galaxy.",
     "crumbs": [
-      "Late Section",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>`R` Playground</span>"
+      "Galaxy",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Join the Training Session</span>"
     ]
   },
   {
-    "objectID": "webr-example.html#things-you-can-do",
-    "href": "webr-example.html#things-you-can-do",
-    "title": "4  R Playground",
-    "section": "4.3 Things you can do",
-    "text": "4.3 Things you can do\nThis WebR instance has three packages installed:\n\nggplot2\nGGally\ntidyverse\npalmerpenguins\n\nOpen the callout boxes below to see some examples you can try in the code cell above.\n\n\n\n\n\n\nPlay with data from a GitHub repository\n\n\n\n\n\nOne of our BM214 workshops involves a WebR-supported interactive exercise involving simulated reporter curves. We preload this data in the setup cell (see source code), and you can interact with it below with the code:\ndata &lt;- read.csv(\"reporter_curves.csv\")\nglimpse(data)\n\n\n\n\n\n\n\n\n\nInvestigate Palmer’s Penguins\n\n\n\n\n\nThe penguins dataset contains data about three different species of penguins. Take a look at the format of the dataset:\nglimpse(penguins)\nYou’ll see there are eight variables, including species, weight, sex, etc. - some of these variables are categorical (i.e. a category, like species), and others are continuous (i.e. numerical). You can see a visual overview of how the data is related using the plot() function:\nplot(penguins)\nWe can visualise the number of penguins of each species in a bar chart:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar()\nfig\nAnd break this down in a facet plot, by sex:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar() +\n         facet_wrap(~sex)\nfig\nWe can make a box and whisker plot of penguin body mass by species:\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=species)) +\n         geom_boxplot()\nfig\nAnd plot the body mass for each sex side-by-side\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=sex)) +\n         geom_boxplot()\nfig\nWe can investigate correlations, such as between body mass and flipper length:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm)) +\n         geom_point()\nfig\nWe can colour datapoints by species:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point()\nfig\nAnd fit a linear regression to each species separately:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point() +\n         geom_smooth(method=\"lm\")\nfig\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nR comes with a number of example datasets you can practice with, including:\n\nmtcars: fuel consumption and other statistic for 32 automobiles\nTitanic: information on the fate of passengers on the fatal maiden voyage of the ocean liner Titanic\n\nYou can see a full list by running the command\nlibrary(help = \"datasets\")",
+    "objectID": "join-session.html#give-a-name-to-the-history",
+    "href": "join-session.html#give-a-name-to-the-history",
+    "title": "3  Join the Training Session",
+    "section": "3.2 Give A Name To The History",
+    "text": "3.2 Give A Name To The History\nIt is helpful to give the workflow/history that you work with a name. This will help you find it again when you reuse the Galaxy EU instance.\n\n\n\n\n\n\nTip\n\n\n\n\nWhen you name a workflow, give it a concise title that expresses the purpose of the workflow.\nYou can also add annotation that describes the workflow and provides more information than the name alone conveys.\nYou can rename or re-annotate your workflow at any time.\n\n\n\nTo assign a name to your workflow:\n\nClick on the pen icon next to Unnamed history\nEnter a name for the workflow in the top Unnamed history field\nEnter additional text describing the workflow in the lower Annotation (optional) field\nClick the Save button.\n\n\n\n\n\n\n\nVideo: Renaming A Galaxy Workflow",
     "crumbs": [
-      "Late Section",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>`R` Playground</span>"
+      "Galaxy",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Join the Training Session</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html",
+    "href": "download-data.html",
+    "title": "4  Download Workshop Data",
+    "section": "",
+    "text": "4.1 Sequencing reads for your isolate",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html#sequencing-reads-for-your-isolate",
+    "href": "download-data.html#sequencing-reads-for-your-isolate",
+    "title": "4  Download Workshop Data",
+    "section": "",
+    "text": "Illumina paired-end reads, forward direction(ERR531380_1.fastq.gz)\nIllumina paired-end reads, reverse direction(ERR531380_2.fastq.gz)",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html#pseudomonas-aeruginosa-reference-strain-for-snp-comparison",
+    "href": "download-data.html#pseudomonas-aeruginosa-reference-strain-for-snp-comparison",
+    "title": "4  Download Workshop Data",
+    "section": "4.2 Pseudomonas aeruginosa reference strain for SNP comparison",
+    "text": "4.2 Pseudomonas aeruginosa reference strain for SNP comparison\n\nP. aeruginosa PA01 genome sequence (.fasta)(GCF_000006765.1_ASM676v1_genomic.fna.gz)",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "download-data.html#room-8-isolate-assembly-for-snp-comparison",
+    "href": "download-data.html#room-8-isolate-assembly-for-snp-comparison",
+    "title": "4  Download Workshop Data",
+    "section": "4.3 Room 8 isolate assembly for SNP comparison",
+    "text": "4.3 Room 8 isolate assembly for SNP comparison\n\nSPAdes assembly of isolate 1031 (ERR531413), from the room 8 shower hose(ERR531413_asm.fasta.gz)\n\n\n\n\n\n\n\nYour Working Directory\n\n\n\nWhen you have downloaded all the files required for the workshop, the contents of the BM327_Workshop folder should resemble the image in Figure 4.1.\n\n\n\n\n\n\nFigure 4.1: macOS BM327_Workshop folder with all files downloaded.",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
+    ]
+  },
+  {
+    "objectID": "upload-data.html",
+    "href": "upload-data.html",
+    "title": "5  Upload Data to Galaxy",
+    "section": "",
+    "text": "5.1 Uploading your data\nThere are three main routes to uploading your data onto the Galaxy instance.",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Upload Data to Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "upload-data.html#uploading-your-data",
+    "href": "upload-data.html#uploading-your-data",
+    "title": "5  Upload Data to Galaxy",
+    "section": "",
+    "text": "5.1.1 Use the You can load your own data link in an empty workflow\nThis option is only visible when you have an empty workflow. Click on the You can load your own data link under This history is empty. This will bring up a dialogue box. You can drag and drop a file or files into the dialogue box, or use the Choose local file button to navigate to the location of your files.\n\nClick on the You can load your own data link.\nDrag the two workshop data files ending with .fastq.gz into the dialogue box.\nClick on the Start button.\nThe files will appear in the History sidebar.\nClick the Close button in the file dialogue.\n\n\n\n\n\n\n\nData file colours\n\n\n\n\n\nWhen the data files are first added to the workflow, they have a grey background. This indicates that Galaxy knows about the files, and is preparing to upload them.\nWhen Galaxy begins to upload the files, the background changes to orange.\nWhen the upload is complete, the background turns green.\nIf there is a problem with uploading, the background turns red (please signal to a demonstrator if this happens for you).\n\n\n\n\n\n\n\n\n\nData file types\n\n\n\n\n\nYou will have noticed the Auto-detect dropdown boxes when you uploaded your files. Galaxy is able to process files that describe many data types, including genome sequence data, transcriptome data, mass spectrometry data, and so on. Each individual file contains a single type of data.\nGalaxy is usually clever enough to determine for itself what data is in a particular file, but sometimes it cannot recognise the contents, and you may have to specify the file type by choosing from the options in this drop-down box.\n\n\n\n\n\n\n\n\n\nVideo: Uploading files with the You can load your own data link\n\n\n\n\n\n\n\n\n5.1.2 Use the Upload Data button in the Tools sidebar\nThere is an Upload button at the top left of the Galaxy window, in the left-most toolbar. It has a green background and an upload icon. At any point in the analysis, you can click on this button to upload data into the workflow.\n\nClick on the Upload button.\nDrag the GCF_000006765.1_ASM676v1_genomic.fna.gz file into the dialogue box.\nClick on the Start button.\nThe file will appear in the History sidebar.\nClick the Close button in the file dialogue.\n\nThis file is smaller than the files you uploaded above, and should take less time to turn orange, and then green, to indicate that it has uploaded correctly.\n\n\n\n\n\n\nVideo: Uploading files with the Upload button\n\n\n\n\n\n\n\n\n5.1.3 Drag and drop data onto the workspace\nYou can also drag and drop data files directly into the central workspace window of Galaxy. This will trigger the file upload dialogue box.\n\nDrag the ERR531413_asm.fasta.gz file into the Galaxy workspace.\nA Drag files here to upload overlay will appear.\nDrop the file in the overlay. A file upload dialogue box will appear.\nClick on the Start button.\nThe file will appear in the History sidebar.\nClick the Close button in the file dialogue.\n\n\n\n\n\n\n\nVideo: Uploading files by dragging them into the workspace",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Upload Data to Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "upload-data.html#inspecting-data",
+    "href": "upload-data.html#inspecting-data",
+    "title": "5  Upload Data to Galaxy",
+    "section": "5.2 Inspecting Data",
+    "text": "5.2 Inspecting Data\nYou can inspect the data you have uploaded to Galaxy visually in two ways.\n\n5.2.1 In the History\nTo view the contents of an uploaded data file in the History.\n\nClick on the file name (e.g. GCF_000006765.1_ASM676v1_genomic.fna.gz). The file descriptor will enlarge.\n\n\nThe descriptor shows the file’s datatype (e.g. “format fasta”)\nAt the bottom of the descriptor, a preview of the dataset is shown, with the first few lines of the data.\n\n\nClick on the file name again to close the file descriptor.\n\n\n\n5.2.2 In the Workspace\nYou can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the eye icon in the file descriptor.\n\nClick on the eye icon of one of the file descriptors (e.g. ERR531413_asm.fasta.gz). A representation of the data in the file will be shown in the workspace window.\n\n\n\n5.2.3 Using additional tools\nThe open file descriptor presents several icons, just above the data preview. These allow you to:\n\nDownload the dataset to your computer\nObtain a direct URL link to the data\nView details about the dataset\nVisualise the data interactively using an appropriate tool\nShow related datasets\n\nView the video below to see some examples of this output.\n\n\n\n\n\n\nVideo: Using interactive data inspection tools",
+    "crumbs": [
+      "Galaxy",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Upload Data to Galaxy</span>"
     ]
   },
   {
