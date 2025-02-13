@@ -36,6 +36,7 @@ book:
   # [E] CHAPTERS AND SECTIONS
   chapters:
     - index.qmd
+    - galaxy-registration.qmd
     - intro.qmd
 
     - part: early-section.qmd
