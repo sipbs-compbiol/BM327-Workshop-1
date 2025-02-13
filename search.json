@@ -40,43 +40,73 @@
     ]
   },
   {
+    "objectID": "galaxy-registration.html",
+    "href": "galaxy-registration.html",
+    "title": "1  Register An Account with Galaxy",
+    "section": "",
+    "text": "1.1 Introduction\nIn this workshop you will be working on Galaxy, an open source scientific workflow and data integration platform (Galaxy Community (2024)). Galaxy is a framework for performing reproducible computational biology and bioinformatics, democratising the field so that scientists with no programming or other computing experience can still carry out bioinformatic analyses on their own data, in their web browser.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "galaxy-registration.html#introduction",
+    "href": "galaxy-registration.html#introduction",
+    "title": "1  Register An Account with Galaxy",
+    "section": "",
+    "text": "Galaxy instances\n\n\n\n\n\nThe Galaxy software is open source and can be downloaded and installed freely on any computer that it can run on. Each such installation is called a Galaxy instance. The Galaxy instance that you will be working on is the EU Galaxy instance at https://usegalaxy.eu/. This is the largest Galaxy instance in Europe and gives access to over 2500 scientific tools. It is free to use, and is maintained by the Galaxy team at Freiburg.\nThere are many other Galaxy instances, some private, and some public and free for anyone to use, such as:\n\nhttps://usegalaxy.org/: The Galaxy Project public server, supporting biomedical research.\nhttps://galaxyproject.org/use/usegalaxy-fr/: A general-purpose Galaxy server, based in France\nhttps://galaxyproject.org/use/usegalaxy-au/: The Australian UseGalaxy server\n\nGalaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contain differing collections of books, each Galaxy instance may make available different sets of tools, or different versions of similar tools. As a result some analyses may be possible on one Galaxy instance, but not another.\nWhen you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool was used in the analysis.\n\n\n\n\n1.1.1 Workflows\nThe key concept in Galaxy is the workflow. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (Figure 1.1).\n\n\n\n\n\n\nFigure 1.1: Galaxy workflow editor view of a Galaxy workflow that runs the same tool (RXLR Motifs) with three different settings, and compares the results using a Venn diagram (reproduced from Cock et al. (2013)). The workflow runs from left to right. A single Input dataset is fed into the RXLR Motifs tool three times, applying a different method each time. Each run of the RXLR Motifs tool generates a different set of output sequences, which are passed as input to the Filter tool. The output from all three runs of the Filter tool is passed to the Venn Diagram tool, along with the original input dataset, to generate a Venn Diagram\n\n\n\nUsing Galaxy, you will build up a powerful bioinformatic analysis workflow to analyse your data, step-by-step, using a web browser. Galaxy allows you to save and share your workflows, to encourage reuse and reproducibility.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
+    ]
+  },
+  {
+    "objectID": "galaxy-registration.html#registering-with-galaxy",
+    "href": "galaxy-registration.html#registering-with-galaxy",
+    "title": "1  Register An Account with Galaxy",
+    "section": "1.2 Registering with Galaxy",
+    "text": "1.2 Registering with Galaxy\n\n\n\n\n\n\nRegister with usegalaxy.eu\n\n\n\nThe first action you should take in this workshop, if you do not already have an account at https://usegalaxy.eu/, is to create an account at https://usegalaxy.eu/.\n\n\n\nGo to the Galaxy login/registration page\nIf you have a usegalaxy.eu account already, then log in using your details and move on to the workshop proper.\nIf you do not already have a usegalaxy.eu account, then click on the Register here link.\nEnter your university email address in the Email address field.\nChoose a secure password and enter it into the Password and Confirm password fields.\nChoose a public name to show (other people will be able to see this) and enter it in the Public name field.\nClick on the Create button.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou will receive a validation email at the account you register with. You must confirm your email to proceed.\n\n\n\n\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton Pritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis with Applications in Molecular Plant Pathology.” PeerJ 1 (September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible, Reproducible, and Collaborative Data Analyses: 2024 Update.” Nucleic Acids Res. 52 (W1): W83–94.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
+    ]
+  },
+  {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "2  Workshop Introduction",
     "section": "",
-    "text": "1.1 Sick burns\nIt’s been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (Figure 1.1).\nThe unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (Figure 1.2). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.\nUnfortunately, Pseudomonas aeruginosa is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with P. aeruginosa, typically leading to bacteraemia, soft tissue infection or pneumonia (Mahar et al. (2010), Reynolds and Kollef (2021), Roy et al. (2024), Figure 1.3).",
+    "text": "2.1 Sick burns\nIt’s been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (Figure 2.1).\nThe unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (Figure 2.2). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.\nUnfortunately, Pseudomonas aeruginosa is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with P. aeruginosa, typically leading to bacteraemia, soft tissue infection or pneumonia (Mahar et al. (2010), Reynolds and Kollef (2021), Roy et al. (2024), Figure 2.3).",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
     "objectID": "intro.html#sick-burns",
     "href": "intro.html#sick-burns",
-    "title": "1  Introduction",
+    "title": "2  Workshop Introduction",
     "section": "",
-    "text": "Figure 1.1: This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1.2: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines\n\n\n\n\n\n\n\n\n\nFigure 1.3: Burn wound infection microbes and their effects on burns patients. Reproduced from Roy et al. (2024) (CC-BY-NC-4.0)",
+    "text": "Figure 2.1: This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2.2: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines\n\n\n\n\n\n\n\n\n\nFigure 2.3: Burn wound infection microbes and their effects on burns patients. Reproduced from Roy et al. (2024) (CC-BY-NC-4.0)",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
     "objectID": "intro.html#the-study",
     "href": "intro.html#the-study",
-    "title": "1  Introduction",
-    "section": "1.2 The study",
-    "text": "1.2 The study\nIn a nosocomial setting P. aeruginosa especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (Trautmann, Lepper, and Haller (2005), Breathnach et al. (2012)). Outbreaks transmitted via water have resulted in fatal cases such as at a neonatal critical care unit in Belfast (Wise (2012)).\nYou are part of a team conducting an observational, prospective study into the occurrence and spread of P. aeruginosa on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.\nAll recruited patients were screened for whether they already carried P. aeruginosa in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If P. aeruginosa was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.\n\n\n\n\n\n\nPatient samples\n\n\n\n\nwound swabs\nurine\nstool\n\n\n\nSamples were also taken from the patient’s environment and water from outlets in their bed space, at weekly intervals, during their stay.\n\n\n\n\n\n\nEnvironment samples\n\n\n\n\nshower head rosette\nshower drain\nshower chair/trolley\ntap\nbedside table\npatient chair\ninstruments",
+    "title": "2  Workshop Introduction",
+    "section": "2.2 The study",
+    "text": "2.2 The study\nIn a nosocomial setting P. aeruginosa especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (Trautmann, Lepper, and Haller (2005), Breathnach et al. (2012)). Outbreaks transmitted via water have resulted in fatal cases such as at a neonatal critical care unit in Belfast (Wise (2012)).\nYou are part of a team conducting an observational, prospective study into the occurrence and spread of P. aeruginosa on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.\nAll recruited patients were screened for whether they already carried P. aeruginosa in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If P. aeruginosa was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.\n\n\n\n\n\n\nPatient samples\n\n\n\n\nwound swabs\nurine\nstool\n\n\n\nSamples were also taken from the patient’s environment and water from outlets in their bed space, at weekly intervals, during their stay.\n\n\n\n\n\n\nEnvironment samples\n\n\n\n\nshower head rosette\nshower drain\nshower chair/trolley\ntap\nbedside table\npatient chair\ninstruments",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
     "objectID": "intro.html#the-samples",
     "href": "intro.html#the-samples",
-    "title": "1  Introduction",
-    "section": "1.3 The samples",
-    "text": "1.3 The samples\nDuring the course of the study, five patients and a number of individual samples were found to be positive for P. aeruginosa (Figure 1.4).\n\n\n\n\n\n\nFigure 1.4: A schematic view of samples found to be positive for P. aeruginosa in the study. Time in days is shown along the x axis. The y axis shows bed numbers in the burns unit (upper, Figure 1.2) and the critical care unity. Each circular icon indicates a positive isolate of P. aeruginosa. The letter in the icon indicates the MLST clade to which the P. aeruginosa sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with P. aeruginosa.\n\n\n\nYour role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of P. aeruginosa to patients.\n\n\n\n\nBreathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche. 2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two Hospitals: Association with Contaminated Hospital Waste-Water Systems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul, Melissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa Bacteraemia in Burns Patients: Risk Factors and Outcomes.” Burns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and Pathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An Update.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder, Vivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial Infections in Burn Patients.” Acute Crit. Care 39 (2): 214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005. “Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and the Evolving Role of Water Outlets as a Reservoir of the Organism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at Belfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
+    "title": "2  Workshop Introduction",
+    "section": "2.3 The samples",
+    "text": "2.3 The samples\nDuring the course of the study, five patients and a number of individual samples were found to be positive for P. aeruginosa (Figure 2.4).\n\n\n\n\n\n\nFigure 2.4: A schematic view of samples found to be positive for P. aeruginosa in the study. Time in days is shown along the x axis. The y axis shows bed numbers in the burns unit (upper, Figure 2.2) and the critical care unity. Each circular icon indicates a positive isolate of P. aeruginosa. The letter in the icon indicates the MLST clade to which the P. aeruginosa sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with P. aeruginosa.\n\n\n\nYour role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of P. aeruginosa to patients.\n\n\n\n\nBreathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche. 2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two Hospitals: Association with Contaminated Hospital Waste-Water Systems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul, Melissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa Bacteraemia in Burns Patients: Risk Factors and Outcomes.” Burns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and Pathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An Update.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder, Vivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial Infections in Burn Patients.” Acute Crit. Care 39 (2): 214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005. “Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and the Evolving Role of Water Outlets as a Reservoir of the Organism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at Belfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
   {
@@ -92,12 +122,12 @@
   {
     "objectID": "early-section-topic.html",
     "href": "early-section-topic.html",
-    "title": "2  Early Section Topic",
+    "title": "3  Early Section Topic",
     "section": "",
     "text": "This .qmd file represents some topic-related text. We use the {#sec-REFERENCE} option to make it cross-referenceable elsewhere in the text.",
     "crumbs": [
       "Early Section",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Early Section Topic</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Early Section Topic</span>"
     ]
   },
   {
@@ -113,34 +143,34 @@
   {
     "objectID": "webr-example.html",
     "href": "webr-example.html",
-    "title": "3  R Playground",
+    "title": "4  R Playground",
     "section": "",
-    "text": "3.1 Introduction\nThis page provides a WebR cell for you to use as a playground to experiment with some example datasets. You can use this page to explore data management and visualisation in R.",
+    "text": "4.1 Introduction\nThis page provides a WebR cell for you to use as a playground to experiment with some example datasets. You can use this page to explore data management and visualisation in R.",
     "crumbs": [
       "Late Section",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>`R` Playground</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>`R` Playground</span>"
     ]
   },
   {
     "objectID": "webr-example.html#playground",
     "href": "webr-example.html#playground",
-    "title": "3  R Playground",
-    "section": "3.2 Playground",
-    "text": "3.2 Playground\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "title": "4  R Playground",
+    "section": "4.2 Playground",
+    "text": "4.2 Playground\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Late Section",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>`R` Playground</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>`R` Playground</span>"
     ]
   },
   {
     "objectID": "webr-example.html#things-you-can-do",
     "href": "webr-example.html#things-you-can-do",
-    "title": "3  R Playground",
-    "section": "3.3 Things you can do",
-    "text": "3.3 Things you can do\nThis WebR instance has three packages installed:\n\nggplot2\nGGally\ntidyverse\npalmerpenguins\n\nOpen the callout boxes below to see some examples you can try in the code cell above.\n\n\n\n\n\n\nPlay with data from a GitHub repository\n\n\n\n\n\nOne of our BM214 workshops involves a WebR-supported interactive exercise involving simulated reporter curves. We preload this data in the setup cell (see source code), and you can interact with it below with the code:\ndata &lt;- read.csv(\"reporter_curves.csv\")\nglimpse(data)\n\n\n\n\n\n\n\n\n\nInvestigate Palmer’s Penguins\n\n\n\n\n\nThe penguins dataset contains data about three different species of penguins. Take a look at the format of the dataset:\nglimpse(penguins)\nYou’ll see there are eight variables, including species, weight, sex, etc. - some of these variables are categorical (i.e. a category, like species), and others are continuous (i.e. numerical). You can see a visual overview of how the data is related using the plot() function:\nplot(penguins)\nWe can visualise the number of penguins of each species in a bar chart:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar()\nfig\nAnd break this down in a facet plot, by sex:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar() +\n         facet_wrap(~sex)\nfig\nWe can make a box and whisker plot of penguin body mass by species:\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=species)) +\n         geom_boxplot()\nfig\nAnd plot the body mass for each sex side-by-side\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=sex)) +\n         geom_boxplot()\nfig\nWe can investigate correlations, such as between body mass and flipper length:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm)) +\n         geom_point()\nfig\nWe can colour datapoints by species:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point()\nfig\nAnd fit a linear regression to each species separately:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point() +\n         geom_smooth(method=\"lm\")\nfig\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nR comes with a number of example datasets you can practice with, including:\n\nmtcars: fuel consumption and other statistic for 32 automobiles\nTitanic: information on the fate of passengers on the fatal maiden voyage of the ocean liner Titanic\n\nYou can see a full list by running the command\nlibrary(help = \"datasets\")",
+    "title": "4  R Playground",
+    "section": "4.3 Things you can do",
+    "text": "4.3 Things you can do\nThis WebR instance has three packages installed:\n\nggplot2\nGGally\ntidyverse\npalmerpenguins\n\nOpen the callout boxes below to see some examples you can try in the code cell above.\n\n\n\n\n\n\nPlay with data from a GitHub repository\n\n\n\n\n\nOne of our BM214 workshops involves a WebR-supported interactive exercise involving simulated reporter curves. We preload this data in the setup cell (see source code), and you can interact with it below with the code:\ndata &lt;- read.csv(\"reporter_curves.csv\")\nglimpse(data)\n\n\n\n\n\n\n\n\n\nInvestigate Palmer’s Penguins\n\n\n\n\n\nThe penguins dataset contains data about three different species of penguins. Take a look at the format of the dataset:\nglimpse(penguins)\nYou’ll see there are eight variables, including species, weight, sex, etc. - some of these variables are categorical (i.e. a category, like species), and others are continuous (i.e. numerical). You can see a visual overview of how the data is related using the plot() function:\nplot(penguins)\nWe can visualise the number of penguins of each species in a bar chart:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar()\nfig\nAnd break this down in a facet plot, by sex:\nfig &lt;- ggplot(penguins, aes(species, fill=species)) +\n         geom_bar() +\n         facet_wrap(~sex)\nfig\nWe can make a box and whisker plot of penguin body mass by species:\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=species)) +\n         geom_boxplot()\nfig\nAnd plot the body mass for each sex side-by-side\nfig &lt;- ggplot(penguins, aes(x=species, y=body_mass_g, fill=sex)) +\n         geom_boxplot()\nfig\nWe can investigate correlations, such as between body mass and flipper length:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm)) +\n         geom_point()\nfig\nWe can colour datapoints by species:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point()\nfig\nAnd fit a linear regression to each species separately:\nfig &lt;- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm, colour=species)) +\n         geom_point() +\n         geom_smooth(method=\"lm\")\nfig\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nR comes with a number of example datasets you can practice with, including:\n\nmtcars: fuel consumption and other statistic for 32 automobiles\nTitanic: information on the fate of passengers on the fatal maiden voyage of the ocean liner Titanic\n\nYou can see a full list by running the command\nlibrary(help = \"datasets\")",
     "crumbs": [
       "Late Section",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>`R` Playground</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>`R` Playground</span>"
     ]
   },
   {
@@ -148,7 +178,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche.\n2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two\nHospitals: Association with Contaminated Hospital Waste-Water\nSystems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul,\nMelissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa\nBacteraemia in Burns Patients: Risk Factors and Outcomes.”\nBurns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and\nPathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An\nUpdate.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder,\nVivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial\nInfections in Burn Patients.” Acute Crit. Care 39 (2):\n214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005.\n“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and\nthe Evolving Role of Water Outlets as a Reservoir of the\nOrganism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at\nBelfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
+    "text": "Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche.\n2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two\nHospitals: Association with Contaminated Hospital Waste-Water\nSystems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul,\nMelissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa\nBacteraemia in Burns Patients: Risk Factors and Outcomes.”\nBurns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and\nPathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An\nUpdate.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder,\nVivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial\nInfections in Burn Patients.” Acute Crit. Care 39 (2):\n214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005.\n“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and\nthe Evolving Role of Water Outlets as a Reservoir of the\nOrganism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at\nBelfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
       "References"
     ]
