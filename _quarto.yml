@@ -54,6 +54,7 @@ book:
       chapters:
         - bwamem.qmd
         - jbrowse.qmd
+        - snippy.qmd
 
     - part: assembly.qmd
     
@@ -86,11 +87,11 @@ custom-callout:
   callout-question:
     title: "QUESTION"
     icon-symbol: "🙋"
-    color: "deeppink"
+    color: "yellow"
   callout-questions:
     title: "QUESTIONS"
     icon-symbol: "🙋️"
-    color: "deeppink"
+    color: "yellow"
 filters:
 - custom-callout
   
