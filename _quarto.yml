@@ -54,9 +54,9 @@ book:
 
     - part: assembly.qmd
     
-#    - part: classification.qmd
+    - part: classification.qmd
     
-#    - part: phylogenetics.qmd
+    - part: phylogenetics.qmd
 
     - references.qmd
 

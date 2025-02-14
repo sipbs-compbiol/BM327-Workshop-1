@@ -1,0 +1,3 @@
+# Isolate Classification {@sec-classification .unnumbered}
+
+There a multiple approaches to identifyiing and classifying a sequenced bacterial isolate. In this section, you will use `pubMLST` to identify your organism and its clade group.
