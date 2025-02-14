@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>Phylogenetics – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
+<title>9&nbsp; Visualise the Mapping – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -31,8 +51,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./classification.html" rel="prev">
+<link href="./assembly.html" rel="next">
+<link href="./bwamem.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -43,6 +63,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-2ce9fc9ac8b614e7ffef13962cc12eaf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
+<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -71,17 +93,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-callout-question.callout {
-  border-left-color: deeppink;
-}
-div.callout-callout-question.callout-style-default > .callout-header {
-  background-color: rgb(from deeppink r g b / 13%);
-}
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
-  background-image: none;
-}
 div.callout-callout-challenge.callout {
   border-left-color: aquamarine;
 }
@@ -91,6 +102,17 @@ div.callout-callout-challenge.callout-style-default > .callout-header {
 div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
   content: '🧑‍🏫';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: deeppink;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from deeppink r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
   background-image: none;
 }
 div.callout-callout-todo.callout {
@@ -104,15 +126,15 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
   content: '📝';
   background-image: none;
 }
-div.callout-callout-questions.callout {
+div.callout-callout-question.callout {
   border-left-color: deeppink;
 }
-div.callout-callout-questions.callout-style-default > .callout-header {
+div.callout-callout-question.callout-style-default > .callout-header {
   background-color: rgb(from deeppink r g b / 13%);
 }
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
   background-image: none;
 }
 </style>
@@ -129,7 +151,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./phylogenetics.html">Phylogenetics</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mapping.html">Read Mapping</a></li><li class="breadcrumb-item"><a href="./jbrowse.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -249,7 +271,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./jbrowse.html" class="sidebar-item-text sidebar-link">
+  <a href="./jbrowse.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></span></a>
   </div>
 </li>
@@ -278,15 +300,22 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#visualising-the-read-mapping" id="toc-visualising-the-read-mapping" class="nav-link active" data-scroll-target="#visualising-the-read-mapping"><span class="header-section-number">9.1</span> Visualising the Read Mapping</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">9.2</span> Next Steps</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/jbrowse.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./mapping.html">Read Mapping</a></li><li class="breadcrumb-item"><a href="./jbrowse.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Phylogenetics</h1>
+<h1 class="title"><span id="sec-jbrowse" class="quarto-section-identifier"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></span></h1>
 </div>
 
 
@@ -303,10 +332,186 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </header>
 
 
-<p>Phylogenetic methods allow us to reconstruct the evolutionary history of, and relationships between, organisms. Here, we can use these approaches to obtain evidence about the likely order and route of transmission of bacterial isolates in the context of an infection outbreak, such as this study.</p>
-<p>In this section, you will construct a phylogenetic tree from the aligned SNPs (single-nucleotide polymorphisms) of a set of isolates from rooms 6, 9, and 11 - and a reference isolate believed to have existed prior to the study. You will visualise the tree you construct, and use it to propose a potential order of events for infection and transmission in this burns ward.</p>
+<p>The <code>.bam</code> file generated in <a href="bwamem.html" class="quarto-xref"><span>Chapter 8</span></a> contains the information we need to understand how well the reads map to . However, being plain-text files and often quite large, they are not easy to read and process intuitively.</p>
+<p>To get the most benefit out of these files, we usually visualise them using an appropriate software tool. The choice of tool depends on the reason for visualisation. The <a href="https://www.sanger.ac.uk/tool/artemis/"><code>Artemis</code></a> software (<span class="citation" data-cites="Carver2012-ja">Carver et al. (<a href="references.html#ref-Carver2012-ja" role="doc-biblioref">2012</a>)</span>) is useful for interactive manual genome annotation; <a href="https://ics.hutton.ac.uk/tablet/"><code>Tablet</code></a> is an excellent tool for investigating genome assembly and sequence variation (<span class="citation" data-cites="Milne2013-vp">Milne et al. (<a href="references.html#ref-Milne2013-vp" role="doc-biblioref">2013</a>)</span>)<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>; and <a href="https://proksee.ca/"><code>Proksee</code></a> is an online service (<span class="citation" data-cites="Grant2023-zr">Grant et al. (<a href="references.html#ref-Grant2023-zr" role="doc-biblioref">2023</a>)</span>) often used to obtain representative images of genome assembly annotations.</p>
+<ul>
+<li><a href="https://sanger-pathogens.github.io/Artemis/Artemis/"><code>Artemis</code> documentation</a></li>
+<li><a href="https://ics.hutton.ac.uk/tablet/"><code>Tablet</code> documentation</a></li>
+<li><a href="https://proksee.ca/"><code>Proksee</code> service</a></li>
+</ul>
+<p>In this section, you will use <a href="https://jbrowse.org/jb2/"><code>JBrowse</code></a> (<span class="citation" data-cites="Diesh2023-go">Diesh et al. (<a href="references.html#ref-Diesh2023-go" role="doc-biblioref">2023</a>)</span>) to visualise your reference mapping interactively. <code>JBrowse</code> is a lightweight genome browser written in JavaScript that can run as a standalone application, or embedded as a web tool, as it is in Galaxy.</p>
+<section id="visualising-the-read-mapping" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="visualising-the-read-mapping"><span class="header-section-number">9.1</span> Visualising the Read Mapping</h2>
+<p>To use <code>JBrowse</code> to investigate your read mapping you need to tell it both what to display, and how to display it.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There are a number of new concepts being introduced here, and they may not make sense until you have tried to visualise your data.</p>
+<p>If you follow the instructions below, and watch the video, you should find that everything works, and the meaning of unfamiliar terms like <em>track group</em> will become apparent.</p>
+</div>
+</div>
+<ol type="1">
+<li>Navigate to the <code>JBrowse</code> tool in the <code>Tools</code> sidebar</li>
+<li>Select the <code>JBrowse</code> tool</li>
+<li>Under <code>Reference genome to display</code>, select the <code>Use a genome from history</code> option</li>
+<li>Select the <code>GCF_000006765.1_ASM676v1_genomic.fna.gz</code> genome file in <code>Select the reference genome</code></li>
+<li>Click on <code>+ Insert Track Group</code> to add a new <em>track group</em></li>
+<li>In the new track group, enter <code>Mapping</code> into the <code>Track Category</code> field</li>
+<li>Click on <code>+ Insert Annotation Track</code> to add a new track to hold the mapping data</li>
+<li>Make sure that the <code>Track Type</code> of the new annotation track is <code>BAM Pileups</code></li>
+<li>In <code>BAM Track Data</code>, select the <code>BWA-MEM2</code> <code>.bam</code> output file</li>
+<li>Select <code>Yes</code> under <code>Autogenerate SNP Track</code></li>
+<li>Click <code>Run Tool</code></li>
+</ol>
+<div class="callout callout-style-default callout-callout-todo callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TODO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>GENERATE VIDEO OF MAPPING VISUALISATION IN GALAXY</strong></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Configuring <code>JBrowse</code> to visualise <code>BWA-MEM2</code> mapping data
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data"><source src="assets/movies/bwamem-3_full.mp4"></video></div>
+</div>
+</div>
+<p>Click on the <code>eye</code> icon for the new <code>JBrowse</code> output, and select the following tracks to be shown:</p>
+<ol type="1">
+<li>Reference sequence</li>
+<li>Mapping (<code>SNPs/Coverage</code>)</li>
+</ol>
+<p>to obtain a visualisation of reads that map to the reference genome.</p>
+<div class="callout callout-style-default callout-callout-todo callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TODO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>GENERATE IMAGE OF MAPPING VISUALISATION IN GALAXY</strong></p>
+</div>
+</div>
+<div id="fig-bwamem-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="assets/images/bwamem_mapping.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9.1: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).
+</figcaption>
+</figure>
+</div>
+<p>You can click on the header of the SNP track in <code>JBrowse</code> and select <code>Pin to top</code>, so that you can zoom in and see individual SNPs, as in the video below.</p>
+<div class="callout callout-style-default callout-callout-todo callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TODO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>GENERATE VIDEO OF SNP VISUALISATION IN GALAXY</strong></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Visualising SNPs in <code>JBrowse</code>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising SNPs in `JBrowse`"><source src="assets/movies/bwamem-4_full.mp4"></video></div>
+</div>
+</div>
+<div class="callout callout-style-default callout-callout-questions callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+QUESTIONS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Do the <code>ERR31380</code> reads map uniformly to the reference genome?</li>
+<li>Where do the reads appear to differ?</li>
+<li>When <code>ERR31380</code> reads do map to the reference genome, how many SNPs are there?</li>
+</ol>
+</div>
+</div>
+<div class="callout callout-style-default callout-callout-challenge callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+CHALLENGE
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Visualise how your <code>ERR31380</code> reads map to the <code>ERR531413_asm</code> genome assembly.</li>
+<li>How does this mapping differ from that to the <em>P. aeruginosa</em> reference genome.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="next-steps" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">9.2</span> Next Steps</h2>
+<p>We can find SNPs by visual inspection in a tool like <code>JBrowse</code>, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in <span class="quarto-unresolved-ref">?sec-snippy</span>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Carver2012-ja" class="csl-entry" role="listitem">
+Carver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and Jacqueline A McQuillan. 2012. <span>“Artemis: An Integrated Platform for Visualization and Analysis of High-Throughput Sequence-Based Experimental Data.”</span> <em>Bioinformatics</em> 28 (4): 464–69.
+</div>
+<div id="ref-Diesh2023-go" class="csl-entry" role="listitem">
+Diesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez, Elliot A Hershberg, Angel Leung, Emma Guo, et al. 2023. <span>“<span>JBrowse</span> 2: A Modular Genome Browser with Views of Synteny and Structural Variation.”</span> <em>Genome Biol.</em> 24 (1): 74.
+</div>
+<div id="ref-Grant2023-zr" class="csl-entry" role="listitem">
+Grant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman, Chih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023. <span>“Proksee: In-Depth Characterization and Visualization of Bacterial Genomes.”</span> <em>Nucleic Acids Res.</em> 51 (W1): W484–92.
+</div>
+<div id="ref-Milne2013-vp" class="csl-entry" role="listitem">
+Milne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton Pritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013. <span>“Using Tablet for Visual Exploration of Second-Generation Sequencing Data.”</span> <em>Brief. Bioinform.</em> 14 (2): 193–202.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p><code>Tablet</code> is the standalone tool I would prefer to use to visualise this data (<em>LP</em>).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -728,13 +933,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./classification.html" class="pagination-link" aria-label="Isolate Classification">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Isolate Classification</span>
+      <a href="./bwamem.html" class="pagination-link" aria-label="Map Reads to the Genome">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Map Reads to the Genome</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link" aria-label="References">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./assembly.html" class="pagination-link" aria-label="Genome Assembly">
+        <span class="nav-page-text">Genome Assembly</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -746,12 +951,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/phylogenetics.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/jbrowse.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
+<script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
 
 
 

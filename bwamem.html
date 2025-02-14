@@ -51,7 +51,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assembly.html" rel="next">
+<link href="./jbrowse.html" rel="next">
 <link href="./mapping.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -92,6 +92,52 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<style>
+div.callout-callout-question.callout {
+  border-left-color: deeppink;
+}
+div.callout-callout-question.callout-style-default > .callout-header {
+  background-color: rgb(from deeppink r g b / 13%);
+}
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
+  background-image: none;
+}
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
+}
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
+}
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
+  background-image: none;
+}
+div.callout-callout-todo.callout {
+  border-left-color: red;
+}
+div.callout-callout-todo.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: deeppink;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from deeppink r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
+  background-image: none;
+}
+</style>
 
 
 </head>
@@ -223,6 +269,12 @@ div.csl-indent {
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Map Reads to the Genome</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./jbrowse.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -345,7 +397,20 @@ Caution
 </section>
 <section id="bwa-mem2-output" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="bwa-mem2-output"><span class="header-section-number">8.2</span> <code>BWA-MEM2</code> Output</h2>
-<p>Unlike many of the other tools you will use today, <code>BWA-MEM</code> produces <em>binary file</em> output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of <code>BWA-MEM2</code> is <code>.bam</code>, and this can be used as an annotation track in <code>JBrowse</code>.</p>
+<p>Unlike many of the other tools you will use today, <code>BWA-MEM</code> produces <em>binary file</em> output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of <code>BWA-MEM2</code> is <code>.bam</code>, and this can be used as an annotation track in a visualisation tool such as <code>JBrowse</code>, wchich you will meet next, in <a href="jbrowse.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
+<div class="callout callout-style-default callout-callout-todo callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+TODO
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>GENERATE THE VIDEO OF INSPECTING THE MAPPING FILE</strong></p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -362,7 +427,7 @@ Video: Visualising the <code>BWA-MEM2</code> <code>.bam</code> output as text
 </section>
 <section id="visualising-the-mapping-in-jbrowse" class="level2" data-number="8.3">
 <h2 data-number="8.3" class="anchored" data-anchor-id="visualising-the-mapping-in-jbrowse"><span class="header-section-number">8.3</span> Visualising the mapping in <code>JBrowse</code></h2>
-<p>We can use the <code>.bam</code> file in <code>JBrowse</code>, but we need to set up another visualisation like that in <span class="quarto-unresolved-ref">?sec-jbrowse</span>.</p>
+<p>We can use the <code>.bam</code> file in <code>JBrowse</code>, but we need to set up another visualisation like that in <a href="jbrowse.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
 <ol type="1">
 <li>Navigate to the <code>JBrowse</code> tool in the <code>Tools</code> sidebar</li>
 <li>Select the <code>JBrowse</code> tool</li>
@@ -400,7 +465,7 @@ Video: Configuring <code>JBrowse</code> to visualise <code>BWA-MEM2</code> mappi
 <li>Annotation (<code>SARS_AY278741.gff3</code>)</li>
 <li>Mapping (<code>SNPs/Coverage</code>)</li>
 </ol>
-<p>to obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in <a href="#fig-bwamem-1" class="quarto-xref">Figure&nbsp;<span>8.1</span></a>.</p>
+<p>to obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in <a href="jbrowse.html#fig-bwamem-1" class="quarto-xref">Figure&nbsp;<span>9.1</span></a>.</p>
 <div id="fig-bwamem-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -893,8 +958,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./assembly.html" class="pagination-link" aria-label="Genome Assembly">
-        <span class="nav-page-text">Genome Assembly</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./jbrowse.html" class="pagination-link" aria-label="Visualise the Mapping">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
