@@ -332,9 +332,94 @@
     "href": "mapping.html",
     "title": "Read Mapping",
     "section": "",
-    "text": "There are several approaches to comparison of genome sequences. One method is to align (or map) the sequenced reads from one genome to a different, reference genome. Reads will only map to (align with) sequence-similar regions, so it is possible to inspect the alignments and see which parts of the two genomes are similar or dissimilar.",
+    "text": "There are several approaches to comparison of genome sequences. One method is to align (or map) the sequenced reads from one genome to a different, reference genome. Reads will only map to (align with) sequence-similar regions, so it is possible to inspect the alignments and see which parts of the two genomes are similar or dissimilar.\nIn this section, you will use this technique to compar the mapping of your isolate to a reference genome (P. aeruginosa PA01) and to a sequenced isolate from the same study.",
     "crumbs": [
       "Read Mapping"
+    ]
+  },
+  {
+    "objectID": "bwamem.html",
+    "href": "bwamem.html",
+    "title": "8  Map Reads to the Genome",
+    "section": "",
+    "text": "8.1 Using BWA-MEM2\nRead mapping is a common bioinformatics technique that aligns sequencing reads to a reference genome. It is often used as part of RNA-seq, or transcriptomic, analyses, where the number of sequencing reads aligned to a part of the genome indicates the level to which a gene in that region is transcribed. It is also central to technologies such as ChIP-seq (chromatin immunoprecipitation and sequencing), which enables the locations of regulatory promoter binding sites to be found.\nToday, you will use the same approach to compare the ERR531380 isolate that you have sequenced to a reference Pseudomonas aeruginosa PAO1 genome, and then to an assembly of the ERR53413 isolate sequenced as part of this study. To do this you will use the BWA-MEM2 read mapping software (Vasimuddin et al. (2019)) to align the cleaned forward and reverse reads from your isolate to each of the two reference genomes.",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#using-bwa-mem2",
+    "href": "bwamem.html#using-bwa-mem2",
+    "title": "8  Map Reads to the Genome",
+    "section": "",
+    "text": "Navigate to the BWA-MEM2 tool\nSelect the BWA-MEM2 tool\nChoose Use a genome from history and build index under Will you select a reference genome…\nChoose the GCF_000006765.1_ASM676v1_genomic.fna.gz sequence under Use the following dataset as the reference sequence\nChoose Paired under Single of Paired-end reads\nSelect the (R1 paired) and (R2 paired) trimmomatic output reads\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Mapping ERR513380 reads to a reference genome using BWA-MEM2\n\n\n\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nBWA-MEM2 can take a few minutes to run to completion.",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#bwa-mem2-output",
+    "href": "bwamem.html#bwa-mem2-output",
+    "title": "8  Map Reads to the Genome",
+    "section": "8.2 BWA-MEM2 Output",
+    "text": "8.2 BWA-MEM2 Output\nUnlike many of the other tools you will use today, BWA-MEM produces binary file output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of BWA-MEM2 is .bam, and this can be used as an annotation track in JBrowse.\n\n\n\n\n\n\nVideo: Visualising the BWA-MEM2 .bam output as text",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#visualising-the-mapping-in-jbrowse",
+    "href": "bwamem.html#visualising-the-mapping-in-jbrowse",
+    "title": "8  Map Reads to the Genome",
+    "section": "8.3 Visualising the mapping in JBrowse",
+    "text": "8.3 Visualising the mapping in JBrowse\nWe can use the .bam file in JBrowse, but we need to set up another visualisation like that in ?sec-jbrowse.\n\nNavigate to the JBrowse tool in the Tools sidebar\nSelect the JBrowse tool\nUnder Reference genome to display, select the Use a genome from history option\nSelect the SARS_AY27874.fasta genome file in Select the reference genome\nClick on + Insert Track Group to add a new track group\nIn the new track group, enter Annotation into the Track Category field\nClick on + Insert Annotation Track to add a new track to hold the annotation\nMake sure that the Track Type of the new annotation track is GFF/GFF3/BED Features\nIn GFF/GFF3/BED Track Data, select the SARS_AY27874.gff3 annotation file for the SARS 2003 isolate\nClick on + Insert Track Group to add a new track group\nIn the new track group, enter Mapping into the Track Category field\nClick on + Insert Annotation Track to add a new track to hold the mapping data\nMake sure that the Track Type of the new annotation track is BAM Pileups\nIn BAM Track Data, select the BWA-MEM2 .bam output file\nSelect Yes under Autogenerate SNP Track\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Configuring JBrowse to visualise BWA-MEM2 mapping data\n\n\n\n\n\n\nClick on the eye icon for the new JBrowse output, and select the following tracks to be shown:\n\nReference sequence\nAnnotation (SARS_AY278741.gff3)\nMapping (SNPs/Coverage)\n\nto obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in Figure 8.1.\n\n\n\n\n\n\nFigure 8.1: JBrowse visualisation of a BWA-MEM2 mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).\n\n\n\nWhile the spike (S) protein is being visualised, select the (mapped reads in BAM format track) to obtain a visualisation similar to the one in Figure 8.2.\n\n\n\n\n\n\nFigure 8.2: JBrowse visualisation of a BWA-MEM2 mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein.\n\n\n\nYou can click on the header of the SNP track in JBrowse and select Pin to top, so that you can zoom in and see individual SNPs, as in the video below.\n\n\n\n\n\n\nVideo: Visualising SNPs in JBrowse\n\n\n\n\n\n\n\n\n\n\n\n\nQuestions\n\n\n\n\nDo SARS-CoV-2 reads map uniformly to the SARS (2003) genome\nWhere do SARS-CoV-2 and SARS (2003) genomes appear to differ?\nWhen SARS-CoV-2 reads do map to the SARS (2003) genome, how many SNPs are there?\nWhat is the biological significance of the pattern of reads not matching the spike (S) protein?\nWhat implications does this have for vaccine development?",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "bwamem.html#next-steps",
+    "href": "bwamem.html#next-steps",
+    "title": "8  Map Reads to the Genome",
+    "section": "8.4 Next Steps",
+    "text": "8.4 Next Steps\nWe can find SNPs by visual inspection in a tool like JBrowse, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in ?sec-snippy.\n\n\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019. “Efficient Architecture-Aware Acceleration of BWA-MEM for Multicore Systems.” In 2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS). Rio de Janeiro, Brazil: IEEE.",
+    "crumbs": [
+      "Read Mapping",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Map Reads to the Genome</span>"
+    ]
+  },
+  {
+    "objectID": "assembly.html",
+    "href": "assembly.html",
+    "title": "Genome Assembly",
+    "section": "",
+    "text": "In this section, you will use your cleaned input dataset of sequenced reads to assemble your study isolate.",
+    "crumbs": [
+      "Genome Assembly"
+    ]
+  },
+  {
+    "objectID": "classification.html",
+    "href": "classification.html",
+    "title": "Isolate Classification",
+    "section": "",
+    "text": "There a multiple approaches to identifyiing and classifying a sequenced bacterial isolate. In this section, you will use pubMLST to identify your organism and its clade group.",
+    "crumbs": [
+      "Isolate Classification"
+    ]
+  },
+  {
+    "objectID": "phylogenetics.html",
+    "href": "phylogenetics.html",
+    "title": "Phylogenetics",
+    "section": "",
+    "text": "Phylogenetic methods allow us to reconstruct the evolutionary history of, and relationships between, organisms. Here, we can use these approaches to obtain evidence about the likely order and route of transmission of bacterial isolates in the context of an infection outbreak, such as this study.\nIn this section, you will construct a phylogenetic tree from the aligned SNPs (single-nucleotide polymorphisms) of a set of isolates from rooms 6, 9, and 11 - and a reference isolate believed to have existed prior to the study. You will visualise the tree you construct, and use it to propose a potential order of events for infection and transmission in this burns ward.",
+    "crumbs": [
+      "Phylogenetics"
     ]
   },
   {
@@ -342,7 +427,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche.\n2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two\nHospitals: Association with Contaminated Hospital Waste-Water\nSystems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul,\nMelissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa\nBacteraemia in Burns Patients: Risk Factors and Outcomes.”\nBurns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and\nPathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An\nUpdate.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder,\nVivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial\nInfections in Burn Patients.” Acute Crit. Care 39 (2):\n214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005.\n“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and\nthe Evolving Role of Water Outlets as a Reservoir of the\nOrganism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at\nBelfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
+    "text": "Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche.\n2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two\nHospitals: Association with Contaminated Hospital Waste-Water\nSystems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul,\nMelissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa\nBacteraemia in Burns Patients: Risk Factors and Outcomes.”\nBurns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and\nPathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An\nUpdate.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder,\nVivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial\nInfections in Burn Patients.” Acute Crit. Care 39 (2):\n214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005.\n“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and\nthe Evolving Role of Water Outlets as a Reservoir of the\nOrganism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019.\n“Efficient Architecture-Aware Acceleration of BWA-MEM\nfor Multicore Systems.” In 2019 IEEE\nInternational Parallel and Distributed Processing Symposium\n(IPDPS). Rio de Janeiro, Brazil: IEEE.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at\nBelfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
       "References"
     ]
