@@ -38,7 +38,11 @@ When reporting read mapping in a manuscript or dissertation, you should always s
 
 ## `BWA-MEM2` Output
 
-Unlike many of the other tools you will use today, `BWA-MEM` produces _binary file_ output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of `BWA-MEM2` is `.bam`, and this can be used as an annotation track in `JBrowse`.
+Unlike many of the other tools you will use today, `BWA-MEM` produces _binary file_ output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of `BWA-MEM2` is `.bam`, and this can be used as an annotation track in a visualisation tool such as `JBrowse`, wchich you will meet next, in @sec-jbrowse.
+
+::: { .callout-todo }
+**GENERATE THE VIDEO OF INSPECTING THE MAPPING FILE**
+:::
 
 ::: { .callout-note }
 ## Video: Visualising the `BWA-MEM2` `.bam` output as text

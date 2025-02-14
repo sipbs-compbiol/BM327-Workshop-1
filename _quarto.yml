@@ -53,6 +53,7 @@ book:
     - part: mapping.qmd
       chapters:
         - bwamem.qmd
+        - jbrowse.qmd
 
     - part: assembly.qmd
     
@@ -72,6 +73,26 @@ format:
     code-link: true
     
     author-meta: "Leighton Pritchard"
+  
+custom-callout:
+  callout-todo:
+    title: "TODO"
+    icon-symbol: "📝"
+    color: "red"
+  callout-challenge:
+    title: "CHALLENGE"
+    icon-symbol: "🧑‍🏫"
+    color: "aquamarine"
+  callout-question:
+    title: "QUESTION"
+    icon-symbol: "🙋"
+    color: "deeppink"
+  callout-questions:
+    title: "QUESTIONS"
+    icon-symbol: "🙋️"
+    color: "deeppink"
+filters:
+- custom-callout
   
 #  pdf:
 #    documentclass: scrreprt
