@@ -1,0 +1,3 @@
+# Genome Assembly {#sec-assembly .unnumbered}
+
+In this section, you will use your cleaned input dataset of sequenced reads to assemble your study isolate.

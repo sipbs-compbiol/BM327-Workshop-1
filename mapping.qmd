@@ -1,3 +1,5 @@
 # Read Mapping {@sec-mapping .unnumbered}
 
 There are several approaches to comparison of genome sequences. One method is to align (or _map_) the sequenced reads from one genome to a different, reference genome. Reads will only _map to_ (align with) sequence-similar regions, so it is possible to inspect the alignments and see which parts of the two genomes are similar or dissimilar.
+
+In this section, you will use this technique to compar the mapping of your isolate to a reference genome (_P. aeruginosa_ PA01) and to a sequenced isolate from the same study.

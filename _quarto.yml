@@ -52,6 +52,12 @@ book:
         
     - part: mapping.qmd
 
+    - part: assembly.qmd
+    
+#    - part: classification.qmd
+    
+#    - part: phylogenetics.qmd
+
     - references.qmd
 
 # Location of BibTeX format reference file; may not need to be changed
