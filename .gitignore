@@ -19,3 +19,6 @@ _freeze/
 
 # Full-size movie files
 *.mov
+
+# Office temp files
+~*
