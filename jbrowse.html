@@ -51,7 +51,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./assembly.html" rel="next">
+<link href="./snippy.html" rel="next">
 <link href="./bwamem.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -93,6 +93,28 @@ div.csl-indent {
   }
 }</script>
 <style>
+div.callout-callout-question.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-question.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
+  background-image: none;
+}
 div.callout-callout-challenge.callout {
   border-left-color: aquamarine;
 }
@@ -104,17 +126,6 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   content: '🧑‍🏫';
   background-image: none;
 }
-div.callout-callout-questions.callout {
-  border-left-color: deeppink;
-}
-div.callout-callout-questions.callout-style-default > .callout-header {
-  background-color: rgb(from deeppink r g b / 13%);
-}
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
-  background-image: none;
-}
 div.callout-callout-todo.callout {
   border-left-color: red;
 }
@@ -124,17 +135,6 @@ div.callout-callout-todo.callout-style-default > .callout-header {
 div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
   content: '📝';
-  background-image: none;
-}
-div.callout-callout-question.callout {
-  border-left-color: deeppink;
-}
-div.callout-callout-question.callout-style-default > .callout-header {
-  background-color: rgb(from deeppink r g b / 13%);
-}
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
   background-image: none;
 }
 </style>
@@ -275,6 +275,12 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./snippy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -370,19 +376,6 @@ Warning
 <li>Select <code>Yes</code> under <code>Autogenerate SNP Track</code></li>
 <li>Click <code>Run Tool</code></li>
 </ol>
-<div class="callout callout-style-default callout-callout-todo callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>GENERATE VIDEO OF MAPPING VISUALISATION IN GALAXY</strong></p>
-</div>
-</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -393,35 +386,27 @@ Video: Configuring <code>JBrowse</code> to visualise <code>BWA-MEM2</code> mappi
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data"><source src="assets/movies/bwamem-3_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data"><source src="assets/movies/galaxy-12-jbrowse.mp4"></video></div>
 </div>
 </div>
-<p>Click on the <code>eye</code> icon for the new <code>JBrowse</code> output, and select the following tracks to be shown:</p>
+<p>Click on the <code>eye</code> icon for the new <code>JBrowse</code> output. The magnifying glass icons can be used to zoom in and out of the visualisation. The check boxes to the left of the window can be used to control whether the reference genome and/or the annotation tracks are visible.</p>
 <ol type="1">
+<li>Select the following tracks to be shown:</li>
+</ol>
+<ul>
 <li>Reference sequence</li>
 <li>Mapping (<code>SNPs/Coverage</code>)</li>
+</ul>
+<ol start="2" type="1">
+<li>Zoom in to the genome to obtain a visualisation of reads that map to the reference genome, similar to that in <a href="#fig-bwamem-1" class="quarto-xref">Figure&nbsp;<span>9.1</span></a>.</li>
 </ol>
-<p>to obtain a visualisation of reads that map to the reference genome.</p>
-<div class="callout callout-style-default callout-callout-todo callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>GENERATE IMAGE OF MAPPING VISUALISATION IN GALAXY</strong></p>
-</div>
-</div>
 <div id="fig-bwamem-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="assets/images/bwamem_mapping.png" class="img-fluid figure-img" style="width:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9.1: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).
+Figure&nbsp;9.1: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> mapping of<code>ERR531380</code> reads reads against a <em>P. aeruginosa</em> reference genome. The JBrowse tool shows the reference sequence (but zoomed out too far for individual bases to be visible), and a mapping track. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).
 </figcaption>
 </figure>
 </div>
@@ -449,7 +434,7 @@ Video: Visualising SNPs in <code>JBrowse</code>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising SNPs in `JBrowse`"><source src="assets/movies/bwamem-4_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising SNPs in `JBrowse`"><source src="assets/movies/galaxy-13-jbrowse.mp4"></video></div>
 </div>
 </div>
 <div class="callout callout-style-default callout-callout-questions callout-titled">
@@ -464,8 +449,8 @@ QUESTIONS
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>Do the <code>ERR31380</code> reads map uniformly to the reference genome?</li>
-<li>Where do the reads appear to differ?</li>
-<li>When <code>ERR31380</code> reads do map to the reference genome, how many SNPs are there?</li>
+<li>When <code>ERR31380</code> reads map to a SNP at the reference genome, what proportion of the mapping reads contains the SNP?</li>
+<li>Based on the number of SNPs you can see in a 1,000bp region of the reference genome, estimate the total number on SNPs.</li>
 </ol>
 </div>
 </div>
@@ -480,15 +465,21 @@ CHALLENGE
 </div>
 <div class="callout-body-container callout-body">
 <ol type="1">
-<li>Visualise how your <code>ERR31380</code> reads map to the <code>ERR531413_asm</code> genome assembly.</li>
-<li>How does this mapping differ from that to the <em>P. aeruginosa</em> reference genome.</li>
+<li>Visualise how your <code>ERR31380</code> reads map to the <code>ERR531413_asm.fasta</code> genome assembly</li>
+</ol>
+<ul>
+<li><strong>NOTE:</strong> you will need to map the reads to this genome using <code>BWA-MEM</code>, first</li>
+<li><strong>NOTE:</strong> you will need to set the BAM chunk size to <code>5500000</code></li>
+</ul>
+<ol start="2" type="1">
+<li>Does this mapping differ from that to the <em>P. aeruginosa</em> reference genome? Are there the same approximate number of SNPs? Do the same proportion of mapping reads carry the SNP?</li>
 </ol>
 </div>
 </div>
 </section>
 <section id="next-steps" class="level2" data-number="9.2">
 <h2 data-number="9.2" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">9.2</span> Next Steps</h2>
-<p>We can find SNPs by visual inspection in a tool like <code>JBrowse</code>, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in <span class="quarto-unresolved-ref">?sec-snippy</span>.</p>
+<p>We can find SNPs by visual inspection in a tool like <code>JBrowse</code>, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in <a href="snippy.html" class="quarto-xref"><span>Chapter 10</span></a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -938,8 +929,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./assembly.html" class="pagination-link" aria-label="Genome Assembly">
-        <span class="nav-page-text">Genome Assembly</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./snippy.html" class="pagination-link" aria-label="Find Sequence Variants">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

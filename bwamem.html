@@ -93,11 +93,22 @@ div.csl-indent {
   }
 }</script>
 <style>
+div.callout-callout-todo.callout {
+  border-left-color: red;
+}
+div.callout-callout-todo.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
 div.callout-callout-question.callout {
-  border-left-color: deeppink;
+  border-left-color: yellow;
 }
 div.callout-callout-question.callout-style-default > .callout-header {
-  background-color: rgb(from deeppink r g b / 13%);
+  background-color: rgb(from yellow r g b / 13%);
 }
 div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
@@ -115,22 +126,11 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   content: '🧑‍🏫';
   background-image: none;
 }
-div.callout-callout-todo.callout {
-  border-left-color: red;
-}
-div.callout-callout-todo.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
-  background-image: none;
-}
 div.callout-callout-questions.callout {
-  border-left-color: deeppink;
+  border-left-color: yellow;
 }
 div.callout-callout-questions.callout-style-default > .callout-header {
-  background-color: rgb(from deeppink r g b / 13%);
+  background-color: rgb(from yellow r g b / 13%);
 }
 div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
@@ -275,6 +275,12 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Visualise the Mapping</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./snippy.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Find Sequence Variants</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -307,8 +313,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
   <ul>
   <li><a href="#using-bwa-mem2" id="toc-using-bwa-mem2" class="nav-link active" data-scroll-target="#using-bwa-mem2"><span class="header-section-number">8.1</span> Using <code>BWA-MEM2</code></a></li>
   <li><a href="#bwa-mem2-output" id="toc-bwa-mem2-output" class="nav-link" data-scroll-target="#bwa-mem2-output"><span class="header-section-number">8.2</span> <code>BWA-MEM2</code> Output</a></li>
-  <li><a href="#visualising-the-mapping-in-jbrowse" id="toc-visualising-the-mapping-in-jbrowse" class="nav-link" data-scroll-target="#visualising-the-mapping-in-jbrowse"><span class="header-section-number">8.3</span> Visualising the mapping in <code>JBrowse</code></a></li>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">8.4</span> Next Steps</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">8.3</span> Next Steps</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/bwamem.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -398,19 +403,6 @@ Caution
 <section id="bwa-mem2-output" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="bwa-mem2-output"><span class="header-section-number">8.2</span> <code>BWA-MEM2</code> Output</h2>
 <p>Unlike many of the other tools you will use today, <code>BWA-MEM</code> produces <em>binary file</em> output, which is not human-readable. However, Galaxy can read it and generate a human-friendly translation. The output format of <code>BWA-MEM2</code> is <code>.bam</code>, and this can be used as an annotation track in a visualisation tool such as <code>JBrowse</code>, wchich you will meet next, in <a href="jbrowse.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
-<div class="callout callout-style-default callout-callout-todo callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-TODO
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>GENERATE THE VIDEO OF INSPECTING THE MAPPING FILE</strong></p>
-</div>
-</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -421,109 +413,13 @@ Video: Visualising the <code>BWA-MEM2</code> <code>.bam</code> output as text
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising the `BWA-MEM2` `.bam` output as text"><source src="assets/movies/bwamem-2_full.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising the `BWA-MEM2` `.bam` output as text"><source src="assets/movies/galaxy-11-bwamem.mp4"></video></div>
 </div>
 </div>
 </section>
-<section id="visualising-the-mapping-in-jbrowse" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="visualising-the-mapping-in-jbrowse"><span class="header-section-number">8.3</span> Visualising the mapping in <code>JBrowse</code></h2>
-<p>We can use the <code>.bam</code> file in <code>JBrowse</code>, but we need to set up another visualisation like that in <a href="jbrowse.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
-<ol type="1">
-<li>Navigate to the <code>JBrowse</code> tool in the <code>Tools</code> sidebar</li>
-<li>Select the <code>JBrowse</code> tool</li>
-<li>Under <code>Reference genome to display</code>, select the <code>Use a genome from history</code> option</li>
-<li>Select the <code>SARS_AY27874.fasta</code> genome file in <code>Select the reference genome</code></li>
-<li>Click on <code>+ Insert Track Group</code> to add a new <em>track group</em></li>
-<li>In the new track group, enter <code>Annotation</code> into the <code>Track Category</code> field</li>
-<li>Click on <code>+ Insert Annotation Track</code> to add a new track to hold the annotation</li>
-<li>Make sure that the <code>Track Type</code> of the new annotation track is <code>GFF/GFF3/BED Features</code></li>
-<li>In <code>GFF/GFF3/BED Track Data</code>, select the <code>SARS_AY27874.gff3</code> annotation file for the SARS 2003 isolate</li>
-<li>Click on <code>+ Insert Track Group</code> to add a new <em>track group</em></li>
-<li>In the new track group, enter <code>Mapping</code> into the <code>Track Category</code> field</li>
-<li>Click on <code>+ Insert Annotation Track</code> to add a new track to hold the mapping data</li>
-<li>Make sure that the <code>Track Type</code> of the new annotation track is <code>BAM Pileups</code></li>
-<li>In <code>BAM Track Data</code>, select the <code>BWA-MEM2</code> <code>.bam</code> output file</li>
-<li>Select <code>Yes</code> under <code>Autogenerate SNP Track</code></li>
-<li>Click <code>Run Tool</code></li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Video: Configuring <code>JBrowse</code> to visualise <code>BWA-MEM2</code> mapping data
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data"><source src="assets/movies/bwamem-3_full.mp4"></video></div>
-</div>
-</div>
-<p>Click on the <code>eye</code> icon for the new <code>JBrowse</code> output, and select the following tracks to be shown:</p>
-<ol type="1">
-<li>Reference sequence</li>
-<li>Annotation (<code>SARS_AY278741.gff3</code>)</li>
-<li>Mapping (<code>SNPs/Coverage</code>)</li>
-</ol>
-<p>to obtain a visualisation of reads that map to the spike (S) protein of SARS 2003, like that shown in <a href="jbrowse.html#fig-bwamem-1" class="quarto-xref">Figure&nbsp;<span>9.1</span></a>.</p>
-<div id="fig-bwamem-1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/bwamem_mapping.png" class="img-fluid figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bwamem-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8.1: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).
-</figcaption>
-</figure>
-</div>
-<p>While the spike (S) protein is being visualised, select the <code>(mapped reads in BAM format track)</code> to obtain a visualisation similar to the one in <a href="#fig-bwamem-2" class="quarto-xref">Figure&nbsp;<span>8.2</span></a>.</p>
-<div id="fig-bwamem-2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-bwamem-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/bwamem_snps.png" class="img-fluid figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bwamem-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8.2: <code>JBrowse</code> visualisation of a <code>BWA-MEM2</code> mapping of SARS-CoV-2 reads against a SARS 2003 reference genome in the regions of the spike (S) protein.
-</figcaption>
-</figure>
-</div>
-<p>You can click on the header of the SNP track in <code>JBrowse</code> and select <code>Pin to top</code>, so that you can zoom in and see individual SNPs, as in the video below.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Video: Visualising SNPs in <code>JBrowse</code>
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising SNPs in `JBrowse`"><source src="assets/movies/bwamem-4_full.mp4"></video></div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Questions
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>Do SARS-CoV-2 reads map uniformly to the SARS (2003) genome</li>
-<li>Where do SARS-CoV-2 and SARS (2003) genomes appear to differ?</li>
-<li>When SARS-CoV-2 reads do map to the SARS (2003) genome, how many SNPs are there?</li>
-<li>What is the biological significance of the pattern of reads not matching the spike (S) protein?</li>
-<li>What implications does this have for vaccine development?</li>
-</ol>
-</div>
-</div>
-</section>
-<section id="next-steps" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">8.4</span> Next Steps</h2>
-<p>We can find SNPs by visual inspection in a tool like <code>JBrowse</code>, but there can be very many of them - as you can see. To ensure reproducibility and accuracy, and avoid errors we need to use dedicated software and pipelines when analysing mapping data. You will have a chance to do this in <span class="quarto-unresolved-ref">?sec-snippy</span>.</p>
+<section id="next-steps" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">8.3</span> Next Steps</h2>
+<p>We can find SNPs by visual inspection in a tool like <code>JBrowse</code>, and you will try this in <a href="jbrowse.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -979,8 +875,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </footer>
 <script>videojs(video_shortcode_videojs_video1);</script>
 <script>videojs(video_shortcode_videojs_video2);</script>
-<script>videojs(video_shortcode_videojs_video3);</script>
-<script>videojs(video_shortcode_videojs_video4);</script>
 
 
 
