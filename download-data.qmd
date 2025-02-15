@@ -14,11 +14,11 @@
 
 ## _Pseudomonas aeruginosa_ reference strain for SNP comparison
 
-- [_P. aeruginosa_ PA01 genome sequence (`.fasta`)](assets/workshop_downloads/GCF_000006765.1_ASM676v1_genomic.fna.gz)(`GCF_000006765.1_ASM676v1_genomic.fna.gz`)
+- [_P. aeruginosa_ PA01 genome sequence (`.fasta`)](assets/workshop_downloads/GCF_000006765.1_ASM676v1_genomic.fna)(`GCF_000006765.1_ASM676v1_genomic.fna`)
 
 ## Room 8 isolate assembly for SNP comparison
 
-- [`SPAdes` assembly of isolate 1031 (`ERR531413`), from the room 8 shower hose](assets/workshop_downloads/ERR531413_asm.fasta.gz)(`ERR531413_asm.fasta.gz`)
+- [`SPAdes` assembly of isolate 1031 (`ERR531413`), from the room 8 shower hose](assets/workshop_downloads/ERR531413_asm.fasta.gz)(`ERR531413_asm.fasta`)
 
 ::: { .callout-note }
 ## Your Working Directory
