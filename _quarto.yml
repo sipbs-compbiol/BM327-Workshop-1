@@ -35,9 +35,10 @@ book:
   # Define chapters and sections here
   # [E] CHAPTERS AND SECTIONS
   chapters:
-    - index.qmd
-    - intro.qmd
-    - galaxy-registration.qmd
+    - part: index.qmd
+      chapters:
+        - intro.qmd
+        - galaxy-registration.qmd
   
     - part: galaxy.qmd
       chapters: 
