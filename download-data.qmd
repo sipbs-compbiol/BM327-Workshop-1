@@ -18,7 +18,7 @@
 
 ## Room 8 isolate assembly for SNP comparison
 
-- [`SPAdes` assembly of isolate 1031 (`ERR531413`), from the room 8 shower hose](assets/workshop_downloads/ERR531413_asm.fasta.gz)(`ERR531413_asm.fasta`)
+- [`SPAdes` assembly of isolate 1031 (`ERR531413`), from the room 8 shower hose](assets/workshop_downloads/ERR531413_asm.fasta)(`ERR531413_asm.fasta`)
 
 ::: { .callout-note }
 ## Your Working Directory
