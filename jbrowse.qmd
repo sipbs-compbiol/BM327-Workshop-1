@@ -34,28 +34,20 @@ If you follow the instructions below, and watch the video, you should find that 
 10. Select `Yes` under `Autogenerate SNP Track`
 11. Click `Run Tool`
 
-::: { .callout-todo }
-**GENERATE VIDEO OF MAPPING VISUALISATION IN GALAXY**
-:::
-
 ::: { .callout-note }
 ## Video: Configuring `JBrowse` to visualise `BWA-MEM2` mapping data
 
-{{< video assets/movies/bwamem-3_full.mp4 title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data" >}}
+{{< video assets/movies/galaxy-12-jbrowse.mp4 title="Configuring `JBrowse` to visualise `BWA-MEM2` mapping data" >}}
 :::
 
-Click on the `eye` icon for the new `JBrowse` output, and select the following tracks to be shown:
+Click on the `eye` icon for the new `JBrowse` output. The magnifying glass icons can be used to zoom in and out of the visualisation. The check boxes to the left of the window can be used to control whether the reference genome and/or the annotation tracks are visible.
 
-1. Reference sequence
-2. Mapping (`SNPs/Coverage`)
+1. Select the following tracks to be shown:
+  - Reference sequence
+  - Mapping (`SNPs/Coverage`)
+2. Zoom in to the genome to obtain a visualisation of reads that map to the reference genome, similar to that in @fig-bwamem-1.
 
-to obtain a visualisation of reads that map to the reference genome.
-
-::: { .callout-todo }
-**GENERATE IMAGE OF MAPPING VISUALISATION IN GALAXY**
-:::
-
-![`JBrowse` visualisation of a `BWA-MEM2` mapping of SARS-CoV-2 reads against a SARS 2003 reference genome. The annotation track shows predicted genes, including the spike (S) protein. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).](assets/images/bwamem_mapping.png){#fig-bwamem-1 width="80%"}
+![`JBrowse` visualisation of a `BWA-MEM2` mapping of`ERR531380` reads reads against a _P. aeruginosa_ reference genome. The JBrowse tool shows the reference sequence (but zoomed out too far for individual bases to be visible), and a mapping track. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).](assets/images/bwamem_mapping.png){#fig-bwamem-1 width="80%"}
 
 You can click on the header of the SNP track in `JBrowse` and select `Pin to top`, so that you can zoom in and see individual SNPs, as in the video below.
 
@@ -66,18 +58,20 @@ You can click on the header of the SNP track in `JBrowse` and select `Pin to top
 ::: { .callout-note }
 ## Video: Visualising SNPs in `JBrowse`
 
-{{< video assets/movies/bwamem-4_full.mp4 title="Visualising SNPs in `JBrowse`" >}}
+{{< video assets/movies/galaxy-13-jbrowse.mp4 title="Visualising SNPs in `JBrowse`" >}}
 :::
 
 ::: { .callout-questions }
 1. Do the `ERR31380` reads map uniformly to the reference genome?
-2. Where do the reads appear to differ?
-3. When `ERR31380` reads do map to the reference genome, how many SNPs are there?
+2. When `ERR31380` reads map to a SNP at the reference genome, what proportion of the mapping reads contains the SNP?
+3. Based on the number of SNPs you can see in a 1,000bp region of the reference genome, estimate the total number on SNPs.
 :::
 
 ::: { .callout-challenge }
-1. Visualise how your `ERR31380` reads map to the `ERR531413_asm` genome assembly.
-2. How does this mapping differ from that to the _P. aeruginosa_ reference genome.
+1. Visualise how your `ERR31380` reads map to the `ERR531413_asm.fasta` genome assembly
+  - **NOTE:** you will need to map the reads to this genome using `BWA-MEM`, first
+  - **NOTE:** you will need to set the BAM chunk size to `5500000`
+2. Does this mapping differ from that to the _P. aeruginosa_ reference genome? Are there the same approximate number of SNPs? Do the same proportion of mapping reads carry the SNP?
 :::
 
 ## Next Steps

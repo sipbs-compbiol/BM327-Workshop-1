@@ -20,20 +20,16 @@ When reporting how you identified variants for your manuscript or dissertation, 
 1. Navigate to the `snippy` tool
 2. Select `snippy`
 3. Select `Use a genome from history and build index` from `Will you select a reference genome…`
-4. Choose the `ERR531413_asm.fasta.gz` file in `Use the following dataset as the reference sequence`
+4. Choose the `ERR531413_asm.fasta` file in `Use the following dataset as the reference sequence`
 5. Select `Paired` under `Single or Paired-end reads`
 6. Choose the cleaned post-`trimmomatic` `(R1 paired)` data for the forward reads
 7. Choose the cleaned post-`trimmomatic` `(R2 paired)` data for the reverse reads
 8. Click `Run Tool`
 
-::: { .callout-todo }
-**GENERATE VIDEO OF USING SNIPPY IN GALAXY**
-:::
-
 ::: { .callout-note }
 ## Video: Identifying sequence variants using `snippy`
 
-{{< video assets/movies/snippy-1_full.mp4 title="Identifying sequence variants using `snippy`" >}}
+{{< video assets/movies/galaxy-14-snippy.mp4 title="Identifying sequence variants using `snippy`" >}}
 :::
 
 ::: { .callout-caution }
@@ -44,12 +40,8 @@ When reporting how you identified variants for your manuscript or dissertation, 
 
 `snippy` provides output in `.vcf` format, which is designed to be processed by bioinformatics software and is not the most understandable form for humans. To see the `snippy` output in a more human-readable form, click on the `eye` icon for the `snps table` output (@fig-snippy-output).
 
-::: { .callout-todo }
-**GENERATE IMAGE OF SNIPPY TABLE OUTPUT**
-:::
 
-
-![The `snippy` `snps table` output. Key columns in the output are: column 2, indicating the position of the variant; column 3, indicating the variant type; column 7, indicating the feature affected by the variant; and column 11, summarising the effect of the variation](assets/images/snippy_table.png){#fig-snippy-output width="80%"}
+![The `snippy` `snps table` output. Key columns in the output are: column 2, indicating the position of the variant; column 4, indicating the reference base(s); column 5, indicating the dominant variant in the mapped data; and column 6, showing the counts of each variant in the mapped data.](assets/images/snippy_table.png){#fig-snippy-output width="80%"}
 
 ::: { .callout-todo }
 **GENERATE VIDEO OF INSPECTING SNIPPY OUTPUT IN GALAXY**

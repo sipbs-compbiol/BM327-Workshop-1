@@ -72,7 +72,7 @@ This file is smaller than the files you uploaded above, and should take less tim
 
 You can also drag and drop data files directly into the central workspace window of Galaxy. This will trigger the file upload dialogue box.
 
-1. Drag the `ERR531413_asm.fasta.gz` file into the Galaxy workspace.
+1. Drag the `ERR531413_asm.fasta` file into the Galaxy workspace.
 2. A `Drag files here to upload` overlay will appear.
 3. Drop the file in the overlay. A file upload dialogue box will appear.
 4. Click on the `Start` button.
@@ -102,7 +102,7 @@ To view the contents of an uploaded data file in the `History`.
 
 You can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the `eye` icon in the file descriptor.
 
-1. Click on the `eye` icon of one of the file descriptors (e.g. `ERR531413_asm.fasta.gz`). A representation of the data in the file will be shown in the workspace window.
+1. Click on the `eye` icon of one of the file descriptors (e.g. `ERR531413_asm.fasta`). A representation of the data in the file will be shown in the workspace window.
 
 ### Using additional tools
 
