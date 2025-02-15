@@ -25,7 +25,7 @@ If you follow the instructions below, and watch the video, you should find that 
 1. Navigate to the `JBrowse` tool in the `Tools` sidebar
 2. Select the `JBrowse` tool
 3. Under `Reference genome to display`, select the `Use a genome from history` option
-4. Select the `GCF_000006765.1_ASM676v1_genomic.fna.gz` genome file in `Select the reference genome`
+4. Select the `GCF_000006765.1_ASM676v1_genomic.fna` genome file in `Select the reference genome`
 5. Click on `+ Insert Track Group` to add a new _track group_
 6. In the new track group, enter `Mapping` into the `Track Category` field
 7. Click on `+ Insert Annotation Track` to add a new track to hold the mapping data
@@ -65,13 +65,6 @@ You can click on the header of the SNP track in `JBrowse` and select `Pin to top
 1. Do the `ERR31380` reads map uniformly to the reference genome?
 2. When `ERR31380` reads map to a SNP at the reference genome, what proportion of the mapping reads contains the SNP?
 3. Based on the number of SNPs you can see in a 1,000bp region of the reference genome, estimate the total number on SNPs.
-:::
-
-::: { .callout-challenge }
-1. Visualise how your `ERR31380` reads map to the `ERR531413_asm.fasta` genome assembly
-  - **NOTE:** you will need to map the reads to this genome using `BWA-MEM`, first
-  - **NOTE:** you will need to set the BAM chunk size to `5500000`
-2. Does this mapping differ from that to the _P. aeruginosa_ reference genome? Are there the same approximate number of SNPs? Do the same proportion of mapping reads carry the SNP?
 :::
 
 ## Next Steps

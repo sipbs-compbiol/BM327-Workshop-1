@@ -21,7 +21,7 @@ When reporting read mapping in a manuscript or dissertation, you should always s
 1. Navigate to the `BWA-MEM2` tool
 2. Select the `BWA-MEM2` tool
 3. Choose `Use a genome from history and build index` under `Will you select a reference genome…`
-4. Choose the `GCF_000006765.1_ASM676v1_genomic.fna.gz` sequence under `Use the following dataset as the reference sequence`
+4. Choose the `GCF_000006765.1_ASM676v1_genomic.fna` sequence under `Use the following dataset as the reference sequence`
 5. Choose `Paired` under `Single of Paired-end reads`
 6. Select the `(R1 paired)` and `(R2 paired)` `trimmomatic` output reads
 7. Click `Run Tool`

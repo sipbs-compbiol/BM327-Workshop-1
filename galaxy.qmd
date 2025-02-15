@@ -1,4 +1,4 @@
-# Galaxy {#sec-galaxy .unnumbered}
+# Galaxy {#sec-galaxy}
 
 The chapters in this section of the workshop will guide you through registering an account with [Galaxy EU](https://usegalaxy.eu), and uploading workshop data to the Galaxy instance.
 

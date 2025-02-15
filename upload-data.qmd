@@ -93,7 +93,7 @@ You can inspect the data you have uploaded to Galaxy visually in two ways.
 
 To view the contents of an uploaded data file in the `History`.
 
-1. Click on the file name (e.g. `GCF_000006765.1_ASM676v1_genomic.fna.gz`). The file descriptor will enlarge.
+1. Click on the file name (e.g. `GCF_000006765.1_ASM676v1_genomic.fna`). The file descriptor will enlarge.
   - The descriptor shows the file's datatype (e.g. "format `fasta`")
   - At the bottom of the descriptor, a preview of the dataset is shown, with the first few lines of the data.
 2. Click on the file name again to close the file descriptor.
