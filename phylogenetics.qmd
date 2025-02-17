@@ -5,3 +5,4 @@ Here, we can use these approaches to obtain evidence about the likely order and 
 
 In this section, you will construct a phylogenetic tree from the aligned SNPs (single-nucleotide polymorphisms) of a set of isolates from rooms 6, 9, and 11 - and a reference isolate believed to have existed prior to the study.
 You will visualise the tree you construct, and use it to propose a potential order of events for infection and transmission in this burns ward.
+

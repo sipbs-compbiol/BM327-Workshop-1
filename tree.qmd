@@ -1,0 +1,65 @@
+# Building a Phylogenetic Tree { #sec-tree }
+
+::: { .callout-important }
+## Your colleague has been very helpful again
+
+The next step in the investigation would normally be to identify and align variant regions between each of the genomes in this study. That could take some time - more than we have today - and, luckily, your helpful colleague has already done this for you. They used the `ParSNP` tool to compare the draft genomes of 33 isolates from several rooms on the burns ward to a common reference (`ERR531413_asm`) and obtain all the identifiable sequence differences.
+
+**Using `Galaxy`, genome assembly would take too long for this workshop.**
+
+They have provided the results for you to download in two files, below - the VCF file of variants (`.vcf` file), and a sequence alignment containing all of these variants (`.fasta` file):
+
+- [`study.snps.vcf`](assets/workshop_downloads/study.snps.vcf)
+- [`study.snps.fasta`](assets/workshop_downloads/study.snps.fasta)
+
+1. Download the alignment and VCF file to the local folder containing your workshop files
+2. Upload both files to `Galaxy`
+
+::: { .callout-note }
+## Video: Upload the sequence variant files
+
+{{< video assets/movies/galaxy-20-upload.mp4 title="Uploading the sequence variant files to Galaxy." >}}
+:::
+
+:::
+
+## Inferring a phylogenetic tree with `RaxML`
+
+1. Navigate to `RaxML` in the `Tools` sidebar
+2. Set the source file to be the `.fasta` file you just uploaded
+3. Check that the `Model type` is `Nucleotide` with the `GTRGAMMA` model
+4. Click on `Run Tool`
+
+::: { .callout-note }
+## Video: Inferring a tree using `RaxML`
+
+{{< video assets/movies/galaxy-21-raxml.mp4 title="Inferring a tree from the variant sequence data using `RaxML`" >}}
+:::
+
+## Inspect the tree file and visualise the tree in Galaxy
+
+1. Click on the `Eye` icon nect to the `Best-scoring ML Tree` output
+
+::: { .callout-todo }
+**ASK SOME QUESTIONS HERE**
+:::
+
+2. Navigate to `ETE tree viewer` in the `Tools` sidebar
+3. In the `Newick Tree to visualise` field, select the `Best-scoring ML Tree` output
+4. Set `Resolve Taxonomic IDs` to `No` 
+5. Click on `Run Tool`
+6. When the visualisation finishes, click on the `Eye` icon next to the output
+
+::: { .callout-note }
+## Video: Visualising the tree in `Galaxy`
+
+{{< video assets/movies/galaxy-22-ete.mp4 title="Visualising the tree in `Galaxy` with `ETE tree viewer`" >}}
+:::
+
+::: { .callout-todo }
+**ASK SOME QUESTIONS HERE**
+:::
+
+## Next Steps
+
+It would be useful to be able to annotate the tree with a visual representation of the sample type and room for each isolate. You will do this in @sec-itol using iTOL.

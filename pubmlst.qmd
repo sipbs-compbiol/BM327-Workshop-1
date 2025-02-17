@@ -1,0 +1,22 @@
+# PubMLST Classification { #sec-pubmlst }
+
+1. **In a new tab of your browser** open the [PubMLST](https://pubmlst.org/) website
+2. Click on `Organisms`
+3. Navigate to _Pseudomonas aeruginosa_ and click on `Typing`
+4. Under `Query a sequence` click on `Single sequence`
+5. Select the `ERR531380` assembly as input
+6. Click on `SUBMIT`
+
+::: { .callout-warning }
+The `pubMLST` classification may take a couple of minutes.
+:::
+
+::: { .callout-note }
+## Video: Use `PubMLST` to classify your isolate
+
+{{< video assets/movies/pubmlst-1-classify.mp4 title="Using the `PubMLST` server to classify your isolate." >}}
+:::
+
+## Next Steps
+
+Now you have assembled and classified your isolate, you can use some additional data prepared by your helpful colleague to reconstruct a phylogenetic tree for isolates obtained from the burns ward.

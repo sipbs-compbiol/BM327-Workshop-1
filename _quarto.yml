@@ -62,6 +62,8 @@ book:
         - shovill.qmd
 
     - part: classification.qmd
+      chapters:
+        - pubmlst.qmd
     
     - part: phylogenetics.qmd
 
