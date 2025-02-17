@@ -58,7 +58,9 @@ book:
         - snippy.qmd
 
     - part: assembly.qmd
-    
+      chapters:
+        - shovill.qmd
+
     - part: classification.qmd
     
     - part: phylogenetics.qmd
