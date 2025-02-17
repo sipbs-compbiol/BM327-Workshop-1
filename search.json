@@ -487,6 +487,50 @@
     ]
   },
   {
+    "objectID": "shovill.html",
+    "href": "shovill.html",
+    "title": "11  Assemble the ERR531380 Genome",
+    "section": "",
+    "text": "11.1 Visualising the Assembly\nIn this section you will investigate the quality of this genome assembly visually using the Bandage tool. You will also use the CheckM tool to obtain a measure of genome completeness.\nThe Bandage software package (Wick et al. (2015)) can take assembly output from tools such as SPAdes and Shovill, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and potential sequencing of co-cultures of related strains, rather than an axenic isolate.\nTo use Bandage to visualise your genome assembly",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assemble the `ERR531380` Genome</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html#visualising-the-assembly",
+    "href": "shovill.html#visualising-the-assembly",
+    "title": "11  Assemble the ERR531380 Genome",
+    "section": "",
+    "text": "Bandage documentation\nBandage website\n\n\n\nNavigate to the Bandage Image tool using the Tools sidebar in Galaxy\nSelect the Bandage Image tool\nMake sure that you have selected the .gfa file as the Graphical Fragment Assembly input\nClick Run Tool\n\n\n\n\n\n\n\nVideo: Visualising the ERR531380 assembly using Bandage Image\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nInspect the assembly graph by clicking on the eye icon for the Assembly Graph Image output.",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assemble the `ERR531380` Genome</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html#estimating-assembly-quality",
+    "href": "shovill.html#estimating-assembly-quality",
+    "title": "11  Assemble the ERR531380 Genome",
+    "section": "11.2 Estimating Assembly Quality",
+    "text": "11.2 Estimating Assembly Quality\nThe CheckM software (Parks et al. (2015)) is a suite of tools used to assess the quality of a bacterial assembly. It estimates the completeness of the genome by looking for the presence of single copy marker genes (SCMGs) for a stated phylogenetic lineage. The more of these marker genes that can be determined to be present in the genome, the more complete the assembly is assumed to be.\n\nCheckM docmentation\nCheckM website\n\nThe use CheckM to estimate the quality of your assembly:\n\nNavigate to the CheckM taxonomy_wf tool using the Tools sidebar in Galaxy\nSelect the Taxonomic rank of Species and set the Taxon of interest to be Pseudomonas aeruginosa (the identity of the isolate is known, or at least strongly suspected, on the basis of polyphasic tests)\nUnder Data structure for bins select In individual datasets and choose the Contigs output from your Shovill assembly\nClick on Run Tool\n\n\n\n\n\n\n\nVideo: Estimating assembly quality using CheckM",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assemble the `ERR531380` Genome</span>"
+    ]
+  },
+  {
+    "objectID": "shovill.html#next-steps",
+    "href": "shovill.html#next-steps",
+    "title": "11  Assemble the ERR531380 Genome",
+    "section": "11.3 Next steps",
+    "text": "11.3 Next steps\nWith the draft genome assembly you have for ERR531380 you can use pubMLST to classify your isolate in more detail, using the pubMLST server.\n\n\n\n\nParks, Donovan H, Michael Imelfort, Connor T Skennerton, Philip Hugenholtz, and Gene W Tyson. 2015. “CheckM: Assessing the Quality of Microbial Genomes Recovered from Isolates, Single Cells, and Metagenomes.” Genome Res. 25 (7): 1043–55.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and Anton Korobeynikov. 2020. “Using SPAdes DE Novo Assembler.” Curr. Protoc. Bioinformatics 70 (1): e102.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015. “Bandage: Interactive Visualization of de Novo Genome Assemblies.” Bioinformatics 31 (20): 3350–52.",
+    "crumbs": [
+      "Genome Assembly",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assemble the `ERR531380` Genome</span>"
+    ]
+  },
+  {
     "objectID": "classification.html",
     "href": "classification.html",
     "title": "Isolate Classification",
@@ -511,7 +555,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche.\n2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two\nHospitals: Association with Contaminated Hospital Waste-Water\nSystems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nCarver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and\nJacqueline A McQuillan. 2012. “Artemis: An Integrated Platform for\nVisualization and Analysis of High-Throughput Sequence-Based\nExperimental Data.” Bioinformatics 28 (4): 464–69.\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nDiesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez,\nElliot A Hershberg, Angel Leung, Emma Guo, et al. 2023.\n“JBrowse 2: A Modular Genome Browser with Views of\nSynteny and Structural Variation.” Genome Biol. 24 (1):\n74.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nGrant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman,\nChih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023.\n“Proksee: In-Depth Characterization and Visualization of Bacterial\nGenomes.” Nucleic Acids Res. 51 (W1): W484–92.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul,\nMelissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa\nBacteraemia in Burns Patients: Risk Factors and Outcomes.”\nBurns 36 (8): 1228–33.\n\n\nMilne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton\nPritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013.\n“Using Tablet for Visual Exploration of Second-Generation\nSequencing Data.” Brief. Bioinform. 14 (2): 193–202.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and\nPathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An\nUpdate.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder,\nVivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial\nInfections in Burn Patients.” Acute Crit. Care 39 (2):\n214–25.\n\n\nStover, C K, X Q Pham, A L Erwin, S D Mizoguchi, P Warrener, M J Hickey,\nF S Brinkman, et al. 2000. “Complete Genome Sequence of\nPseudomonas Aeruginosa PAO1, an Opportunistic\nPathogen.” Nature 406 (6799): 959–64.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005.\n“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and\nthe Evolving Role of Water Outlets as a Reservoir of the\nOrganism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019.\n“Efficient Architecture-Aware Acceleration of BWA-MEM\nfor Multicore Systems.” In 2019 IEEE\nInternational Parallel and Distributed Processing Symposium\n(IPDPS). Rio de Janeiro, Brazil: IEEE.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at\nBelfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
+    "text": "Breathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche.\n2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two\nHospitals: Association with Contaminated Hospital Waste-Water\nSystems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nCarver, Tim, Simon R Harris, Matthew Berriman, Julian Parkhill, and\nJacqueline A McQuillan. 2012. “Artemis: An Integrated Platform for\nVisualization and Analysis of High-Throughput Sequence-Based\nExperimental Data.” Bioinformatics 28 (4): 464–69.\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton\nPritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis\nwith Applications in Molecular Plant Pathology.” PeerJ 1\n(September): e167.\n\n\nDiesh, Colin, Garrett J Stevens, Peter Xie, Teresa De Jesus Martinez,\nElliot A Hershberg, Angel Leung, Emma Guo, et al. 2023.\n“JBrowse 2: A Modular Genome Browser with Views of\nSynteny and Structural Variation.” Genome Biol. 24 (1):\n74.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible,\nReproducible, and Collaborative Data Analyses: 2024 Update.”\nNucleic Acids Res. 52 (W1): W83–94.\n\n\nGrant, Jason R, Eric Enns, Eric Marinier, Arnab Mandal, Emily K Herman,\nChih-Yu Chen, Morag Graham, Gary Van Domselaar, and Paul Stothard. 2023.\n“Proksee: In-Depth Characterization and Visualization of Bacterial\nGenomes.” Nucleic Acids Res. 51 (W1): W484–92.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul,\nMelissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa\nBacteraemia in Burns Patients: Risk Factors and Outcomes.”\nBurns 36 (8): 1228–33.\n\n\nMilne, Iain, Gordon Stephen, Micha Bayer, Peter J A Cock, Leighton\nPritchard, Linda Cardle, Paul D Shaw, and David Marshall. 2013.\n“Using Tablet for Visual Exploration of Second-Generation\nSequencing Data.” Brief. Bioinform. 14 (2): 193–202.\n\n\nParks, Donovan H, Michael Imelfort, Connor T Skennerton, Philip\nHugenholtz, and Gene W Tyson. 2015. “CheckM:\nAssessing the Quality of Microbial Genomes Recovered from Isolates,\nSingle Cells, and Metagenomes.” Genome Res. 25 (7):\n1043–55.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and\nAnton Korobeynikov. 2020. “Using SPAdes\nDE Novo Assembler.” Curr. Protoc.\nBioinformatics 70 (1): e102.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and\nPathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An\nUpdate.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder,\nVivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial\nInfections in Burn Patients.” Acute Crit. Care 39 (2):\n214–25.\n\n\nStover, C K, X Q Pham, A L Erwin, S D Mizoguchi, P Warrener, M J Hickey,\nF S Brinkman, et al. 2000. “Complete Genome Sequence of\nPseudomonas Aeruginosa PAO1, an Opportunistic\nPathogen.” Nature 406 (6799): 959–64.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005.\n“Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and\nthe Evolving Role of Water Outlets as a Reservoir of the\nOrganism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nVasimuddin, Md, Sanchit Misra, Heng Li, and Srinivas Aluru. 2019.\n“Efficient Architecture-Aware Acceleration of BWA-MEM\nfor Multicore Systems.” In 2019 IEEE\nInternational Parallel and Distributed Processing Symposium\n(IPDPS). Rio de Janeiro, Brazil: IEEE.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015.\n“Bandage: Interactive Visualization of de Novo Genome\nAssemblies.” Bioinformatics 31 (20): 3350–52.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at\nBelfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
       "References"
     ]
