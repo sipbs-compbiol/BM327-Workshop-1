@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>6&nbsp; Inspect Read Quality – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
+<title>12&nbsp; PubMLST Classification – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./trimmomatic.html" rel="next">
-<link href="./workshop.html" rel="prev">
+<link href="./phylogenetics.html" rel="next">
+<link href="./classification.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -73,17 +73,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
-}
-div.callout-callout-challenge.callout-style-default > .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
-}
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
-  background-image: none;
-}
 div.callout-callout-question.callout {
   border-left-color: yellow;
 }
@@ -117,12 +106,23 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
   content: '🙋️';
   background-image: none;
 }
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
+}
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
+}
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
+  background-image: none;
+}
 </style>
 
 
 </head>
 
-<body class="nav-sidebar floating slimcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -131,7 +131,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li><li class="breadcrumb-item"><a href="./fastqc.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./classification.html">Isolate Classification</a></li><li class="breadcrumb-item"><a href="./pubmlst.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">PubMLST Classification</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -227,7 +227,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fastqc.html" class="sidebar-item-text sidebar-link active">
+  <a href="./fastqc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></span></a>
   </div>
 </li>
@@ -296,7 +296,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pubmlst.html" class="sidebar-item-text sidebar-link">
+  <a href="./pubmlst.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">PubMLST Classification</span></span></a>
   </div>
 </li>
@@ -322,23 +322,16 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#using-falco" id="toc-using-falco" class="nav-link active" data-scroll-target="#using-falco"><span class="header-section-number">6.1</span> Using <code>Falco</code></a></li>
-  <li><a href="#falco-output" id="toc-falco-output" class="nav-link" data-scroll-target="#falco-output"><span class="header-section-number">6.2</span> <code>Falco</code> output</a>
-  <ul class="collapse">
-  <li><a href="#falco-summary" id="toc-falco-summary" class="nav-link" data-scroll-target="#falco-summary"><span class="header-section-number">6.2.1</span> <code>Falco</code> Summary</a></li>
-  <li><a href="#per-base-sequence-quality" id="toc-per-base-sequence-quality" class="nav-link" data-scroll-target="#per-base-sequence-quality"><span class="header-section-number">6.2.2</span> Per base sequence quality</a></li>
-  <li><a href="#per-sequence-quality-scores" id="toc-per-sequence-quality-scores" class="nav-link" data-scroll-target="#per-sequence-quality-scores"><span class="header-section-number">6.2.3</span> Per sequence quality scores</a></li>
-  </ul></li>
-  <li><a href="#what-do-we-do-about-sequencing-data-problems" id="toc-what-do-we-do-about-sequencing-data-problems" class="nav-link" data-scroll-target="#what-do-we-do-about-sequencing-data-problems"><span class="header-section-number">6.3</span> What do we do about sequencing data problems?</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link active" data-scroll-target="#next-steps"><span class="header-section-number">12.1</span> Next Steps</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/fastqc.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/pubmlst.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./workshop.html">Workshop</a></li><li class="breadcrumb-item"><a href="./fastqc.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./classification.html">Isolate Classification</a></li><li class="breadcrumb-item"><a href="./pubmlst.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">PubMLST Classification</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-fastqc" class="quarto-section-identifier"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></span></h1>
+<h1 class="title"><span id="sec-pubmlst" class="quarto-section-identifier"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">PubMLST Classification</span></span></h1>
 </div>
 
 
@@ -355,137 +348,25 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </header>
 
 
-<p>Using good quality input data improves our chance of getting a good quality output assembly.</p>
-<p>We call the set of sequenced reads we obtain from the sequencer the <em>raw reads</em>. Modern sequencing technologies usually give us high quality data, but it is still possible for some low-quality read sequences to be produced among the raw reads. So that these do not detrimentally affect the quality of our assembly, we first <em>assess the quality</em> of our read data, and then <em>remove low-quality reads and low-quality parts of read sequences</em>. The resulting dataset is often called the <em>cleaned reads</em> or <em>processed reads</em>.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Good practice
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It is good practice always to inspect the quality of your sequencing read data, and remove low-quality reads, before assembly.</p>
-<p>When describing your sequencing experiment in a manuscript or dissertation, you should always state:</p>
 <ol type="1">
-<li>The sequencing technology used, and the sequencing platform</li>
-<li>The number of raw reads obtained, and a measure of average read length</li>
+<li><strong>In a new tab of your browser</strong> open the <a href="https://pubmlst.org/">PubMLST</a> website</li>
+<li>Click on <code>Organisms</code></li>
+<li>Navigate to <em>Pseudomonas aeruginosa</em> and click on <code>Typing</code></li>
+<li>Under <code>Query a sequence</code> click on <code>Single sequence</code></li>
+<li>Select the <code>ERR531380</code> assembly as input</li>
+<li>Click on <code>SUBMIT</code></li>
 </ol>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The main kind of low-quality data we might have in our raw reads are:</p>
-<ol type="1">
-<li>Contamination: reads that derive from an organism we didn’t intend to sequence; these are usually identified by querying against a database and removed</li>
-<li>Low-confidence basecalls: reads containing base calls that the basecaller is unsure about; these are usually found towards the end of the read sequence and are removed by <em>trimming</em> the read</li>
-<li>Low-confidence reads: reads where a large proportion of the base calls are low quality; these are usually removed</li>
-<li>Adapter sequence: these are sections of sequence left over from library preparation and do not derive from the sequenced organism; they are removed by trimming</li>
-</ol>
-</div>
-</div>
-<p>This part of the workshop will cover the use of <code>Falco</code> to inspect the quality of your sequence reads.</p>
-<section id="using-falco" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="using-falco"><span class="header-section-number">6.1</span> Using <code>Falco</code></h2>
-<ol type="1">
-<li>Navigate to the <code>Falco</code> tool using the <code>Tools</code> sidebar in <code>Galaxy</code></li>
-</ol>
-<ul>
-<li>You can use the <code>search tools</code> field to find <code>Falco</code></li>
-<li>Alternatively, you will find it under <code>GENOMIC FILE MANIPULATION</code>/<code>FASTA/FASTQ</code> in the sidebar</li>
-</ul>
-<ol start="2" type="1">
-<li>Select the <code>Falco</code> tool</li>
-<li>Run the <code>Falco</code> tool on each of your <code>FASTQ</code> input files</li>
-</ol>
-<ul>
-<li>These are the <code>ERR531380_1.fastq</code> and <code>ERR531380_2.fastq</code> files.</li>
-<li>With the <code>Falco</code> tool options in the main <code>Workspace</code> window, select the file you want to run <code>Falco</code> on.</li>
-<li>Click on the <code>Run Tool</code> button.</li>
-</ul>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Make sure you run <code>FastQC</code> on both the forward and reverse read sets.</strong></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Video: Using <code>FastQC</code> to assess the quality of your sequencing reads
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Assessing sequencing read quality with `Falco`"><source src="assets/movies/galaxy-06-falco.mp4"></video></div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><code>Falco</code> takes a few moments to run (but is faster than <code>FastQC</code>, which it has superseded.</p>
-<p>When the run is complete, click on the <code>eye</code> icon of the <code>Webpage</code> result to inspect the <code>FastQC</code> output.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can press and hold <strong>CTRL</strong> (on a PC) or <strong>CMD ⌘</strong> (macOS) when clicking the <code>eye</code> icon to open the result in its own window.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="falco-output" class="level2 page-columns page-full" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="falco-output"><span class="header-section-number">6.2</span> <code>Falco</code> output</h2>
-<p>The output of <code>Falco</code> tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:</p>
-<ul>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">Official <code>FastQC</code> documentation</a></li>
-<li><a href="https://falco.readthedocs.io/en/latest/">Official <code>Falco</code> documentation</a></li>
-<li><a href="https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx">Michigan State University (MSU) <code>FastQC</code> tutorial</a></li>
-</ul>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<code>Falco</code> and <code>FastQC</code>
+Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>Falco</code> and <code>FastQC</code> are two different tools, but they perform the same task and give equivalent, if visually distinct, output. <code>Falco</code> output is interpreted in exactly the same way as <code>FastQC</code> output, so it can be helpful to refer to <code>FastQC</code> tutorials and documentation.</p>
+<p>The <code>pubMLST</code> classification may take a couple of minutes.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -494,117 +375,16 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Video: Inspecting <code>Falco</code> output in Galaxy
+Video: Use <code>PubMLST</code> to classify your isolate
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting `Falco` output in Galaxy"><source src="assets/movies/galaxy-07-falco.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Using the `PubMLST` server to classify your isolate."><source src="assets/movies/pubmlst-1-classify.mp4"></video></div>
 </div>
 </div>
-<section id="falco-summary" class="level3 page-columns page-full" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="falco-summary"><span class="header-section-number">6.2.1</span> <code>Falco</code> Summary</h3>
-<p>The <code>Falco</code> summary (<a href="#fig-falco-summary" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a <em>pass</em> (green, with a tick), a <em>warning</em> (amber, with exclamation mark), or a <em>fail</em> (red, with a cross) mark.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div id="fig-falco-summary" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Summary section of a Falco report showing passes for most sections, warnings for some sections, and failure for two sections.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-falco-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/falco_summary.png" class="img-fluid figure-img" style="width:80.0%" alt="Summary section of a Falco report showing passes for most sections, warnings for some sections, and failure for two sections.">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-falco-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.1: Example <code>Falco</code> summary showing passes for most sections of the report including “Basic Statistics,” warnings for some sections including “Sequence Length Distribution,” and a fail for “Per tile sequence quality”
-</figcaption>
-</figure>
-</div>
-</div></div></section>
-<section id="per-base-sequence-quality" class="level3" data-number="6.2.2">
-<h3 data-number="6.2.2" class="anchored" data-anchor-id="per-base-sequence-quality"><span class="header-section-number">6.2.2</span> Per base sequence quality</h3>
-<p>The <em>per base sequence quality</em> plot (<a href="#fig-falco-perbase" class="quarto-xref">Figure&nbsp;<span>6.2</span></a>) presents the ranges of individual base quality calls across the lengths of the input sequence reads. Higher scores (near 40) indicate better quality.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For good-quality sequence read data, we are looking for a graph where the mean quality (see <a href="#fig-falco-perbase" class="quarto-xref">Figure&nbsp;<span>6.2</span></a>) is always showing green, with a score greater than 29.</p>
-</div>
-</div>
-<div id="fig-falco-perbase" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-falco-perbase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/falco_perbase.png" class="img-fluid figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-falco-perbase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.2: Per base sequence quality score plot from <code>Falco</code> indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range.
-</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>It is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.</p>
-<p>It is also typical for the quality score to be slightly lower in the first 5-7 bases of the read.</p>
-<p>If mean quality per base falls below 29, there may be a problem with the sequencing data.</p>
-</div>
-</div>
-</section>
-<section id="per-sequence-quality-scores" class="level3" data-number="6.2.3">
-<h3 data-number="6.2.3" class="anchored" data-anchor-id="per-sequence-quality-scores"><span class="header-section-number">6.2.3</span> Per sequence quality scores</h3>
-<p>The <em>per sequence quality</em> score (<span class="quarto-unresolved-ref">?fig-falco-perseq</span>) summarises the distribution of high quality (higher scores, near 40) and lower quality reads in the complete dataset.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.</p>
-</div>
-</div>
-<div id="fig-fastqc-perseq" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-fastqc-perseq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/falco_perseq.png" class="img-fluid figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-perseq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.3: Per sequence quality score plot from <code>Falco</code> indicating overall high quality sequencing reads.
-</figcaption>
-</figure>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="what-do-we-do-about-sequencing-data-problems" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="what-do-we-do-about-sequencing-data-problems"><span class="header-section-number">6.3</span> What do we do about sequencing data problems?</h2>
-<p><code>Falco</code> does a great job of alerting us to problems with our sequencing data sets. But, by itself, it cannot remedy these problems.</p>
-<p>Modern sequencing methods produce so much read data that the usual approach to excluding poor data is either to exclude (or <em>drop</em>) the read itself, or to <em>trim</em> (throw away) the section of the read sequence that is low quality.</p>
-<p>A popular tool for removing poor quality read data is <code>trimmomatic</code> and you will meet this in <a href="trimmomatic.html" class="quarto-xref"><span>Chapter 7</span></a>.</p>
+<section id="next-steps" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">12.1</span> Next Steps</h2>
+<p>Now you have assembled and classified your isolate, you can use some additional data prepared by your helpful colleague to reconstruct a phylogenetic tree for isolates obtained from the burns ward.</p>
 
 
 </section>
@@ -1029,13 +809,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./workshop.html" class="pagination-link" aria-label="Workshop">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workshop</span>
+      <a href="./classification.html" class="pagination-link" aria-label="Isolate Classification">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Isolate Classification</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./trimmomatic.html" class="pagination-link" aria-label="Clean Raw Read Data">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Clean Raw Read Data</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./phylogenetics.html" class="pagination-link" aria-label="Phylogenetics">
+        <span class="nav-page-text">Phylogenetics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1047,14 +827,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/fastqc.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/pubmlst.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
 <script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
 
 
 
