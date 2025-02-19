@@ -3,9 +3,11 @@
 ::: { .callout-tip }
 ## Use this link to join the training session
 
-- [https://usegalaxy.eu/join-training/](https://usegalaxy.eu/join-training/)
+- [https://usegalaxy.eu/join-training/bm327-workshop-1/](https://usegalaxy.eu/join-training/bm327-workshop-1/)
 
-We have deployed a dedicated cloud service just for this workshop to use. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
+Galaxy EU have deployed a dedicated cloud service just for this workshop to use[^1]. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
+
+[^1]: This is a single server with 120 cores and 205 GB of RAM.
 :::
 
 ## The Galaxy workspace layout
