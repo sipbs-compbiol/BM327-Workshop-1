@@ -93,15 +93,15 @@ div.csl-indent {
   }
 }</script>
 <style>
-div.callout-callout-questions.callout {
+div.callout-callout-question.callout {
   border-left-color: yellow;
 }
-div.callout-callout-questions.callout-style-default > .callout-header {
+div.callout-callout-question.callout-style-default > .callout-header {
   background-color: rgb(from yellow r g b / 13%);
 }
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
   background-image: none;
 }
 div.callout-callout-challenge.callout {
@@ -115,15 +115,15 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   content: '🧑‍🏫';
   background-image: none;
 }
-div.callout-callout-question.callout {
+div.callout-callout-questions.callout {
   border-left-color: yellow;
 }
-div.callout-callout-question.callout-style-default > .callout-header {
+div.callout-callout-questions.callout-style-default > .callout-header {
   background-color: rgb(from yellow r g b / 13%);
 }
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
   background-image: none;
 }
 div.callout-callout-todo.callout {
@@ -382,7 +382,7 @@ Someone else has assembled the genome for you
 <div class="callout-body-container callout-body">
 <p>The next step in the investigation would normally be to assemble the <code>ERR531380</code> genome and assess the assembly quality.</p>
 <p><strong>Using <code>Galaxy</code>, genome assembly would take too long for this workshop.</strong></p>
-<p>But someone has kindly assembled your genome for you using the <code>SPAdes</code> assembler (<span class="citation" data-cites="Prjibelski2020-iq">Prjibelski et al. (<a href="references.html#ref-Prjibelski2020-iq" role="doc-biblioref">2020</a>)</span>) and provided the result for you to download in two files, below - the assembled genome (<code>.fasta</code> file), and the assembly graph (<code>.gfa</code> file):</p>
+<p>In this scenario, a colleague has kindly assembled your genome for you using the <code>SPAdes</code> assembler (<span class="citation" data-cites="Prjibelski2020-iq">Prjibelski et al. (<a href="references.html#ref-Prjibelski2020-iq" role="doc-biblioref">2020</a>)</span>) and provided the result for you to download in two files, below - the assembled genome (<code>.fasta</code> file), and the assembly graph (<code>.gfa</code> file):</p>
 <ul>
 <li><a href="assets/workshop_downloads/ERR531380.contigs.fasta"><code>ERR531380.contigs.fasta</code></a></li>
 <li><a href="assets/workshop_downloads/ERR531380.gfa"><code>ERR531380.gfa</code></a></li>
@@ -409,7 +409,7 @@ Video: Upload the <code>ERR531380</code> assembly files
 <p>In this section you will investigate the quality of this genome assembly visually using the <code>Bandage</code> tool. You will also use the <code>CheckM</code> tool to obtain a measure of genome completeness.</p>
 <section id="visualising-the-assembly" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="visualising-the-assembly"><span class="header-section-number">11.1</span> Visualising the Assembly</h2>
-<p>The <code>Bandage</code> software package (<span class="citation" data-cites="Wick2015-vm">Wick et al. (<a href="references.html#ref-Wick2015-vm" role="doc-biblioref">2015</a>)</span>) can take assembly output from tools such as <code>SPAdes</code> and <code>Shovill</code>, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and potential sequencing of co-cultures of related strains, rather than an axenic isolate.</p>
+<p>The <code>Bandage</code> software package (<span class="citation" data-cites="Wick2015-vm">Wick et al. (<a href="references.html#ref-Wick2015-vm" role="doc-biblioref">2015</a>)</span>) can take assembly output from tools such as <code>SPAdes</code> and <code>Shovill</code>, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and when there is potential unintentional sequencing of co-cultures of related strains, rather than an axenic isolate.</p>
 <ul>
 <li><a href="https://github.com/rrwick/Bandage/wiki"><code>Bandage</code> documentation</a></li>
 <li><a href="https://rrwick.github.io/Bandage/"><code>Bandage</code> website</a></li>
@@ -478,7 +478,7 @@ Video: Estimating assembly quality using <code>CheckM</code>
 </section>
 <section id="next-steps" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">11.3</span> Next steps</h2>
-<p>With the draft genome assembly you have for <code>ERR531380</code> you can use pubMLST to classify your isolate in more detail, using the <code>pubMLST</code> server.</p>
+<p>With the draft genome assembly you have for <code>ERR531380</code> you can use pubMLST to classify your isolate in more detail, using <code>Galaxy</code> and the <code>pubMLST</code> server.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">

@@ -492,7 +492,7 @@
     "href": "assembly.html",
     "title": "Genome Assembly",
     "section": "",
-    "text": "In this section, you will use your cleaned input dataset of sequenced reads to assemble your study isolate ERR531380 into a complete genome, and assess the quality of your assembly.",
+    "text": "In this section, you will assess the quality of a genome assembly for your study isolate ERR531380.",
     "crumbs": [
       "Genome Assembly"
     ]
@@ -502,7 +502,7 @@
     "href": "shovill.html",
     "title": "11  Assemble the ERR531380 Genome",
     "section": "",
-    "text": "11.1 Visualising the Assembly\nIn this section you will investigate the quality of this genome assembly visually using the Bandage tool. You will also use the CheckM tool to obtain a measure of genome completeness.\nThe Bandage software package (Wick et al. (2015)) can take assembly output from tools such as SPAdes and Shovill, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and potential sequencing of co-cultures of related strains, rather than an axenic isolate.\nTo use Bandage to visualise your genome assembly",
+    "text": "11.1 Visualising the Assembly\nIn this section you will investigate the quality of this genome assembly visually using the Bandage tool. You will also use the CheckM tool to obtain a measure of genome completeness.\nThe Bandage software package (Wick et al. (2015)) can take assembly output from tools such as SPAdes and Shovill, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and when there is potential unintentional sequencing of co-cultures of related strains, rather than an axenic isolate.\nTo use Bandage to visualise your genome assembly",
     "crumbs": [
       "Genome Assembly",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assemble the `ERR531380` Genome</span>"
@@ -535,7 +535,7 @@
     "href": "shovill.html#next-steps",
     "title": "11  Assemble the ERR531380 Genome",
     "section": "11.3 Next steps",
-    "text": "11.3 Next steps\nWith the draft genome assembly you have for ERR531380 you can use pubMLST to classify your isolate in more detail, using the pubMLST server.\n\n\n\n\nParks, Donovan H, Michael Imelfort, Connor T Skennerton, Philip Hugenholtz, and Gene W Tyson. 2015. “CheckM: Assessing the Quality of Microbial Genomes Recovered from Isolates, Single Cells, and Metagenomes.” Genome Res. 25 (7): 1043–55.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and Anton Korobeynikov. 2020. “Using SPAdes DE Novo Assembler.” Curr. Protoc. Bioinformatics 70 (1): e102.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015. “Bandage: Interactive Visualization of de Novo Genome Assemblies.” Bioinformatics 31 (20): 3350–52.",
+    "text": "11.3 Next steps\nWith the draft genome assembly you have for ERR531380 you can use pubMLST to classify your isolate in more detail, using Galaxy and the pubMLST server.\n\n\n\n\nParks, Donovan H, Michael Imelfort, Connor T Skennerton, Philip Hugenholtz, and Gene W Tyson. 2015. “CheckM: Assessing the Quality of Microbial Genomes Recovered from Isolates, Single Cells, and Metagenomes.” Genome Res. 25 (7): 1043–55.\n\n\nPrjibelski, Andrey, Dmitry Antipov, Dmitry Meleshko, Alla Lapidus, and Anton Korobeynikov. 2020. “Using SPAdes DE Novo Assembler.” Curr. Protoc. Bioinformatics 70 (1): e102.\n\n\nWick, Ryan R, Mark B Schultz, Justin Zobel, and Kathryn E Holt. 2015. “Bandage: Interactive Visualization of de Novo Genome Assemblies.” Bioinformatics 31 (20): 3350–52.",
     "crumbs": [
       "Genome Assembly",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Assemble the `ERR531380` Genome</span>"
@@ -546,7 +546,7 @@
     "href": "classification.html",
     "title": "Isolate Classification",
     "section": "",
-    "text": "There a multiple approaches to identifyiing and classifying a sequenced bacterial isolate. In this section, you will use pubMLST to identify your organism and its clade group.",
+    "text": "There are multiple approaches to identifyiing and classifying a sequenced bacterial isolate. In this section, you will use pubMLST to identify your organism and its clade group.",
     "crumbs": [
       "Isolate Classification"
     ]
@@ -556,7 +556,40 @@
     "href": "pubmlst.html",
     "title": "12  PubMLST Classification",
     "section": "",
-    "text": "12.1 Next Steps\nNow you have assembled and classified your isolate, you can use some additional data prepared by your helpful colleague to reconstruct a phylogenetic tree for isolates obtained from the burns ward.",
+    "text": "12.1 Classification with Galaxy",
+    "crumbs": [
+      "Isolate Classification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>PubMLST Classification</span>"
+    ]
+  },
+  {
+    "objectID": "pubmlst.html#classification-with-galaxy",
+    "href": "pubmlst.html#classification-with-galaxy",
+    "title": "12  PubMLST Classification",
+    "section": "",
+    "text": "Navigate to the MLST tool in the Tools sidebar\nSelect the ERR531380 assembly as the input_files\nClick on Run Tool\nClick on the Eye icon to see the result\n\n\n\n\n\n\n\nVideo: Use Galaxy’s MLST tool to classify your isolate",
+    "crumbs": [
+      "Isolate Classification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>PubMLST Classification</span>"
+    ]
+  },
+  {
+    "objectID": "pubmlst.html#classification-at-pubmlst",
+    "href": "pubmlst.html#classification-at-pubmlst",
+    "title": "12  PubMLST Classification",
+    "section": "12.2 Classification at pubMLST",
+    "text": "12.2 Classification at pubMLST\n\nIn a new tab of your browser open the PubMLST website\nClick on Organisms\nNavigate to Pseudomonas aeruginosa and click on Typing\nUnder Query a sequence click on Single sequence\nSelect the ERR531380 assembly as input\nClick on SUBMIT\n\n\n\n\n\n\n\nWarning\n\n\n\nThe pubMLST classification may take a couple of minutes.\n\n\n\n\n\n\n\n\nVideo: Use PubMLST to classify your isolate",
+    "crumbs": [
+      "Isolate Classification",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>PubMLST Classification</span>"
+    ]
+  },
+  {
+    "objectID": "pubmlst.html#next-steps",
+    "href": "pubmlst.html#next-steps",
+    "title": "12  PubMLST Classification",
+    "section": "12.3 Next Steps",
+    "text": "12.3 Next Steps\nNow you have assembled and classified your isolate, you can use some additional data prepared by your helpful colleague to reconstruct a phylogenetic tree for isolates obtained from the burns ward.",
     "crumbs": [
       "Isolate Classification",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>PubMLST Classification</span>"

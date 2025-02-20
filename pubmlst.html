@@ -73,6 +73,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
+}
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
+}
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
+  background-image: none;
+}
 div.callout-callout-question.callout {
   border-left-color: yellow;
 }
@@ -104,17 +115,6 @@ div.callout-callout-todo.callout-style-default > .callout-header {
 div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
   content: '📝';
-  background-image: none;
-}
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
-}
-div.callout-callout-challenge.callout-style-default > .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
-}
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
   background-image: none;
 }
 </style>
@@ -322,7 +322,9 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#next-steps" id="toc-next-steps" class="nav-link active" data-scroll-target="#next-steps"><span class="header-section-number">12.1</span> Next Steps</a></li>
+  <li><a href="#classification-with-galaxy" id="toc-classification-with-galaxy" class="nav-link active" data-scroll-target="#classification-with-galaxy"><span class="header-section-number">12.1</span> Classification with <code>Galaxy</code></a></li>
+  <li><a href="#classification-at-pubmlst" id="toc-classification-at-pubmlst" class="nav-link" data-scroll-target="#classification-at-pubmlst"><span class="header-section-number">12.2</span> Classification at <code>pubMLST</code></a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">12.3</span> Next Steps</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/pubmlst.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -348,6 +350,30 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
 </header>
 
 
+<section id="classification-with-galaxy" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="classification-with-galaxy"><span class="header-section-number">12.1</span> Classification with <code>Galaxy</code></h2>
+<ol type="1">
+<li>Navigate to the <code>MLST</code> tool in the <code>Tools</code> sidebar</li>
+<li>Select the <code>ERR531380</code> assembly as the <code>input_files</code></li>
+<li>Click on <code>Run Tool</code></li>
+<li>Click on the <code>Eye</code> icon to see the result</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Video: Use Galaxy’s <code>MLST</code> tool to classify your isolate
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Using the Galaxy `MLST` tool to classify your isolate."><source src="assets/movies/galaxy-22-mlst.mp4"></video></div>
+</div>
+</div>
+</section>
+<section id="classification-at-pubmlst" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="classification-at-pubmlst"><span class="header-section-number">12.2</span> Classification at <code>pubMLST</code></h2>
 <ol type="1">
 <li><strong>In a new tab of your browser</strong> open the <a href="https://pubmlst.org/">PubMLST</a> website</li>
 <li>Click on <code>Organisms</code></li>
@@ -379,11 +405,12 @@ Video: Use <code>PubMLST</code> to classify your isolate
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Using the `PubMLST` server to classify your isolate."><source src="assets/movies/pubmlst-1-classify.mp4"></video></div>
+<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Using the `PubMLST` server to classify your isolate."><source src="assets/movies/pubmlst-1-classify.mp4"></video></div>
 </div>
 </div>
-<section id="next-steps" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">12.1</span> Next Steps</h2>
+</section>
+<section id="next-steps" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">12.3</span> Next Steps</h2>
 <p>Now you have assembled and classified your isolate, you can use some additional data prepared by your helpful colleague to reconstruct a phylogenetic tree for isolates obtained from the burns ward.</p>
 
 
@@ -834,6 +861,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 <script>videojs(video_shortcode_videojs_video1);</script>
+<script>videojs(video_shortcode_videojs_video2);</script>
 
 
 
