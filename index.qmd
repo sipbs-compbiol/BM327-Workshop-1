@@ -1,4 +1,4 @@
-# Preface to the {{< var ay >}} presentation {.unnumbered}
+# Preface to the {{< var ay >}} presentation
 
 Welcome to the BM327 (Being a Biomolecular Scientist 3) bioinformatics workshop 1 for {{< var ay >}}.
 
