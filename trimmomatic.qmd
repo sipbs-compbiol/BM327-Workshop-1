@@ -62,8 +62,14 @@ You can inspect the contents of these files by clicking on the filename in the `
 {{< video assets/movies/galaxy-09-trimmomatic.mp4 title="Inspecting reads cleaned with `trimmomatic`" >}}
 :::
 
-![Per base quality score plot from `Falco` indicating improvement in read quality, post-`trimmomatic`.](assets/images/falco_perbase_clean.png){#fig-fastqc-perbase width=80%}
+::: { .callout-caution }
+## Run `Falco` again on your cleaned reads to see the improvement in data quality
+
+Following the example from @sec-fastqc, run `Falco` again on your newly-cleaned (paired) read sets, to see how the quality has improved.
+:::
+
+![Per base quality score plot from `Falco` indicating an improvement in read quality, post-`trimmomatic`.](assets/images/falco_perbase_clean.png){#fig-fastqc-perbase width=80%}
 
 ## Next steps
 
-Now that we have clean, high-quality sequencing reads, we can move on to mapping the reads to a reference genome, in @sec-mapping.
+Now that we have clean, high-quality sequencing reads, we can move on to mapping the reads to a reference genome, in @sec-bwamem
