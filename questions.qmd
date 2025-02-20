@@ -1,0 +1,295 @@
+# Tracing the Outbreak { #sec-questions }
+
+You have constructed a phylogenetic tree similar to that in @fig-tree for each of the study isolates in @tbl-isolates.
+In this section, you will use this information, and the plan of the burns unit in @fig-ward-layout to draw inferences about the likely routes of transmission of _P. aeruginosa_ in the burns unit.
+
+Work through the questions below to form your own conclusions concerning how the evidence supports particular routes of transmission.
+
+![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout width=80% .lightbox}
+
+![A phylogenetic tree of the burns unit _P. aeruginosa_ isolates. The outgroup isolate `ERR531413` roots the tree. The bed and patient from which each sample was taken is indicated in the branch labels. Branch labels are coloured by sample source: water (blue), environment (green), and patient (yellow).](assets/images/itol-patients.png){#fig-tree width=80% .lightbox}
+
+```{r echo=FALSE}
+#| label: tbl-isolates
+#| tbl-cap: "Sequenced isolates from the burns unit."
+
+metadata <- readxl::read_excel("assets/workshop_downloads/isolate_metadata.xlsx")
+
+DT::datatable(metadata)
+```
+
+Use what you know or can infer from @fig-ward-layout and @tbl-isolates to answer questions and determine the plausibility of the hypotheses below.
+
+## How does the burns unit layout influence potential routes of transmission?
+
+### Hypothesis 1
+
+Suppose that _P. aeruginosa_ was introduced to the unit _via_ the mains water system, which enters at the top left of @fig-ward-layout.
+
+Assume that the pipes and fittings are contaminated in sequence, as water moves through the water system, and that _P. aeruginosa_ is continuously accumulating mutations.
+
+::: { .callout-question }
+
+:::::{.question}
+Consider each scenario below and decide which you think is most plausible.
+
+::::{.choices}
+
+:::{.choice}
+All of the isolates sampled from each bed will be identical, and a phylogenetic tree would not help trace contamination.
+:::
+
+:::{.choice .correct-choice}
+The earliest-contaminated beds on the left-hand side of the unit (9-15) will appear to share a distinct common ancestor from those on the right-hand side of the unit (1-8).
+:::
+
+:::{.choice}
+The isolates will appear to diverge from the initial contaminant in order of bed number (i.e. bed 1 samples diverge first, then bed 2 samples, then bed 3 samples).
+:::
+
+:::{.choice}
+The isolates will appear to diverge from the initial contaminant in _reverse_ order of bed number (i.e. bed 15 samples diverge first, then bed 14 samples, then bed 3 samples).
+:::
+
+
+::::
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+Try tracing the possible paths through the pipe system, moving from the top left into the ward. 
+Where are the branching points?
+If the _P. aeruginosa_ isolates are constantly accumulating mutations, how might the branching points correspond to points on a phylogenetic tree?
+
+Try sketching the tree you think you would see.
+:::
+
+::: { .callout-warning collapse="true" }
+## Explanation
+
+The flow of mains water would be expected always to be towards the outlets, and populations of _P. aeruginosa_ that found themselves on the left-hand side of the ward would be unlikely to be able to move through the pipes to the right-hand side (and _vice versa_).
+If we assume initial contamination _via_ mains water, and no subsequent cross-contamination between beds, we would expect beds 9-15 to share a common ancestor that is not shared by beds 1-8 (and _vice versa_).
+:::
+
+
+:::::
+
+:::
+
+::: { .callout-important }
+## How to use this answer
+
+Is the tree you constructed compatible with this hypothesis?
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+Do isolates from beds 9 and 11 share a common ancestor that is not shared with beds 1 or 6?
+:::
+
+:::
+
+### Hypothesis 2
+
+It is possible that _P. aeruginosa_ isolates are transferred frequently between beds, for example by patient movement, clinician or nurse movement, or other poor infection control.
+
+The ward is designed with side rooms to limit the amount of casual cross contamination that occurs.
+
+Suppose that, despite this deliberate design effort, patient and staff movement frequently contaminates one bed with _P. aeruginosa_ isolates from other beds. 
+
+::: { .callout-question }
+
+:::::{.question}
+Consider each scenario below and decide which you think would be most plausible.
+
+::::{.choices}
+
+:::{.choice .correct-choice}
+Isolates from several different beds would appear to share the same recent common ancestor, and it would not be possible to separate a phylogenetic tree into clades corresponding to individual beds.
+:::
+
+:::{.choice}
+Isolates from the same bed would appear to share a more recent common ancestor with each other than with isolates from any other bed.
+:::
+
+:::{.choice}
+Isolates from the left-hand side of the ward would appear to share a more recent common ancestor with each other than with isolates from the other side of the ward.
+:::
+
+:::{.choice}
+Isolates would appear to diverge from the same common ancestor in the order of bed number (bed 1 being most anciently diverged, bed 15 being most recently diverged).
+:::
+
+
+::::
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+What kinds of movements from room to room might you expect to see? Would there always be a pattern?
+Suppose you went into room 13 and picked up an isolate, then contaminated room 5 with it. What would the tree look like?
+What would the tree look like if you did this 100 times between different pairs of rooms?
+:::
+
+::: { .callout-warning collapse="true" }
+## Explanation
+
+The phylogenetic tree would still produce a history of the isolates that reflected the sequence of mutations that had occurred.
+The tree would have a clade structure, with groups of isolates that were more recently-diverged from a common ancestor than other groups.
+But, if there was frequent transfer of isolates between rooms, the clades would not correspond to any one location, and the isolates from any particular clade would be likely to be found in many different rooms.
+:::
+
+
+:::::
+
+:::
+
+::: { .callout-important }
+## How to use this answer
+
+Is the tree you constructed compatible with this hypothesis?
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+Is there a clade structure to your tree, where there is (more or less) one bed per clade?
+:::
+
+:::
+
+## Did the patients bring their own _P. aeruginosa_?
+
+### Hypothesis 3
+
+Suppose that the patients were already contaminated with a different strain of _P. aeruginosa_ acquired from some other location (perhaps their home) before they took their beds on the ward.
+
+Assume that the unit was already contaminated with _P. aeruginosa_, but that there is no cross-contamination between beds.
+
+Assume that there is contamination between patient and bed.
+
+::: { .callout-question }
+
+:::::{.question}
+Consider each scenario below and decide which you think would be plausible.
+
+::::{.choices}
+
+
+:::{.choice}
+Isolates sampled from the patient would closely resemble isolates sampled from other beds, but not their own bed.
+:::
+
+:::{.choice .correct-choice}
+Isolates sampled from the patient would closely resemble isolates sampled from their bed, but not other beds.
+:::
+
+:::{.choice .correct-choice}
+Isolates sampled from other beds in the unit would resemble isolates sampled from the patient.
+:::
+
+:::{.choice}
+Isolates sampled from the patient would not resemble any isolates sampled from the unit.
+:::
+
+
+::::
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+Contamination can be bidirectional.
+If a patient and their bed are in contact tbhen material, including bacteria, can be transferred from the patient to the bed, and from the bed to the patient.
+:::
+
+::: { .callout-warning collapse="true" }
+## Explanation
+
+If the patient introduces _P. aeruginosa_ from an outside source to their bed, then isolates from that patient's bed may resemble those from an outside source (but not other isolates from the unit).
+In the absence of cross-contamination, only that bed would carry the isolate that was introduced by the patient.
+
+If the patient acquires _P. aeruginosa_ from the previously-contaminated unit, and the isolates from each bed are related, then isolates from the patient may resemble those from any bed on the unit (though will likely be most similar to those from their own bed).
+:::
+
+
+:::::
+
+:::
+
+::: { .callout-important }
+## How to use this answer
+
+Is the tree you constructed compatible with this hypothesis?
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+Do the isolates sampled from patients resemble isolates sampled from the beds, or do they appear to be a different lineage entirely?
+:::
+
+:::
+
+### Hypothesis 4
+
+Suppose that the patients were already contaminated with a different strain of _P. aeruginosa_ acquired from some other location (perhaps their home) before they took their beds on the ward.
+
+Assume that the unit was already contaminated with _P. aeruginosa_, but that there is no cross-contamination between beds.
+
+Assume that there is contamination between patient and bed.
+
+::: { .callout-question }
+
+:::::{.question}
+Use the `Days` column from @tbl-isolates (you may need to scroll to the right), and your tree, when considering each scenario below to decide which you think would be plausible, based on the evidence.
+
+::::{.choices}
+
+
+:::{.choice}
+Patients P01 and P04 independently introduced from outside the burns unit two different strains that were sampled from their wounds.
+:::
+
+:::{.choice}
+Patient P01 introduced the strain sampled from both patients from outside the unit, contaminating bed 11, and then contaminating patient P04.
+:::
+
+:::{.choice .correct-choice}
+Patients P01 and P04 each acquired the strain that was sampled from their wounds from bed 11.
+:::
+
+:::{.choice}
+Patient P04 introduced the strain sampled from both patients from outside the unit, contaminating bed 11, and then contaminating patient P01.
+:::
+
+
+::::
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+The branching order of the tree implies the order of divergence of isolates, and patients can't travel backwards in time to infect other patients.
+Use the data in @tbl-isolates to check if time travel would be necessary for some of the options.
+:::
+
+::: { .callout-warning collapse="true" }
+## Explanation
+
+Patient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated them. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independently contaminated outwith the burns unit.
+:::
+
+
+:::::
+
+:::
+
+::: { .callout-important }
+## How to use this answer
+
+Is the tree you constructed compatible with this hypothesis?
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+Do the isolates sampled from patients look to be distinct from those that were sampled from the unit's environment and water system?
+:::
+
+:::

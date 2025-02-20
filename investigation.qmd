@@ -1,0 +1,3 @@
+# Investigation { #sec-investigation }
+
+Now that you have obtained a phylogenetic tree from the study isolates, you can begin to consider some questions that might lead you to understand paths of transmission.

@@ -70,6 +70,10 @@ book:
         - tree.qmd
         - itol.qmd
 
+    - part: investigation.qmd
+      chapters:
+        - questions.qmd
+
     - references.qmd
 
 # Location of BibTeX format reference file; may not need to be changed
