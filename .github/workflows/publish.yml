@@ -22,9 +22,12 @@ jobs:
 
       - name: Install Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          # To install LaTeX to build PDF book
-          tinytex: true
+# Potential fix for "Unable to determine latest release for rstudio/tinytex-releases"        
+#        env:
+#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+# Install tinytex to build PDF book
+#        with:
+#          tinytex: true
           # uncomment below and fill to pin a version
           # version: 0.9.105
 
