@@ -57,9 +57,11 @@ book:
         - jbrowse.qmd
         - snippy.qmd
 
-    - part: assembly.qmd
-      chapters:
-        - shovill.qmd
+    # Commented out as we don't have time in the workshop session for
+    # students to perform their own assembly
+    # - part: assembly.qmd
+    #   chapters:
+    #     - shovill.qmd
 
     - part: classification.qmd
       chapters:
