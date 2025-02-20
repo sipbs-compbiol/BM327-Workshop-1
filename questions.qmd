@@ -293,3 +293,11 @@ Do the isolates sampled from patients look to be distinct from those that were s
 :::
 
 :::
+
+## Next Steps
+
+Please follow the link to the MyPlace formative quiz below and answer the questions.
+
+- [MyPlace Formative Quiz]()
+
+Now read on to @sec-epilogue.
