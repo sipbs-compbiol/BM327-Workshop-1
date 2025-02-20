@@ -46,6 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -443,7 +446,7 @@ Tip
 <p>Tools like <code>trimmomatic</code> return two kinds of cleaned read data:</p>
 <ol type="1">
 <li>R1-paired, R2-paired: these are high quality paired-end reads</li>
-<li>R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality</li>
+<li>R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality and only the high quality read was retained</li>
 </ol>
 </div>
 </div>
@@ -520,10 +523,10 @@ Run <code>Falco</code> again on your cleaned reads to see the improvement in dat
 <p>Following the example from <a href="fastqc.html" class="quarto-xref"><span>Chapter 6</span></a>, run <code>Falco</code> again on your newly-cleaned (paired) read sets, to see how the quality has improved.</p>
 </div>
 </div>
-<div id="fig-fastqc-perbase" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-fastqc-perbase" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-fastqc-perbase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/falco_perbase_clean.png" class="img-fluid figure-img" style="width:80.0%">
+<a href="assets/images/falco_perbase_clean.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;7.2: Per base quality score plot from Falco indicating an improvement in read quality, post-trimmomatic."><img src="assets/images/falco_perbase_clean.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-fastqc-perbase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;7.2: Per base quality score plot from <code>Falco</code> indicating an improvement in read quality, post-<code>trimmomatic</code>.
@@ -984,6 +987,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </footer>
 <script>videojs(video_shortcode_videojs_video1);</script>
 <script>videojs(video_shortcode_videojs_video2);</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

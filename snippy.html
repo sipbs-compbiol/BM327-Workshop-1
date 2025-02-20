@@ -94,17 +94,6 @@ div.csl-indent {
   }
 }</script>
 <style>
-div.callout-callout-todo.callout {
-  border-left-color: red;
-}
-div.callout-callout-todo.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
-  background-image: none;
-}
 div.callout-callout-challenge.callout {
   border-left-color: aquamarine;
 }
@@ -136,6 +125,17 @@ div.callout-callout-questions.callout-style-default > .callout-header {
 div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
   content: '🙋️';
+  background-image: none;
+}
+div.callout-callout-todo.callout {
+  border-left-color: red;
+}
+div.callout-callout-todo.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
   background-image: none;
 }
 </style>
@@ -424,11 +424,11 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </header>
 
 
-<p><a href="https://github.com/tseemann/snippy"><code>snippy</code></a> is a sequence variant finding pipeline, designed for haploid genomes such as prokaryotes and viruses.</p>
+<p><a href="https://github.com/tseemann/snippy"><code>snippy</code></a> is a sequence variant finding pipeline, designed for haploid genomes such as prokaryotes and viruses. It uses <code>BWA-MEM</code> to align reads to the reference genome, but it also performs a number of filtering and statistical steps to improve the quality of SNP identification.</p>
 <ul>
 <li><a href="https://github.com/tseemann/snippy"><code>snippy</code> documentation</a></li>
 </ul>
-<p>As with most kinds of bioinformatics data, there is a data format designed specifically to capture the important elements of the data, and <code>snippy</code> outputs its results in this format (called <strong>VCF</strong>).</p>
+<p>As with most kinds of bioinformatics data, there is a data format designed specifically to capture the important elements of the data, and <code>snippy</code> outputs its results in this format (called <strong>VCF</strong>) as well as in a data table.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -526,8 +526,24 @@ QUESTIONS
 <li>Can you find SNPs from the <code>snippy</code> output manually using JBrowse in your earlier visualisation?</li>
 <li>Can you find any SNPs that are different or inconsistent between the <code>JBrowse</code> and <code>snippy</code> outputs?</li>
 </ol>
-<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint 1
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Inspect the SNPs table output box. How many lines are in the table? I estimated about 49,000 SNPs from visual inspection of <code>JBrowse</code>, which was much greater than the ≈22,000 reported by <code>snippy</code>.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -536,7 +552,7 @@ Explaining your observations
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Bioinformatic tools that perform the same kind of task may differ in exactly how they carry out that task. This can result in them generating output that is not identical, even if they claim to calculate the same kind of value or make the same kind of measurement.</p>
 <p>Even different versions of the same tool might differ and produce different output, so <strong>it is good practice to explain exactly which version of a software tool you use in your work</strong>.</p>
@@ -559,7 +575,7 @@ CHALLENGE
 <ol type="1">
 <li>Map your <code>ERR531380</code> isolate reads to the <code>ERR531413_asm.fasta</code> assembly using <code>snippy</code>.</li>
 <li>How many sequence variants are there between the two genomes?</li>
-<li>Why might you think that your study isolate shares a more, or less, recent common ancestory with <code>ERR531413</code>?</li>
+<li>Why might you think that your study isolate shares a more, or less, recent common ancestor with <code>ERR531413</code> than with PAO1?</li>
 </ol>
 </div>
 </div>
