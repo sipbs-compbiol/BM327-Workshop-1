@@ -72,6 +72,28 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
+}
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
+}
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
+  background-image: none;
+}
 div.callout-callout-todo.callout {
   border-left-color: red;
 }
@@ -92,28 +114,6 @@ div.callout-callout-question.callout-style-default > .callout-header {
 div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
   content: '🙋';
-  background-image: none;
-}
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-questions.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
-  background-image: none;
-}
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
-}
-div.callout-callout-challenge.callout-style-default > .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
-}
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
   background-image: none;
 }
 </style>
@@ -394,7 +394,14 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
 </header>
 
 
-<p>There are multiple approaches to identifyiing and classifying a sequenced bacterial isolate. In this section, you will use <code>pubMLST</code> to identify your organism and its clade group.</p>
+<p>There are multiple approaches to identifying and classifying a sequenced bacterial isolate. In <a href="download-data.html" class="quarto-xref"><span>4&nbsp; Download Workshop Data</span></a> you saw that the isolate was initially identified phenotypically by resistance to C-390 and the VITEK 2 GN identification card. But once you have the genome sequence more accurate and precise approaches become feasible, including:</p>
+<ul>
+<li>Marker gene analysis such as <strong>16S sequencing</strong>, which can identify bacteria to genus, and sometimes species, level by comparing the sequence of the 16S rRNA gene to known examples in a reference database.</li>
+<li>Variable repeat analysis such as <strong>VNTR (Variable Number Tandem Repeats)</strong>, which uses the differing lengths of short repeat regions to distinguish between members of the same species.</li>
+<li><strong>Multi-Locus Sequence Typing (MLST)</strong>, which uses a small set of marker genes, assigning allele numbers to each marker variant, and classifying an organism by which alleles are found to be present. This method can identify different clades of bacteria belonging to the same species.</li>
+<li><strong>Whole-genome comparison/Overall Genome Relatedness Index (OGRI)</strong>, in which complete genomes are aligned and their similarity calculated. This approach can in principle identify genomes uniquely.</li>
+</ul>
+<p>In <a href="pubmlst.html" class="quarto-xref"><span>12&nbsp; PubMLST Classification</span></a> you will use two approches to Multi-Locus Sequence Typing (MLST) to identify your isolate, using two different tools.</p>
 
 
 

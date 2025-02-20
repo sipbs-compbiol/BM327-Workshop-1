@@ -94,6 +94,17 @@ div.csl-indent {
   }
 }</script>
 <style>
+div.callout-callout-question.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-question.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
+  background-image: none;
+}
 div.callout-callout-challenge.callout {
   border-left-color: aquamarine;
 }
@@ -125,17 +136,6 @@ div.callout-callout-todo.callout-style-default > .callout-header {
 div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
   content: '📝';
-  background-image: none;
-}
-div.callout-callout-question.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-question.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
   background-image: none;
 }
 </style>
@@ -460,6 +460,37 @@ Video: Upload the <code>ERR531380</code> assembly files
 </div>
 </div>
 </div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Inspect the uploaded assembly
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Click on the uploaded <code>ERR531380.contigs.fasta</code> file</li>
+</ol>
+<div class="callout callout-style-default callout-callout-questions callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+QUESTIONS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Has the genome been assembled into a single sequence?</li>
+<li>How many sequences (called <em>contigs</em>) was the genome assembled into?</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
 <p>In this section you will investigate the quality of this genome assembly visually using the <code>Bandage</code> tool. You will also use the <code>CheckM</code> tool to obtain a measure of genome completeness.</p>
 <section id="visualising-the-assembly" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="visualising-the-assembly"><span class="header-section-number">11.1</span> Visualising the Assembly</h2>
@@ -488,23 +519,26 @@ Video: Visualising the <code>ERR531380</code> assembly using <code>Bandage Image
 <div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising the genome assembly with `Bandage Image`"><source src="assets/movies/galaxy-18-bandage.mp4"></video></div>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Inspect the assembly graph by clicking on the <code>eye</code> icon for the Assembly Graph Image output.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Inspect the assembly graph by clicking on the <code>eye</code> icon for the Assembly Graph Image output.</strong></p>
+<p>Each separate subgraph in the <code>Bandage</code> graph image shows a section of the genome that the assembly software thinks might be linked together in some way. The branched and looped nature of these graphs shows where the assembler has been unable to make a decision between two or more ways the reads could be joined together.</p>
+<p>Each differently-coloured section of the subgraph is a part of the genome sequence that the assembler was confident about stitching together into a contiguous sequence.</p>
+<p>This kind of genome assembly, comprising many fragments, some of which can’t be confidently linked together, is called a <em>draft genome assembly</em>.</p>
 </div>
 </div>
 </section>
 <section id="estimating-assembly-quality" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="estimating-assembly-quality"><span class="header-section-number">11.2</span> Estimating Assembly Quality</h2>
-<p>The <code>CheckM</code> software (<span class="citation" data-cites="Parks2015-so">Parks et al. (<a href="references.html#ref-Parks2015-so" role="doc-biblioref">2015</a>)</span>) is a suite of tools used to assess the quality of a bacterial assembly. It estimates the completeness of the genome by looking for the presence of <em>single copy marker genes</em> (SCMGs) for a stated phylogenetic lineage. The more of these marker genes that can be determined to be present in the genome, the more complete the assembly is assumed to be.</p>
+<p><code>Bandage</code> gives a visual account of the “quality” of an assembly in terms of its contiguity. By contrast, the <code>CheckM</code> software (<span class="citation" data-cites="Parks2015-so">Parks et al. (<a href="references.html#ref-Parks2015-so" role="doc-biblioref">2015</a>)</span>) is a suite of tools used to assess the quality of a bacterial assembly in terms of whether it resembles known similar genome sequences.</p>
+<p><code>CheckM</code> estimates the completeness of the genome by looking for the presence of <em>single copy marker genes</em> (SCMGs) for a stated phylogenetic lineage. The more of these marker genes that can be determined to be present in the genome, the more complete the assembly is assumed to be.</p>
 <ul>
 <li><a href="https://github.com/Ecogenomics/CheckM/wiki"><code>CheckM</code> docmentation</a></li>
 <li><a href="https://ecogenomics.github.io/CheckM/"><code>CheckM</code> website</a></li>
