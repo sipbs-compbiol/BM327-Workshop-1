@@ -1,5 +1,19 @@
 # Download Workshop Data {#sec-download-data}
 
+In this workshop you will be working with isolate ERR531380, which was sequenced using the Illumina platform.
+
+::: { .callout-note collapse="true" }
+## How was the strain isolated?
+The _P. aeruginosa_ strain was isolated from wound swabs by inoculation onto cysteine lactose electrolyte deficient agar (CLED) and cetrimide agar and incubation for 24 h at 37°C. Identification was confirmed by resistance to C-390 and the VITEK 2 GN identification card. For storage and DNA extraction a single colony was purified from the primary culture plate.
+
+Isolates were stored on Biobank beads at −20°C prior to DNA extraction. Organisms were resuscitated on CLED agar plates and genome DNA either extracted directly using the MOBIO UltraClean Microbial DNA Kit, or from overnight LB broth culture using a Qiagen Genomic-Tip 100G.
+:::
+
+::: { .callout-note collapse="true" }
+## How was the isolate sequenced?
+Genomic DNA was prepared from single colony picks using the MOBIO Ultraclean microbial kit (MOBIO, Carlsbad, USA). 1 ng input DNA, as quantified by Qubit (Life Technologies, Carlsbad, USA) was used to prepare genomic libraries for sequencing using the Illumina Nextera XT DNA sample kit as per manufacturer’s protocol (Illumina, San Diego, USA). Libraries were sequenced on the Illumina MiSeq using a paired-end protocol resulting in read lengths between 150 and 300 bases.
+:::
+
 ::: { .callout-tip }
 ## Download the workshop data
 
@@ -14,11 +28,15 @@
 
 ## _Pseudomonas aeruginosa_ reference strain for SNP comparison
 
+You will be using the PAO1 strain of _P. aeruginosa_ (@Stover2000-fp) for some comparisons. The genome sequence with accession GCF_000006765.1 was downloaded from NCBI.
+
 - [_P. aeruginosa_ PA01 genome sequence (`.fasta`)](assets/workshop_downloads/GCF_000006765.1_ASM676v1_genomic.fna)(`GCF_000006765.1_ASM676v1_genomic.fna`)
 
-## Room 8 isolate assembly for SNP comparison
+## Room 1 isolate assembly for SNP comparison
 
-- [`SPAdes` assembly of isolate 1031 (`ERR531413`), from the room 8 shower hose](assets/workshop_downloads/ERR531413_asm.fasta)(`ERR531413_asm.fasta`)
+The isolate with accession `ERR531413`, sampled from the shower in room 1 of the burns unit, is also used as a reference genome for some comparisons.
+
+- [`SPAdes` assembly of isolate 1031 (`ERR531413`), from the room 1 shower hose](assets/workshop_downloads/ERR531413_asm.fasta)(`ERR531413_asm.fasta`)
 
 ::: { .callout-note }
 ## Your Working Directory
