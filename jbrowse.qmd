@@ -54,7 +54,7 @@ You can click on the header of the SNP track in `JBrowse` and select `Pin to top
 ::: { .callout-todo }
 **ADD CALLOUT TO SAY NOT TO WORRY ABOUT ZOOMING OUT/NOT DISPLAYING**
 
-- also MAF's error message on zooming out too far
+- also MAF's error message on zooming out too far, and warn about chunk size with parameter settings
 :::
 
 ::: { .callout-note }
