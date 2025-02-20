@@ -2,13 +2,11 @@
 
 The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.
 
-1. Assessing the quality of sequence read data for your isolate
-2. Prepare your sequencing read data for assembly
-3. Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between your isolate and a reference genome, and against another study isolate
-4. Assemble a genome for your isolate
-5. Visualise your genome assembly
-6. Assess the quality of your assembly
-7. Use pubMLST to classify your isolate
-8. Build and visualise a phylogenetic tree of isolates from the study
-9. Use your data to draw conclusions about nosocomial transmission
+- @sec-fastqc: Assessing the quality of sequence read data for your isolate
+- @sec-trimmomatic: Prepare your sequencing read data for assembly
+- @sec-bwamem, @sec-jbrowse, and @sec-snippy: Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between your isolate and a reference genome, and against another study isolate
+- @sec-shovill: Assess genome assembly quality for your isolate
+- @sec-pubmlst Use pubMLST to classify your isolate
+- @sec-tree and @sec-itol: Build and visualise a phylogenetic tree of isolates from the study
+- @sec-questions: Use your data to draw conclusions about nosocomial transmission
 
