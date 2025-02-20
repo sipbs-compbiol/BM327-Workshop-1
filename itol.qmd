@@ -1,4 +1,4 @@
-# Visualising a Phylogenetic Tree { #sec-itol }
+# Visualising the Phylogenetic Tree { #sec-itol }
 
 In this section you will use the online tool `iTOL` to visualise the phylogenetic tree you created in @sec-tree.
 This tree represents evolutionary relationships between the 33 study isolates, as inferred from differences in their genome sequences.
@@ -47,7 +47,7 @@ A basic representation of your tree should appear, as in @fig-itol-1
 {{< video assets/movies/itol-01-upload.mp4 title="Uploading the tree file to `iTOL`." >}}
 :::
 
-## Re-root the tree
+## Re-rooting the tree
 
 ::: { .callout-important }
 Your colleague has been super-helpful and identified the reference genome that is assumed to be ancestral to all of the genomes in the tree.
@@ -64,7 +64,83 @@ Rooting the tree at this genome should make the tree reflect the time sequence o
 {{< video assets/movies/itol-02-reroot.mp4 title="Re-rooting the tree." >}}
 :::
 
+::: { .callout-tip }
+
+As a reminder, and to help with tree annotation, the interactive table of isolate metadata is shown below in @tbl-isolates.
+
+```{r echo=FALSE}
+#| label: tbl-isolates
+#| tbl-cap: "Sequenced isolates"
+
+metadata <- readxl::read_excel("assets/workshop_downloads/isolate_metadata.xlsx")
+
+DT::datatable(metadata)
+```
+:::
+
 ::: { .callout-todo }
 **ADD QUESTION ASKING STUDENTS TO CONSIDER THE CLADE STRUCTURE**
 :::
 
+## Annotating the tree
+
+We are interested in how _P. aeruginosa_ may have spread around the burns ward.
+We can gain some insight into this by annotating the phylogenetic tree, which represents the evolutionary history of the isolates, with metadata.
+For example, annotating the tree with the bed number might help us understand whether the isolates tend to stay in one location, or whether they move freely between beds.
+Similarly, annotating the specimen type can help us understand if there is transmission between patients, from environment or water to the patient, or from the patient to the environment.
+
+::: { .callout-tip }
+It can help visibility to increase the linewidth for all branches in the tree.
+
+To do this, look for `Branch options` in the `Basic` `iTOL` tab of the control panel. There is an option called `Line style`. Click on the chevrons to obtain a branch line weight that is pleasing to the eye.
+:::
+
+### Relabel branches to indicate the beds they were sampled from
+
+1. Sort @tbl-isolates by bed number by clicking on one of the triangles next to the `Bed` header
+2. Identify the branches corresponding to the genomes sampled from bed 6
+3. Modify the label for each branch to indicate the bed it was sampled from (e.g. change `ERR531398_asm.fasta` to `ERR531398_bed6`)
+  - Click on the branch label
+  - Click on `Label -> Text -> Edit label`
+  - Enter the new label
+  - Click on the tick (changes won't be saved if you do not do this)
+4. Repeat steps 2 and 3 for the genomes sampled from beds 9 and 11
+
+::: { .callout-note }
+## Video: Relabel branches to reflect the beds they were sampled from
+
+{{< video assets/movies/itol-03-rename.mp4 title="Relabelling tree branches." >}}
+:::
+
+### Change label colour to indicate the specimen type
+
+1. Sort @tbl-isolates by bed number by clicking on one of the triangles next to the `SpecimenType` header
+2. Identify the branches corresponding to the `Environmental` samples
+3. Modify the background colour for each of these branches to be the same colour (e.g. green)
+  - Click on the branch label
+  - Click on `Label -> Text -> Edit label`
+  - Enter the new label
+  - Click on the tick (changes won't be saved if you do not do this)
+4. Repeat steps 2 and 3 for the Patient and Water samples, using contrasting colours
+
+::: { .callout-note }
+## Video: Colour branch labels to indicate the sample source
+
+{{< video assets/movies/itol-04-colour.mp4 title="Colouring branch labels." >}}
+:::
+
+### Relabel branches to indicate the patients from which they were sampled
+
+1. Sort @tbl-isolates by patient by clicking on one of the triangles next to the `PatientID` header
+2. Identify branches with a `SpecimenType` of Patient
+3. Update the label for each such branch to indicate the patient corresponding to the sample (e.g. change `ERR531300 bed 11` to `ERR531300 bed 11 P01`)
+
+::: { .callout-note }
+## Video: Colour branch labels to indicate the sample source
+
+{{< video assets/movies/itol-05-patients.mp4 title="Colouring branch labels." >}}
+:::
+
+## Next Steps
+
+Now that you have reconstructed a phylogenetic tree and annotated it with metadata for each sequenced isolate, you can move on to interpreting the data in @sec-questions.

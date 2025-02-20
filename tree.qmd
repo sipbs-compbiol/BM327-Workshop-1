@@ -25,7 +25,17 @@ They have provided the results for you to download in two files, below - the VCF
 
 ## What isolates are being analysed?
 
-The isolate genomes your colleague has assembled came from the rooms and sources shown in @tbl-isolates
+The isolate genomes your colleague has assembled came from the beds and sources shown in @tbl-isolates.
+
+::: { .callout-note }
+- `GenomeID` is the accession number for the read data.
+- `SampleID` is the sample number from the study. 
+- `PatientID` uniquely identifies a patient.
+- `Bed` indicates the corresponding bed for the patient.
+- `Specimen` indicates whether the isolate was sampled directly from the patient, from a water sample, or swabbed from an environmental surface.
+- `Source` names the kind of surface or substance that was sampled.
+- `Days` indicates the number of days after the study start at which the isolate was collected.
+:::
 
 ```{r echo=FALSE}
 #| label: tbl-isolates
