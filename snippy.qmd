@@ -50,13 +50,18 @@ When reporting how you identified variants for your manuscript or dissertation, 
 :::
 
 ::: { .callout-questions }
-Bioinformatic tools that perform the same kind of task may differ in exactly how they carry out that task.
-This can result in them generating output that is not identical.
-Even different versions of the same tool might differ and produce different output, so **it is important to explain exactly which version of a software tool you use in your work**.
-
 1. How many variants are there in the SNPs table? How does this compare with your estimate from `JBrowse` visualisation?
 2. Can you find SNPs from the `snippy` output manually using JBrowse in your earlier visualisation?
 3. Can you find any SNPs that are different or inconsistent between the `JBrowse` and `snippy` outputs?
+
+::: { .callout-caution }
+## Explaining your observations
+
+Bioinformatic tools that perform the same kind of task may differ in exactly how they carry out that task.
+This can result in them generating output that is not identical.
+Even different versions of the same tool might differ and produce different output, so **it is important to explain exactly which version of a software tool you use in your work**.
+:::
+
 :::
 
 ::: { .callout-challenge }
