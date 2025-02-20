@@ -54,7 +54,7 @@ When reporting how you identified variants for your manuscript or dissertation, 
 2. Can you find SNPs from the `snippy` output manually using JBrowse in your earlier visualisation?
 3. Can you find any SNPs that are different or inconsistent between the `JBrowse` and `snippy` outputs?
 
-::: { .callout-caution }
+::: { .callout-caution collapse="true" }
 ## Explaining your observations
 
 Bioinformatic tools that perform the same kind of task may differ in exactly how they carry out that task.
