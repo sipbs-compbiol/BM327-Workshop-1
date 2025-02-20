@@ -7,7 +7,7 @@ For Galaxy to be able to use your data, that **data must be in your _history_ on
 :::
 
 ::: { .callout-caution }
-Data is not shared between Galaxy instances. For instance, if you upload data to `usegalaxy.eu` it will _not_ automatically be available on `usegalaxy.org` or `usegalaxy.au`.
+Data is not shared between Galaxy instances. For instance, if you upload data to `usegalaxy.eu` (Europe) it will _not_ automatically be available on `usegalaxy.org` (USA) or `usegalaxy.au` (Australia).
 :::
 
 ## Uploading your data
@@ -29,11 +29,11 @@ This option is only visible when you have an empty workflow. Click on the `You c
 
 When the data files are first added to the workflow, they have a grey background. This indicates that Galaxy knows about the files, and is preparing to upload them.
 
-When Galaxy begins to upload the files, the background changes to orange.
+When Galaxy begins to upload the files, the background changes to <span style="color:orange;">orange</span>.
 
-When the upload is complete, the background turns green.
+When the upload is complete, the background turns <span style="color:green;">green</span>.
 
-If there is a problem with uploading, the background turns red (please signal to a demonstrator if this happens for you).
+If there is a problem with uploading, the background turns <span style="color:red;">red</span> (please signal to a demonstrator if this happens for you).
 :::
 
 ::: { .callout-tip collapse="true" }
