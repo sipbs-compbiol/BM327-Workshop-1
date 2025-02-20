@@ -1,3 +1,10 @@
 # Isolate Classification {@sec-classification .unnumbered}
 
-There are multiple approaches to identifyiing and classifying a sequenced bacterial isolate. In this section, you will use `pubMLST` to identify your organism and its clade group.
+There are multiple approaches to identifying and classifying a sequenced bacterial isolate. In @sec-download-data you saw that the isolate was initially identified phenotypically by resistance to C-390 and the VITEK 2 GN identification card. But once you have the genome sequence more accurate and precise approaches become feasible, including:
+
+- Marker gene analysis such as **16S sequencing**, which can identify bacteria to genus, and sometimes species, level by comparing the sequence of the 16S rRNA gene to known examples in a reference database.
+- Variable repeat analysis such as **VNTR (Variable Number Tandem Repeats)**, which uses the differing lengths of short repeat regions to distinguish between members of the same species.
+- **Multi-Locus Sequence Typing (MLST)**, which uses a small set of marker genes, assigning allele numbers to each marker variant, and classifying an organism by which alleles are found to be present. This method can identify different clades of bacteria belonging to the same species.
+- **Whole-genome comparison/Overall Genome Relatedness Index (OGRI)**, in which complete genomes are aligned and their similarity calculated. This approach can in principle identify genomes uniquely.
+
+In @sec-pubmlst you will use two approches to Multi-Locus Sequence Typing (MLST) to identify your isolate, using two different tools.
