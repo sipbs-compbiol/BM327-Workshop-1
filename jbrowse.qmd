@@ -1,6 +1,6 @@
 # Visualise the Mapping {#sec-jbrowse}
 
-The `.bam` file generated in @sec-bwamem contains the information we need to understand how well the reads map to . However, being plain-text files and often quite large, they are not easy to read and process intuitively.
+The `.bam` file generated in @sec-bwamem contains the information we need to understand how well the reads map to a reference genome. However, being plain-text files and often quite large, they are not easy to read and process intuitively.
 
 To get the most benefit out of these files, we usually visualise them using an appropriate software tool. The choice of tool depends on the reason for visualisation. The [`Artemis`](https://www.sanger.ac.uk/tool/artemis/) software (@Carver2012-ja) is useful for interactive manual genome annotation; [`Tablet`](https://ics.hutton.ac.uk/tablet/) is an excellent tool for investigating genome assembly and sequence variation (@Milne2013-vp)[^1]; and [`Proksee`](https://proksee.ca/) is an online service (@Grant2023-zr) often used to obtain representative images of genome assembly annotations.
 
@@ -47,14 +47,24 @@ Click on the `eye` icon for the new `JBrowse` output. The magnifying glass icons
   - Mapping (`SNPs/Coverage`)
 2. Zoom in to the genome to obtain a visualisation of reads that map to the reference genome, similar to that in @fig-bwamem-1.
 
-![`JBrowse` visualisation of a `BWA-MEM2` mapping of`ERR531380` reads reads against a _P. aeruginosa_ reference genome. The JBrowse tool shows the reference sequence (but zoomed out too far for individual bases to be visible), and a mapping track. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).](assets/images/bwamem_mapping.png){#fig-bwamem-1 width="80%"}
+![`JBrowse` visualisation of a `BWA-MEM2` mapping of`ERR531380` reads reads against a _P. aeruginosa_ reference genome. The JBrowse tool shows the reference sequence (but zoomed out too far for individual bases to be visible), and a mapping track. The mapping track shows individual SNPs (teardrops), and total mapping read depth (the stacks above the teardrops).](assets/images/bwamem_mapping.png){#fig-bwamem-1 width="80%" .lightbox}
 
 You can click on the header of the SNP track in `JBrowse` and select `Pin to top`, so that you can zoom in and see individual SNPs, as in the video below.
 
-::: { .callout-todo }
-**ADD CALLOUT TO SAY NOT TO WORRY ABOUT ZOOMING OUT/NOT DISPLAYING**
+::: { .callout-tip }
+## How do I move around/do things in `JBrowse`?
 
-- also MAF's error message on zooming out too far, and warn about chunk size with parameter settings
+There is a short user guide on the `JBrowse` tool page in `Galaxy`. There is also official `JBrowse` documentation at the link below.
+
+- [`JBrowse` user guide](https://jbrowse.org/jb2/docs/user_guide/)
+:::
+
+::: { .callout-caution }
+## It is possible to zoom out too far
+
+If you zoom out too far, you may not see any SNPs and may even see an error message reading `Too many BAM features` or `Invalid array length`.
+
+If this happens to you, click on the `Eye` icon for the `JBrowse` output, and it should reset to the original view.
 :::
 
 ::: { .callout-note }
@@ -64,9 +74,28 @@ You can click on the header of the SNP track in `JBrowse` and select `Pin to top
 :::
 
 ::: { .callout-questions }
-1. Do the `ERR31380` reads map uniformly to the reference genome?
-2. When `ERR31380` reads map to a SNP at the reference genome, what proportion of the mapping reads contains the SNP?
+1. Do the `ERR31380` reads map uniformly to the PAO1 reference genome?
+2. When `ERR31380` reads map to a SNP at the PAO1 reference genome, what proportion of the mapping reads contains the SNP, and what does that imply?
 3. Based on the number of SNPs you can see in a 1,000bp region of the reference genome, estimate the total number on SNPs.
+
+::: { .callout-tip collapse="true" }
+## Hint 1
+
+If the reads mapped uniformly, the grey plot of read depth would be flat and horizontal. It is not: there are many peaks and troughs. So the reads do not map uniformly - some parts of the genome are mapped more deeply than others.
+:::
+
+::: { .callout-tip collapse="true" }
+## Hint 2
+
+By visual inspection, nearly all SNPs occur in all of the mapped reads. This implies that the SNP is a real sequence variant difference between the mapped and reference genomes.
+:::
+
+::: { .callout-tip collapse="true" }
+## Hint 3
+
+Sampling a few 1,000 base regions I saw an average rate of about seven SNPs per 1kbp. The reference genome is around 7,000,000bp in length, so there are approximately 7,000 1kbp sections and I would expect around $7,000 \times 7 \approx 49,000$ SNPs.
+:::
+
 :::
 
 ## Next Steps
