@@ -96,7 +96,7 @@ The _per base sequence quality_ plot (@fig-falco-perbase) presents the ranges of
 For good-quality sequence read data, we are looking for a graph where the mean quality (see @fig-falco-perbase) is always showing green, with a score greater than 29.
 :::
 
-![Per base sequence quality score plot from `Falco` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range. In this example, quality is high for the first 100 bases, but dips significantly and becomes less reliable at about 150 bases into the reads.](assets/images/falco_perbase.png){#fig-falco-perbase width=80%}
+![Per base sequence quality score plot from `Falco` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range. In this example, quality is high for the first 100 bases, but dips significantly and becomes less reliable at about 150 bases into the reads.](assets/images/falco_perbase.png){#fig-falco-perbase width=80% .lightbox}
 
 ::: { .callout-caution }
 It is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.
@@ -114,7 +114,7 @@ The _per sequence quality_ score (@fig-falco-perseq) summarises the distribution
 In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.
 :::
 
-![Per sequence quality score plot from `Falco` indicating a majority of high quality sequencing reads. The tail to the left is quite "heavy" suggesting that there are quite a few lower quality reads in this dataset. ](assets/images/falco_perseq.png){#fig-falco-perseq width=80%}
+![Per sequence quality score plot from `Falco` indicating a majority of high quality sequencing reads. The tail to the left is quite "heavy" suggesting that there are quite a few lower quality reads in this dataset. ](assets/images/falco_perseq.png){#fig-falco-perseq width=80% .lightbox}
 
 ::: { .callout-caution }
 If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.
