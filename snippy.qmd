@@ -1,10 +1,10 @@
 # Find Sequence Variants {#sec-snippy}
 
-[`snippy`](https://github.com/tseemann/snippy) is a sequence variant finding pipeline, designed for haploid genomes such as prokaryotes and viruses.
+[`snippy`](https://github.com/tseemann/snippy) is a sequence variant finding pipeline, designed for haploid genomes such as prokaryotes and viruses. It uses `BWA-MEM` to align reads to the reference genome, but it also performs a number of filtering and statistical steps to improve the quality of SNP identification.
 
 - [`snippy` documentation](https://github.com/tseemann/snippy)
 
-As with most kinds of bioinformatics data, there is a data format designed specifically to capture the important elements of the data, and `snippy` outputs its results in this format (called **VCF**).
+As with most kinds of bioinformatics data, there is a data format designed specifically to capture the important elements of the data, and `snippy` outputs its results in this format (called **VCF**) as well as in a data table.
 
 ::: { .callout-important }
 ## Good practice
@@ -54,6 +54,12 @@ When reporting how you identified variants for your manuscript or dissertation, 
 2. Can you find SNPs from the `snippy` output manually using JBrowse in your earlier visualisation?
 3. Can you find any SNPs that are different or inconsistent between the `JBrowse` and `snippy` outputs?
 
+::: { .callout-tip collapse="true" }
+## Hint 1
+
+Inspect the SNPs table output box. How many lines are in the table? I estimated about 49,000 SNPs from visual inspection of `JBrowse`, which was much greater than the ≈22,000 reported by `snippy`.
+:::
+
 ::: { .callout-caution collapse="true" }
 ## Explaining your observations
 
@@ -72,7 +78,7 @@ You have one such genome assembly in `ERR531413_asm.fasta`
 
 1. Map your `ERR531380` isolate reads to the `ERR531413_asm.fasta` assembly using `snippy`.
 2. How many sequence variants are there between the two genomes?
-3. Why might you think that your study isolate shares a more, or less, recent common ancestory with `ERR531413`?
+3. Why might you think that your study isolate shares a more, or less, recent common ancestor with `ERR531413` than with PAO1?
 :::
 
 ## Next Steps
