@@ -2,6 +2,61 @@
 
 ## The Real Study
 
-This workshop is based on a real study from 2014 (@Quick2014-kt).
+This workshop is based on a real study from 2014 by @Quick2014-kt (@fig-paper).
+You can read this paper to get the full detail.
+
 The sequences you worked with are real sequences (you can look up the accession numbers at NCBI), and the ward layout is real.
-Some details were changed slightly for pedagogical reasons, but by and large you've been doing the same kind of analysis as in that paper.
+Some details were changed slightly for pedagogical reasons, but by and large you've been doing the same kind of analysis as in that paper, the key points of which are summarised below.
+
+![Front matter of the @Quick2014-kt paper on which this workshop is based](assets/images/quick_paper.png){#fig-paper width=80% .lightbox}
+
+## What kind of hospital was it?
+
+This was a purpose-built burns centre located in the Midlands in England, opened in 2010 and admitting around 300 patients each year.
+The burns centre is laid out just as in @fig-ward-layout.
+
+## How was the study performed?
+
+This was an observational prospective study designed to determine if whole genome sequencing (WGS) could be helpful for determining likely sources of _P. aeruginosa_ in a hospital setting.
+Hydrotherapy is a major part of burns treatments, and there was an overarching hypothesis that patients were acquiring _P. aeruginosa_ from hospital shower water.
+
+Patients were screened for having greater than 7% total body surface area burns injuries, and they or a legal consultee gave written consent for participation.
+Recruited patients were also screened for carriage of _P. aeruginosa_ from outside sources.
+
+Samples were taken from patient wounds, urine and stool, and also from environmental samples.
+Patient, environmental and water samples were taken after the patients were admitted.
+The environment and water sources were also sampled after patient discharge.
+
+## What did they find?
+
+::: { .callout-important }
+## The water and environment in burns and critical care unites are frequently colonised by _P. aeruginosa_
+
+Around 50% of water samples, 26% of wet environment samples, and 6% of dry environment samples were positive for _P. aeruginosa_.
+
+Around 50% of patient samples were positive for _P. aeruginosa_.
+
+Eight distinct clades of _P. aeruginosa_ were identified, and there was no niche preference by clade.
+:::
+
+
+::: { .callout-caution }
+## Potential transmission events detected by WGS
+
+Patients P01 and P04 (samples used in this workshop) were found to have a _P. aeruginosa_ genotype indistinguishable from that of the water and environment of bed 11.
+
+Other patients in the study were positive for _P. aeruginosa_ but environmental or water samples of the same genotype were only found during the duration of their stay, not before or after. This suggested that the patients introduced those lineages to the unit.
+
+Phylogenetic reconstruction from strains including those in this workshop, in conjunction with the plan of the unit, identified a common source of infection.
+:::
+
+::: { .callout-tip }
+### Identification of a potential infection source
+
+The study team obtained a thermostatic mixed valve (TMV) from the hospital estates team, which had been taken from bed 9.
+
+They sequenced a biofilm scraped from this valve, and found reads mapping to _P. aeruginosa_ of the same clade that infected patients in room 11. It appears that persistent biofilms in water systems are a plausible source of _P. aeruginosa_ infections.
+:::
+
+## Limitations of the study
+

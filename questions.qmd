@@ -303,4 +303,4 @@ Please follow the link to the MyPlace formative quiz below and answer the questi
 
 - [MyPlace Formative Quiz]()
 
-Now read on to @sec-epilogue.
+Then read on to @sec-epilogue.
