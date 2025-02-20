@@ -610,7 +610,18 @@
     "href": "tree.html",
     "title": "13  Building a Phylogenetic Tree",
     "section": "",
-    "text": "13.1 What isolates are being analysed?\nThe isolate genomes your colleague has assembled came from the rooms and sources shown in Table 13.1\nTable 13.1: Sequenced isolates",
+    "text": "13.1 What isolates are being analysed?\nThe isolate genomes your colleague has assembled came from the beds and sources shown in Table 14.1.\nTable 13.1: Sequenced isolates",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "tree.html#what-isolates-are-being-analysed",
+    "href": "tree.html#what-isolates-are-being-analysed",
+    "title": "13  Building a Phylogenetic Tree",
+    "section": "",
+    "text": "Note\n\n\n\n\nGenomeID is the accession number for the read data.\nSampleID is the sample number from the study.\nPatientID uniquely identifies a patient.\nBed indicates the corresponding bed for the patient.\nSpecimen indicates whether the isolate was sampled directly from the patient, from a water sample, or swabbed from an environmental surface.\nSource names the kind of surface or substance that was sampled.\nDays indicates the number of days after the study start at which the isolate was collected.",
     "crumbs": [
       "Phylogenetics",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building a Phylogenetic Tree</span>"
@@ -652,56 +663,78 @@
   {
     "objectID": "itol.html",
     "href": "itol.html",
-    "title": "14  Visualising a Phylogenetic Tree",
+    "title": "14  Visualising the Phylogenetic Tree",
     "section": "",
     "text": "14.1 Downloading the tree\nIn this section you will use the online tool iTOL to visualise the phylogenetic tree you created in Chapter 13. This tree represents evolutionary relationships between the 33 study isolates, as inferred from differences in their genome sequences. By appropriately rooting and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.\nTo use iTOL you need to upload a file representing the phylogenetic tree. At the moment your tree file only exists on Galaxy so you need to download it to your local project folder. To download the tree file:\nThis will place the Newick-formatted tree file in your local directory.",
     "crumbs": [
       "Phylogenetics",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
     ]
   },
   {
     "objectID": "itol.html#downloading-the-tree",
     "href": "itol.html#downloading-the-tree",
-    "title": "14  Visualising a Phylogenetic Tree",
+    "title": "14  Visualising the Phylogenetic Tree",
     "section": "",
     "text": "Click on the Best-scoring ML Tree history item\nClick on the floppy disk icon1\nSelect the appropriate location to download the file\nClick Save\n\n\n\n\n\n\n\n\nVideo: Downloading the tree file",
     "crumbs": [
       "Phylogenetics",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
     ]
   },
   {
     "objectID": "itol.html#upload-the-tree-to-itol",
     "href": "itol.html#upload-the-tree-to-itol",
-    "title": "14  Visualising a Phylogenetic Tree",
+    "title": "14  Visualising the Phylogenetic Tree",
     "section": "14.2 Upload the tree to iTOL",
     "text": "14.2 Upload the tree to iTOL\n\nNavigate to the iTOL website at https://itol.embl.de/\nClick on Upload a tree\nClick on Browse and navigate to your downloaded Newick tree file\nSelect the tree file and click Open. The tree file’s name should appear at the iTOL site\nClick Upload\n\nA basic representation of your tree should appear, as in Figure 14.1\n\n\n\n\n\n\n\n\nFigure 14.1: Initial tree representation at iTOL\n\n\n\n\n\n\n\n\n\nVideo: Upload the tree file to iTOL",
     "crumbs": [
       "Phylogenetics",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
     ]
   },
   {
-    "objectID": "itol.html#re-root-the-tree",
-    "href": "itol.html#re-root-the-tree",
-    "title": "14  Visualising a Phylogenetic Tree",
-    "section": "14.3 Re-root the tree",
-    "text": "14.3 Re-root the tree\n\n\n\n\n\n\nImportant\n\n\n\nYour colleague has been super-helpful and identified the reference genome that is assumed to be ancestral to all of the genomes in the tree. The ancestral genome, which should be considered the root of the tree, is ERR531413_asm.fasta.ref. Rooting the tree at this genome should make the tree reflect the time sequence of divergence of each isolate from their common ancestors.\n\n\n\nClick on the ancestral node in the tree: ERR531413_asm.fasta.ref\nClick on Tree structure -&gt; Re-root the tree here\n\n\n\n\n\n\n\nVideo: Re-root the tree to the known ancestral reference\n\n\n\n\n\n\n\n\n\n\n\n\nTODO\n\n\n\nADD QUESTION ASKING STUDENTS TO CONSIDER THE CLADE STRUCTURE",
+    "objectID": "itol.html#re-rooting-the-tree",
+    "href": "itol.html#re-rooting-the-tree",
+    "title": "14  Visualising the Phylogenetic Tree",
+    "section": "14.3 Re-rooting the tree",
+    "text": "14.3 Re-rooting the tree\n\n\n\n\n\n\nImportant\n\n\n\nYour colleague has been super-helpful and identified the reference genome that is assumed to be ancestral to all of the genomes in the tree. The ancestral genome, which should be considered the root of the tree, is ERR531413_asm.fasta.ref. Rooting the tree at this genome should make the tree reflect the time sequence of divergence of each isolate from their common ancestors.\n\n\n\nClick on the ancestral node in the tree: ERR531413_asm.fasta.ref\nClick on Tree structure -&gt; Re-root the tree here\n\n\n\n\n\n\n\nVideo: Re-root the tree to the known ancestral reference\n\n\n\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nAs a reminder, and to help with tree annotation, the interactive table of isolate metadata is shown below in Table 14.1.\n\n\n\n\nTable 14.1: Sequenced isolates\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTODO\n\n\n\nADD QUESTION ASKING STUDENTS TO CONSIDER THE CLADE STRUCTURE",
     "crumbs": [
       "Phylogenetics",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "itol.html#annotating-the-tree",
+    "href": "itol.html#annotating-the-tree",
+    "title": "14  Visualising the Phylogenetic Tree",
+    "section": "14.4 Annotating the tree",
+    "text": "14.4 Annotating the tree\nWe are interested in how P. aeruginosa may have spread around the burns ward. We can gain some insight into this by annotating the phylogenetic tree, which represents the evolutionary history of the isolates, with metadata. For example, annotating the tree with the bed number might help us understand whether the isolates tend to stay in one location, or whether they move freely between beds. Similarly, annotating the specimen type can help us understand if there is transmission between patients, from environment or water to the patient, or from the patient to the environment.\n\n\n\n\n\n\nTip\n\n\n\nIt can help visibility to increase the linewidth for all branches in the tree.\nTo do this, look for Branch options in the Basic iTOL tab of the control panel. There is an option called Line style. Click on the chevrons to obtain a branch line weight that is pleasing to the eye.\n\n\n\n14.4.1 Relabel branches to indicate the beds they were sampled from\n\nSort Table 14.1 by bed number by clicking on one of the triangles next to the Bed header\nIdentify the branches corresponding to the genomes sampled from bed 6\nModify the label for each branch to indicate the bed it was sampled from (e.g. change ERR531398_asm.fasta to ERR531398_bed6)\n\n\nClick on the branch label\nClick on Label -&gt; Text -&gt; Edit label\nEnter the new label\nClick on the tick (changes won’t be saved if you do not do this)\n\n\nRepeat steps 2 and 3 for the genomes sampled from beds 9 and 11\n\n\n\n\n\n\n\nVideo: Relabel branches to reflect the beds they were sampled from\n\n\n\n\n\n\n\n\n14.4.2 Change label colour to indicate the specimen type\n\nSort Table 14.1 by bed number by clicking on one of the triangles next to the SpecimenType header\nIdentify the branches corresponding to the Environmental samples\nModify the background colour for each of these branches to be the same colour (e.g. green)\n\n\nClick on the branch label\nClick on Label -&gt; Text -&gt; Edit label\nEnter the new label\nClick on the tick (changes won’t be saved if you do not do this)\n\n\nRepeat steps 2 and 3 for the Patient and Water samples, using contrasting colours\n\n\n\n\n\n\n\nVideo: Colour branch labels to indicate the sample source\n\n\n\n\n\n\n\n\n14.4.3 Relabel branches to indicate the patients from which they were sampled\n\nSort Table 14.1 by patient by clicking on one of the triangles next to the PatientID header\nIdentify branches with a SpecimenType of Patient\nUpdate the label for each such branch to indicate the patient corresponding to the sample (e.g. change ERR531300 bed 11 to ERR531300 bed 11 P01)\n\n\n\n\n\n\n\nVideo: Colour branch labels to indicate the sample source",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "itol.html#next-steps",
+    "href": "itol.html#next-steps",
+    "title": "14  Visualising the Phylogenetic Tree",
+    "section": "14.5 Next Steps",
+    "text": "14.5 Next Steps\nNow that you have reconstructed a phylogenetic tree and annotated it with metadata for each sequenced isolate, you can move on to interpreting the data in ?sec-questions.",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
     ]
   },
   {
     "objectID": "itol.html#footnotes",
     "href": "itol.html#footnotes",
-    "title": "14  Visualising a Phylogenetic Tree",
+    "title": "14  Visualising the Phylogenetic Tree",
     "section": "",
     "text": "We know you’re all too young to have used a floppy disk, but humour us…↩︎",
     "crumbs": [
       "Phylogenetics",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
     ]
   },
   {
