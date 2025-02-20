@@ -567,7 +567,7 @@
     "href": "pubmlst.html#classification-with-galaxy",
     "title": "12  PubMLST Classification",
     "section": "",
-    "text": "Navigate to the MLST tool in the Tools sidebar\nSelect the ERR531380 assembly as the input_files\nClick on Run Tool\nClick on the Eye icon to see the result\n\n\n\n\n\n\n\nVideo: Use Galaxy’s MLST tool to classify your isolate",
+    "text": "Navigate to the MLST tool in the Tools sidebar\nSelect the ERR531380 assembly as the input_files\nClick on Run Tool\nClick on the Eye icon to see the result\n\n\n\n\n\n\n\nVideo: Use Galaxy’s MLST tool to classify your isolate\n\n\n\n\n\n\n\n\n\n\n\n\nQUESTION\n\n\n\n\nWhat is the sequence type (ST) of your isolate as reported by Galaxy MLST?\n\n\n\n\n ✗paeruginosa\n\n\n ✓395\n\n\n ✗6, 5, 1, 1, 1, 12, 1\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nCheck the Help section of the MLST tool for a description of the output format.",
     "crumbs": [
       "Isolate Classification",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>PubMLST Classification</span>"
@@ -603,6 +603,105 @@
     "text": "Phylogenetic methods allow us to reconstruct the evolutionary history of, and relationships between, organisms. Here, we can use these approaches to obtain evidence about the likely order and route of transmission of bacterial isolates in the context of an infection outbreak, such as this study.\nIn this section, you will construct a phylogenetic tree from the aligned SNPs (single-nucleotide polymorphisms) of a set of isolates from rooms 6, 9, and 11 - and a reference isolate believed to have existed prior to the study. You will visualise the tree you construct, and use it to propose a potential order of events for infection and transmission in this burns ward.",
     "crumbs": [
       "Phylogenetics"
+    ]
+  },
+  {
+    "objectID": "tree.html",
+    "href": "tree.html",
+    "title": "13  Building a Phylogenetic Tree",
+    "section": "",
+    "text": "13.1 What isolates are being analysed?\nThe isolate genomes your colleague has assembled came from the rooms and sources shown in Table 13.1\nTable 13.1: Sequenced isolates",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "tree.html#inferring-a-phylogenetic-tree-with-raxml",
+    "href": "tree.html#inferring-a-phylogenetic-tree-with-raxml",
+    "title": "13  Building a Phylogenetic Tree",
+    "section": "13.2 Inferring a phylogenetic tree with RaxML",
+    "text": "13.2 Inferring a phylogenetic tree with RaxML\n\nNavigate to RaxML in the Tools sidebar\nSet the source file to be the .fasta file you just uploaded\nCheck that the Model type is Nucleotide with the GTRGAMMA model\nClick on Run Tool\n\n\n\n\n\n\n\nVideo: Inferring a tree using RaxML",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "tree.html#inspect-the-tree-file-and-visualise-the-tree-in-galaxy",
+    "href": "tree.html#inspect-the-tree-file-and-visualise-the-tree-in-galaxy",
+    "title": "13  Building a Phylogenetic Tree",
+    "section": "13.3 Inspect the tree file and visualise the tree in Galaxy",
+    "text": "13.3 Inspect the tree file and visualise the tree in Galaxy\n\nClick on the Eye icon nect to the Best-scoring ML Tree output\n\n\n\n\n\n\n\nTODO\n\n\n\nASK SOME QUESTIONS HERE\n\n\n\nNavigate to ETE tree viewer in the Tools sidebar\nIn the Newick Tree to visualise field, select the Best-scoring ML Tree output\nSet Resolve Taxonomic IDs to No\nClick on Run Tool\nWhen the visualisation finishes, click on the Eye icon next to the output\n\n\n\n\n\n\n\nVideo: Visualising the tree in Galaxy\n\n\n\n\n\n\n\n\n\n\n\n\nTODO\n\n\n\nASK SOME QUESTIONS HERE",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "tree.html#next-steps",
+    "href": "tree.html#next-steps",
+    "title": "13  Building a Phylogenetic Tree",
+    "section": "13.4 Next Steps",
+    "text": "13.4 Next Steps\nIt would be useful to be able to annotate the tree with a visual representation of the sample type and room for each isolate. You will do this in Chapter 14 using iTOL.",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Building a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "itol.html",
+    "href": "itol.html",
+    "title": "14  Visualising a Phylogenetic Tree",
+    "section": "",
+    "text": "14.1 Downloading the tree\nIn this section you will use the online tool iTOL to visualise the phylogenetic tree you created in Chapter 13. This tree represents evolutionary relationships between the 33 study isolates, as inferred from differences in their genome sequences. By appropriately rooting and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.\nTo use iTOL you need to upload a file representing the phylogenetic tree. At the moment your tree file only exists on Galaxy so you need to download it to your local project folder. To download the tree file:\nThis will place the Newick-formatted tree file in your local directory.",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "itol.html#downloading-the-tree",
+    "href": "itol.html#downloading-the-tree",
+    "title": "14  Visualising a Phylogenetic Tree",
+    "section": "",
+    "text": "Click on the Best-scoring ML Tree history item\nClick on the floppy disk icon1\nSelect the appropriate location to download the file\nClick Save\n\n\n\n\n\n\n\n\nVideo: Downloading the tree file",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "itol.html#upload-the-tree-to-itol",
+    "href": "itol.html#upload-the-tree-to-itol",
+    "title": "14  Visualising a Phylogenetic Tree",
+    "section": "14.2 Upload the tree to iTOL",
+    "text": "14.2 Upload the tree to iTOL\n\nNavigate to the iTOL website at https://itol.embl.de/\nClick on Upload a tree\nClick on Browse and navigate to your downloaded Newick tree file\nSelect the tree file and click Open. The tree file’s name should appear at the iTOL site\nClick Upload\n\nA basic representation of your tree should appear, as in Figure 14.1\n\n\n\n\n\n\n\n\nFigure 14.1: Initial tree representation at iTOL\n\n\n\n\n\n\n\n\n\nVideo: Upload the tree file to iTOL",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "itol.html#re-root-the-tree",
+    "href": "itol.html#re-root-the-tree",
+    "title": "14  Visualising a Phylogenetic Tree",
+    "section": "14.3 Re-root the tree",
+    "text": "14.3 Re-root the tree\n\n\n\n\n\n\nImportant\n\n\n\nYour colleague has been super-helpful and identified the reference genome that is assumed to be ancestral to all of the genomes in the tree. The ancestral genome, which should be considered the root of the tree, is ERR531413_asm.fasta.ref. Rooting the tree at this genome should make the tree reflect the time sequence of divergence of each isolate from their common ancestors.\n\n\n\nClick on the ancestral node in the tree: ERR531413_asm.fasta.ref\nClick on Tree structure -&gt; Re-root the tree here\n\n\n\n\n\n\n\nVideo: Re-root the tree to the known ancestral reference\n\n\n\n\n\n\n\n\n\n\n\n\nTODO\n\n\n\nADD QUESTION ASKING STUDENTS TO CONSIDER THE CLADE STRUCTURE",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
+    ]
+  },
+  {
+    "objectID": "itol.html#footnotes",
+    "href": "itol.html#footnotes",
+    "title": "14  Visualising a Phylogenetic Tree",
+    "section": "",
+    "text": "We know you’re all too young to have used a floppy disk, but humour us…↩︎",
+    "crumbs": [
+      "Phylogenetics",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising a Phylogenetic Tree</span>"
     ]
   },
   {
