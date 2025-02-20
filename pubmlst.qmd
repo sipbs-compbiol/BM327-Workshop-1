@@ -1,5 +1,20 @@
 # PubMLST Classification { #sec-pubmlst }
 
+## Classification with `Galaxy`
+
+1. Navigate to the `MLST` tool in the `Tools` sidebar
+2. Select the `ERR531380` assembly as the `input_files`
+3. Click on `Run Tool`
+4. Click on the `Eye` icon to see the result
+
+::: { .callout-note }
+## Video: Use Galaxy's `MLST` tool to classify your isolate
+
+{{< video assets/movies/galaxy-22-mlst.mp4 title="Using the Galaxy `MLST` tool to classify your isolate." >}}
+:::
+
+## Classification at `pubMLST`
+
 1. **In a new tab of your browser** open the [PubMLST](https://pubmlst.org/) website
 2. Click on `Organisms`
 3. Navigate to _Pseudomonas aeruginosa_ and click on `Typing`
@@ -16,6 +31,8 @@ The `pubMLST` classification may take a couple of minutes.
 
 {{< video assets/movies/pubmlst-1-classify.mp4 title="Using the `PubMLST` server to classify your isolate." >}}
 :::
+
+
 
 ## Next Steps
 
