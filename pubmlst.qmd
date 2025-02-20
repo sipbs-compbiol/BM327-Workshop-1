@@ -1,6 +1,21 @@
 # PubMLST Classification { #sec-pubmlst }
 
-## Classification with `Galaxy`
+## Multi-Locus Sequence Typing (MLST)
+
+[Multi-Locus Sequence Typing (MLST)](https://pubmlst.org/multilocus-sequence-typing) is a widely-used method for bacterial identification. It is typically more precise and has more resolving power than 16S sequence analysis, but less precise than whole-genome sequence analysis (@Maiden2013-jh).
+
+MLST works by defining _marker sequences_ for a taxon (@fig-mlst). These are typically well-conserved ("housekeeping") genes which very relatively little between organisms in the taxon, but enough to allow discrimination between them. The number of markers varies, but is usually somewhere around seven.
+
+Each marker sequence has many _variants_ (different sequences) within the taxon, and these are known as _alleles_. Each marker allele is given a unique number (starting at 1 and counting upwards) - its _allele number_. A single organism's _sequence type (ST)_ is determined by the list of allele numbers that it contains. Organisms with the same _sequence type_ are considered to be part of the same group.
+
+![Schematic representation of MLST. In this typing scheme there are seven markers ("housekeeping genes"). One of these is the gene _adk_, which has a different sequence in each of the strains A, B, and C - so these have different allele numbers (1, 2, and 3). Another marker, _pdhC_ has the same sequence (allele number) in strains A and C, but a different sequence (allele number) in strain B. The strains have allele numbers: 1,1,1,1,1,1,1 (A); 2,2,2,1,2,1,2 (B); 1,3,2,2,1,3,2 (C). These lists are different, so the strains have different sequence types.](assets/images/MLST.png){#fig-mlst width="80%" .lightbox}
+
+
+## MLST Classification with `Galaxy`
+
+The [PubMLST.org](https://pubmlst.org/) website hosts a collection of open-access, curated databases that integrate population sequence data with provenance and phenotype information for over 130 different microbial species and genera. These databases are curated and maintained by volunteers and made available freely for use by anyone. They are available in `Galaxy`.
+
+The [`MLST` software](https://github.com/tseemann/mlst) is made available in `Galaxy` for querying bacterial sequences against the `pubMLST` databases. To do this:
 
 1. Navigate to the `MLST` tool in the `Tools` sidebar
 2. Select the `ERR531380` assembly as the `input_files`
@@ -44,9 +59,11 @@ Check the `Help` section of the `MLST` tool for a description of the output form
 
 :::
 
-
-
 ## Classification at `pubMLST`
+
+The [PubMLST.org](https://pubmlst.org/) website also provides its own search and classification tools. Some of these are genus or species specific, running queries against databases focused on classification of a particular group of organisms, but they also provide a much braoder classification scheme with a much larger number of markers that you may have met in a [BM329 workshop](https://sipbs-compbiol.github.io/BM329_Block_A_workshop/mlst.html).
+
+Here, you will use `PubMLST`'s _Pseudomonas aeruginosa_-specific database to identify your assembled isolate.
 
 1. **In a new tab of your browser** open the [PubMLST](https://pubmlst.org/) website
 2. Click on `Organisms`
@@ -65,7 +82,9 @@ The `pubMLST` classification may take a couple of minutes.
 {{< video assets/movies/pubmlst-1-classify.mp4 title="Using the `PubMLST` server to classify your isolate." >}}
 :::
 
-
+::: { .callout-question }
+1. Does `PubMLST` assign the same sequence type (ST) to your isolate as `Galaxy`'s `MLST` tool did?
+:::
 
 ## Next Steps
 
