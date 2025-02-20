@@ -99,6 +99,7 @@ custom-callout:
     color: "yellow"
 filters:
 - custom-callout
+- naquiz
   
 #  pdf:
 #    documentclass: scrreprt

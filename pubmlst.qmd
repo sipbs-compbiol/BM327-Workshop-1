@@ -13,6 +13,39 @@
 {{< video assets/movies/galaxy-22-mlst.mp4 title="Using the Galaxy `MLST` tool to classify your isolate." >}}
 :::
 
+::: { .callout-question }
+
+:::::{.question}
+What is the sequence type (ST) of your isolate as reported by Galaxy `MLST`?
+
+::::{.choices}
+
+:::{.choice}
+paeruginosa
+:::
+
+:::{.choice .correct-choice}
+395
+:::
+
+:::{.choice}
+6, 5, 1, 1, 1, 12, 1
+:::
+
+::::
+
+::: { .callout-tip collapse="true" }
+## Hint
+
+Check the `Help` section of the `MLST` tool for a description of the output format.
+:::
+
+:::::
+
+:::
+
+
+
 ## Classification at `pubMLST`
 
 1. **In a new tab of your browser** open the [PubMLST](https://pubmlst.org/) website
