@@ -73,6 +73,10 @@ book:
     - part: investigation.qmd
       chapters:
         - questions.qmd
+        
+    - part: conclusion.qmd
+      chapters:
+        - epilogue.qmd
 
     - references.qmd
 

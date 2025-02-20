@@ -1,0 +1,7 @@
+# Epilogue { #sec-epilogue }
+
+## The Real Study
+
+This workshop is based on a real study from 2014 (@Quick2014-kt).
+The sequences you worked with are real sequences (you can look up the accession numbers at NCBI), and the ward layout is real.
+Some details were changed slightly for pedagogical reasons, but by and large you've been doing the same kind of analysis as in that paper.

@@ -3,7 +3,7 @@
 You have constructed a phylogenetic tree similar to that in @fig-tree for each of the study isolates in @tbl-isolates.
 In this section, you will use this information, and the plan of the burns unit in @fig-ward-layout to draw inferences about the likely routes of transmission of _P. aeruginosa_ in the burns unit.
 
-Work through the questions below to form your own conclusions concerning how the evidence supports particular routes of transmission.
+Work through the questions below to form your own conclusions concerning how the evidence does or does not support hypotheses about particular routes of transmission.
 
 ![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout width=80% .lightbox}
 
@@ -198,14 +198,15 @@ Isolates sampled from the patient would not resemble any isolates sampled from t
 ## Hint
 
 Contamination can be bidirectional.
-If a patient and their bed are in contact tbhen material, including bacteria, can be transferred from the patient to the bed, and from the bed to the patient.
+If a patient and their bed are in contact then material, including bacteria, can be transferred from the patient to the bed, and from the bed to the patient.
+More than one answer may be plausible.
 :::
 
 ::: { .callout-warning collapse="true" }
 ## Explanation
 
 If the patient introduces _P. aeruginosa_ from an outside source to their bed, then isolates from that patient's bed may resemble those from an outside source (but not other isolates from the unit).
-In the absence of cross-contamination, only that bed would carry the isolate that was introduced by the patient.
+In the absence of cross-contamination, only that bed would carry an isolate that was introduced by the patient.
 
 If the patient acquires _P. aeruginosa_ from the previously-contaminated unit, and the isolates from each bed are related, then isolates from the patient may resemble those from any bed on the unit (though will likely be most similar to those from their own bed).
 :::
@@ -224,6 +225,8 @@ Is the tree you constructed compatible with this hypothesis?
 ## Hint
 
 Do the isolates sampled from patients resemble isolates sampled from the beds, or do they appear to be a different lineage entirely?
+
+Is it possible that the study's sampling strategy could pick up contamination in one direction (e.g. bed to patient), but not the other (patient to bed)?
 :::
 
 :::
@@ -245,11 +248,11 @@ Use the `Days` column from @tbl-isolates (you may need to scroll to the right), 
 
 
 :::{.choice}
-Patients P01 and P04 independently introduced from outside the burns unit two different strains that were sampled from their wounds.
+Patients P01 and P04 independently introduced from outside the burns unit two different lineages of _P. aeruginosa_ that were sampled from their wounds.
 :::
 
 :::{.choice}
-Patient P01 introduced the strain sampled from both patients from outside the unit, contaminating bed 11, and then contaminating patient P04.
+Patient P01 introduced the strain sampled from both patients from outside the unit, contaminating bed 11. Later, bed 11 contaminated patient P04.
 :::
 
 :::{.choice .correct-choice}
@@ -257,7 +260,7 @@ Patients P01 and P04 each acquired the strain that was sampled from their wounds
 :::
 
 :::{.choice}
-Patient P04 introduced the strain sampled from both patients from outside the unit, contaminating bed 11, and then contaminating patient P01.
+Patient P04 introduced the strain sampled from both patients from outside the unit, contaminating bed 11. Later, bed 11 contaminated patient P01.
 :::
 
 
@@ -273,7 +276,7 @@ Use the data in @tbl-isolates to check if time travel would be necessary for som
 ::: { .callout-warning collapse="true" }
 ## Explanation
 
-Patient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated them. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independently contaminated outwith the burns unit.
+Patient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated them. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independent lineages introduced to the burns unit.
 :::
 
 
