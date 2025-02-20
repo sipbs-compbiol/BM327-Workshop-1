@@ -112,7 +112,7 @@ The _per sequence quality_ score (@fig-falco-perseq) summarises the distribution
 In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.
 :::
 
-![Per sequence quality score plot from `Falco` indicating overall high quality sequencing reads.](assets/images/falco_perseq.png){#fig-fastqc-perseq width=80%}
+![Per sequence quality score plot from `Falco` indicating overall high quality sequencing reads.](assets/images/falco_perseq.png){#fig-falco-perseq width=80%}
 
 ::: { .callout-caution }
 If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.
