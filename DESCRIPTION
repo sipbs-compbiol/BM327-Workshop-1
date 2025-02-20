@@ -1,5 +1,5 @@
 Package: bm327-workshop-1
-Title: BM327_Workshop_1
+Title: BM327-Workshop-1
 Version: 0.1
 Authors@R: c(
     person("Leighton", "Pritchard", , "leighton.pritchard@strath.ac.uk", role = c("aut", "cre")),
