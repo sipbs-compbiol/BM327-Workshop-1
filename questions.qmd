@@ -301,6 +301,6 @@ Do the isolates sampled from patients look to be distinct from those that were s
 
 Please follow the link to the MyPlace formative quiz below and answer the questions.
 
-- [MyPlace Formative Quiz]()
+- [MyPlace Formative Quiz]({{< var myplace.quiz >}})
 
 Then read on to @sec-epilogue.
