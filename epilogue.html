@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Leighton Pritchard">
-<meta name="dcterms.date" content="2025-02-21">
 
-<title>BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
+<title>16&nbsp; Epilogue – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -32,7 +51,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
+<link href="./references.html" rel="next">
+<link href="./conclusion.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -72,6 +92,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
+  background-image: none;
+}
 div.callout-callout-challenge.callout {
   border-left-color: aquamarine;
 }
@@ -92,17 +123,6 @@ div.callout-callout-question.callout-style-default > .callout-header {
 div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
   content: '🙋';
-  background-image: none;
-}
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-questions.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
   background-image: none;
 }
 div.callout-callout-todo.callout {
@@ -130,7 +150,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface to the {{&lt; var ay &gt;}} presentation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./conclusion.html">Conclusion</a></li><li class="breadcrumb-item"><a href="./epilogue.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Epilogue</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -165,7 +185,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./index.html" class="sidebar-item-text sidebar-link active">
+            <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface to the 2024-25 presentation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -352,7 +372,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./epilogue.html" class="sidebar-item-text sidebar-link">
+  <a href="./epilogue.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Epilogue</span></span></a>
   </div>
 </li>
@@ -374,40 +394,23 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface-to-the-presentation" id="toc-preface-to-the-presentation" class="nav-link active" data-scroll-target="#preface-to-the-presentation">Preface to the 2024-25 presentation</a>
-  <ul class="collapse">
-  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#assessment" id="toc-assessment" class="nav-link" data-scroll-target="#assessment">Assessment</a></li>
-  </ul></li>
+  <li><a href="#the-real-study" id="toc-the-real-study" class="nav-link active" data-scroll-target="#the-real-study"><span class="header-section-number">16.1</span> The Real Study</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/epilogue.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./conclusion.html">Conclusion</a></li><li class="breadcrumb-item"><a href="./epilogue.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Epilogue</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">BM327 Workshop 1: Seeking the Source of Hospital Infection</h1>
+<h1 class="title"><span id="sec-epilogue" class="quarto-section-identifier"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Epilogue</span></span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Dr Leighton Pritchard and Dr Morgan Feeney </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 21, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -417,46 +420,16 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-
-<section id="preface-to-the-presentation" class="level1 unnumbered">
-<h1 class="unnumbered">Preface to the 2024-25 presentation</h1><p><img src="sipbs_compbio_800.png" title="BM327 Workshop 1: Seeking the Source of Hospital Infection" class="quarto-cover-image img-fluid"></p>
-<p>Welcome to the BM327 (Being a Biomolecular Scientist 3) bioinformatics workshop 1 for 2024-25.</p>
-<p>This is the first presentation of this material, and we would be very grateful to hear feedback about it <a href="mailto:leighton.pritchard@strath.ac.uk">by email</a> or through the <a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues">GitHub repository Issues page</a>.</p>
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This workshop asks you to carry out common bioinformatics analyses to trace the likely source of a <em>Pseudomonas aeruginosa</em> infection in a hospital burns unit. You will be using online bioinformatics services to do this.</p>
-<div class="callout callout-style-default callout-warning callout-titled" title="Important Note">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>There is new material in this workshop that is not covered in lectures, and <strong>this material is examinable</strong>. Please take care to read the text in the expandable callout boxes, as well as that for the workshop, to be sure you have understood the topic and obtain full value from the exercise.</p>
-<p>The workshop material will remain live online for the duration of BM327, and you can revisit it whenever you wish, for practice or revision.</p>
-</div>
-</div>
-<p><strong>You should be able to complete this workshop in under two hours.</strong></p>
-</section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of this workshop, students will be able to:</p>
-<ul>
-<li>Perform quality control on Illumina sequencing data</li>
-<li>Map Illumina-sequenced reads to a reference genome, to identify sequence variants</li>
-<li>Generate and annotate a phylogenetic tree</li>
-<li>Use genomic data to make an informed judgement about the likely source of a nosocomial infection</li>
-</ul>
-</section>
-<section id="assessment" class="level2">
-<h2 class="anchored" data-anchor-id="assessment">Assessment</h2>
-<p>This workshop activity itself is not formally assessed although, as noted, all the material it contains is examinable. There is a formative assessment in the form of short answer questions <a href="https://classes.myplace.strath.ac.uk/course/view.php?id=21691">on MyPlace</a>, which you should complete as part of the workshop.</p>
+<section id="the-real-study" class="level2" data-number="16.1">
+<h2 data-number="16.1" class="anchored" data-anchor-id="the-real-study"><span class="header-section-number">16.1</span> The Real Study</h2>
+<p>This workshop is based on a real study from 2014 (<span class="citation" data-cites="Quick2014-kt">Quick et al. (<a href="references.html#ref-Quick2014-kt" role="doc-biblioref">2014</a>)</span>). The sequences you worked with are real sequences (you can look up the accession numbers at NCBI), and the ward layout is real. Some details were changed slightly for pedagogical reasons, but by and large you’ve been doing the same kind of analysis as in that paper.</p>
 
 
-</section>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Quick2014-kt" class="csl-entry" role="listitem">
+Quick, Joshua, Nicola Cumley, Christopher M Wearn, Marc Niebel, Chrystala Constantinidou, Chris M Thomas, Mark J Pallen, et al. 2014. <span>“Seeking the Source of Pseudomonas Aeruginosa Infections in a Recently Opened Hospital: An Observational Study Using Whole-Genome Sequencing.”</span> <em>BMJ Open</em> 4 (11): e006278.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -879,10 +852,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./conclusion.html" class="pagination-link" aria-label="Conclusion">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Conclusion</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Workshop Introduction">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Workshop Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link" aria-label="References">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -894,7 +870,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/epilogue.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
