@@ -60,7 +60,7 @@ The use `CheckM` to estimate the quality of your assembly:
 
 1. Navigate to the `CheckM taxonomy_wf` tool using the `Tools` sidebar in Galaxy
 2. Select the Taxonomic rank of `Species` and set the `Taxon of interest` to be _Pseudomonas aeruginosa_ (the identity of the isolate is known, or at least strongly suspected, on the basis of polyphasic tests)
-3. Under `Data structure for bins` select `In individual datasets` and choose the `Contigs` output from your `Shovill assembly`
+3. Under `Data structure for bins` select `In individual datasets` and choose the `ERR531380.contigs.fasta` file
 4. Click on `Run Tool`
 
 ::: { .callout-note }
