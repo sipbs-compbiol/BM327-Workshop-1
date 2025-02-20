@@ -27,11 +27,13 @@ They have provided the results for you to download in two files, below - the VCF
 
 The isolate genomes your colleague has assembled came from the rooms and sources shown in @tbl-isolates
 
-```{r}
+```{r echo=FALSE}
 #| label: tbl-isolates
 #| tbl-cap: "Sequenced isolates"
 
+metadata <- readxl::read_excel("assets/workshop_downloads/isolate_metadata.xlsx")
 
+DT::datatable(metadata)
 ```
 
 
