@@ -77,7 +77,7 @@ DT::datatable(metadata)
 ::: { .callout-note }
 ## Video: Visualising the tree in `Galaxy`
 
-{{< video assets/movies/galaxy-22-ete.mp4 title="Visualising the tree in `Galaxy` with `ETE tree viewer`" >}}
+{{< video assets/movies/galaxy-22a-ete.mp4 title="Visualising the tree in `Galaxy` with `ETE tree viewer`" >}}
 :::
 
 ::: { .callout-todo }
