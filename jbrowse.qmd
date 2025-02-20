@@ -51,10 +51,6 @@ Click on the `eye` icon for the new `JBrowse` output. The magnifying glass icons
 
 You can click on the header of the SNP track in `JBrowse` and select `Pin to top`, so that you can zoom in and see individual SNPs, as in the video below.
 
-::: { .callout-todo }
-**GENERATE VIDEO OF SNP VISUALISATION IN GALAXY**
-:::
-
 ::: { .callout-note }
 ## Video: Visualising SNPs in `JBrowse`
 
