@@ -1,6 +1,6 @@
 # Galaxy {#sec-galaxy}
 
-The chapters in this section of the workshop will guide you through registering an account with [Galaxy EU](https://usegalaxy.eu), and uploading workshop data to the Galaxy instance.
+The chapters in this section of the workshop will guide you through joining the workshop session at [Galaxy EU](https://usegalaxy.eu), and uploading workshop data to the Galaxy instance.
 
 - @sec-join-session at [https://usegalaxy.eu/join-training/](https://usegalaxy.eu/join-training/)
 - @sec-download-data to your computer
