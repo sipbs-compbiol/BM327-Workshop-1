@@ -16,7 +16,7 @@ When describing your sequencing experiment in a manuscript or dissertation, you 
 :::
 
 ::: { .callout-tip }
-The main kind of low-quality data we might have in our raw reads are:
+The main kinds of low-quality data we might have in our raw reads are:
 
 1. Contamination: reads that derive from an organism we didn't intend to sequence; these are usually identified by querying against a database and removed
 2. Low-confidence basecalls: reads containing base calls that the basecaller is unsure about; these are usually found towards the end of the read sequence and are removed by _trimming_ the read
@@ -53,7 +53,7 @@ This part of the workshop will cover the use of `Falco` to inspect the quality o
 When the run is complete, click on the `eye` icon of the `Webpage` result to inspect the `FastQC` output.
 
 ::: { .callout-tip }
-You can press and hold **CTRL** (on a PC) or **CMD ⌘** (macOS) when clicking the `eye` icon to open the result in its own window.
+You can press and hold **CTRL** (on a PC) or **CMD** (⌘, macOS) when clicking the `eye` icon to open the result in its own window.
 :::
 :::
 
@@ -62,15 +62,17 @@ You can press and hold **CTRL** (on a PC) or **CMD ⌘** (macOS) when clicking t
 
 The output of `Falco` tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:
 
-- [Official `FastQC` documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 - [Official `Falco` documentation](https://falco.readthedocs.io/en/latest/)
-- [Michigan State University (MSU) `FastQC` tutorial](https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx)
 
-::: { .callout-warning }
+::: { .callout-tip }
 ## `Falco` and `FastQC`
 
-`Falco` and `FastQC` are two different tools, but they perform the same task and give equivalent, if visually distinct, output. `Falco` output is interpreted in exactly the same way as `FastQC` output, so it can be helpful to refer to `FastQC` tutorials and documentation.
+`Falco` is a reimplementation of the `FastQC` application. Almost all of the documentation about use and interpretation of `FastQC` also applies to `Falco`.
+
+- [Official `FastQC` documentation](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- [Michigan State University (MSU) `FastQC` tutorial](https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx)
 :::
+
 
 ::: { .callout-note }
 ## Video: Inspecting `Falco` output in Galaxy
@@ -80,7 +82,7 @@ The output of `Falco` tells us a lot about the quality of our sequencing data, a
 
 ### `Falco` Summary
 
-The `Falco` summary (@fig-falco-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (green, with a tick), a _warning_ (amber, with exclamation mark), or a _fail_ (red, with a cross) mark.
+The `Falco` summary (@fig-falco-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (<span style="color:green;">green</span>, with a tick), a _warning_ (<span style="color:orange;">amber</span>, with exclamation mark), or a _fail_ (<span style="color:red;">red</span>, with a cross) mark.
 
 ::: { .column-margin }
 ![Example `Falco` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Sequence Length Distribution," and a fail for "Per tile sequence quality"](assets/images/falco_summary.png){#fig-falco-summary fig-alt="Summary section of a Falco report showing passes for most sections, warnings for some sections, and failure for two sections." width="80%"}
@@ -94,7 +96,7 @@ The _per base sequence quality_ plot (@fig-falco-perbase) presents the ranges of
 For good-quality sequence read data, we are looking for a graph where the mean quality (see @fig-falco-perbase) is always showing green, with a score greater than 29.
 :::
 
-![Per base sequence quality score plot from `Falco` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range.](assets/images/falco_perbase.png){#fig-falco-perbase width=80%}
+![Per base sequence quality score plot from `Falco` indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range. In this example, quality is high for the first 100 bases, but dips significantly and becomes less reliable at about 150 bases into the reads.](assets/images/falco_perbase.png){#fig-falco-perbase width=80%}
 
 ::: { .callout-caution }
 It is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.
@@ -112,7 +114,7 @@ The _per sequence quality_ score (@fig-falco-perseq) summarises the distribution
 In good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.
 :::
 
-![Per sequence quality score plot from `Falco` indicating overall high quality sequencing reads.](assets/images/falco_perseq.png){#fig-falco-perseq width=80%}
+![Per sequence quality score plot from `Falco` indicating a majority of high quality sequencing reads. The tail to the left is quite "heavy" suggesting that there are quite a few lower quality reads in this dataset. ](assets/images/falco_perseq.png){#fig-falco-perseq width=80%}
 
 ::: { .callout-caution }
 If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.
