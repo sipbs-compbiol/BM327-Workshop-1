@@ -74,28 +74,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-questions.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
-  background-image: none;
-}
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
-}
-div.callout-callout-challenge.callout-style-default > .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
-}
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
-  background-image: none;
-}
 div.callout-callout-todo.callout {
   border-left-color: red;
 }
@@ -116,6 +94,28 @@ div.callout-callout-question.callout-style-default > .callout-header {
 div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
   content: '🙋';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
+  background-image: none;
+}
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
+}
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
+}
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
   background-image: none;
 }
 </style>
@@ -168,7 +168,7 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to the 2024-25 presentation</span></a>
+ <span class="menu-text">Preface</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -439,7 +439,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The main kind of low-quality data we might have in our raw reads are:</p>
+<p>The main kinds of low-quality data we might have in our raw reads are:</p>
 <ol type="1">
 <li>Contamination: reads that derive from an organism we didn’t intend to sequence; these are usually identified by querying against a database and removed</li>
 <li>Low-confidence basecalls: reads containing base calls that the basecaller is unsure about; these are usually found towards the end of the read sequence and are removed by <em>trimming</em> the read</li>
@@ -515,7 +515,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can press and hold <strong>CTRL</strong> (on a PC) or <strong>CMD ⌘</strong> (macOS) when clicking the <code>eye</code> icon to open the result in its own window.</p>
+<p>You can press and hold <strong>CTRL</strong> (on a PC) or <strong>CMD</strong> (⌘, macOS) when clicking the <code>eye</code> icon to open the result in its own window.</p>
 </div>
 </div>
 </div>
@@ -525,11 +525,9 @@ Tip
 <h2 data-number="6.2" class="anchored" data-anchor-id="falco-output"><span class="header-section-number">6.2</span> <code>Falco</code> output</h2>
 <p>The output of <code>Falco</code> tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:</p>
 <ul>
-<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">Official <code>FastQC</code> documentation</a></li>
 <li><a href="https://falco.readthedocs.io/en/latest/">Official <code>Falco</code> documentation</a></li>
-<li><a href="https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx">Michigan State University (MSU) <code>FastQC</code> tutorial</a></li>
 </ul>
-<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -539,7 +537,11 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>Falco</code> and <code>FastQC</code> are two different tools, but they perform the same task and give equivalent, if visually distinct, output. <code>Falco</code> output is interpreted in exactly the same way as <code>FastQC</code> output, so it can be helpful to refer to <code>FastQC</code> tutorials and documentation.</p>
+<p><code>Falco</code> is a reimplementation of the <code>FastQC</code> application. Almost all of the documentation about use and interpretation of <code>FastQC</code> also applies to <code>Falco</code>.</p>
+<ul>
+<li><a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">Official <code>FastQC</code> documentation</a></li>
+<li><a href="https://rtsf.natsci.msu.edu/genomics/technical-documents/fastqc-tutorial-and-faq.aspx">Michigan State University (MSU) <code>FastQC</code> tutorial</a></li>
+</ul>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -557,7 +559,7 @@ Video: Inspecting <code>Falco</code> output in Galaxy
 </div>
 <section id="falco-summary" class="level3 page-columns page-full" data-number="6.2.1">
 <h3 data-number="6.2.1" class="anchored" data-anchor-id="falco-summary"><span class="header-section-number">6.2.1</span> <code>Falco</code> Summary</h3>
-<p>The <code>Falco</code> summary (<a href="#fig-falco-summary" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a <em>pass</em> (green, with a tick), a <em>warning</em> (amber, with exclamation mark), or a <em>fail</em> (red, with a cross) mark.</p>
+<p>The <code>Falco</code> summary (<a href="#fig-falco-summary" class="quarto-xref">Figure&nbsp;<span>6.1</span></a>) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a <em>pass</em> (<span style="color:green;">green</span>, with a tick), a <em>warning</em> (<span style="color:orange;">amber</span>, with exclamation mark), or a <em>fail</em> (<span style="color:red;">red</span>, with a cross) mark.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div id="fig-falco-summary" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Summary section of a Falco report showing passes for most sections, warnings for some sections, and failure for two sections.">
@@ -593,7 +595,7 @@ Tip
 <img src="assets/images/falco_perbase.png" class="img-fluid figure-img" style="width:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-falco-perbase-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.2: Per base sequence quality score plot from <code>Falco</code> indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range.
+Figure&nbsp;6.2: Per base sequence quality score plot from <code>Falco</code> indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range. In this example, quality is high for the first 100 bases, but dips significantly and becomes less reliable at about 150 bases into the reads.
 </figcaption>
 </figure>
 </div>
@@ -635,7 +637,7 @@ Tip
 <img src="assets/images/falco_perseq.png" class="img-fluid figure-img" style="width:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-falco-perseq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6.3: Per sequence quality score plot from <code>Falco</code> indicating overall high quality sequencing reads.
+Figure&nbsp;6.3: Per sequence quality score plot from <code>Falco</code> indicating a majority of high quality sequencing reads. The tail to the left is quite “heavy” suggesting that there are quite a few lower quality reads in this dataset.
 </figcaption>
 </figure>
 </div>

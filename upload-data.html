@@ -74,6 +74,17 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-callout-todo.callout {
+  border-left-color: red;
+}
+div.callout-callout-todo.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
 div.callout-callout-question.callout {
   border-left-color: yellow;
 }
@@ -105,17 +116,6 @@ div.callout-callout-questions.callout-style-default > .callout-header {
 div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
   content: '🙋️';
-  background-image: none;
-}
-div.callout-callout-todo.callout {
-  border-left-color: red;
-}
-div.callout-callout-todo.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
   background-image: none;
 }
 </style>
@@ -168,7 +168,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to the 2024-25 presentation</span></a>
+ <span class="menu-text">Preface</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -436,7 +436,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Data is not shared between Galaxy instances. For instance, if you upload data to <code>usegalaxy.eu</code> it will <em>not</em> automatically be available on <code>usegalaxy.org</code> or <code>usegalaxy.au</code>.</p>
+<p>Data is not shared between Galaxy instances. For instance, if you upload data to <code>usegalaxy.eu</code> (Europe) it will <em>not</em> automatically be available on <code>usegalaxy.org</code> (USA) or <code>usegalaxy.au</code> (Australia).</p>
 </div>
 </div>
 <section id="uploading-your-data" class="level2" data-number="5.1">
@@ -465,9 +465,9 @@ Data file colours
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>When the data files are first added to the workflow, they have a grey background. This indicates that Galaxy knows about the files, and is preparing to upload them.</p>
-<p>When Galaxy begins to upload the files, the background changes to orange.</p>
-<p>When the upload is complete, the background turns green.</p>
-<p>If there is a problem with uploading, the background turns red (please signal to a demonstrator if this happens for you).</p>
+<p>When Galaxy begins to upload the files, the background changes to <span style="color:orange;">orange</span>.</p>
+<p>When the upload is complete, the background turns <span style="color:green;">green</span>.</p>
+<p>If there is a problem with uploading, the background turns <span style="color:red;">red</span> (please signal to a demonstrator if this happens for you).</p>
 </div>
 </div>
 </div>

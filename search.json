@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "BM327 Workshop 1: Seeking the Source of Hospital Infection",
     "section": "",
-    "text": "1 Preface to the 2024-25 presentation\nWelcome to the BM327 (Being a Biomolecular Scientist 3) bioinformatics workshop 1 for 2024-25.\nThis is the first presentation of this material, and we would be very grateful to hear feedback about it by email or through the GitHub repository Issues page.",
+    "text": "1 Preface\nWelcome to the BM327 (Being a Biomolecular Scientist 3) bioinformatics workshop 1 for 2024-25.\nThis is the first presentation of this material, and we would be very grateful to hear feedback about it by email or through the GitHub repository Issues page.",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation"
+      "Preface"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "1.1 Overview",
     "text": "1.1 Overview\nThis workshop asks you to carry out common bioinformatics analyses to trace the likely source of a Pseudomonas aeruginosa infection in a hospital burns unit. You will be using online bioinformatics services to do this.\n\n\n\n\n\n\nImportant Note\n\n\n\nThere is new material in this workshop that is not covered in lectures, and this material is examinable. Please take care to read the text in the expandable callout boxes, as well as that for the workshop, to be sure you have understood the topic and obtain full value from the exercise.\nThe workshop material will remain live online for the duration of BM327, and you can revisit it whenever you wish, for practice or revision.\n\n\nYou should be able to complete this workshop in under two hours.",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation"
+      "Preface"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "1.2 Learning Objectives",
     "text": "1.2 Learning Objectives\nBy the end of this workshop, students will be able to:\n\nPerform quality control on Illumina sequencing data\nMap Illumina-sequenced reads to a reference genome, to identify sequence variants\nGenerate and annotate a phylogenetic tree\nUse genomic data to make an informed judgement about the likely source of a nosocomial infection",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation"
+      "Preface"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "section": "1.3 Assessment",
     "text": "1.3 Assessment\nThis workshop activity itself is not formally assessed although, as noted, all the material it contains is examinable. There is a formative assessment on MyPlace, which you should complete as part of the workshop.",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation"
+      "Preface"
     ]
   },
   {
@@ -46,7 +46,7 @@
     "section": "",
     "text": "1.1 Sick burns\nIt’s been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (Figure 1.1).\nThe unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (Figure 15.1). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.\nUnfortunately, Pseudomonas aeruginosa is a ubiquitous opportunistic pathogen in healthcare settings, and the ward has rapidly regressed to the mean situation of UK hospitals in which up to one in three burns patients become colonised with P. aeruginosa, typically leading to bacteraemia, soft tissue infection or pneumonia (Mahar et al. (2010), Reynolds and Kollef (2021), Roy et al. (2024), Figure 1.2).",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation",
+      "Preface",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
@@ -57,7 +57,7 @@
     "section": "",
     "text": "Figure 1.1: This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.\n\n\n\n\n\n\n\n\n\n\n\nFigure 1.2: Burn wound infection microbes and their effects on burns patients. Reproduced from Roy et al. (2024) (CC-BY-NC-4.0)",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation",
+      "Preface",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
@@ -68,7 +68,7 @@
     "section": "1.2 The study",
     "text": "1.2 The study\nIn a nosocomial setting P. aeruginosa especially affects patients with impaired immunity. Outbreaks are frequently reported to be associated with water sources such as taps, showers, mixer valves, sink traps and drains (Trautmann, Lepper, and Haller (2005), Breathnach et al. (2012)). Outbreaks transmitted via water have resulted in fatal cases such as at a neonatal critical care unit in Belfast (Wise (2012)).\nYou are part of a team conducting an observational, prospective study into the occurrence and spread of P. aeruginosa on this burns ward. Patients were recruited from arrivals presenting with burns injuries covering greater than 7% of of their total body surface area.\nAll recruited patients were screened for whether they already carried P. aeruginosa in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If P. aeruginosa was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.\n\n\n\n\n\n\n\n\nFigure 1.3: The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines\n\n\n\n\n\n\n\n\n\nPatient samples\n\n\n\n\nwound swabs\nurine\nstool\n\n\n\nSamples were also taken from the patient’s environment and water from outlets in their bed space, at weekly intervals, during their stay.\n\n\n\n\n\n\nEnvironment samples\n\n\n\n\nshower head rosette\nshower drain\nshower chair/trolley\ntap\nbedside table\npatient chair\ninstruments",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation",
+      "Preface",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
@@ -79,7 +79,7 @@
     "section": "1.3 The samples",
     "text": "1.3 The samples\nDuring the course of the study, five patients and a number of individual samples were found to be positive for P. aeruginosa (Figure 1.4).\n\n\n\n\n\n\nFigure 1.4: A schematic view of samples found to be positive for P. aeruginosa in the study. Time in days is shown along the x axis. The y axis shows bed numbers in the burns unit (upper, Figure 15.1) and the critical care unity. Each circular icon indicates a positive isolate of P. aeruginosa. The letter in the icon indicates the MLST clade to which the P. aeruginosa sample belongs. The colour of the icon indicates the environment from which it was sampled: red = wound, purple = sputum, yellow = urine, blue = water, green = environment. Patient icons indicate individual patient enrolments in the study, and their locations (arrows indicate movement between beds). Boxes 1-5 indicate patients infected with P. aeruginosa.\n\n\n\nYour role, as the bioinformatician attached to the study, is to investigate the genome sequences of bacteria from these samples, and determine what evidence there is for transmission of P. aeruginosa to patients.\n\n\n\n\nBreathnach, A S, M D Cubbon, R N Karunaharan, C F Pope, and T D Planche. 2012. “Multidrug-Resistant Pseudomonas Aeruginosa Outbreaks in Two Hospitals: Association with Contaminated Hospital Waste-Water Systems.” J. Hosp. Infect. 82 (1): 19–24.\n\n\nMahar, Patrick, Alexander A Padiglione, Heather Cleland, Eldho Paul, Melissa Hinrichs, and Jason Wasiak. 2010. “Pseudomonas Aeruginosa Bacteraemia in Burns Patients: Risk Factors and Outcomes.” Burns 36 (8): 1228–33.\n\n\nReynolds, Dan, and Marin Kollef. 2021. “The Epidemiology and Pathogenesis and Treatment of Pseudomonas Aeruginosa Infections: An Update.” Drugs 81 (18): 2117–31.\n\n\nRoy, Souvik, Preeti Mukherjee, Sutrisha Kundu, Debashrita Majumder, Vivek Raychaudhuri, and Lopamudra Choudhury. 2024. “Microbial Infections in Burn Patients.” Acute Crit. Care 39 (2): 214–25.\n\n\nTrautmann, Matthias, Philipp M Lepper, and Mathias Haller. 2005. “Ecology of Pseudomonas Aeruginosa in the Intensive Care Unit and the Evolving Role of Water Outlets as a Reservoir of the Organism.” Am. J. Infect. Control 33 (5 Suppl 1): S41–9.\n\n\nWise, Jacqui. 2012. “Three Babies Die in Pseudomonas Outbreak at Belfast Neonatal Unit.” BMJ 344 (jan24 1): e592.",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation",
+      "Preface",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Workshop Introduction</span>"
     ]
   },
@@ -90,7 +90,7 @@
     "section": "",
     "text": "2.1 Introduction\nIn this workshop you will be working on Galaxy, an open source scientific workflow and data integration platform (Galaxy Community (2024)). Galaxy is a framework for performing reproducible computational biology and bioinformatics, democratising the field so that scientists with no programming or other computing experience can still carry out bioinformatic analyses on their own data, in their web browser.",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation",
+      "Preface",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
     ]
   },
@@ -101,7 +101,7 @@
     "section": "",
     "text": "Galaxy instances\n\n\n\n\n\nThe Galaxy software is open source and can be downloaded and installed freely on any computer that it can run on. Each such installation is called a Galaxy instance. The Galaxy instance that you will be working on is the EU Galaxy instance at https://usegalaxy.eu/. This is the largest Galaxy instance in Europe and gives access to over 2500 scientific tools. It is free to use, and is maintained by the Galaxy team at Freiburg.\nThere are many other Galaxy instances, some private, and some public and free for anyone to use, such as:\n\nhttps://usegalaxy.org/: The Galaxy Project public server, supporting biomedical research.\nhttps://galaxyproject.org/use/usegalaxy-fr/: A general-purpose Galaxy server, based in France\nhttps://galaxyproject.org/use/usegalaxy-au/: The Australian UseGalaxy server\n\nGalaxy can be thought of as a library of bioinformatics tools and, just as different libraries may contain differing collections of books, each Galaxy instance may make available different sets of tools, or different versions of similar tools. As a result some analyses may be possible on one Galaxy instance, but not another.\nWhen you use Galaxy it is important to be clear when writing up your analysis methods to be clear about which Galaxy instance is used, and which version of each tool was used in the analysis.\n\n\n\n\n2.1.1 Workflows\nThe key concept in Galaxy is the workflow. A workflow is a series, or chain, of analysis steps that takes some input data (one or more files or datasets) through a series of actions, to generate one or more result files. Typically, the output of one step will serve as the input to the next step, but more complicated branching workflows can also be created (Figure 2.1).\n\n\n\n\n\n\nFigure 2.1: Galaxy workflow editor view of a Galaxy workflow that runs the same tool (RXLR Motifs) with three different settings, and compares the results using a Venn diagram (reproduced from Cock et al. (2013)). The workflow runs from left to right. A single Input dataset is fed into the RXLR Motifs tool three times, applying a different method each time. Each run of the RXLR Motifs tool generates a different set of output sequences, which are passed as input to the Filter tool. The output from all three runs of the Filter tool is passed to the Venn Diagram tool, along with the original input dataset, to generate a Venn Diagram\n\n\n\nUsing Galaxy, you will build up a powerful bioinformatic analysis workflow to analyse your data, step-by-step, using a web browser. Galaxy allows you to save and share your workflows, to encourage reuse and reproducibility.",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation",
+      "Preface",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
     ]
   },
@@ -112,7 +112,7 @@
     "section": "2.2 Registering with Galaxy",
     "text": "2.2 Registering with Galaxy\n\n\n\n\n\n\nRegister with usegalaxy.eu\n\n\n\nThe first action you should take in this workshop, if you do not already have an account at https://usegalaxy.eu/, is to create an account at https://usegalaxy.eu/.\n\n\n\nGo to the Galaxy login/registration page\nIf you have a usegalaxy.eu account already, then log in using your details and move on to the workshop proper.\nIf you do not already have a usegalaxy.eu account, then click on the Register here link.\nEnter your university email address in the Email address field.\nChoose a secure password and enter it into the Password and Confirm password fields.\nChoose a public name to show (other people will be able to see this) and enter it in the Public name field.\nClick on the Create button.\n\n\n\n\n\n\n\nImportant\n\n\n\nYou will receive a validation email at the account you register with. You must confirm your email to proceed.\n\n\n\n\n\n\nCock, Peter J A, Björn A Grüning, Konrad Paszkiewicz, and Leighton Pritchard. 2013. “Galaxy Tools and Workflows for Sequence Analysis with Applications in Molecular Plant Pathology.” PeerJ 1 (September): e167.\n\n\nGalaxy Community. 2024. “The Galaxy Platform for Accessible, Reproducible, and Collaborative Data Analyses: 2024 Update.” Nucleic Acids Res. 52 (W1): W83–94.",
     "crumbs": [
-      "Preface to the {{< var ay >}} presentation",
+      "Preface",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Register An Account with Galaxy</span>"
     ]
   },
@@ -252,7 +252,7 @@
     "href": "workshop.html",
     "title": "Workshop",
     "section": "",
-    "text": "The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.\n\nAssessing the quality of sequence read data for your isolate\nPrepare your sequencing read data for assembly\nIdentify sequence variants (SNPs, Single Nucleotide Polymorphisms) between your isolate and a reference genome, and against another study isolate\nAssemble a genome for your isolate\nVisualise your genome assembly\nAssess the quality of your assembly\nUse pubMLST to classify your isolate\nBuild and visualise a phylogenetic tree of isolates from the study\nUse your data to draw conclusions about nosocomial transmission",
+    "text": "The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.\n\n6  Inspect Read Quality: Assessing the quality of sequence read data for your isolate\n7  Clean Raw Read Data: Prepare your sequencing read data for assembly\n8  Map Reads to the Genome, 9  Visualise the Mapping, and 10  Find Sequence Variants: Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between your isolate and a reference genome, and against another study isolate\n11  Assemble the ERR531380 Genome: Assess genome assembly quality for your isolate\n12  PubMLST Classification Use pubMLST to classify your isolate\n13  Building a Phylogenetic Tree and 14  Visualising the Phylogenetic Tree: Build and visualise a phylogenetic tree of isolates from the study\n15  Tracing the Source: Use your data to draw conclusions about nosocomial transmission",
     "crumbs": [
       "Workshop"
     ]
@@ -273,7 +273,7 @@
     "href": "fastqc.html#using-falco",
     "title": "6  Inspect Read Quality",
     "section": "",
-    "text": "Navigate to the Falco tool using the Tools sidebar in Galaxy\n\n\nYou can use the search tools field to find Falco\nAlternatively, you will find it under GENOMIC FILE MANIPULATION/FASTA/FASTQ in the sidebar\n\n\nSelect the Falco tool\nRun the Falco tool on each of your FASTQ input files\n\n\nThese are the ERR531380_1.fastq and ERR531380_2.fastq files.\nWith the Falco tool options in the main Workspace window, select the file you want to run Falco on.\nClick on the Run Tool button.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you run Falco on both the forward and reverse read sets.\n\n\n\n\n\n\n\n\nVideo: Using Falco to assess the quality of your sequencing reads\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFalco takes a few moments to run (but is faster than FastQC, which it has superseded.\nWhen the run is complete, click on the eye icon of the Webpage result to inspect the FastQC output.\n\n\n\n\n\n\nTip\n\n\n\nYou can press and hold CTRL (on a PC) or CMD ⌘ (macOS) when clicking the eye icon to open the result in its own window.",
+    "text": "Navigate to the Falco tool using the Tools sidebar in Galaxy\n\n\nYou can use the search tools field to find Falco\nAlternatively, you will find it under GENOMIC FILE MANIPULATION/FASTA/FASTQ in the sidebar\n\n\nSelect the Falco tool\nRun the Falco tool on each of your FASTQ input files\n\n\nThese are the ERR531380_1.fastq and ERR531380_2.fastq files.\nWith the Falco tool options in the main Workspace window, select the file you want to run Falco on.\nClick on the Run Tool button.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you run Falco on both the forward and reverse read sets.\n\n\n\n\n\n\n\n\nVideo: Using Falco to assess the quality of your sequencing reads\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFalco takes a few moments to run (but is faster than FastQC, which it has superseded.\nWhen the run is complete, click on the eye icon of the Webpage result to inspect the FastQC output.\n\n\n\n\n\n\nTip\n\n\n\nYou can press and hold CTRL (on a PC) or CMD (⌘, macOS) when clicking the eye icon to open the result in its own window.",
     "crumbs": [
       "Workshop",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inspect Read Quality</span>"
@@ -284,7 +284,7 @@
     "href": "fastqc.html#falco-output",
     "title": "6  Inspect Read Quality",
     "section": "6.2 Falco output",
-    "text": "6.2 Falco output\nThe output of Falco tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:\n\nOfficial FastQC documentation\nOfficial Falco documentation\nMichigan State University (MSU) FastQC tutorial\n\n\n\n\n\n\n\nFalco and FastQC\n\n\n\nFalco and FastQC are two different tools, but they perform the same task and give equivalent, if visually distinct, output. Falco output is interpreted in exactly the same way as FastQC output, so it can be helpful to refer to FastQC tutorials and documentation.\n\n\n\n\n\n\n\n\nVideo: Inspecting Falco output in Galaxy\n\n\n\n\n\n\n\n6.2.1 Falco Summary\nThe Falco summary (Figure 6.1) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a pass (green, with a tick), a warning (amber, with exclamation mark), or a fail (red, with a cross) mark.\n\n\n\n\n\n\n\n\nFigure 6.1: Example Falco summary showing passes for most sections of the report including “Basic Statistics,” warnings for some sections including “Sequence Length Distribution,” and a fail for “Per tile sequence quality”\n\n\n\n\n\n6.2.2 Per base sequence quality\nThe per base sequence quality plot (Figure 6.2) presents the ranges of individual base quality calls across the lengths of the input sequence reads. Higher scores (near 40) indicate better quality.\n\n\n\n\n\n\nTip\n\n\n\nFor good-quality sequence read data, we are looking for a graph where the mean quality (see Figure 6.2) is always showing green, with a score greater than 29.\n\n\n\n\n\n\n\n\nFigure 6.2: Per base sequence quality score plot from Falco indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIt is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.\nIt is also typical for the quality score to be slightly lower in the first 5-7 bases of the read.\nIf mean quality per base falls below 29, there may be a problem with the sequencing data.\n\n\n\n\n6.2.3 Per sequence quality scores\nThe per sequence quality score (Figure 6.3) summarises the distribution of high quality (higher scores, near 40) and lower quality reads in the complete dataset.\n\n\n\n\n\n\nTip\n\n\n\nIn good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.\n\n\n\n\n\n\n\n\nFigure 6.3: Per sequence quality score plot from Falco indicating overall high quality sequencing reads.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIf the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.",
+    "text": "6.2 Falco output\nThe output of Falco tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:\n\nOfficial Falco documentation\n\n\n\n\n\n\n\nFalco and FastQC\n\n\n\nFalco is a reimplementation of the FastQC application. Almost all of the documentation about use and interpretation of FastQC also applies to Falco.\n\nOfficial FastQC documentation\nMichigan State University (MSU) FastQC tutorial\n\n\n\n\n\n\n\n\n\nVideo: Inspecting Falco output in Galaxy\n\n\n\n\n\n\n\n6.2.1 Falco Summary\nThe Falco summary (Figure 6.1) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a pass (green, with a tick), a warning (amber, with exclamation mark), or a fail (red, with a cross) mark.\n\n\n\n\n\n\n\n\nFigure 6.1: Example Falco summary showing passes for most sections of the report including “Basic Statistics,” warnings for some sections including “Sequence Length Distribution,” and a fail for “Per tile sequence quality”\n\n\n\n\n\n6.2.2 Per base sequence quality\nThe per base sequence quality plot (Figure 6.2) presents the ranges of individual base quality calls across the lengths of the input sequence reads. Higher scores (near 40) indicate better quality.\n\n\n\n\n\n\nTip\n\n\n\nFor good-quality sequence read data, we are looking for a graph where the mean quality (see Figure 6.2) is always showing green, with a score greater than 29.\n\n\n\n\n\n\n\n\nFigure 6.2: Per base sequence quality score plot from Falco indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range. In this example, quality is high for the first 100 bases, but dips significantly and becomes less reliable at about 150 bases into the reads.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIt is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.\nIt is also typical for the quality score to be slightly lower in the first 5-7 bases of the read.\nIf mean quality per base falls below 29, there may be a problem with the sequencing data.\n\n\n\n\n6.2.3 Per sequence quality scores\nThe per sequence quality score (Figure 6.3) summarises the distribution of high quality (higher scores, near 40) and lower quality reads in the complete dataset.\n\n\n\n\n\n\nTip\n\n\n\nIn good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.\n\n\n\n\n\n\n\n\nFigure 6.3: Per sequence quality score plot from Falco indicating a majority of high quality sequencing reads. The tail to the left is quite “heavy” suggesting that there are quite a few lower quality reads in this dataset.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIf the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.",
     "crumbs": [
       "Workshop",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inspect Read Quality</span>"

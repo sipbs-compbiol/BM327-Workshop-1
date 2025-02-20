@@ -83,6 +83,17 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   content: '🧑‍🏫';
   background-image: none;
 }
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
+  background-image: none;
+}
 div.callout-callout-question.callout {
   border-left-color: yellow;
 }
@@ -103,17 +114,6 @@ div.callout-callout-todo.callout-style-default > .callout-header {
 div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
   content: '📝';
-  background-image: none;
-}
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-questions.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
   background-image: none;
 }
 </style>
@@ -166,7 +166,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface to the 2024-25 presentation</span></a>
+ <span class="menu-text">Preface</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -395,17 +395,15 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 
 
 <p>The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.</p>
-<ol type="1">
-<li>Assessing the quality of sequence read data for your isolate</li>
-<li>Prepare your sequencing read data for assembly</li>
-<li>Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between your isolate and a reference genome, and against another study isolate</li>
-<li>Assemble a genome for your isolate</li>
-<li>Visualise your genome assembly</li>
-<li>Assess the quality of your assembly</li>
-<li>Use pubMLST to classify your isolate</li>
-<li>Build and visualise a phylogenetic tree of isolates from the study</li>
-<li>Use your data to draw conclusions about nosocomial transmission</li>
-</ol>
+<ul>
+<li><a href="fastqc.html" class="quarto-xref"><span>6&nbsp; Inspect Read Quality</span></a>: Assessing the quality of sequence read data for your isolate</li>
+<li><a href="trimmomatic.html" class="quarto-xref"><span>7&nbsp; Clean Raw Read Data</span></a>: Prepare your sequencing read data for assembly</li>
+<li><a href="bwamem.html" class="quarto-xref"><span>8&nbsp; Map Reads to the Genome</span></a>, <a href="jbrowse.html" class="quarto-xref"><span>9&nbsp; Visualise the Mapping</span></a>, and <a href="snippy.html" class="quarto-xref"><span>10&nbsp; Find Sequence Variants</span></a>: Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between your isolate and a reference genome, and against another study isolate</li>
+<li><a href="shovill.html" class="quarto-xref"><span>11&nbsp; Assemble the ERR531380 Genome</span></a>: Assess genome assembly quality for your isolate</li>
+<li><a href="pubmlst.html" class="quarto-xref"><span>12&nbsp; PubMLST Classification</span></a> Use pubMLST to classify your isolate</li>
+<li><a href="tree.html" class="quarto-xref"><span>13&nbsp; Building a Phylogenetic Tree</span></a> and <a href="itol.html" class="quarto-xref"><span>14&nbsp; Visualising the Phylogenetic Tree</span></a>: Build and visualise a phylogenetic tree of isolates from the study</li>
+<li><a href="questions.html" class="quarto-xref"><span>15&nbsp; Tracing the Source</span></a>: Use your data to draw conclusions about nosocomial transmission</li>
+</ul>
 
 
 
