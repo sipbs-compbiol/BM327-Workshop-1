@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>5&nbsp; Upload Data to Galaxy – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
+<title>Investigation – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,8 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./workshop.html" rel="next">
-<link href="./download-data.html" rel="prev">
+<link href="./questions.html" rel="next">
+<link href="./itol.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -44,8 +44,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-2ce9fc9ac8b614e7ffef13962cc12eaf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -132,7 +130,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./galaxy.html">Galaxy</a></li><li class="breadcrumb-item"><a href="./upload-data.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Upload Data to Galaxy</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./investigation.html">Investigation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -211,7 +209,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./upload-data.html" class="sidebar-item-text sidebar-link active">
+  <a href="./upload-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Upload Data to Galaxy</span></span></a>
   </div>
 </li>
@@ -328,7 +326,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./investigation.html" class="sidebar-item-text sidebar-link">
+            <a href="./investigation.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Investigation</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -354,32 +352,15 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#uploading-your-data" id="toc-uploading-your-data" class="nav-link active" data-scroll-target="#uploading-your-data"><span class="header-section-number">5.1</span> Uploading your data</a>
-  <ul class="collapse">
-  <li><a href="#use-the-you-can-load-your-own-data-link-in-an-empty-workflow" id="toc-use-the-you-can-load-your-own-data-link-in-an-empty-workflow" class="nav-link" data-scroll-target="#use-the-you-can-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.1</span> Use the <code>You can load your own data</code> link in an empty workflow</a></li>
-  <li><a href="#use-the-upload-data-button-in-the-tools-sidebar" id="toc-use-the-upload-data-button-in-the-tools-sidebar" class="nav-link" data-scroll-target="#use-the-upload-data-button-in-the-tools-sidebar"><span class="header-section-number">5.1.2</span> Use the <code>Upload Data</code> button in the <code>Tools</code> sidebar</a></li>
-  <li><a href="#drag-and-drop-data-onto-the-workspace" id="toc-drag-and-drop-data-onto-the-workspace" class="nav-link" data-scroll-target="#drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.3</span> Drag and drop data onto the workspace</a></li>
-  </ul></li>
-  <li><a href="#inspecting-data" id="toc-inspecting-data" class="nav-link" data-scroll-target="#inspecting-data"><span class="header-section-number">5.2</span> Inspecting Data</a>
-  <ul class="collapse">
-  <li><a href="#in-the-history" id="toc-in-the-history" class="nav-link" data-scroll-target="#in-the-history"><span class="header-section-number">5.2.1</span> In the <code>History</code></a></li>
-  <li><a href="#in-the-workspace" id="toc-in-the-workspace" class="nav-link" data-scroll-target="#in-the-workspace"><span class="header-section-number">5.2.2</span> In the <code>Workspace</code></a></li>
-  <li><a href="#using-additional-tools" id="toc-using-additional-tools" class="nav-link" data-scroll-target="#using-additional-tools"><span class="header-section-number">5.2.3</span> Using additional tools</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/upload-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./galaxy.html">Galaxy</a></li><li class="breadcrumb-item"><a href="./upload-data.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Upload Data to Galaxy</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-upload-data" class="quarto-section-identifier"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Upload Data to Galaxy</span></span></h1>
+<h1 class="title"><span id="sec-investigation" class="quarto-section-identifier">Investigation</span></h1>
 </div>
 
 
@@ -396,198 +377,9 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
 </header>
 
 
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Using data in Galaxy
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>For Galaxy to be able to use your data, that <strong>data must be in your <em>history</em> on the Galaxy instance</strong>.</p>
-</div>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Data is not shared between Galaxy instances. For instance, if you upload data to <code>usegalaxy.eu</code> it will <em>not</em> automatically be available on <code>usegalaxy.org</code> or <code>usegalaxy.au</code>.</p>
-</div>
-</div>
-<section id="uploading-your-data" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="uploading-your-data"><span class="header-section-number">5.1</span> Uploading your data</h2>
-<p>There are three main routes to uploading your data onto the Galaxy instance.</p>
-<section id="use-the-you-can-load-your-own-data-link-in-an-empty-workflow" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="use-the-you-can-load-your-own-data-link-in-an-empty-workflow"><span class="header-section-number">5.1.1</span> Use the <code>You can load your own data</code> link in an empty workflow</h3>
-<p>This option is only visible when you have an empty workflow. Click on the <code>You can load your own data</code> link under <code>This history is empty</code>. This will bring up a dialogue box. You can drag and drop a file or files into the dialogue box, or use the <code>Choose local file</code> button to navigate to the location of your files.</p>
-<ol type="1">
-<li>Click on the <code>You can load your own data</code> link.</li>
-<li>Drag the two workshop data files ending with <code>.fastq.gz</code> into the dialogue box.</li>
-<li>Click on the <code>Start</code> button.</li>
-<li>The files will appear in the <code>History</code> sidebar.</li>
-<li>Click the <code>Close</code> button in the file dialogue.</li>
-</ol>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Data file colours
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>When the data files are first added to the workflow, they have a grey background. This indicates that Galaxy knows about the files, and is preparing to upload them.</p>
-<p>When Galaxy begins to upload the files, the background changes to orange.</p>
-<p>When the upload is complete, the background turns green.</p>
-<p>If there is a problem with uploading, the background turns red (please signal to a demonstrator if this happens for you).</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Data file types
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>You will have noticed the <code>Auto-detect</code> dropdown boxes when you uploaded your files. Galaxy is able to process files that describe many <em>data types</em>, including genome sequence data, transcriptome data, mass spectrometry data, and so on. Each individual file contains a single type of data.</p>
-<p>Galaxy is usually clever enough to determine for itself what data is in a particular file, but sometimes it cannot recognise the contents, and you may have to specify the file type by choosing from the options in this drop-down box.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Video: Uploading files with the <code>You can load your own data</code> link
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video1" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data via the 'You can load your own data' link"><source src="assets/movies/galaxy-02-upload.mp4"></video></div>
-</div>
-</div>
-</section>
-<section id="use-the-upload-data-button-in-the-tools-sidebar" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="use-the-upload-data-button-in-the-tools-sidebar"><span class="header-section-number">5.1.2</span> Use the <code>Upload Data</code> button in the <code>Tools</code> sidebar</h3>
-<p>There is an <code>Upload</code> button at the top left of the Galaxy window, in the left-most toolbar. It has a green background and an upload icon. At any point in the analysis, you can click on this button to upload data into the workflow.</p>
-<ol type="1">
-<li>Click on the <code>Upload</code> button.</li>
-<li>Drag the <code>GCF_000006765.1_ASM676v1_genomic.fna.gz</code> file into the dialogue box.</li>
-<li>Click on the <code>Start</code> button.</li>
-<li>The file will appear in the <code>History</code> sidebar.</li>
-<li>Click the <code>Close</code> button in the file dialogue.</li>
-</ol>
-<p>This file is smaller than the files you uploaded above, and should take less time to turn orange, and then green, to indicate that it has uploaded correctly.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Video: Uploading files with the <code>Upload</code> button
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video2" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data via the 'Upload' button"><source src="assets/movies/galaxy-03-upload.mp4"></video></div>
-</div>
-</div>
-</section>
-<section id="drag-and-drop-data-onto-the-workspace" class="level3" data-number="5.1.3">
-<h3 data-number="5.1.3" class="anchored" data-anchor-id="drag-and-drop-data-onto-the-workspace"><span class="header-section-number">5.1.3</span> Drag and drop data onto the workspace</h3>
-<p>You can also drag and drop data files directly into the central workspace window of Galaxy. This will trigger the file upload dialogue box.</p>
-<ol type="1">
-<li>Drag the <code>ERR531413_asm.fasta</code> file into the Galaxy workspace.</li>
-<li>A <code>Drag files here to upload</code> overlay will appear.</li>
-<li>Drop the file in the overlay. A file upload dialogue box will appear.</li>
-<li>Click on the <code>Start</code> button.</li>
-<li>The file will appear in the <code>History</code> sidebar.</li>
-<li>Click the <code>Close</code> button in the file dialogue.</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Video: Uploading files by dragging them into the workspace
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Uploading data by dragging it into the Workspace"><source src="assets/movies/galaxy-04-upload.mp4"></video></div>
-</div>
-</div>
-</section>
-</section>
-<section id="inspecting-data" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="inspecting-data"><span class="header-section-number">5.2</span> Inspecting Data</h2>
-<p>You can inspect the data you have uploaded to Galaxy visually in two ways.</p>
-<section id="in-the-history" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="in-the-history"><span class="header-section-number">5.2.1</span> In the <code>History</code></h3>
-<p>To view the contents of an uploaded data file in the <code>History</code>.</p>
-<ol type="1">
-<li>Click on the file name (e.g.&nbsp;<code>GCF_000006765.1_ASM676v1_genomic.fna</code>). The file descriptor will enlarge.</li>
-</ol>
-<ul>
-<li>The descriptor shows the file’s datatype (e.g.&nbsp;“format <code>fasta</code>”)</li>
-<li>At the bottom of the descriptor, a preview of the dataset is shown, with the first few lines of the data.</li>
-</ul>
-<ol start="2" type="1">
-<li>Click on the file name again to close the file descriptor.</li>
-</ol>
-</section>
-<section id="in-the-workspace" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="in-the-workspace"><span class="header-section-number">5.2.2</span> In the <code>Workspace</code></h3>
-<p>You can view the complete file contents (or at least a large preview of up to 1MB of data) in the main workspace window, by clicking on the <code>eye</code> icon in the file descriptor.</p>
-<ol type="1">
-<li>Click on the <code>eye</code> icon of one of the file descriptors (e.g.&nbsp;<code>ERR531413_asm.fasta</code>). A representation of the data in the file will be shown in the workspace window.</li>
-</ol>
-</section>
-<section id="using-additional-tools" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="using-additional-tools"><span class="header-section-number">5.2.3</span> Using additional tools</h3>
-<p>The open file descriptor presents several icons, just above the data preview. These allow you to:</p>
-<ol type="1">
-<li>Download the dataset to your computer</li>
-<li>Obtain a direct URL link to the data</li>
-<li>View details about the dataset</li>
-<li>Visualise the data interactively using an appropriate tool</li>
-<li>Show related datasets</li>
-</ol>
-<p>View the video below to see some examples of this output.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Video: Using interactive data inspection tools
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="quarto-video"><video id="video_shortcode_videojs_video4" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Inspecting data in the History and Workspace, and using the interactive data inspection tools"><source src="assets/movies/galaxy-05-inspect.mp4"></video></div>
-</div>
-</div>
+<p>Now that you have obtained a phylogenetic tree from the study isolates, you can begin to consider some questions that might lead you to understand paths of transmission.</p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1009,13 +801,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./download-data.html" class="pagination-link" aria-label="Download Workshop Data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Download Workshop Data</span></span>
+      <a href="./itol.html" class="pagination-link" aria-label="Visualising the Phylogenetic Tree">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Visualising the Phylogenetic Tree</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./workshop.html" class="pagination-link" aria-label="Workshop">
-        <span class="nav-page-text">Workshop</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./questions.html" class="pagination-link" aria-label="Tracing the Outbreak">
+        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tracing the Outbreak</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1027,16 +819,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/upload-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/investigation.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
   </div>
 </footer>
-<script>videojs(video_shortcode_videojs_video1);</script>
-<script>videojs(video_shortcode_videojs_video2);</script>
-<script>videojs(video_shortcode_videojs_video3);</script>
-<script>videojs(video_shortcode_videojs_video4);</script>
 
 
 
