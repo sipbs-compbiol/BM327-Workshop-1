@@ -7,7 +7,7 @@ The next step in the investigation would normally be to assemble the `ERR531380`
 
 **Using `Galaxy`, genome assembly would take too long for this workshop.**
 
-But someone has kindly assembled your genome for you using the `SPAdes` assembler (@Prjibelski2020-iq) and provided the result for you to download in two files, below - the assembled genome (`.fasta` file), and the assembly graph (`.gfa` file):
+In this scenario, a colleague has kindly assembled your genome for you using the `SPAdes` assembler (@Prjibelski2020-iq) and provided the result for you to download in two files, below - the assembled genome (`.fasta` file), and the assembly graph (`.gfa` file):
 
 - [`ERR531380.contigs.fasta`](assets/workshop_downloads/ERR531380.contigs.fasta)
 - [`ERR531380.gfa`](assets/workshop_downloads/ERR531380.gfa)
@@ -27,7 +27,7 @@ In this section you will investigate the quality of this genome assembly visuall
 
 ## Visualising the Assembly
 
-The `Bandage` software package (@Wick2015-vm) can take assembly output from tools such as `SPAdes` and `Shovill`, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and potential sequencing of co-cultures of related strains, rather than an axenic isolate.
+The `Bandage` software package (@Wick2015-vm) can take assembly output from tools such as `SPAdes` and `Shovill`, and visualise them as a graph. This is a useful step in assessing the quality of an assembly and can help identify poorly-assembled regions and when there is potential unintentional sequencing of co-cultures of related strains, rather than an axenic isolate.
 
 - [`Bandage` documentation](https://github.com/rrwick/Bandage/wiki)
 - [`Bandage` website](https://rrwick.github.io/Bandage/)
@@ -71,4 +71,4 @@ The use `CheckM` to estimate the quality of your assembly:
 
 ## Next steps
 
-With the draft genome assembly you have for `ERR531380` you can use pubMLST to classify your isolate in more detail, using the `pubMLST` server.
+With the draft genome assembly you have for `ERR531380` you can use pubMLST to classify your isolate in more detail, using `Galaxy` and the `pubMLST` server.

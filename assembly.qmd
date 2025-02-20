@@ -1,4 +1,4 @@
 # Genome Assembly {#sec-assembly}
 
-In this section, you will use your cleaned input dataset of sequenced reads to assemble your study isolate `ERR531380` into a complete genome, and assess the quality of your assembly.
+In this section, you will assess the quality of a genome assembly for your study isolate `ERR531380`.
 
