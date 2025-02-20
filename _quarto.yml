@@ -66,6 +66,9 @@ book:
         - pubmlst.qmd
     
     - part: phylogenetics.qmd
+      chapters:
+        - tree.qmd
+        - itol.qmd
 
     - references.qmd
 
