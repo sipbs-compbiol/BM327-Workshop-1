@@ -24,7 +24,7 @@ When reporting how you cleaned your sequence data in a manuscript or dissertatio
 Tools like `trimmomatic` return two kinds of cleaned read data:
 
 1. R1-paired, R2-paired: these are high quality paired-end reads
-2. R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality
+2. R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality and only the high quality read was retained
 :::
 
 This part of the workshop will guide you through using `trimmomatic` to clear your sequence read data.
@@ -68,7 +68,7 @@ You can inspect the contents of these files by clicking on the filename in the `
 Following the example from @sec-fastqc, run `Falco` again on your newly-cleaned (paired) read sets, to see how the quality has improved.
 :::
 
-![Per base quality score plot from `Falco` indicating an improvement in read quality, post-`trimmomatic`.](assets/images/falco_perbase_clean.png){#fig-fastqc-perbase width=80%}
+![Per base quality score plot from `Falco` indicating an improvement in read quality, post-`trimmomatic`.](assets/images/falco_perbase_clean.png){#fig-fastqc-perbase width=80% .lightbox}
 
 ## Next steps
 
