@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -72,15 +92,15 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
 }
-div.callout-callout-questions.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
 }
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
   background-image: none;
 }
 div.callout-callout-question.callout {
@@ -94,6 +114,17 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
   content: '🙋';
   background-image: none;
 }
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
+  background-image: none;
+}
 div.callout-callout-todo.callout {
   border-left-color: red;
 }
@@ -103,17 +134,6 @@ div.callout-callout-todo.callout-style-default > .callout-header {
 div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
   content: '📝';
-  background-image: none;
-}
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
-}
-div.callout-callout-challenge.callout-style-default > .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
-}
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
   background-image: none;
 }
 </style>
@@ -376,7 +396,7 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   <ul>
   <li><a href="#sequencing-reads-for-your-isolate" id="toc-sequencing-reads-for-your-isolate" class="nav-link active" data-scroll-target="#sequencing-reads-for-your-isolate"><span class="header-section-number">4.1</span> Sequencing reads for your isolate</a></li>
   <li><a href="#pseudomonas-aeruginosa-reference-strain-for-snp-comparison" id="toc-pseudomonas-aeruginosa-reference-strain-for-snp-comparison" class="nav-link" data-scroll-target="#pseudomonas-aeruginosa-reference-strain-for-snp-comparison"><span class="header-section-number">4.2</span> <em>Pseudomonas aeruginosa</em> reference strain for SNP comparison</a></li>
-  <li><a href="#room-8-isolate-assembly-for-snp-comparison" id="toc-room-8-isolate-assembly-for-snp-comparison" class="nav-link" data-scroll-target="#room-8-isolate-assembly-for-snp-comparison"><span class="header-section-number">4.3</span> Room 8 isolate assembly for SNP comparison</a></li>
+  <li><a href="#room-1-isolate-assembly-for-snp-comparison" id="toc-room-1-isolate-assembly-for-snp-comparison" class="nav-link" data-scroll-target="#room-1-isolate-assembly-for-snp-comparison"><span class="header-section-number">4.3</span> Room 1 isolate assembly for SNP comparison</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/download-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -402,6 +422,40 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
 </header>
 
 
+<p>In this workshop you will be working with isolate ERR531380, which was sequenced using the Illumina platform.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How was the strain isolated?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The <em>P. aeruginosa</em> strain was isolated from wound swabs by inoculation onto cysteine lactose electrolyte deficient agar (CLED) and cetrimide agar and incubation for 24 h at 37°C. Identification was confirmed by resistance to C-390 and the VITEK 2 GN identification card. For storage and DNA extraction a single colony was purified from the primary culture plate.</p>
+<p>Isolates were stored on Biobank beads at −20°C prior to DNA extraction. Organisms were resuscitated on CLED agar plates and genome DNA either extracted directly using the MOBIO UltraClean Microbial DNA Kit, or from overnight LB broth culture using a Qiagen Genomic-Tip 100G.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How was the isolate sequenced?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Genomic DNA was prepared from single colony picks using the MOBIO Ultraclean microbial kit (MOBIO, Carlsbad, USA). 1 ng input DNA, as quantified by Qubit (Life Technologies, Carlsbad, USA) was used to prepare genomic libraries for sequencing using the Illumina Nextera XT DNA sample kit as per manufacturer’s protocol (Illumina, San Diego, USA). Libraries were sequenced on the Illumina MiSeq using a paired-end protocol resulting in read lengths between 150 and 300 bases.</p>
+</div>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -427,14 +481,16 @@ Download the workshop data
 </section>
 <section id="pseudomonas-aeruginosa-reference-strain-for-snp-comparison" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="pseudomonas-aeruginosa-reference-strain-for-snp-comparison"><span class="header-section-number">4.2</span> <em>Pseudomonas aeruginosa</em> reference strain for SNP comparison</h2>
+<p>You will be using the PAO1 strain of <em>P. aeruginosa</em> (<span class="citation" data-cites="Stover2000-fp">Stover et al. (<a href="references.html#ref-Stover2000-fp" role="doc-biblioref">2000</a>)</span>) for some comparisons. The genome sequence with accession GCF_000006765.1 was downloaded from NCBI.</p>
 <ul>
 <li><a href="assets/workshop_downloads/GCF_000006765.1_ASM676v1_genomic.fna"><em>P. aeruginosa</em> PA01 genome sequence (<code>.fasta</code>)</a>(<code>GCF_000006765.1_ASM676v1_genomic.fna</code>)</li>
 </ul>
 </section>
-<section id="room-8-isolate-assembly-for-snp-comparison" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="room-8-isolate-assembly-for-snp-comparison"><span class="header-section-number">4.3</span> Room 8 isolate assembly for SNP comparison</h2>
+<section id="room-1-isolate-assembly-for-snp-comparison" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="room-1-isolate-assembly-for-snp-comparison"><span class="header-section-number">4.3</span> Room 1 isolate assembly for SNP comparison</h2>
+<p>The isolate with accession <code>ERR531413</code>, sampled from the shower in room 1 of the burns unit, is also used as a reference genome for some comparisons.</p>
 <ul>
-<li><a href="assets/workshop_downloads/ERR531413_asm.fasta"><code>SPAdes</code> assembly of isolate 1031 (<code>ERR531413</code>), from the room 8 shower hose</a>(<code>ERR531413_asm.fasta</code>)</li>
+<li><a href="assets/workshop_downloads/ERR531413_asm.fasta"><code>SPAdes</code> assembly of isolate 1031 (<code>ERR531413</code>), from the room 1 shower hose</a>(<code>ERR531413_asm.fasta</code>)</li>
 </ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -461,6 +517,11 @@ Figure&nbsp;4.1: macOS <code>BM327_Workshop</code> folder with all files downloa
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Stover2000-fp" class="csl-entry" role="listitem">
+Stover, C K, X Q Pham, A L Erwin, S D Mizoguchi, P Warrener, M J Hickey, F S Brinkman, et al. 2000. <span>“Complete Genome Sequence of Pseudomonas Aeruginosa <span>PAO1</span>, an Opportunistic Pathogen.”</span> <em>Nature</em> 406 (6799): 959–64.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

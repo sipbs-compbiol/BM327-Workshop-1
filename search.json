@@ -175,7 +175,7 @@
     "href": "download-data.html",
     "title": "4  Download Workshop Data",
     "section": "",
-    "text": "4.1 Sequencing reads for your isolate",
+    "text": "4.1 Sequencing reads for your isolate\nIn this workshop you will be working with isolate ERR531380, which was sequenced using the Illumina platform.",
     "crumbs": [
       "Galaxy",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
@@ -197,18 +197,18 @@
     "href": "download-data.html#pseudomonas-aeruginosa-reference-strain-for-snp-comparison",
     "title": "4  Download Workshop Data",
     "section": "4.2 Pseudomonas aeruginosa reference strain for SNP comparison",
-    "text": "4.2 Pseudomonas aeruginosa reference strain for SNP comparison\n\nP. aeruginosa PA01 genome sequence (.fasta)(GCF_000006765.1_ASM676v1_genomic.fna)",
+    "text": "4.2 Pseudomonas aeruginosa reference strain for SNP comparison\nYou will be using the PAO1 strain of P. aeruginosa (Stover et al. (2000)) for some comparisons. The genome sequence with accession GCF_000006765.1 was downloaded from NCBI.\n\nP. aeruginosa PA01 genome sequence (.fasta)(GCF_000006765.1_ASM676v1_genomic.fna)",
     "crumbs": [
       "Galaxy",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
     ]
   },
   {
-    "objectID": "download-data.html#room-8-isolate-assembly-for-snp-comparison",
-    "href": "download-data.html#room-8-isolate-assembly-for-snp-comparison",
+    "objectID": "download-data.html#room-1-isolate-assembly-for-snp-comparison",
+    "href": "download-data.html#room-1-isolate-assembly-for-snp-comparison",
     "title": "4  Download Workshop Data",
-    "section": "4.3 Room 8 isolate assembly for SNP comparison",
-    "text": "4.3 Room 8 isolate assembly for SNP comparison\n\nSPAdes assembly of isolate 1031 (ERR531413), from the room 8 shower hose(ERR531413_asm.fasta)\n\n\n\n\n\n\n\nYour Working Directory\n\n\n\nWhen you have downloaded all the files required for the workshop, the contents of the BM327_Workshop folder should resemble the image in Figure 4.1.\n\n\n\n\n\n\nFigure 4.1: macOS BM327_Workshop folder with all files downloaded.",
+    "section": "4.3 Room 1 isolate assembly for SNP comparison",
+    "text": "4.3 Room 1 isolate assembly for SNP comparison\nThe isolate with accession ERR531413, sampled from the shower in room 1 of the burns unit, is also used as a reference genome for some comparisons.\n\nSPAdes assembly of isolate 1031 (ERR531413), from the room 1 shower hose(ERR531413_asm.fasta)\n\n\n\n\n\n\n\nYour Working Directory\n\n\n\nWhen you have downloaded all the files required for the workshop, the contents of the BM327_Workshop folder should resemble the image in Figure 4.1.\n\n\n\n\n\n\nFigure 4.1: macOS BM327_Workshop folder with all files downloaded.\n\n\n\n\n\n\n\n\n\nStover, C K, X Q Pham, A L Erwin, S D Mizoguchi, P Warrener, M J Hickey, F S Brinkman, et al. 2000. “Complete Genome Sequence of Pseudomonas Aeruginosa PAO1, an Opportunistic Pathogen.” Nature 406 (6799): 959–64.",
     "crumbs": [
       "Galaxy",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Download Workshop Data</span>"
