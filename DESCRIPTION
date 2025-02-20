@@ -13,6 +13,7 @@ Imports:
     ggplot2,
     flextable,
     kableExtra,
+    DT,
 Suggests:
     knitr,
     sessioninfo
