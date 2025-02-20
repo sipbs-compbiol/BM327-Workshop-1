@@ -38,11 +38,11 @@ This part of the workshop will cover the use of `Falco` to inspect the quality o
   - Click on the `Run Tool` button.
 
 ::: { .callout-important }
-**Make sure you run `FastQC` on both the forward and reverse read sets.**
+**Make sure you run `Falco` on both the forward and reverse read sets.**
 :::
 
 ::: { .callout-note }
-## Video: Using `FastQC` to assess the quality of your sequencing reads
+## Video: Using `Falco` to assess the quality of your sequencing reads
 
 {{< video assets/movies/galaxy-06-falco.mp4 title="Assessing sequencing read quality with `Falco`" >}}
 :::
