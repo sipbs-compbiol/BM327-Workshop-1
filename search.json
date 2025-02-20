@@ -273,7 +273,7 @@
     "href": "fastqc.html#using-falco",
     "title": "6  Inspect Read Quality",
     "section": "",
-    "text": "Navigate to the Falco tool using the Tools sidebar in Galaxy\n\n\nYou can use the search tools field to find Falco\nAlternatively, you will find it under GENOMIC FILE MANIPULATION/FASTA/FASTQ in the sidebar\n\n\nSelect the Falco tool\nRun the Falco tool on each of your FASTQ input files\n\n\nThese are the ERR531380_1.fastq and ERR531380_2.fastq files.\nWith the Falco tool options in the main Workspace window, select the file you want to run Falco on.\nClick on the Run Tool button.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you run FastQC on both the forward and reverse read sets.\n\n\n\n\n\n\n\n\nVideo: Using FastQC to assess the quality of your sequencing reads\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFalco takes a few moments to run (but is faster than FastQC, which it has superseded.\nWhen the run is complete, click on the eye icon of the Webpage result to inspect the FastQC output.\n\n\n\n\n\n\nTip\n\n\n\nYou can press and hold CTRL (on a PC) or CMD ⌘ (macOS) when clicking the eye icon to open the result in its own window.",
+    "text": "Navigate to the Falco tool using the Tools sidebar in Galaxy\n\n\nYou can use the search tools field to find Falco\nAlternatively, you will find it under GENOMIC FILE MANIPULATION/FASTA/FASTQ in the sidebar\n\n\nSelect the Falco tool\nRun the Falco tool on each of your FASTQ input files\n\n\nThese are the ERR531380_1.fastq and ERR531380_2.fastq files.\nWith the Falco tool options in the main Workspace window, select the file you want to run Falco on.\nClick on the Run Tool button.\n\n\n\n\n\n\n\nImportant\n\n\n\nMake sure you run Falco on both the forward and reverse read sets.\n\n\n\n\n\n\n\n\nVideo: Using Falco to assess the quality of your sequencing reads\n\n\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nFalco takes a few moments to run (but is faster than FastQC, which it has superseded.\nWhen the run is complete, click on the eye icon of the Webpage result to inspect the FastQC output.\n\n\n\n\n\n\nTip\n\n\n\nYou can press and hold CTRL (on a PC) or CMD ⌘ (macOS) when clicking the eye icon to open the result in its own window.",
     "crumbs": [
       "Workshop",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inspect Read Quality</span>"
@@ -284,7 +284,7 @@
     "href": "fastqc.html#falco-output",
     "title": "6  Inspect Read Quality",
     "section": "6.2 Falco output",
-    "text": "6.2 Falco output\nThe output of Falco tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:\n\nOfficial FastQC documentation\nOfficial Falco documentation\nMichigan State University (MSU) FastQC tutorial\n\n\n\n\n\n\n\nFalco and FastQC\n\n\n\nFalco and FastQC are two different tools, but they perform the same task and give equivalent, if visually distinct, output. Falco output is interpreted in exactly the same way as FastQC output, so it can be helpful to refer to FastQC tutorials and documentation.\n\n\n\n\n\n\n\n\nVideo: Inspecting Falco output in Galaxy\n\n\n\n\n\n\n\n6.2.1 Falco Summary\nThe Falco summary (Figure 6.1) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a pass (green, with a tick), a warning (amber, with exclamation mark), or a fail (red, with a cross) mark.\n\n\n\n\n\n\n\n\nFigure 6.1: Example Falco summary showing passes for most sections of the report including “Basic Statistics,” warnings for some sections including “Sequence Length Distribution,” and a fail for “Per tile sequence quality”\n\n\n\n\n\n6.2.2 Per base sequence quality\nThe per base sequence quality plot (Figure 6.2) presents the ranges of individual base quality calls across the lengths of the input sequence reads. Higher scores (near 40) indicate better quality.\n\n\n\n\n\n\nTip\n\n\n\nFor good-quality sequence read data, we are looking for a graph where the mean quality (see Figure 6.2) is always showing green, with a score greater than 29.\n\n\n\n\n\n\n\n\nFigure 6.2: Per base sequence quality score plot from Falco indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIt is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.\nIt is also typical for the quality score to be slightly lower in the first 5-7 bases of the read.\nIf mean quality per base falls below 29, there may be a problem with the sequencing data.\n\n\n\n\n6.2.3 Per sequence quality scores\nThe per sequence quality score (?fig-falco-perseq) summarises the distribution of high quality (higher scores, near 40) and lower quality reads in the complete dataset.\n\n\n\n\n\n\nTip\n\n\n\nIn good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.\n\n\n\n\n\n\n\n\nFigure 6.3: Per sequence quality score plot from Falco indicating overall high quality sequencing reads.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIf the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.",
+    "text": "6.2 Falco output\nThe output of Falco tells us a lot about the quality of our sequencing data, and we would typically use it to identify problems with our sequencing data. Some important sections are described below, and you can read more about how to diagnose quality issues in your dataset at the links below:\n\nOfficial FastQC documentation\nOfficial Falco documentation\nMichigan State University (MSU) FastQC tutorial\n\n\n\n\n\n\n\nFalco and FastQC\n\n\n\nFalco and FastQC are two different tools, but they perform the same task and give equivalent, if visually distinct, output. Falco output is interpreted in exactly the same way as FastQC output, so it can be helpful to refer to FastQC tutorials and documentation.\n\n\n\n\n\n\n\n\nVideo: Inspecting Falco output in Galaxy\n\n\n\n\n\n\n\n6.2.1 Falco Summary\nThe Falco summary (Figure 6.1) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a pass (green, with a tick), a warning (amber, with exclamation mark), or a fail (red, with a cross) mark.\n\n\n\n\n\n\n\n\nFigure 6.1: Example Falco summary showing passes for most sections of the report including “Basic Statistics,” warnings for some sections including “Sequence Length Distribution,” and a fail for “Per tile sequence quality”\n\n\n\n\n\n6.2.2 Per base sequence quality\nThe per base sequence quality plot (Figure 6.2) presents the ranges of individual base quality calls across the lengths of the input sequence reads. Higher scores (near 40) indicate better quality.\n\n\n\n\n\n\nTip\n\n\n\nFor good-quality sequence read data, we are looking for a graph where the mean quality (see Figure 6.2) is always showing green, with a score greater than 29.\n\n\n\n\n\n\n\n\nFigure 6.2: Per base sequence quality score plot from Falco indicating high quality sequencing reads. Quality score ranges are presented as a boxplot at each sequence position range.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIt is not unusual for the per-base quality scores to fall quite steeply towards the end of the reads, with Illumina and other sequencing technologies.\nIt is also typical for the quality score to be slightly lower in the first 5-7 bases of the read.\nIf mean quality per base falls below 29, there may be a problem with the sequencing data.\n\n\n\n\n6.2.3 Per sequence quality scores\nThe per sequence quality score (Figure 6.3) summarises the distribution of high quality (higher scores, near 40) and lower quality reads in the complete dataset.\n\n\n\n\n\n\nTip\n\n\n\nIn good quality sequence data, we tend to see a sharp peak towards the right hand side of the plot.\n\n\n\n\n\n\n\n\nFigure 6.3: Per sequence quality score plot from Falco indicating overall high quality sequencing reads.\n\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIf the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.",
     "crumbs": [
       "Workshop",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Inspect Read Quality</span>"
@@ -328,7 +328,7 @@
     "href": "trimmomatic.html#trimmomatic-output",
     "title": "7  Clean Raw Read Data",
     "section": "7.2 trimmomatic Output",
-    "text": "7.2 trimmomatic Output\nCleaning your data with trimmomatic generates four output files (Figure 7.1).\n\n\n\n\n\n\n\n\nFigure 7.1: FastQC output files in Galaxy. From the top: unpaired reverse (R2) reads, unpaired forward (R1) reads, paired reverse (R2) reads, and paired forward (R1) reads.\n\n\n\nYou can inspect the contents of these files by clicking on the filename in the History sidebar, and also by clicking on the corresponding eye icon to view the trimmed reads in the workspace.\n\n\n\n\n\n\nVideo: Inspecting trimmomatic output files\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7.2: Per base quality score plot from Falco indicating improvement in read quality, post-trimmomatic.",
+    "text": "7.2 trimmomatic Output\nCleaning your data with trimmomatic generates four output files (Figure 7.1).\n\n\n\n\n\n\n\n\nFigure 7.1: FastQC output files in Galaxy. From the top: unpaired reverse (R2) reads, unpaired forward (R1) reads, paired reverse (R2) reads, and paired forward (R1) reads.\n\n\n\nYou can inspect the contents of these files by clicking on the filename in the History sidebar, and also by clicking on the corresponding eye icon to view the trimmed reads in the workspace.\n\n\n\n\n\n\nVideo: Inspecting trimmomatic output files\n\n\n\n\n\n\n\n\n\n\n\n\nRun Falco again on your cleaned reads to see the improvement in data quality\n\n\n\nFollowing the example from Chapter 6, run Falco again on your newly-cleaned (paired) read sets, to see how the quality has improved.\n\n\n\n\n\n\n\n\nFigure 7.2: Per base quality score plot from Falco indicating an improvement in read quality, post-trimmomatic.",
     "crumbs": [
       "Workshop",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clean Raw Read Data</span>"
@@ -339,7 +339,7 @@
     "href": "trimmomatic.html#next-steps",
     "title": "7  Clean Raw Read Data",
     "section": "7.3 Next steps",
-    "text": "7.3 Next steps\nNow that we have clean, high-quality sequencing reads, we can move on to mapping the reads to a reference genome, in ?sec-mapping.",
+    "text": "7.3 Next steps\nNow that we have clean, high-quality sequencing reads, we can move on to mapping the reads to a reference genome, in Chapter 8",
     "crumbs": [
       "Workshop",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Clean Raw Read Data</span>"
@@ -750,45 +750,45 @@
   {
     "objectID": "questions.html",
     "href": "questions.html",
-    "title": "15  Tracing the Outbreak",
+    "title": "15  Tracing the Source",
     "section": "",
     "text": "15.1 How does the burns unit layout influence potential routes of transmission?\nYou have constructed a phylogenetic tree similar to that in Figure 15.2 for each of the study isolates in Table 15.1. In this section, you will use this information, and the plan of the burns unit in Figure 15.1 to draw inferences about the likely routes of transmission of P. aeruginosa in the burns unit.\nWork through the questions below to form your own conclusions concerning how the evidence does or does not support hypotheses about particular routes of transmission.\nUse what you know or can infer from Figure 15.1 and Table 15.1 to answer questions and determine the plausibility of the hypotheses below.",
     "crumbs": [
       "Investigation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Outbreak</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Source</span>"
     ]
   },
   {
     "objectID": "questions.html#how-does-the-burns-unit-layout-influence-potential-routes-of-transmission",
     "href": "questions.html#how-does-the-burns-unit-layout-influence-potential-routes-of-transmission",
-    "title": "15  Tracing the Outbreak",
+    "title": "15  Tracing the Source",
     "section": "",
     "text": "15.1.1 Hypothesis 1\nSuppose that P. aeruginosa was introduced to the unit via the mains water system, which enters at the top left of Figure 15.1.\nAssume that the pipes and fittings are contaminated in sequence, as water moves through the water system, and that P. aeruginosa is continuously accumulating mutations.\n\n\n\n\n\n\nQUESTION\n\n\n\n\nConsider each scenario below and decide which you think is most plausible.\n\n\n\n\n ✗All of the isolates sampled from each bed will be identical, and a phylogenetic tree would not help trace contamination.\n\n\n ✓The earliest-contaminated beds on the left-hand side of the unit (9-15) will appear to share a distinct common ancestor from those on the right-hand side of the unit (1-8).\n\n\n ✗The isolates will appear to diverge from the initial contaminant in order of bed number (i.e. bed 1 samples diverge first, then bed 2 samples, then bed 3 samples).\n\n\n ✗The isolates will appear to diverge from the initial contaminant in reverse order of bed number (i.e. bed 15 samples diverge first, then bed 14 samples, then bed 3 samples).\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nTry tracing the possible paths through the pipe system, moving from the top left into the ward. Where are the branching points? If the P. aeruginosa isolates are constantly accumulating mutations, how might the branching points correspond to points on a phylogenetic tree?\nTry sketching the tree you think you would see.\n\n\n\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nThe flow of mains water would be expected always to be towards the outlets, and populations of P. aeruginosa that found themselves on the left-hand side of the ward would be unlikely to be able to move through the pipes to the right-hand side (and vice versa). If we assume initial contamination via mains water, and no subsequent cross-contamination between beds, we would expect beds 9-15 to share a common ancestor that is not shared by beds 1-8 (and vice versa).\n\n\n\n\n\n\n\n\n\n\n\n\nHow to use this answer\n\n\n\nIs the tree you constructed compatible with this hypothesis?\n\n\n\n\n\n\nHint\n\n\n\n\n\nDo isolates from beds 9 and 11 share a common ancestor that is not shared with beds 1 or 6?\n\n\n\n\n\n\n\n15.1.2 Hypothesis 2\nIt is possible that P. aeruginosa isolates are transferred frequently between beds, for example by patient movement, clinician or nurse movement, or other poor infection control.\nThe ward is designed with side rooms to limit the amount of casual cross contamination that occurs.\nSuppose that, despite this deliberate design effort, patient and staff movement frequently contaminates one bed with P. aeruginosa isolates from other beds.\n\n\n\n\n\n\nQUESTION\n\n\n\n\nConsider each scenario below and decide which you think would be most plausible.\n\n\n\n\n ✓Isolates from several different beds would appear to share the same recent common ancestor, and it would not be possible to separate a phylogenetic tree into clades corresponding to individual beds.\n\n\n ✗Isolates from the same bed would appear to share a more recent common ancestor with each other than with isolates from any other bed.\n\n\n ✗Isolates from the left-hand side of the ward would appear to share a more recent common ancestor with each other than with isolates from the other side of the ward.\n\n\n ✗Isolates would appear to diverge from the same common ancestor in the order of bed number (bed 1 being most anciently diverged, bed 15 being most recently diverged).\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nWhat kinds of movements from room to room might you expect to see? Would there always be a pattern? Suppose you went into room 13 and picked up an isolate, then contaminated room 5 with it. What would the tree look like? What would the tree look like if you did this 100 times between different pairs of rooms?\n\n\n\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nThe phylogenetic tree would still produce a history of the isolates that reflected the sequence of mutations that had occurred. The tree would have a clade structure, with groups of isolates that were more recently-diverged from a common ancestor than other groups. But, if there was frequent transfer of isolates between rooms, the clades would not correspond to any one location, and the isolates from any particular clade would be likely to be found in many different rooms.\n\n\n\n\n\n\n\n\n\n\n\n\nHow to use this answer\n\n\n\nIs the tree you constructed compatible with this hypothesis?\n\n\n\n\n\n\nHint\n\n\n\n\n\nIs there a clade structure to your tree, where there is (more or less) one bed per clade?",
     "crumbs": [
       "Investigation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Outbreak</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Source</span>"
     ]
   },
   {
     "objectID": "questions.html#did-the-patients-bring-their-own-p.-aeruginosa",
     "href": "questions.html#did-the-patients-bring-their-own-p.-aeruginosa",
-    "title": "15  Tracing the Outbreak",
+    "title": "15  Tracing the Source",
     "section": "15.2 Did the patients bring their own P. aeruginosa?",
     "text": "15.2 Did the patients bring their own P. aeruginosa?\n\n15.2.1 Hypothesis 3\nSuppose that the patients were already contaminated with a different strain of P. aeruginosa acquired from some other location (perhaps their home) before they took their beds on the ward.\nAssume that the unit was already contaminated with P. aeruginosa, but that there is no cross-contamination between beds.\nAssume that there is contamination between patient and bed.\n\n\n\n\n\n\nQUESTION\n\n\n\n\nConsider each scenario below and decide which you think would be plausible.\n\n\n\n\n ✗Isolates sampled from the patient would closely resemble isolates sampled from other beds, but not their own bed.\n\n\n ✓Isolates sampled from the patient would closely resemble isolates sampled from their bed, but not other beds.\n\n\n ✓Isolates sampled from other beds in the unit would resemble isolates sampled from the patient.\n\n\n ✗Isolates sampled from the patient would not resemble any isolates sampled from the unit.\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nContamination can be bidirectional. If a patient and their bed are in contact then material, including bacteria, can be transferred from the patient to the bed, and from the bed to the patient. More than one answer may be plausible.\n\n\n\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nIf the patient introduces P. aeruginosa from an outside source to their bed, then isolates from that patient’s bed may resemble those from an outside source (but not other isolates from the unit). In the absence of cross-contamination, only that bed would carry an isolate that was introduced by the patient.\nIf the patient acquires P. aeruginosa from the previously-contaminated unit, and the isolates from each bed are related, then isolates from the patient may resemble those from any bed on the unit (though will likely be most similar to those from their own bed).\n\n\n\n\n\n\n\n\n\n\n\n\nHow to use this answer\n\n\n\nIs the tree you constructed compatible with this hypothesis?\n\n\n\n\n\n\nHint\n\n\n\n\n\nDo the isolates sampled from patients resemble isolates sampled from the beds, or do they appear to be a different lineage entirely?\nIs it possible that the study’s sampling strategy could pick up contamination in one direction (e.g. bed to patient), but not the other (patient to bed)?\n\n\n\n\n\n\n\n15.2.2 Hypothesis 4\nSuppose that the patients were already contaminated with a different strain of P. aeruginosa acquired from some other location (perhaps their home) before they took their beds on the ward.\nAssume that the unit was already contaminated with P. aeruginosa, but that there is no cross-contamination between beds.\nAssume that there is contamination between patient and bed.\n\n\n\n\n\n\nQUESTION\n\n\n\n\nUse the Days column from Table 15.1 (you may need to scroll to the right), and your tree, when considering each scenario below to decide which you think would be plausible, based on the evidence.\n\n\n\n\n ✗Patients P01 and P04 independently introduced from outside the burns unit two different lineages of P. aeruginosa that were sampled from their wounds.\n\n\n ✗Patient P01 introduced the strain sampled from both patients from outside the unit, contaminating bed 11. Later, bed 11 contaminated patient P04.\n\n\n ✓Patients P01 and P04 each acquired the strain that was sampled from their wounds from bed 11.\n\n\n ✗Patient P04 introduced the strain sampled from both patients from outside the unit, contaminating bed 11. Later, bed 11 contaminated patient P01.\n\n\n\n\n\n\n\n\n\n\nHint\n\n\n\n\n\nThe branching order of the tree implies the order of divergence of isolates, and patients can’t travel backwards in time to infect other patients. Use the data in Table 15.1 to check if time travel would be necessary for some of the options.\n\n\n\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nPatient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated them. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independent lineages introduced to the burns unit.\n\n\n\n\n\n\n\n\n\n\n\n\nHow to use this answer\n\n\n\nIs the tree you constructed compatible with this hypothesis?\n\n\n\n\n\n\nHint\n\n\n\n\n\nDo the isolates sampled from patients look to be distinct from those that were sampled from the unit’s environment and water system?",
     "crumbs": [
       "Investigation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Outbreak</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Source</span>"
     ]
   },
   {
     "objectID": "questions.html#next-steps",
     "href": "questions.html#next-steps",
-    "title": "15  Tracing the Outbreak",
+    "title": "15  Tracing the Source",
     "section": "15.3 Next Steps",
-    "text": "15.3 Next Steps\nPlease follow the link to the MyPlace formative quiz below and answer the questions.\n\nMyPlace Formative Quiz\n\nNow read on to Chapter 16.",
+    "text": "15.3 Next Steps\nPlease follow the link to the MyPlace formative quiz below and answer the questions.\n\nMyPlace Formative Quiz\n\nThen read on to Chapter 16.",
     "crumbs": [
       "Investigation",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Outbreak</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Tracing the Source</span>"
     ]
   },
   {
@@ -806,7 +806,7 @@
     "href": "epilogue.html",
     "title": "16  Epilogue",
     "section": "",
-    "text": "16.1 The Real Study\nThis workshop is based on a real study from 2014 (Quick et al. (2014)). The sequences you worked with are real sequences (you can look up the accession numbers at NCBI), and the ward layout is real. Some details were changed slightly for pedagogical reasons, but by and large you’ve been doing the same kind of analysis as in that paper.",
+    "text": "16.1 The Real Study\nThis workshop is based on a real study from 2014 by Quick et al. (2014) (Figure 16.1). You can read this paper to get the full detail.\nThe sequences you worked with are real sequences (you can look up the accession numbers at NCBI), and the ward layout is real. Some details were changed slightly for pedagogical reasons, but by and large you’ve been doing the same kind of analysis as in that paper, the key points of which are summarised below.",
     "crumbs": [
       "Conclusion",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Epilogue</span>"
@@ -817,7 +817,51 @@
     "href": "epilogue.html#the-real-study",
     "title": "16  Epilogue",
     "section": "",
-    "text": "Quick, Joshua, Nicola Cumley, Christopher M Wearn, Marc Niebel, Chrystala Constantinidou, Chris M Thomas, Mark J Pallen, et al. 2014. “Seeking the Source of Pseudomonas Aeruginosa Infections in a Recently Opened Hospital: An Observational Study Using Whole-Genome Sequencing.” BMJ Open 4 (11): e006278.",
+    "text": "Figure 16.1: Front matter of the Quick et al. (2014) paper on which this workshop is based",
+    "crumbs": [
+      "Conclusion",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Epilogue</span>"
+    ]
+  },
+  {
+    "objectID": "epilogue.html#what-kind-of-hospital-was-it",
+    "href": "epilogue.html#what-kind-of-hospital-was-it",
+    "title": "16  Epilogue",
+    "section": "16.2 What kind of hospital was it?",
+    "text": "16.2 What kind of hospital was it?\nThis was a purpose-built burns centre located in the Midlands in England, opened in 2010 and admitting around 300 patients each year. The burns centre is laid out just as in Figure 15.1.",
+    "crumbs": [
+      "Conclusion",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Epilogue</span>"
+    ]
+  },
+  {
+    "objectID": "epilogue.html#how-was-the-study-performed",
+    "href": "epilogue.html#how-was-the-study-performed",
+    "title": "16  Epilogue",
+    "section": "16.3 How was the study performed?",
+    "text": "16.3 How was the study performed?\nThis was an observational prospective study designed to determine if whole genome sequencing (WGS) could be helpful for determining likely sources of P. aeruginosa in a hospital setting. Hydrotherapy is a major part of burns treatments, and there was an overarching hypothesis that patients were acquiring P. aeruginosa from hospital shower water.\nPatients were screened for having greater than 7% total body surface area burns injuries, and they or a legal consultee gave written consent for participation. Recruited patients were also screened for carriage of P. aeruginosa from outside sources.\nSamples were taken from patient wounds, urine and stool, and also from environmental samples. Patient, environmental and water samples were taken after the patients were admitted. The environment and water sources were also sampled after patient discharge.",
+    "crumbs": [
+      "Conclusion",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Epilogue</span>"
+    ]
+  },
+  {
+    "objectID": "epilogue.html#what-did-they-find",
+    "href": "epilogue.html#what-did-they-find",
+    "title": "16  Epilogue",
+    "section": "16.4 What did they find?",
+    "text": "16.4 What did they find?\n\n\n\n\n\n\nThe water and environment in burns and critical care unites are frequently colonised by P. aeruginosa\n\n\n\nAround 50% of water samples, 26% of wet environment samples, and 6% of dry environment samples were positive for P. aeruginosa.\nAround 50% of patient samples were positive for P. aeruginosa.\nEight distinct clades of P. aeruginosa were identified, and there was no niche preference by clade.\n\n\n\n\n\n\n\n\nPotential transmission events detected by WGS\n\n\n\nPatients P01 and P04 (samples used in this workshop) were found to have a P. aeruginosa genotype indistinguishable from that of the water and environment of bed 11.\nOther patients in the study were positive for P. aeruginosa but environmental or water samples of the same genotype were only found during the duration of their stay, not before or after. This suggested that the patients introduced those lineages to the unit.\nPhylogenetic reconstruction from strains including those in this workshop, in conjunction with the plan of the unit, identified a common source of infection.\n\n\n\n\n\n\n\n\nIdentification of a potential infection source\n\n\n\nThe study team obtained a thermostatic mixed valve (TMV) from the hospital estates team, which had been taken from bed 9.\nThey sequenced a biofilm scraped from this valve, and found reads mapping to P. aeruginosa of the same clade that infected patients in room 11. It appears that persistent biofilms in water systems are a plausible source of P. aeruginosa infections.",
+    "crumbs": [
+      "Conclusion",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Epilogue</span>"
+    ]
+  },
+  {
+    "objectID": "epilogue.html#limitations-of-the-study",
+    "href": "epilogue.html#limitations-of-the-study",
+    "title": "16  Epilogue",
+    "section": "16.5 Limitations of the study",
+    "text": "16.5 Limitations of the study\n\n\n\n\nQuick, Joshua, Nicola Cumley, Christopher M Wearn, Marc Niebel, Chrystala Constantinidou, Chris M Thomas, Mark J Pallen, et al. 2014. “Seeking the Source of Pseudomonas Aeruginosa Infections in a Recently Opened Hospital: An Observational Study Using Whole-Genome Sequencing.” BMJ Open 4 (11): e006278.",
     "crumbs": [
       "Conclusion",
       "<span class='chapter-number'>16</span>  <span class='chapter-title'>Epilogue</span>"

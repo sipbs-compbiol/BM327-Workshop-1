@@ -64,6 +64,9 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-2ce9fc9ac8b614e7ffef13962cc12eaf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,15 +95,15 @@ div.csl-indent {
   }
 }</script>
 <style>
-div.callout-callout-questions.callout {
+div.callout-callout-question.callout {
   border-left-color: yellow;
 }
-div.callout-callout-questions.callout-style-default > .callout-header {
+div.callout-callout-question.callout-style-default > .callout-header {
   background-color: rgb(from yellow r g b / 13%);
 }
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
   background-image: none;
 }
 div.callout-callout-challenge.callout {
@@ -114,17 +117,6 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   content: '🧑‍🏫';
   background-image: none;
 }
-div.callout-callout-question.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-question.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
-  background-image: none;
-}
 div.callout-callout-todo.callout {
   border-left-color: red;
 }
@@ -134,6 +126,17 @@ div.callout-callout-todo.callout-style-default > .callout-header {
 div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
   content: '📝';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
   background-image: none;
 }
 </style>
@@ -356,7 +359,7 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./questions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tracing the Outbreak</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Tracing the Source</span></span></a>
   </div>
 </li>
       </ul>
@@ -395,6 +398,10 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
    
   <ul>
   <li><a href="#the-real-study" id="toc-the-real-study" class="nav-link active" data-scroll-target="#the-real-study"><span class="header-section-number">16.1</span> The Real Study</a></li>
+  <li><a href="#what-kind-of-hospital-was-it" id="toc-what-kind-of-hospital-was-it" class="nav-link" data-scroll-target="#what-kind-of-hospital-was-it"><span class="header-section-number">16.2</span> What kind of hospital was it?</a></li>
+  <li><a href="#how-was-the-study-performed" id="toc-how-was-the-study-performed" class="nav-link" data-scroll-target="#how-was-the-study-performed"><span class="header-section-number">16.3</span> How was the study performed?</a></li>
+  <li><a href="#what-did-they-find" id="toc-what-did-they-find" class="nav-link" data-scroll-target="#what-did-they-find"><span class="header-section-number">16.4</span> What did they find?</a></li>
+  <li><a href="#limitations-of-the-study" id="toc-limitations-of-the-study" class="nav-link" data-scroll-target="#limitations-of-the-study"><span class="header-section-number">16.5</span> Limitations of the study</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/epilogue.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -422,7 +429,78 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
 
 <section id="the-real-study" class="level2" data-number="16.1">
 <h2 data-number="16.1" class="anchored" data-anchor-id="the-real-study"><span class="header-section-number">16.1</span> The Real Study</h2>
-<p>This workshop is based on a real study from 2014 (<span class="citation" data-cites="Quick2014-kt">Quick et al. (<a href="references.html#ref-Quick2014-kt" role="doc-biblioref">2014</a>)</span>). The sequences you worked with are real sequences (you can look up the accession numbers at NCBI), and the ward layout is real. Some details were changed slightly for pedagogical reasons, but by and large you’ve been doing the same kind of analysis as in that paper.</p>
+<p>This workshop is based on a real study from 2014 by <span class="citation" data-cites="Quick2014-kt">Quick et al. (<a href="references.html#ref-Quick2014-kt" role="doc-biblioref">2014</a>)</span> (<a href="#fig-paper" class="quarto-xref">Figure&nbsp;<span>16.1</span></a>). You can read this paper to get the full detail.</p>
+<p>The sequences you worked with are real sequences (you can look up the accession numbers at NCBI), and the ward layout is real. Some details were changed slightly for pedagogical reasons, but by and large you’ve been doing the same kind of analysis as in that paper, the key points of which are summarised below.</p>
+<div id="fig-paper" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-paper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="assets/images/quick_paper.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;16.1: Front matter of the @Quick2014-kt paper on which this workshop is based"><img src="assets/images/quick_paper.png" class="img-fluid figure-img" style="width:80.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-paper-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16.1: Front matter of the <span class="citation" data-cites="Quick2014-kt">Quick et al. (<a href="references.html#ref-Quick2014-kt" role="doc-biblioref">2014</a>)</span> paper on which this workshop is based
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="what-kind-of-hospital-was-it" class="level2" data-number="16.2">
+<h2 data-number="16.2" class="anchored" data-anchor-id="what-kind-of-hospital-was-it"><span class="header-section-number">16.2</span> What kind of hospital was it?</h2>
+<p>This was a purpose-built burns centre located in the Midlands in England, opened in 2010 and admitting around 300 patients each year. The burns centre is laid out just as in <a href="questions.html#fig-ward-layout" class="quarto-xref">Figure&nbsp;<span>15.1</span></a>.</p>
+</section>
+<section id="how-was-the-study-performed" class="level2" data-number="16.3">
+<h2 data-number="16.3" class="anchored" data-anchor-id="how-was-the-study-performed"><span class="header-section-number">16.3</span> How was the study performed?</h2>
+<p>This was an observational prospective study designed to determine if whole genome sequencing (WGS) could be helpful for determining likely sources of <em>P. aeruginosa</em> in a hospital setting. Hydrotherapy is a major part of burns treatments, and there was an overarching hypothesis that patients were acquiring <em>P. aeruginosa</em> from hospital shower water.</p>
+<p>Patients were screened for having greater than 7% total body surface area burns injuries, and they or a legal consultee gave written consent for participation. Recruited patients were also screened for carriage of <em>P. aeruginosa</em> from outside sources.</p>
+<p>Samples were taken from patient wounds, urine and stool, and also from environmental samples. Patient, environmental and water samples were taken after the patients were admitted. The environment and water sources were also sampled after patient discharge.</p>
+</section>
+<section id="what-did-they-find" class="level2" data-number="16.4">
+<h2 data-number="16.4" class="anchored" data-anchor-id="what-did-they-find"><span class="header-section-number">16.4</span> What did they find?</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The water and environment in burns and critical care unites are frequently colonised by <em>P. aeruginosa</em>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Around 50% of water samples, 26% of wet environment samples, and 6% of dry environment samples were positive for <em>P. aeruginosa</em>.</p>
+<p>Around 50% of patient samples were positive for <em>P. aeruginosa</em>.</p>
+<p>Eight distinct clades of <em>P. aeruginosa</em> were identified, and there was no niche preference by clade.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Potential transmission events detected by WGS
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Patients P01 and P04 (samples used in this workshop) were found to have a <em>P. aeruginosa</em> genotype indistinguishable from that of the water and environment of bed 11.</p>
+<p>Other patients in the study were positive for <em>P. aeruginosa</em> but environmental or water samples of the same genotype were only found during the duration of their stay, not before or after. This suggested that the patients introduced those lineages to the unit.</p>
+<p>Phylogenetic reconstruction from strains including those in this workshop, in conjunction with the plan of the unit, identified a common source of infection.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Identification of a potential infection source
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The study team obtained a thermostatic mixed valve (TMV) from the hospital estates team, which had been taken from bed 9.</p>
+<p>They sequenced a biofilm scraped from this valve, and found reads mapping to <em>P. aeruginosa</em> of the same clade that infected patients in room 11. It appears that persistent biofilms in water systems are a plausible source of <em>P. aeruginosa</em> infections.</p>
+</div>
+</div>
+</section>
+<section id="limitations-of-the-study" class="level2" data-number="16.5">
+<h2 data-number="16.5" class="anchored" data-anchor-id="limitations-of-the-study"><span class="header-section-number">16.5</span> Limitations of the study</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -876,6 +954,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
