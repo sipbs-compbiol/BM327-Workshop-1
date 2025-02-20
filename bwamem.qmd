@@ -16,6 +16,14 @@ When reporting read mapping in a manuscript or dissertation, you should always s
 3. The accession numbers of the reference genome and read data (if available)
 :::
 
+::: { .callout-tip }
+## How `BWA-MEM2` works
+
+`BWA-MEM2` is named after the [Burrows-Wheeler Algorithm](https://en.wikipedia.org/wiki/Burrows%E2%80%93Wheeler_transform), a mathematical technique that was originally used for _lossless_ data compression (similar to a `.zip` file). In a bioinformatics context, the algorithm helps make sequence alignment much faster because "compressing" the reference sequence into an _index_ means that alignment to redundant short sequences only needs to take place once, rather than many times.
+
+Fast algorithms like `BWA-MEM2` for use with large datasets often have two steps: generation of a reference index, and then comparison of the input data against the index.
+:::
+
 ## Using `BWA-MEM2`
 
 1. Navigate to the `BWA-MEM2` tool
