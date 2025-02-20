@@ -95,7 +95,7 @@ It is possible that _P. aeruginosa_ isolates are transferred frequently between 
 
 The ward is designed with side rooms to limit the amount of casual cross contamination that occurs.
 
-Suppose that, despite this deliberate design effort, patient and staff movement frequently contaminates one bed with _P. aeruginosa_ isolates from other beds. 
+Suppose that, despite this deliberate design effort, patient and staff movement frequently contaminates each bed with _P. aeruginosa_ isolates from other beds. 
 
 ::: { .callout-question }
 
