@@ -1,4 +1,4 @@
-# Tracing the Outbreak { #sec-questions }
+# Tracing the Source { #sec-questions }
 
 You have constructed a phylogenetic tree similar to that in @fig-tree for each of the study isolates in @tbl-isolates.
 In this section, you will use this information, and the plan of the burns unit in @fig-ward-layout to draw inferences about the likely routes of transmission of _P. aeruginosa_ in the burns unit.
