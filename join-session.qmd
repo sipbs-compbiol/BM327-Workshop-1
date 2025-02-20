@@ -5,14 +5,14 @@
 
 - [{{< var galaxy.session >}}]({{< var galaxy.session >}})
 
-Galaxy EU have deployed a dedicated cloud service just for this workshop to use[^1]. No-one outside of our workshop has access to this machine. All of the jobs in our training session will run on this machine. Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
+Galaxy EU have deployed a dedicated cloud service just for this workshop to use[^1]. No-one outside of our workshop has access to this machine, and all of the jobs in our training session will run on this server Use the link above and log in with your `usegalaxy.eu` account (instructions to set up this account can be found in @sec-galaxy-registration).
 
 [^1]: This is a single server with 120 cores and 205 GB of RAM.
 :::
 
 ## The Galaxy workspace layout
 
-After you join the session, you will see the Galaxy workspace, which should look similar to @fig-galaxy-workspace. There are three sections to the workspace: the `Tools` sidebar, the `History/Workflow` sidebar, and the central `Workspace` area. You will become more familiar with these as you move through the workshop.
+Once you have joined the session, you will see the Galaxy workspace, which should look similar to @fig-galaxy-workspace. There are three sections to the workspace: the `Tools` sidebar, the `History/Workflow` sidebar, and the central `Workspace` area. You will become more familiar with these as you move through the workshop.
 
 ![An empty Galaxy workspace. The workspace is divided into three sections. On the left is the `Tools` sidebar, which presents the software tools available on the current Galaxy instance. On the right is the `History` or `Workflow` sidebar, which describes the data and steps being used in the current Galaxy workflow. The largest section, in the centre, shows details of a selected tool including options to set or change parameters, or the contents of the dataset, depending what is selected from the `History` sidebar.](assets/images/galaxy_landing.png){#fig-galaxy-workspace fig-alt="Screen capture of a Galaxy workspace, with the three sections 'Tools,' 'Workspace,' and 'History/Workflow' indicated." width=80%}
 
