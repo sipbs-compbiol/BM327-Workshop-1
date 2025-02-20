@@ -5,7 +5,7 @@
 It's been a couple of years since your local mayor proudly opened the new burns ward at your local hospital (@fig-mayor).
 
 ::: {.column-margin}
-![This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.](assets/images/mayor_opens_burns_unit.jpg){#fig-mayor}
+![This is apparently what Bing Image Generator thinks a mayor opening a burns unit looks like.](assets/images/mayor_opens_burns_unit.jpg){#fig-mayor fig-alt="AI-generated image of a man in a suit standing in front of a group of applauding nurses, and a building that is clearly on fire."}
 :::
 
 The unit is a modern, purpose-built 15 bed ward, with 11 side-rooms and two dual-bedded rooms (@fig-ward-layout). Any patients requiring mechanical ventilation or organ support are usually treated in two self-contained cubicles, located in the trauma critical care unit. As is typical in the UK, burns patients receive shower cart hydrotherapy as a central part of their treatment.
@@ -23,7 +23,7 @@ You are part of a team conducting an observational, prospective study into the o
 All recruited patients were screened for whether they already carried _P. aeruginosa_ in their wounds, urine, or stool. Samples were then taken from each patient during their stay on the ward. If _P. aeruginosa_ was found while the patient was on the ward, then wound swabs and twice-weekly urine samples were taken from the patient.
 
 ::: {.column-margin}
-![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout .lightbox}
+![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout .lightbox fig-alt="Schematic diagram of the layout of a hospital ward, where individual rooms are indicated, and the layout of the mains water pipes is also shown."}
 :::
 
 
