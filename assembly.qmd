@@ -1,4 +1,6 @@
 # Genome Assembly {#sec-assembly}
 
-In this section, you will assess the quality of a genome assembly for your study isolate `ERR531380`.
+The next stage of a study like this would involve genome assembly of your isolate with an assembler such as `Shovill` or `SPAdes`. However, we do not have time to conduct the assembly in this workshop, so you will be provided with a pre-assembled draft genome.
+
+In @sec-shovill, you will assess the quality of this draft genome assembly of your study isolate `ERR531380`, visually inspecting the graph structure of the assembly, and estimating the level of completeness and contamination using the `CheckM` software.
 
