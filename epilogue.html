@@ -95,17 +95,6 @@ div.csl-indent {
   }
 }</script>
 <style>
-div.callout-callout-todo.callout {
-  border-left-color: red;
-}
-div.callout-callout-todo.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
-  background-image: none;
-}
 div.callout-callout-questions.callout {
   border-left-color: yellow;
 }
@@ -115,6 +104,17 @@ div.callout-callout-questions.callout-style-default > .callout-header {
 div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
   content: '🙋️';
+  background-image: none;
+}
+div.callout-callout-question.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-question.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
   background-image: none;
 }
 div.callout-callout-challenge.callout {
@@ -128,15 +128,15 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   content: '🧑‍🏫';
   background-image: none;
 }
-div.callout-callout-question.callout {
-  border-left-color: yellow;
+div.callout-callout-todo.callout {
+  border-left-color: red;
 }
-div.callout-callout-question.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
+div.callout-callout-todo.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
 }
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
   background-image: none;
 }
 </style>
@@ -401,7 +401,6 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
   <li><a href="#what-kind-of-hospital-was-it" id="toc-what-kind-of-hospital-was-it" class="nav-link" data-scroll-target="#what-kind-of-hospital-was-it"><span class="header-section-number">16.2</span> What kind of hospital was it?</a></li>
   <li><a href="#how-was-the-study-performed" id="toc-how-was-the-study-performed" class="nav-link" data-scroll-target="#how-was-the-study-performed"><span class="header-section-number">16.3</span> How was the study performed?</a></li>
   <li><a href="#what-did-they-find" id="toc-what-did-they-find" class="nav-link" data-scroll-target="#what-did-they-find"><span class="header-section-number">16.4</span> What did they find?</a></li>
-  <li><a href="#limitations-of-the-study" id="toc-limitations-of-the-study" class="nav-link" data-scroll-target="#limitations-of-the-study"><span class="header-section-number">16.5</span> Limitations of the study</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/epilogue.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -498,9 +497,6 @@ Identification of a potential infection source
 <p>They sequenced a biofilm scraped from this valve, and found reads mapping to <em>P. aeruginosa</em> of the same clade that infected patients in room 11. It appears that persistent biofilms in water systems are a plausible source of <em>P. aeruginosa</em> infections.</p>
 </div>
 </div>
-</section>
-<section id="limitations-of-the-study" class="level2" data-number="16.5">
-<h2 data-number="16.5" class="anchored" data-anchor-id="limitations-of-the-study"><span class="header-section-number">16.5</span> Limitations of the study</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
