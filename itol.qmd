@@ -1,8 +1,10 @@
 # Visualising the Phylogenetic Tree { #sec-itol }
 
-In this section you will use the online tool `iTOL` to visualise the phylogenetic tree you created in @sec-tree.
-This tree represents evolutionary relationships between the 33 study isolates, as inferred from differences in their genome sequences.
-By appropriately _rooting_ and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.
+In this section you will use the online tool `iTOL` (@Letunic2021-ro) to visualise the phylogenetic tree you created in @sec-tree.
+This tree represents evolutionary relationships between the 33 study isolates (and a reference), as inferred from differences in their genome sequences.
+By appropriately _rooting_[^1] and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.
+
+[^1]: Maximum likelihood methods produce _unrooted_ trees, which means that they don't make a decision on which of the branching points is the oldest. _Rooting_ a tree is essentially a visual improvement where we use other information about what we believe to be the most ancient branching event to modify our view of the tree, making it appear that branching events proceed in the order that they actually happened.
 
 ## Downloading the tree
 
@@ -78,8 +80,11 @@ DT::datatable(metadata)
 ```
 :::
 
-::: { .callout-todo }
-**ADD QUESTION ASKING STUDENTS TO CONSIDER THE CLADE STRUCTURE**
+::: { .callout-questions }
+Your rooted tree has an implied structure to it. Branching events proceed in order from assumed to be oldest to assumed to be most recent, from left to right. This has resulted in some visible clustering of sequences into groups that appear to share a more recent common ancestor to each other than to other sequences in the tree. We call these groups [_monophyletic clades_](https://en.wikipedia.org/wiki/Clade) as they share a single common ancestor, or just "clades" for short.
+
+1. Using @tbl-isolates, what feature of the data appears to be common between the sequences in the clade of seven sequences including `ERR43133` and `ERR531418`?
+2. What other clades do you see, and what features do they seem to have in common?
 :::
 
 ## Annotating the tree

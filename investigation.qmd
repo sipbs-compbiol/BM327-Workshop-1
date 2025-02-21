@@ -1,3 +1,5 @@
 # Investigation { #sec-investigation }
 
-Now that you have obtained a phylogenetic tree from the study isolates, you can begin to consider some questions that might lead you to understand paths of transmission.
+Now that you have obtained and annotated a phylogenetic tree from the study isolates, you can begin to consider some questions that might lead you to understand paths of transmission in @sec-questions.
+
+You have information about the sample location for each isolate, whether it was sampled from a patient or the hospital environment, and a presumed order of divergence of the isolates that were sequenced. This should be enough to form a working hypothesis for how the _P. aeruginosa_ isolates spread and were acquired by the patients.

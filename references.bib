@@ -674,3 +674,101 @@
   year      =  2013,
   language  = "en"
 }
+
+@UNPUBLISHED{Kille2024-lm,
+  title    = "Parsnp 2.0: Scalable core-genome alignment for massive microbial
+              datasets",
+  author   = "Kille, Bryce and Nute, Michael G and Huang, Victor and Kim, Eddie
+              and Phillippy, Adam M and Treangen, Todd J",
+  abstract = "Motivation:Since 2016, the number of microbial species with
+              available reference genomes in NCBI has more than tripled.
+              Multiple genome alignment, the process of identifying nucleotides
+              across multiple genomes which share a common ancestor, is used as
+              the input to numerous downstream comparative analysis methods.
+              Parsnp is one of the few multiple genome alignment methods able
+              to scale to the current era of genomic data; however, there has
+              been no major release since its initial release in
+              2014.Results:To address this gap, we developed Parsnp v2, which
+              significantly improves on its original release. Parsnp v2
+              provides users with more control over executions of the program,
+              allowing Parsnp to be better tailored for different use-cases. We
+              introduce a partitioning option to Parsnp, which allows the input
+              to be broken up into multiple parallel alignment processes which
+              are then combined into a final alignment. The partitioning option
+              can reduce memory usage by over 4x and reduce runtime by over 2x,
+              all while maintaining a precise core-genome alignment. The
+              partitioning workflow is also less susceptible to complications
+              caused by assembly artifacts and minor variation, as alignment
+              anchors only need to be conserved within their partition and not
+              across the entire input set. We highlight the performance on
+              datasets involving thousands of bacterial and viral genomes.",
+  journal  = "bioRxiv",
+  month    =  jan,
+  year     =  2024
+}
+
+@ARTICLE{Stamatakis2014-ez,
+  title     = "{RAxML} version 8: a tool for phylogenetic analysis and
+               post-analysis of large phylogenies",
+  author    = "Stamatakis, Alexandros",
+  abstract  = "MOTIVATION: Phylogenies are increasingly used in all fields of
+               medical and biological research. Moreover, because of the
+               next-generation sequencing revolution, datasets used for
+               conducting phylogenetic analyses grow at an unprecedented pace.
+               RAxML (Randomized Axelerated Maximum Likelihood) is a popular
+               program for phylogenetic analyses of large datasets under
+               maximum likelihood. Since the last RAxML paper in 2006, it has
+               been continuously maintained and extended to accommodate the
+               increasingly growing input datasets and to serve the needs of
+               the user community. RESULTS: I present some of the most notable
+               new features and extensions of RAxML, such as a substantial
+               extension of substitution models and supported data types, the
+               introduction of SSE3, AVX and AVX2 vector intrinsics, techniques
+               for reducing the memory requirements of the code and a plethora
+               of operations for conducting post-analyses on sets of trees. In
+               addition, an up-to-date 50-page user manual covering all new
+               RAxML options is available.",
+  journal   = "Bioinformatics",
+  publisher = "Oxford University Press (OUP)",
+  volume    =  30,
+  number    =  9,
+  pages     = "1312--1313",
+  month     =  may,
+  year      =  2014,
+  copyright = "http://creativecommons.org/licenses/by-nc/3.0/",
+  language  = "en"
+}
+
+@ARTICLE{Letunic2021-ro,
+  title     = "Interactive Tree Of Life ({iTOL}) v5: an online tool for
+               phylogenetic tree display and annotation",
+  author    = "Letunic, Ivica and Bork, Peer",
+  abstract  = "The Interactive Tree Of Life (https://itol.embl.de) is an online
+               tool for the display, manipulation and annotation of
+               phylogenetic and other trees. It is freely available and open to
+               everyone. iTOL version 5 introduces a completely new tree
+               display engine, together with numerous new features. For
+               example, a new dataset type has been added (MEME motifs), while
+               annotation options have been expanded for several existing ones.
+               Node metadata display options have been extended and now also
+               support non-numerical categorical values, as well as multiple
+               values per node. Direct manual annotation is now available,
+               providing a set of basic drawing and labeling tools, allowing
+               users to draw shapes, labels and other features by hand directly
+               onto the trees. Support for tree and dataset scales has been
+               extended, providing fine control over line and label styles.
+               Unrooted tree displays can now use the equal-daylight algorithm,
+               proving a much greater display clarity. The user account system
+               has been streamlined and expanded with new navigation options
+               and currently handles >1 million trees from >70 000 individual
+               users.",
+  journal   = "Nucleic Acids Res.",
+  publisher = "Oxford University Press (OUP)",
+  volume    =  49,
+  number    = "W1",
+  pages     = "W293--W296",
+  month     =  jul,
+  year      =  2021,
+  copyright = "http://creativecommons.org/licenses/by/4.0/",
+  language  = "en"
+}

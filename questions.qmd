@@ -3,11 +3,11 @@
 You have constructed a phylogenetic tree similar to that in @fig-tree for each of the study isolates in @tbl-isolates.
 In this section, you will use this information, and the plan of the burns unit in @fig-ward-layout to draw inferences about the likely routes of transmission of _P. aeruginosa_ in the burns unit.
 
-Work through the questions below to form your own conclusions concerning how the evidence does or does not support hypotheses about particular routes of transmission.
+Work through the questions below to **form your own conclusions concerning how the evidence you collected does or does not support hypotheses about particular routes of transmission**.
+
+![An annotated phylogenetic tree of the burns unit _P. aeruginosa_ isolates. The outgroup isolate `ERR531413` roots the tree. The bed and patient from which each sample was taken is indicated in the branch labels. Branch labels are coloured by sample source: water (blue), environment (green), and patient (yellow).](assets/images/itol-patients.png){#fig-tree width=80% .lightbox}
 
 ![The 15 bed burns ward layout. Beds 1-4 are located in dual-bedded rooms, and beds 5-15 are located in side-rooms. Water supply pipes are indicated by the blue lines](assets/images/ward_layout.png){#fig-ward-layout width=80% .lightbox}
-
-![A phylogenetic tree of the burns unit _P. aeruginosa_ isolates. The outgroup isolate `ERR531413` roots the tree. The bed and patient from which each sample was taken is indicated in the branch labels. Branch labels are coloured by sample source: water (blue), environment (green), and patient (yellow).](assets/images/itol-patients.png){#fig-tree width=80% .lightbox}
 
 ```{r echo=FALSE}
 #| label: tbl-isolates
@@ -24,14 +24,14 @@ Use what you know or can infer from @fig-ward-layout and @tbl-isolates to answer
 
 ### Hypothesis 1
 
-Suppose that _P. aeruginosa_ was introduced to the unit _via_ the mains water system, which enters at the top left of @fig-ward-layout.
+_P. aeruginosa_ was introduced to the unit _via_ the mains water system, which enters at the top left of @fig-ward-layout.
 
 Assume that the pipes and fittings are contaminated in sequence, as water moves through the water system, and that _P. aeruginosa_ is continuously accumulating mutations.
 
 ::: { .callout-question }
 
 :::::{.question}
-Consider each scenario below and decide which you think is most plausible.
+Consider each scenario below and decide which you think is most plausible, **based on this hypothesis**.
 
 ::::{.choices}
 
@@ -91,7 +91,7 @@ Do isolates from beds 9 and 11 share a common ancestor that is not shared with b
 
 ### Hypothesis 2
 
-It is possible that _P. aeruginosa_ isolates are transferred frequently between beds, for example by patient movement, clinician or nurse movement, or other poor infection control.
+_P. aeruginosa_ isolates are transferred frequently between beds, for example by patient movement, clinician or nurse movement, or other poor infection control.
 
 The ward is designed with side rooms to limit the amount of casual cross contamination that occurs.
 
@@ -100,7 +100,7 @@ Suppose that, despite this deliberate design effort, patient and staff movement 
 ::: { .callout-question }
 
 :::::{.question}
-Consider each scenario below and decide which you think would be most plausible.
+Consider each scenario below and decide which you think would be most plausible, **based on this hypothesis**.
 
 ::::{.choices}
 
@@ -161,7 +161,7 @@ Is there a clade structure to your tree, where there is (more or less) one bed p
 
 ### Hypothesis 3
 
-Suppose that the patients were already contaminated with a different strain of _P. aeruginosa_ acquired from some other location (perhaps their home) before they took their beds on the ward.
+Patients were already contaminated with a different strain of _P. aeruginosa_ acquired from some other location (perhaps their home) before they took their beds on the ward.
 
 Assume that the unit was already contaminated with _P. aeruginosa_, but that there is no cross-contamination between beds.
 
@@ -170,7 +170,7 @@ Assume that there is contamination between patient and bed.
 ::: { .callout-question }
 
 :::::{.question}
-Consider each scenario below and decide which you think would be plausible.
+Consider each scenario below and decide which you think would be plausible, **based on this hypothesis**.
 
 ::::{.choices}
 
@@ -231,18 +231,11 @@ Is it possible that the study's sampling strategy could pick up contamination in
 
 :::
 
-### Hypothesis 4
-
-Suppose that the patients were already contaminated with a different strain of _P. aeruginosa_ acquired from some other location (perhaps their home) before they took their beds on the ward.
-
-Assume that the unit was already contaminated with _P. aeruginosa_, but that there is no cross-contamination between beds.
-
-Assume that there is contamination between patient and bed.
 
 ::: { .callout-question }
 
 :::::{.question}
-Use the `Days` column from @tbl-isolates (you may need to scroll to the right), and your tree, when considering each scenario below to decide which you think would be plausible, based on the evidence.
+Use the `Days` column from @tbl-isolates (you may need to scroll to the right), and your tree, when considering each scenario below to decide which you think would be plausible, **based on your evidence**.
 
 ::::{.choices}
 
@@ -252,7 +245,7 @@ Patients P01 and P04 independently introduced from outside the burns unit two di
 :::
 
 :::{.choice}
-Patient P01 introduced the strain sampled from both patients from outside the unit, contaminating bed 11. Later, bed 11 contaminated patient P04.
+Patient P01 introduced the strain sampled from both patients from outside the unit, contaminating bed 11. Later, patient P04 acquired this from bed 11.
 :::
 
 :::{.choice .correct-choice}
@@ -260,7 +253,7 @@ Patients P01 and P04 each acquired the strain that was sampled from their wounds
 :::
 
 :::{.choice}
-Patient P04 introduced the strain sampled from both patients from outside the unit, contaminating bed 11. Later, bed 11 contaminated patient P01.
+Patient P04 introduced the strain sampled from both patients from outside the unit, contaminating bed 11.Later, patient P01 acquired this from bed 11.
 :::
 
 
@@ -276,7 +269,7 @@ Use the data in @tbl-isolates to check if time travel would be necessary for som
 ::: { .callout-warning collapse="true" }
 ## Explanation
 
-Patient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated them. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independent lineages introduced to the burns unit.
+Patient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated them. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independent lineages introduced to the burns unit. The close relationship of these isolates to the isolates from other beds suggests that they were not introduced to the unit from an external source.
 :::
 
 

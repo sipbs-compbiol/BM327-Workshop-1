@@ -3,7 +3,17 @@
 ::: { .callout-important }
 ## Your colleague has been very helpful again
 
-The next step in the investigation would normally be to identify and align variant regions between each of the genomes in this study. That could take some time - more than we have today - and, luckily, your helpful colleague has already done this for you. They used the `ParSNP` tool to compare the draft genomes of 33 isolates from several rooms on the burns ward to a common reference (`ERR531413_asm`) and obtain all the identifiable sequence differences.
+The next step in the investigation would normally be to identify and align variant regions between each of the genomes in this study. That could take some time - more than we have today - and, luckily, your helpful colleague has already done this for you. They used the `ParSNP` tool (@Kille2024-lm) to compare the draft genomes of 33 isolates from several rooms on the burns ward to a common reference (`ERR531413_asm`) and obtain all the identifiable sequence differences.
+
+::: { .callout-note collapse="true" }
+## What does `ParSNP` do?
+
+`ParSNP` is a tool in the [`Harvest` suite](https://harvest.readthedocs.io/en/latest/index.html) of bioinformatics programs. It was written to very rapidly identify and align the _core genomes_[^1] of hundreds to thousands of bacterial sequences.
+
+To work, `ParSNP` requires a reference genome to align to - here that reference was the assembly of the `ERR531413` isolate from this study. It identified core regions shared between all the study isolates and the reference, and examined those core regions for sequence differences (_variants_) such as SNPs and indels, which it reported as a sequence alignment and a VCF file.
+:::
+
+[^1]: The _core genome_ is the set of sequences shared by all genomes in a group. It can be thought of as the regions of sequence that characterise what makes members of that group members of that group (like all birds have wings - wings are a _core feature_ of birds).
 
 **Using `Galaxy`, genome assembly would take too long for this workshop.**
 
@@ -49,6 +59,30 @@ DT::datatable(metadata)
 
 ## Inferring a phylogenetic tree with `RaxML`
 
+Given a sequence alignment like the one in the `study.snps.fasta` file above, one can use many different methods to reconstruct a proposed evolutionary history leading to the observed alignment. Such histories are typically _trees_[^2], and methods to draw them include clustering approaches such as:
+
+- [`UPGMA`](https://en.wikipedia.org/wiki/UPGMA) (Unweighted Pair Group Method with Arithmetic mean)
+- [Neighbour-Joining](https://en.wikipedia.org/wiki/Neighbor_joining)
+
+which are applications of general clustering methods to biology using pairwise similarity scores between sequences. These methods have almost completely been superseded by statistical inference methods including:
+
+- [Maximum Likelihood](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation)
+- [Bayesian inference](https://en.wikipedia.org/wiki/Bayesian_inference_in_phylogeny)
+
+which adopt a statistical model (sometimes very complex models) of the likelihood of base or amino acid substitution, and attempt to find the tree that "best fits" the data, given that model[^3]. 
+
+[^2]: A _tree_ is the name we give to a kind of _graph_ (in the mathematical sense) where there are no loops (known as _cycles_). The biological interpretation of these is typically that _bifurcations_ (i.e. branching points) represent sequence divergence at some point in history, and that edge length/branch length represents the degree of difference between two points on the graph (i.e. how different two sequences are).
+
+[^3]: The concept is analogous to regression of a straight line through a set of points, but it's regressing a tree through a set of sequences.
+
+The tool you will use here is `RaxML` (@Stamatakis2014-ez), one of several packages that uses maximum likelihood to infer the "best tree" that fits the data.
+
+::: { .callout-note collapse="true" }
+## What does `RaxML` do?
+
+`RaxML` is given an input sequence set and told a model of evolution to use (here it's a simple `GTRGAMMA` substitution model). It initially creates a number of quickly-built approximate trees and runs through a process of optimising these by modifying and editing each tree, and checking to see if it is a "better fit" to the data than the tree it derived from. If it is a better fit, it is retained. This process continues until no improvement is seen, or some other stopping criterion is met.
+:::
+
 1. Navigate to `RaxML` in the `Tools` sidebar
 2. Set the source file to be the `.fasta` file you just uploaded
 3. Check that the `Model type` is `Nucleotide` with the `GTRGAMMA` model
@@ -62,10 +96,20 @@ DT::datatable(metadata)
 
 ## Inspect the tree file and visualise the tree in Galaxy
 
-1. Click on the `Eye` icon nect to the `Best-scoring ML Tree` output
+1. Click on the `Eye` icon next to the `Best-scoring ML Tree` output
 
-::: { .callout-todo }
-**ASK SOME QUESTIONS HERE**
+::: { .callout-questions }
+1. Does this look like a tree?
+2. Can you find your assembly and/or the reference listed in the tree?
+
+::: { .callout-tip collapse="true" }
+## What is this file?
+
+The file produced by `RaxML` as the `Best-scoring ML tree` is in a format known as [`Newick`](https://en.wikipedia.org/wiki/Newick_format) which uses parentheses and commas to describe tree structure. 
+
+The numbers in the output represent the distance from each of the nodes in the tree (some are genomes, some are internal nodes interpreted as historical branching events) to its parent.
+:::
+
 :::
 
 2. Navigate to `ETE tree viewer` in the `Tools` sidebar
@@ -80,10 +124,22 @@ DT::datatable(metadata)
 {{< video assets/movies/galaxy-22a-ete.mp4 title="Visualising the tree in `Galaxy` with `ETE tree viewer`" >}}
 :::
 
-::: { .callout-todo }
-**ASK SOME QUESTIONS HERE**
+::: { .callout-questions }
+1. Can you find your assembly and/or the reference listed in the tree?
+2. Your isolate `ERR531380` was sampled from bed 11. Using @tbl-isolates to identify the other bed 11 isolates, find where they are in the tree. What do you notice?
+
+::: { .callout-tip collapse="true" }
+## What do those numbers mean?
+
+You will notice numbers (usually "1") at internal nodes of the tree. These represent [_bootstrap values_](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)), a statistical method for estimating confidence in an outcome.
+
+In phylogenetics, this often involves _resampling_ the initial dataset (building a new alignment by randomly taking columns from the original input, and allowing repetition) many times and building a new tree each time. The _bootstrap value_ is then the proportion of times a particular branching event is seen in the full set of all trees (always present = 1, never present except in the original tree = 0).
+
+Here, we did not perform bootstrapping, so the value of "1" is meaningless for understanding the robustness or confidence we should have in our tree.
+:::
+
 :::
 
 ## Next Steps
 
-It would be useful to be able to annotate the tree with a visual representation of the sample type and room for each isolate. You will do this in @sec-itol using iTOL.
+You should have seen that the bed 11 isolates all seem to cluster together. It's difficult to keep track of this just on the basic tree, and it would be useful to be able to annotate the tree with a visual representation of the sample type and room for each isolate. You will do this in @sec-itol using iTOL.
