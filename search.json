@@ -753,7 +753,7 @@
     "href": "itol.html#footnotes",
     "title": "14  Visualising the Phylogenetic Tree",
     "section": "",
-    "text": "We know you’re all too young to have used a floppy disk, but humour us…↩︎\nWe know you’re all too young to have used a floppy disk, but humour us…↩︎",
+    "text": "Maximum likelihood methods produce unrooted trees, which means that they don’t make a decision on which of the branching points is the oldest. Rooting a tree is essentially a visual improvement where we use other information about what we believe to be the most ancient branching event to modify our view of the tree, making it appear that branching events proceed in the order that they actually happened.↩︎\nWe know you’re all too young to have used a floppy disk, but humour us…↩︎",
     "crumbs": [
       "Phylogenetics",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Visualising the Phylogenetic Tree</span>"
