@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -84,6 +104,28 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
 <script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <style>
+div.callout-callout-todo.callout {
+  border-left-color: red;
+}
+div.callout-callout-todo.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
+div.callout-callout-question.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-question.callout-style-default > .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
+  background-image: none;
+}
 div.callout-callout-challenge.callout {
   border-left-color: aquamarine;
 }
@@ -104,28 +146,6 @@ div.callout-callout-questions.callout-style-default > .callout-header {
 div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
   content: '🙋️';
-  background-image: none;
-}
-div.callout-callout-question.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-question.callout-style-default > .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
-  background-image: none;
-}
-div.callout-callout-todo.callout {
-  border-left-color: red;
-}
-div.callout-callout-todo.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
   background-image: none;
 }
 </style>
@@ -425,7 +445,24 @@ Your colleague has been very helpful again
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The next step in the investigation would normally be to identify and align variant regions between each of the genomes in this study. That could take some time - more than we have today - and, luckily, your helpful colleague has already done this for you. They used the <code>ParSNP</code> tool to compare the draft genomes of 33 isolates from several rooms on the burns ward to a common reference (<code>ERR531413_asm</code>) and obtain all the identifiable sequence differences.</p>
+<p>The next step in the investigation would normally be to identify and align variant regions between each of the genomes in this study. That could take some time - more than we have today - and, luckily, your helpful colleague has already done this for you. They used the <code>ParSNP</code> tool (<span class="citation" data-cites="Kille2024-lm">Kille et al. (<a href="references.html#ref-Kille2024-lm" role="doc-biblioref">2024</a>)</span>) to compare the draft genomes of 33 isolates from several rooms on the burns ward to a common reference (<code>ERR531413_asm</code>) and obtain all the identifiable sequence differences.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What does <code>ParSNP</code> do?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>ParSNP</code> is a tool in the <a href="https://harvest.readthedocs.io/en/latest/index.html"><code>Harvest</code> suite</a> of bioinformatics programs. It was written to very rapidly identify and align the <em>core genomes</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> of hundreds to thousands of bacterial sequences.</p>
+<p>To work, <code>ParSNP</code> requires a reference genome to align to - here that reference was the assembly of the <code>ERR531413</code> isolate from this study. It identified core regions shared between all the study isolates and the reference, and examined those core regions for sequence differences (<em>variants</em>) such as SNPs and indels, which it reported as a sequence alignment and a VCF file.</p>
+</div>
+</div>
+</div>
 <p><strong>Using <code>Galaxy</code>, genome assembly would take too long for this workshop.</strong></p>
 <p>They have provided the results for you to download in two files, below - the VCF file of variants (<code>.vcf</code> file), and a sequence alignment containing all of these variants (<code>.fasta</code> file):</p>
 <ul>
@@ -483,8 +520,8 @@ Table&nbsp;13.1: Sequenced isolates
 </figcaption>
 <div aria-describedby="tbl-isolates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-491a1eff376c7ce62d71" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-491a1eff376c7ce62d71">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34"],["ERR531300","ERR531301","ERR531302","ERR531303","ERR531366","ERR531367","ERR531375","ERR531377","ERR531378","ERR531379","ERR531380","ERR531381","ERR531383","ERR531384","ERR531385","ERR531389","ERR531390","ERR531391","ERR531398","ERR531399","ERR531400","ERR531401","ERR531402","ERR531403","ERR531404","ERR531413","ERR531418","ERR531420","ERR531424","ERR531426","ERR531427","ERR531431","ERR531432","ERR531433"],[900,901,902,903,967,968,976,980,981,982,983,984,986,987,988,992,993,994,1003,1004,1005,1006,1007,1008,1009,1031,1036,1041,1048,1050,1052,1057,1058,1062],["P01","P01","P01","P01","SP09","SP10","P04","P04","P04","P04","P04","P04","P04","P04","P04","Water Sample","Water Sample","Water Sample","Water Sample","Water Sample","P04","P04","P04","P04","P04","SP13","SP15","SP16","SP20","SP21","SP22","SP25","SP25","SP29"],[11,11,11,11,9,11,11,11,11,11,11,11,11,11,11,9,9,9,6,6,11,11,11,11,11,1,6,6,11,11,9,6,6,6],["Patient","Environmental","Environmental","Water","Water","Water","Patient","Environmental","Environmental","Patient","Patient","Patient","Water","Environmental","Water","Water","Water","Water","Water","Water","Patient","Patient","Patient","Patient","Patient","Water","Water","Water","Environmental","Water","Water","Water","Environmental","Environmental"],["Wound","Trolley","Drain","Shower","Shower","Shower","Wound","Shower","Drain","Wound","Wound","Wound","Tap","Shower","Shower","Tap","Shower","Shower","Shower","Shower","Wound","Wound","Wound","Wound","Wound","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower"],[14,27,27,27,65,65,82,89,89,85,85,85,89,89,89,90,90,90,91,91,91,91,93,103,103,5,177,190,216,216,226,278,278,292]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>GenomeID<\/th>\n      <th>SampleID<\/th>\n      <th>PatientID<\/th>\n      <th>Bed<\/th>\n      <th>SpecimenType<\/th>\n      <th>Source<\/th>\n      <th>Days<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,4,7]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"GenomeID","targets":1},{"name":"SampleID","targets":2},{"name":"PatientID","targets":3},{"name":"Bed","targets":4},{"name":"SpecimenType","targets":5},{"name":"Source","targets":6},{"name":"Days","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-1d62ac901b0da3777b52" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1d62ac901b0da3777b52">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34"],["ERR531300","ERR531301","ERR531302","ERR531303","ERR531366","ERR531367","ERR531375","ERR531377","ERR531378","ERR531379","ERR531380","ERR531381","ERR531383","ERR531384","ERR531385","ERR531389","ERR531390","ERR531391","ERR531398","ERR531399","ERR531400","ERR531401","ERR531402","ERR531403","ERR531404","ERR531413","ERR531418","ERR531420","ERR531424","ERR531426","ERR531427","ERR531431","ERR531432","ERR531433"],[900,901,902,903,967,968,976,980,981,982,983,984,986,987,988,992,993,994,1003,1004,1005,1006,1007,1008,1009,1031,1036,1041,1048,1050,1052,1057,1058,1062],["P01","P01","P01","P01","SP09","SP10","P04","P04","P04","P04","P04","P04","P04","P04","P04","Water Sample","Water Sample","Water Sample","Water Sample","Water Sample","P04","P04","P04","P04","P04","SP13","SP15","SP16","SP20","SP21","SP22","SP25","SP25","SP29"],[11,11,11,11,9,11,11,11,11,11,11,11,11,11,11,9,9,9,6,6,11,11,11,11,11,1,6,6,11,11,9,6,6,6],["Patient","Environmental","Environmental","Water","Water","Water","Patient","Environmental","Environmental","Patient","Patient","Patient","Water","Environmental","Water","Water","Water","Water","Water","Water","Patient","Patient","Patient","Patient","Patient","Water","Water","Water","Environmental","Water","Water","Water","Environmental","Environmental"],["Wound","Trolley","Drain","Shower","Shower","Shower","Wound","Shower","Drain","Wound","Wound","Wound","Tap","Shower","Shower","Tap","Shower","Shower","Shower","Shower","Wound","Wound","Wound","Wound","Wound","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower"],[14,27,27,27,65,65,82,89,89,85,85,85,89,89,89,90,90,90,91,91,91,91,93,103,103,5,177,190,216,216,226,278,278,292]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>GenomeID<\/th>\n      <th>SampleID<\/th>\n      <th>PatientID<\/th>\n      <th>Bed<\/th>\n      <th>SpecimenType<\/th>\n      <th>Source<\/th>\n      <th>Days<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,4,7]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"GenomeID","targets":1},{"name":"SampleID","targets":2},{"name":"PatientID","targets":3},{"name":"Bed","targets":4},{"name":"SpecimenType","targets":5},{"name":"Source","targets":6},{"name":"Days","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </figure>
@@ -493,6 +530,34 @@ Table&nbsp;13.1: Sequenced isolates
 </section>
 <section id="inferring-a-phylogenetic-tree-with-raxml" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="inferring-a-phylogenetic-tree-with-raxml"><span class="header-section-number">13.2</span> Inferring a phylogenetic tree with <code>RaxML</code></h2>
+<p>Given a sequence alignment like the one in the <code>study.snps.fasta</code> file above, one can use many different methods to reconstruct a proposed evolutionary history leading to the observed alignment. Such histories are typically <em>trees</em><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, and methods to draw them include clustering approaches such as:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/UPGMA"><code>UPGMA</code></a> (Unweighted Pair Group Method with Arithmetic mean)</li>
+<li><a href="https://en.wikipedia.org/wiki/Neighbor_joining">Neighbour-Joining</a></li>
+</ul>
+<p>which are applications of general clustering methods to biology using pairwise similarity scores between sequences. These methods have almost completely been superseded by statistical inference methods including:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Maximum_likelihood_estimation">Maximum Likelihood</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bayesian_inference_in_phylogeny">Bayesian inference</a></li>
+</ul>
+<p>which adopt a statistical model (sometimes very complex models) of the likelihood of base or amino acid substitution, and attempt to find the tree that “best fits” the data, given that model<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<p>The tool you will use here is <code>RaxML</code> (<span class="citation" data-cites="Stamatakis2014-ez">Stamatakis (<a href="references.html#ref-Stamatakis2014-ez" role="doc-biblioref">2014</a>)</span>), one of several packages that uses maximum likelihood to infer the “best tree” that fits the data.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What does <code>RaxML</code> do?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>RaxML</code> is given an input sequence set and told a model of evolution to use (here it’s a simple <code>GTRGAMMA</code> substitution model). It initially creates a number of quickly-built approximate trees and runs through a process of optimising these by modifying and editing each tree, and checking to see if it is a “better fit” to the data than the tree it derived from. If it is a better fit, it is retained. This process continues until no improvement is seen, or some other stopping criterion is met.</p>
+</div>
+</div>
+</div>
 <ol type="1">
 <li>Navigate to <code>RaxML</code> in the <code>Tools</code> sidebar</li>
 <li>Set the source file to be the <code>.fasta</code> file you just uploaded</li>
@@ -516,19 +581,39 @@ Video: Inferring a tree using <code>RaxML</code>
 <section id="inspect-the-tree-file-and-visualise-the-tree-in-galaxy" class="level2" data-number="13.3">
 <h2 data-number="13.3" class="anchored" data-anchor-id="inspect-the-tree-file-and-visualise-the-tree-in-galaxy"><span class="header-section-number">13.3</span> Inspect the tree file and visualise the tree in Galaxy</h2>
 <ol type="1">
-<li>Click on the <code>Eye</code> icon nect to the <code>Best-scoring ML Tree</code> output</li>
+<li>Click on the <code>Eye</code> icon next to the <code>Best-scoring ML Tree</code> output</li>
 </ol>
-<div class="callout callout-style-default callout-callout-todo callout-titled">
+<div class="callout callout-style-default callout-callout-questions callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-TODO
+QUESTIONS
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>ASK SOME QUESTIONS HERE</strong></p>
+<ol type="1">
+<li>Does this look like a tree?</li>
+<li>Can you find your assembly and/or the reference listed in the tree?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is this file?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The file produced by <code>RaxML</code> as the <code>Best-scoring ML tree</code> is in a format known as <a href="https://en.wikipedia.org/wiki/Newick_format"><code>Newick</code></a> which uses parentheses and commas to describe tree structure.</p>
+<p>The numbers in the output represent the distance from each of the nodes in the tree (some are genomes, some are internal nodes interpreted as historical branching events) to its parent.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <ol start="2" type="1">
@@ -551,25 +636,62 @@ Video: Visualising the tree in <code>Galaxy</code>
 <div class="quarto-video"><video id="video_shortcode_videojs_video3" class="video-js vjs-default-skin vjs-fluid" controls="" preload="auto" data-setup="{}" title="Visualising the tree in `Galaxy` with `ETE tree viewer`"><source src="assets/movies/galaxy-22a-ete.mp4"></video></div>
 </div>
 </div>
-<div class="callout callout-style-default callout-callout-todo callout-titled">
+<div class="callout callout-style-default callout-callout-questions callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-TODO
+QUESTIONS
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>ASK SOME QUESTIONS HERE</strong></p>
+<ol type="1">
+<li>Can you find your assembly and/or the reference listed in the tree?</li>
+<li>Your isolate <code>ERR531380</code> was sampled from bed 11. Using <a href="questions.html#tbl-isolates" class="quarto-xref">Table&nbsp;<span>15.1</span></a> to identify the other bed 11 isolates, find where they are in the tree. What do you notice?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What do those numbers mean?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You will notice numbers (usually “1”) at internal nodes of the tree. These represent <a href="https://en.wikipedia.org/wiki/Bootstrapping_(statistics)"><em>bootstrap values</em></a>, a statistical method for estimating confidence in an outcome.</p>
+<p>In phylogenetics, this often involves <em>resampling</em> the initial dataset (building a new alignment by randomly taking columns from the original input, and allowing repetition) many times and building a new tree each time. The <em>bootstrap value</em> is then the proportion of times a particular branching event is seen in the full set of all trees (always present = 1, never present except in the original tree = 0).</p>
+<p>Here, we did not perform bootstrapping, so the value of “1” is meaningless for understanding the robustness or confidence we should have in our tree.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
 <section id="next-steps" class="level2" data-number="13.4">
 <h2 data-number="13.4" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">13.4</span> Next Steps</h2>
-<p>It would be useful to be able to annotate the tree with a visual representation of the sample type and room for each isolate. You will do this in <a href="itol.html" class="quarto-xref"><span>Chapter 14</span></a> using iTOL.</p>
+<p>You should have seen that the bed 11 isolates all seem to cluster together. It’s difficult to keep track of this just on the basic tree, and it would be useful to be able to annotate the tree with a visual representation of the sample type and room for each isolate. You will do this in <a href="itol.html" class="quarto-xref"><span>Chapter 14</span></a> using iTOL.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Kille2024-lm" class="csl-entry" role="listitem">
+Kille, Bryce, Michael G Nute, Victor Huang, Eddie Kim, Adam M Phillippy, and Todd J Treangen. 2024. <span>“Parsnp 2.0: Scalable Core-Genome Alignment for Massive Microbial Datasets.”</span> <em>bioRxiv</em>.
+</div>
+<div id="ref-Stamatakis2014-ez" class="csl-entry" role="listitem">
+Stamatakis, Alexandros. 2014. <span>“<span>RAxML</span> Version 8: A Tool for Phylogenetic Analysis and Post-Analysis of Large Phylogenies.”</span> <em>Bioinformatics</em> 30 (9): 1312–13.
+</div>
+</div>
+</section>
+<section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn1"><p>The <em>core genome</em> is the set of sequences shared by all genomes in a group. It can be thought of as the regions of sequence that characterise what makes members of that group members of that group (like all birds have wings - wings are a <em>core feature</em> of birds).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>A <em>tree</em> is the name we give to a kind of <em>graph</em> (in the mathematical sense) where there are no loops (known as <em>cycles</em>). The biological interpretation of these is typically that <em>bifurcations</em> (i.e.&nbsp;branching points) represent sequence divergence at some point in history, and that edge length/branch length represents the degree of difference between two points on the graph (i.e.&nbsp;how different two sequences are).<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>The concept is analogous to regression of a straight line through a set of points, but it’s regressing a tree through a set of sequences.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
 </section>
 
 </main> <!-- /main -->

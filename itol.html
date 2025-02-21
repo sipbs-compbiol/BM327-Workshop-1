@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -424,13 +444,13 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </header>
 
 
-<p>In this section you will use the online tool <code>iTOL</code> to visualise the phylogenetic tree you created in <a href="tree.html" class="quarto-xref"><span>Chapter 13</span></a>. This tree represents evolutionary relationships between the 33 study isolates, as inferred from differences in their genome sequences. By appropriately <em>rooting</em> and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.</p>
+<p>In this section you will use the online tool <code>iTOL</code> (<span class="citation" data-cites="Letunic2021-ro">Letunic and Bork (<a href="references.html#ref-Letunic2021-ro" role="doc-biblioref">2021</a>)</span>) to visualise the phylogenetic tree you created in <a href="tree.html" class="quarto-xref"><span>Chapter 13</span></a>. This tree represents evolutionary relationships between the 33 study isolates (and a reference), as inferred from differences in their genome sequences. By appropriately <em>rooting</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.</p>
 <section id="downloading-the-tree" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="downloading-the-tree"><span class="header-section-number">14.1</span> Downloading the tree</h2>
 <p>To use <code>iTOL</code> you need to upload a file representing the phylogenetic tree. At the moment your tree file only exists on <code>Galaxy</code> so you need to download it to your local project folder. To download the tree file:</p>
 <ol type="1">
 <li>Click on the <code>Best-scoring ML Tree</code> history item</li>
-<li>Click on the floppy disk icon<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>Click on the floppy disk icon<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
 <li>Select the appropriate location to download the file</li>
 <li>Click <code>Save</code></li>
 </ol>
@@ -536,8 +556,8 @@ Table&nbsp;14.1: Sequenced isolates
 </figcaption>
 <div aria-describedby="tbl-isolates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-bb8a7ea8d5e1c5fa9f87" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-bb8a7ea8d5e1c5fa9f87">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34"],["ERR531300","ERR531301","ERR531302","ERR531303","ERR531366","ERR531367","ERR531375","ERR531377","ERR531378","ERR531379","ERR531380","ERR531381","ERR531383","ERR531384","ERR531385","ERR531389","ERR531390","ERR531391","ERR531398","ERR531399","ERR531400","ERR531401","ERR531402","ERR531403","ERR531404","ERR531413","ERR531418","ERR531420","ERR531424","ERR531426","ERR531427","ERR531431","ERR531432","ERR531433"],[900,901,902,903,967,968,976,980,981,982,983,984,986,987,988,992,993,994,1003,1004,1005,1006,1007,1008,1009,1031,1036,1041,1048,1050,1052,1057,1058,1062],["P01","P01","P01","P01","SP09","SP10","P04","P04","P04","P04","P04","P04","P04","P04","P04","Water Sample","Water Sample","Water Sample","Water Sample","Water Sample","P04","P04","P04","P04","P04","SP13","SP15","SP16","SP20","SP21","SP22","SP25","SP25","SP29"],[11,11,11,11,9,11,11,11,11,11,11,11,11,11,11,9,9,9,6,6,11,11,11,11,11,1,6,6,11,11,9,6,6,6],["Patient","Environmental","Environmental","Water","Water","Water","Patient","Environmental","Environmental","Patient","Patient","Patient","Water","Environmental","Water","Water","Water","Water","Water","Water","Patient","Patient","Patient","Patient","Patient","Water","Water","Water","Environmental","Water","Water","Water","Environmental","Environmental"],["Wound","Trolley","Drain","Shower","Shower","Shower","Wound","Shower","Drain","Wound","Wound","Wound","Tap","Shower","Shower","Tap","Shower","Shower","Shower","Shower","Wound","Wound","Wound","Wound","Wound","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower"],[14,27,27,27,65,65,82,89,89,85,85,85,89,89,89,90,90,90,91,91,91,91,93,103,103,5,177,190,216,216,226,278,278,292]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>GenomeID<\/th>\n      <th>SampleID<\/th>\n      <th>PatientID<\/th>\n      <th>Bed<\/th>\n      <th>SpecimenType<\/th>\n      <th>Source<\/th>\n      <th>Days<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,4,7]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"GenomeID","targets":1},{"name":"SampleID","targets":2},{"name":"PatientID","targets":3},{"name":"Bed","targets":4},{"name":"SpecimenType","targets":5},{"name":"Source","targets":6},{"name":"Days","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-cae2d0d3605b3aeea780" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-cae2d0d3605b3aeea780">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34"],["ERR531300","ERR531301","ERR531302","ERR531303","ERR531366","ERR531367","ERR531375","ERR531377","ERR531378","ERR531379","ERR531380","ERR531381","ERR531383","ERR531384","ERR531385","ERR531389","ERR531390","ERR531391","ERR531398","ERR531399","ERR531400","ERR531401","ERR531402","ERR531403","ERR531404","ERR531413","ERR531418","ERR531420","ERR531424","ERR531426","ERR531427","ERR531431","ERR531432","ERR531433"],[900,901,902,903,967,968,976,980,981,982,983,984,986,987,988,992,993,994,1003,1004,1005,1006,1007,1008,1009,1031,1036,1041,1048,1050,1052,1057,1058,1062],["P01","P01","P01","P01","SP09","SP10","P04","P04","P04","P04","P04","P04","P04","P04","P04","Water Sample","Water Sample","Water Sample","Water Sample","Water Sample","P04","P04","P04","P04","P04","SP13","SP15","SP16","SP20","SP21","SP22","SP25","SP25","SP29"],[11,11,11,11,9,11,11,11,11,11,11,11,11,11,11,9,9,9,6,6,11,11,11,11,11,1,6,6,11,11,9,6,6,6],["Patient","Environmental","Environmental","Water","Water","Water","Patient","Environmental","Environmental","Patient","Patient","Patient","Water","Environmental","Water","Water","Water","Water","Water","Water","Patient","Patient","Patient","Patient","Patient","Water","Water","Water","Environmental","Water","Water","Water","Environmental","Environmental"],["Wound","Trolley","Drain","Shower","Shower","Shower","Wound","Shower","Drain","Wound","Wound","Wound","Tap","Shower","Shower","Tap","Shower","Shower","Shower","Shower","Wound","Wound","Wound","Wound","Wound","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower","Shower"],[14,27,27,27,65,65,82,89,89,85,85,85,89,89,89,90,90,90,91,91,91,91,93,103,103,5,177,190,216,216,226,278,278,292]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>GenomeID<\/th>\n      <th>SampleID<\/th>\n      <th>PatientID<\/th>\n      <th>Bed<\/th>\n      <th>SpecimenType<\/th>\n      <th>Source<\/th>\n      <th>Days<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[2,4,7]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"GenomeID","targets":1},{"name":"SampleID","targets":2},{"name":"PatientID","targets":3},{"name":"Bed","targets":4},{"name":"SpecimenType","targets":5},{"name":"Source","targets":6},{"name":"Days","targets":7}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </figure>
@@ -545,17 +565,21 @@ Table&nbsp;14.1: Sequenced isolates
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-callout-todo callout-titled">
+<div class="callout callout-style-default callout-callout-questions callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-TODO
+QUESTIONS
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>ADD QUESTION ASKING STUDENTS TO CONSIDER THE CLADE STRUCTURE</strong></p>
+<p>Your rooted tree has an implied structure to it. Branching events proceed in order from assumed to be oldest to assumed to be most recent, from left to right. This has resulted in some visible clustering of sequences into groups that appear to share a more recent common ancestor to each other than to other sequences in the tree. We call these groups <a href="https://en.wikipedia.org/wiki/Clade"><em>monophyletic clades</em></a> as they share a single common ancestor, or just “clades” for short.</p>
+<ol type="1">
+<li>Using <a href="questions.html#tbl-isolates" class="quarto-xref">Table&nbsp;<span>15.1</span></a>, what feature of the data appears to be common between the sequences in the clade of seven sequences including <code>ERR43133</code> and <code>ERR531418</code>?</li>
+<li>What other clades do you see, and what features do they seem to have in common?</li>
+</ol>
 </div>
 </div>
 </section>
@@ -663,11 +687,17 @@ Video: Colour branch labels to indicate the sample source
 <p>Now that you have reconstructed a phylogenetic tree and annotated it with metadata for each sequenced isolate, you can move on to interpreting the data in <a href="questions.html" class="quarto-xref"><span>Chapter 15</span></a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="ref-Letunic2021-ro" class="csl-entry" role="listitem">
+Letunic, Ivica, and Peer Bork. 2021. <span>“Interactive Tree of Life (<span class="nocase">iTOL</span>) V5: An Online Tool for Phylogenetic Tree Display and Annotation.”</span> <em>Nucleic Acids Res.</em> 49 (W1): W293–96.
+</div>
+</div>
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
 <li id="fn1"><p>We know you’re all too young to have used a floppy disk, but humour us…<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>We know you’re all too young to have used a floppy disk, but humour us…<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
