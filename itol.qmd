@@ -2,9 +2,9 @@
 
 In this section you will use the online tool `iTOL` (@Letunic2021-ro) to visualise the phylogenetic tree you created in @sec-tree.
 This tree represents evolutionary relationships between the 33 study isolates (and a reference), as inferred from differences in their genome sequences.
-By appropriately _rooting_[^1] and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.
+By appropriately _rooting_[^2] and annotating the tree, you should be able to draw conclusions concerning the routes of transmission of these isolates.
 
-[^1]: Maximum likelihood methods produce _unrooted_ trees, which means that they don't make a decision on which of the branching points is the oldest. _Rooting_ a tree is essentially a visual improvement where we use other information about what we believe to be the most ancient branching event to modify our view of the tree, making it appear that branching events proceed in the order that they actually happened.
+[^2]: Maximum likelihood methods produce _unrooted_ trees, which means that they don't make a decision on which of the branching points is the oldest. _Rooting_ a tree is essentially a visual improvement where we use other information about what we believe to be the most ancient branching event to modify our view of the tree, making it appear that branching events proceed in the order that they actually happened.
 
 ## Downloading the tree
 
