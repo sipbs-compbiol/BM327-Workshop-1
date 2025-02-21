@@ -58,5 +58,4 @@ The study team obtained a thermostatic mixed valve (TMV) from the hospital estat
 They sequenced a biofilm scraped from this valve, and found reads mapping to _P. aeruginosa_ of the same clade that infected patients in room 11. It appears that persistent biofilms in water systems are a plausible source of _P. aeruginosa_ infections.
 :::
 
-## Limitations of the study
 
