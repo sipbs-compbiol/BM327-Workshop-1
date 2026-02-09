@@ -67,7 +67,7 @@ You can inspect the contents of these files by clicking on the filename in the `
 :::
 
 ::: { .callout-question }
-Run `Falco` again on your cleaned reads to see the improvement in data quality.
+Run `Falco` again on your cleaned reads (`R1 paired` and `R2 paired`) to see the improvement in data quality.
 
 How has the quality of each read set improved, if at all?
 :::
