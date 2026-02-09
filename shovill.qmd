@@ -87,6 +87,10 @@ The use `CheckM` to estimate the quality of your assembly:
 3. Under `Data structure for bins` select `In individual datasets` and choose the `ERR531380.contigs.fasta` file
 4. Click on `Run Tool`
 
+::: { .callout-important }
+`CheckM` may take a few minutes to complete.
+:::
+
 ::: { .callout-note }
 ## Video: Estimating assembly quality using `CheckM`
 
