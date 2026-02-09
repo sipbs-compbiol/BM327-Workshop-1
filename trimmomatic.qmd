@@ -31,7 +31,7 @@ Tools like `trimmomatic` return two kinds of cleaned read data:
 2. R1-unpaired, R2-unpaired: these are single reads, where one member of the read pair was low quality and only the high quality read was retained
 :::
 
-This part of the workshop will guide you through using `trimmomatic` to clear your sequence read data.
+This part of the workshop will guide you through using `trimmomatic` to clean your sequence read data.
 
 ## Using `trimmomatic`
 
@@ -66,10 +66,10 @@ You can inspect the contents of these files by clicking on the filename in the `
 {{< video assets/movies/galaxy-09-trimmomatic.mp4 title="Inspecting reads cleaned with `trimmomatic`" >}}
 :::
 
-::: { .callout-caution }
-## Run `Falco` again on your cleaned reads to see the improvement in data quality
+::: { .callout-question }
+Run `Falco` again on your cleaned reads to see the improvement in data quality.
 
-Following the example from @sec-fastqc, run `Falco` again on your newly-cleaned (paired) read sets, to see how the quality has improved.
+How has the quality of each read set improved, if at all?
 :::
 
 ![Per base quality score plot from `Falco` indicating an improvement in read quality, post-`trimmomatic`.](assets/images/falco_perbase_clean.png){#fig-fastqc-perbase width=80% .lightbox}
