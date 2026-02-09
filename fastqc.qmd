@@ -18,7 +18,7 @@ When describing your sequencing experiment in a manuscript or dissertation, you 
 ::: { .callout-tip }
 The main kinds of low-quality data we might have in our raw reads are:
 
-1. Contamination: reads that derive from an organism we didn't intend to sequence; these are usually identified by querying against a database and removed
+1. Contamination: reads that derive from an organism we didn't intend to sequence; these are usually identified by querying against a database and subsequently removed
 2. Low-confidence basecalls: reads containing base calls that the basecaller is unsure about; these are usually found towards the end of the read sequence and are removed by _trimming_ the read
 3. Low-confidence reads: reads where a large proportion of the base calls are low quality; these are usually removed
 4. Adapter sequence: these are sections of sequence left over from library preparation and do not derive from the sequenced organism; they are removed by trimming
@@ -82,7 +82,7 @@ The output of `Falco` tells us a lot about the quality of our sequencing data, a
 
 ### `Falco` Summary
 
-The `Falco` summary (@fig-falco-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (<span style="color:green;">green</span>, with a tick), a _warning_ (<span style="color:orange;">amber</span>, with exclamation mark), or a _fail_ (<span style="color:red;">red</span>, with a cross) mark.
+The `Falco` summary (@fig-falco-summary) provides an overview that indicates where there may be areas of concern in your data. Each section of the report receives a flag indicating either that it gets a _pass_ (<span style="color:green;">green</span>), a _warning_ (<span style="color:orange;">amber</span>), or a _fail_ (<span style="color:red;">red</span>) mark.
 
 ::: { .column-margin }
 ![Example `Falco` summary showing passes for most sections of the report including "Basic Statistics," warnings for some sections including "Sequence Length Distribution," and a fail for "Per tile sequence quality"](assets/images/falco_summary.png){#fig-falco-summary fig-alt="Summary section of a Falco report showing passes for most sections, warnings for some sections, and failure for two sections." width="80%"}
@@ -118,6 +118,12 @@ In good quality sequence data, we tend to see a sharp peak towards the right han
 
 ::: { .callout-caution }
 If the per sequence quality score appears flat, or plateaus towards the left hand side of the plot, there may be a problem with the sequencing data.
+:::
+
+## Inspect the `Falco` output
+
+::: { .callout-question }
+What issues, if any, do you see in each read dataset?
 :::
 
 ## What do we do about sequencing data problems?
