@@ -74,7 +74,7 @@ If this happens to you, click on the `Eye` icon for the `JBrowse` output, and it
 :::
 
 ::: { .callout-questions }
-1. Do the `ERR31380` reads map uniformly to the PAO1 reference genome?
+1. Do the `ERR31380` reads map uniformly to the same depth on the PAO1 reference genome?
 2. When `ERR31380` reads map to a SNP at the PAO1 reference genome, what proportion of the mapping reads contains the SNP, and what does that imply?
 3. Based on the number of SNPs you can see in a 1,000bp region of the reference genome, estimate the total number on SNPs.
 

@@ -183,8 +183,8 @@ Isolates sampled from the patient would closely resemble isolates sampled from o
 Isolates sampled from the patient would closely resemble isolates sampled from their bed, but not other beds.
 :::
 
-:::{.choice .correct-choice}
-Isolates sampled from other beds in the unit would resemble isolates sampled from the patient.
+:::{.choice}
+Isolates sampled from beds in the unit other than that of the patient would resemble isolates sampled from the patient.
 :::
 
 :::{.choice}
@@ -269,7 +269,7 @@ Use the data in @tbl-isolates to check if time travel would be necessary for som
 ::: { .callout-warning collapse="true" }
 ## Explanation
 
-Patient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated them. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independent lineages introduced to the burns unit. The close relationship of these isolates to the isolates from other beds suggests that they were not introduced to the unit from an external source.
+Patient P01 was sampled two months before patient P04 occupied the same bed, so P04 could not have contaminated patient P01. Also, some of the isolates from PA04 appeared to diverge earlier than the isolate sampled from P01, and so are unlikely to have been introduced to the unit by P01. The close relation of isolates from P01 and P04 suggests that they were not independent lineages introduced to the burns unit. The close relationship of these isolates to the isolates from other beds suggests that they were not introduced to the unit from an external source.
 :::
 
 

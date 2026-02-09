@@ -15,6 +15,10 @@ In this scenario, a colleague has kindly assembled your genome for you using the
 1. Download the assembled genome and assembly graph to the local folder containing your workshop files
 2. Upload both files to `Galaxy`
 
+::: { .callout-caution }
+You may need to right-click the links and select `Save Link As...` to download the data.
+:::
+
 ::: { .callout-note }
 ## Video: Upload the `ERR531380` assembly files
 
@@ -60,14 +64,12 @@ To use `Bandage` to visualise your genome assembly
 ::: { .callout-caution }
 ## Inspect the assembly graph by clicking on the `eye` icon for the Assembly Graph Image output.
 
-Each separate subgraph in the `Bandage` graph image shows a section of the genome that the assembly software thinks might be linked together in some way. The branched and looped nature of these graphs shows where the assembler has been unable to make a decision between two or more ways the reads could be joined together.
+Each separate (_disjoint_ in technical language) subgraph in the `Bandage` graph image shows a section of the genome that the assembly software thinks might be linked together in some way. The branched and looped nature of these graphs shows where the assembler has been unable to make a decision between two or more ways the reads could be joined together.
 
 Each differently-coloured section of the subgraph is a part of the genome sequence that the assembler was confident about stitching together into a contiguous sequence.
 
 This kind of genome assembly, comprising many fragments, some of which can't be confidently linked together, is called a _draft genome assembly_.
 :::
-
-
 
 ## Estimating Assembly Quality
 
@@ -85,10 +87,18 @@ The use `CheckM` to estimate the quality of your assembly:
 3. Under `Data structure for bins` select `In individual datasets` and choose the `ERR531380.contigs.fasta` file
 4. Click on `Run Tool`
 
+::: { .callout-important }
+`CheckM` may take a few minutes to complete.
+:::
+
 ::: { .callout-note }
 ## Video: Estimating assembly quality using `CheckM`
 
 {{< video assets/movies/galaxy-19-checkm.mp4 title="Estimating assembly quality with `CheckM`" >}}
+:::
+
+::: { .callout-question }
+What does `CheckM` tell you about the quality of this assembly?
 :::
 
 ## Next steps

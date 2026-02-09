@@ -21,7 +21,7 @@ The workshop material will remain live online for the duration of BM327, and you
 
 By the end of this workshop, students will be able to:
 
-- Perform quality control on Illumina sequencing data
+- Perform quality control operations on Illumina sequencing data
 - Map Illumina-sequenced reads to a reference genome, to identify sequence variants
 - Generate and annotate a phylogenetic tree
 - Use genomic data to make an informed judgement about the likely source of a nosocomial infection

@@ -68,10 +68,10 @@ Rooting the tree at this genome should make the tree reflect the time sequence o
 
 ::: { .callout-tip }
 
-As a reminder, and to help with tree annotation, the interactive table of isolate metadata is shown below in @tbl-isolates.
+As a reminder, and to help with tree annotation, the interactive table of isolate metadata is shown below in @tbl-isolates2.
 
 ```{r echo=FALSE}
-#| label: tbl-isolates
+#| label: tbl-isolates2
 #| tbl-cap: "Sequenced isolates"
 
 metadata <- readxl::read_excel("assets/workshop_downloads/isolate_metadata.xlsx")
@@ -83,7 +83,7 @@ DT::datatable(metadata)
 ::: { .callout-questions }
 Your rooted tree has an implied structure to it. Branching events proceed in order from assumed to be oldest to assumed to be most recent, from left to right. This has resulted in some visible clustering of sequences into groups that appear to share a more recent common ancestor to each other than to other sequences in the tree. We call these groups [_monophyletic clades_](https://en.wikipedia.org/wiki/Clade) as they share a single common ancestor, or just "clades" for short.
 
-1. Using @tbl-isolates, what feature of the data appears to be common between the sequences in the clade of seven sequences including `ERR43133` and `ERR531418`?
+1. Using @tbl-isolates2, what feature of the data appears to be common between the sequences in the clade of seven sequences including `ERR43133` and `ERR531418`?
 2. What other clades do you see, and what features do they seem to have in common?
 :::
 
@@ -102,7 +102,7 @@ To do this, look for `Branch options` in the `Basic` `iTOL` tab of the control p
 
 ### Relabel branches to indicate the beds they were sampled from
 
-1. Sort @tbl-isolates by bed number by clicking on one of the triangles next to the `Bed` header
+1. Sort @tbl-isolates2 by bed number by clicking on one of the triangles next to the `Bed` header
 2. Identify the branches corresponding to the genomes sampled from bed 6
 3. Modify the label for each branch to indicate the bed it was sampled from (e.g. change `ERR531398_asm.fasta` to `ERR531398_bed6`)
   - Click on the branch label

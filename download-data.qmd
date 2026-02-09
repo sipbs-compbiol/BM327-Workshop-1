@@ -21,6 +21,10 @@ Genomic DNA was prepared from single colony picks using the MOBIO Ultraclean mic
 2. Download the files from the sections below into this new folder.
 :::
 
+::: { .callout-caution }
+You may need to right-click and select `Save Link As...` or similar in order to download some of the files.
+:::
+
 ## Sequencing reads for your isolate
 
 - [Illumina paired-end reads, forward direction](assets/workshop_downloads/ERR531380_1.fastq.gz)(`ERR531380_1.fastq.gz`)

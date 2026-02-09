@@ -15,7 +15,7 @@ To work, `ParSNP` requires a reference genome to align to - here that reference 
 
 [^1]: The _core genome_ is the set of sequences shared by all genomes in a group. It can be thought of as the regions of sequence that characterise what makes members of that group members of that group (like all birds have wings - wings are a _core feature_ of birds).
 
-**Using `Galaxy`, genome assembly would take too long for this workshop.**
+**Using `Galaxy`, generating this data would take too long for this workshop.**
 
 They have provided the results for you to download in two files, below - the VCF file of variants (`.vcf` file), and a sequence alignment containing all of these variants (`.fasta` file):
 
@@ -24,6 +24,10 @@ They have provided the results for you to download in two files, below - the VCF
 
 1. Download the alignment and VCF file to the local folder containing your workshop files
 2. Upload both files to `Galaxy`
+
+::: { .callout-caution }
+You may need to right click on the link and choose `Save Link As...` to download this data.
+:::
 
 ::: { .callout-note }
 ## Video: Upload the sequence variant files
@@ -48,7 +52,7 @@ The isolate genomes your colleague has assembled came from the beds and sources 
 :::
 
 ```{r echo=FALSE}
-#| label: tbl-isolates
+#| label: tbl-isolates1
 #| tbl-cap: "Sequenced isolates"
 
 metadata <- readxl::read_excel("assets/workshop_downloads/isolate_metadata.xlsx")
@@ -126,7 +130,7 @@ The numbers in the output represent the distance from each of the nodes in the t
 
 ::: { .callout-questions }
 1. Can you find your assembly and/or the reference listed in the tree?
-2. Your isolate `ERR531380` was sampled from bed 11. Using @tbl-isolates to identify the other bed 11 isolates, find where they are in the tree. What do you notice?
+2. Your isolate `ERR531380` was sampled from bed 11. Using @tbl-isolates1 to identify the other bed 11 isolates, find where they are in the tree. What do you notice?
 
 ::: { .callout-tip collapse="true" }
 ## What do those numbers mean?

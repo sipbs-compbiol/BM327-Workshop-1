@@ -2,7 +2,7 @@
 
 The chapters in this section of the site will lead you through each step of the workshop. Please work through these steps in order and, if you get stuck, please ask one of the lecturers or demonstrators for help.
 
-- @sec-fastqc: Assessing the quality of sequence read data for your isolate
+- @sec-fastqc: Assess the quality of sequence read data for your isolate
 - @sec-trimmomatic: Prepare your sequencing read data for assembly
 - @sec-bwamem, @sec-jbrowse, and @sec-snippy: Identify sequence variants (SNPs, Single Nucleotide Polymorphisms) between your isolate and a reference genome, and against another study isolate
 - @sec-shovill: Assess genome assembly quality for your isolate
