@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>4&nbsp; Download Workshop Data – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
+<title>Quality Control – BM327 Workshop 1: Seeking the Source of Hospital Infection</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -51,8 +31,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./upload-data.html" rel="next">
-<link href="./join-session.html" rel="prev">
+<link href="./fastqc.html" rel="next">
+<link href="./workshop.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -94,17 +74,6 @@ div.csl-indent {
   }
 }</script>
 <style>
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
-}
-div.callout-callout-challenge.callout-style-default > .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
-}
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
-  background-image: none;
-}
 div.callout-callout-question.callout {
   border-left-color: yellow;
 }
@@ -116,15 +85,15 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
   content: '🙋';
   background-image: none;
 }
-div.callout-callout-todo.callout {
-  border-left-color: red;
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
 }
-div.callout-callout-todo.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-callout-challenge.callout-style-default > .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
 }
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
   background-image: none;
 }
 div.callout-callout-questions.callout {
@@ -136,6 +105,17 @@ div.callout-callout-questions.callout-style-default > .callout-header {
 div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
   content: '🙋️';
+  background-image: none;
+}
+div.callout-callout-todo.callout {
+  border-left-color: red;
+}
+div.callout-callout-todo.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
   background-image: none;
 }
 </style>
@@ -152,7 +132,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./galaxy.html">Galaxy</a></li><li class="breadcrumb-item"><a href="./download-data.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Download Workshop Data</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./quality_control.html">Quality Control</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -225,7 +205,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./download-data.html" class="sidebar-item-text sidebar-link active">
+  <a href="./download-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Download Workshop Data</span></span></a>
   </div>
 </li>
@@ -243,7 +223,7 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./quality_control.html" class="sidebar-item-text sidebar-link">
+            <a href="./quality_control.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Quality Control</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -395,23 +375,15 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#sequencing-reads-for-your-isolate" id="toc-sequencing-reads-for-your-isolate" class="nav-link active" data-scroll-target="#sequencing-reads-for-your-isolate"><span class="header-section-number">4.1</span> Sequencing reads for your isolate</a></li>
-  <li><a href="#pseudomonas-aeruginosa-reference-strain-for-snp-comparison" id="toc-pseudomonas-aeruginosa-reference-strain-for-snp-comparison" class="nav-link" data-scroll-target="#pseudomonas-aeruginosa-reference-strain-for-snp-comparison"><span class="header-section-number">4.2</span> <em>Pseudomonas aeruginosa</em> reference strain for SNP comparison</a></li>
-  <li><a href="#room-1-isolate-assembly-for-snp-comparison" id="toc-room-1-isolate-assembly-for-snp-comparison" class="nav-link" data-scroll-target="#room-1-isolate-assembly-for-snp-comparison"><span class="header-section-number">4.3</span> Room 1 isolate assembly for SNP comparison</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/download-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./galaxy.html">Galaxy</a></li><li class="breadcrumb-item"><a href="./download-data.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Download Workshop Data</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span id="sec-download-data" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Download Workshop Data</span></span></h1>
+<h1 class="title"><span id="sec-qc" class="quarto-section-identifier">Quality Control</span></h1>
 </div>
 
 
@@ -428,120 +400,11 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </header>
 
 
-<p>In this workshop you will be working with isolate ERR531380, which was sequenced using the Illumina platform.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>How was the strain isolated?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>The <em>P. aeruginosa</em> strain was isolated from wound swabs by inoculation onto cysteine lactose electrolyte deficient agar (CLED) and cetrimide agar and incubation for 24 h at 37°C. Identification was confirmed by resistance to C-390 and the VITEK 2 GN identification card. For storage and DNA extraction a single colony was purified from the primary culture plate.</p>
-<p>Isolates were stored on Biobank beads at −20°C prior to DNA extraction. Organisms were resuscitated on CLED agar plates and genome DNA either extracted directly using the MOBIO UltraClean Microbial DNA Kit, or from overnight LB broth culture using a Qiagen Genomic-Tip 100G.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>How was the isolate sequenced?
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Genomic DNA was prepared from single colony picks using the MOBIO Ultraclean microbial kit (MOBIO, Carlsbad, USA). 1 ng input DNA, as quantified by Qubit (Life Technologies, Carlsbad, USA) was used to prepare genomic libraries for sequencing using the Illumina Nextera XT DNA sample kit as per manufacturer’s protocol (Illumina, San Diego, USA). Libraries were sequenced on the Illumina MiSeq using a paired-end protocol resulting in read lengths between 150 and 300 bases.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Download the workshop data
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>Create a new folder on your computer desktop called <code>BM327_Workshop</code></li>
-<li>Download the files from the sections below into this new folder.</li>
-</ol>
-</div>
-</div>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You may need to right-click and select <code>Save Link As...</code> or similar in order to download some of the files.</p>
-</div>
-</div>
-<section id="sequencing-reads-for-your-isolate" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="sequencing-reads-for-your-isolate"><span class="header-section-number">4.1</span> Sequencing reads for your isolate</h2>
-<ul>
-<li><a href="assets/workshop_downloads/ERR531380_1.fastq.gz">Illumina paired-end reads, forward direction</a>(<code>ERR531380_1.fastq.gz</code>)</li>
-<li><a href="assets/workshop_downloads/ERR531380_2.fastq.gz">Illumina paired-end reads, reverse direction</a>(<code>ERR531380_2.fastq.gz</code>)</li>
-</ul>
-</section>
-<section id="pseudomonas-aeruginosa-reference-strain-for-snp-comparison" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="pseudomonas-aeruginosa-reference-strain-for-snp-comparison"><span class="header-section-number">4.2</span> <em>Pseudomonas aeruginosa</em> reference strain for SNP comparison</h2>
-<p>You will be using the PAO1 strain of <em>P. aeruginosa</em> (<span class="citation" data-cites="Stover2000-fp">Stover et al. (<a href="references.html#ref-Stover2000-fp" role="doc-biblioref">2000</a>)</span>) for some comparisons. The genome sequence with accession GCF_000006765.1 was downloaded from NCBI.</p>
-<ul>
-<li><a href="assets/workshop_downloads/GCF_000006765.1_ASM676v1_genomic.fna"><em>P. aeruginosa</em> PA01 genome sequence (<code>.fasta</code>)</a>(<code>GCF_000006765.1_ASM676v1_genomic.fna</code>)</li>
-</ul>
-</section>
-<section id="room-1-isolate-assembly-for-snp-comparison" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="room-1-isolate-assembly-for-snp-comparison"><span class="header-section-number">4.3</span> Room 1 isolate assembly for SNP comparison</h2>
-<p>The isolate with accession <code>ERR531413</code>, sampled from the shower in room 1 of the burns unit, is also used as a reference genome for some comparisons.</p>
-<ul>
-<li><a href="assets/workshop_downloads/ERR531413_asm.fasta"><code>SPAdes</code> assembly of isolate 1031 (<code>ERR531413</code>), from the room 1 shower hose</a>(<code>ERR531413_asm.fasta</code>)</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Your Working Directory
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>When you have downloaded all the files required for the workshop, the contents of the <code>BM327_Workshop</code> folder should resemble the image in <a href="#fig-working-directory" class="quarto-xref">Figure&nbsp;<span>4.1</span></a>.</p>
-<div id="fig-working-directory" class="quarto-float quarto-figure quarto-figure-center anchored" alt="macOS folder called BM327_Workshop, containing the downloaded files required for this workshop.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-working-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="assets/images/working_directory.png" class="img-fluid figure-img" alt="macOS folder called BM327_Workshop, containing the downloaded files required for this workshop.">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-working-directory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.1: macOS <code>BM327_Workshop</code> folder with all files downloaded.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<p>It is important to assess the quality of a sequencing experiment: are there enough reads to cover the genome being sequenced to sufficient depth for assembly? should we have confidence in the accuracy of the basecalls? are there any warning signs of systematic problems with the sequencing?</p>
+<p>If the input to our sequence assembly tools is low quality, we risk generating a low-quality or even incorrect assembly.</p>
+<p>In <a href="fastqc.html" class="quarto-xref"><span>6&nbsp; Inspect Read Quality</span></a> you will assess the quality of sequence read data for your isolate on a number of different measures. Then, in <a href="trimmomatic.html" class="quarto-xref"><span>7&nbsp; Clean Raw Read Data</span></a> you will prepare your sequencing read data for assembly by discarding low quality reads and sections of reads.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
-<div id="ref-Stover2000-fp" class="csl-entry" role="listitem">
-Stover, C K, X Q Pham, A L Erwin, S D Mizoguchi, P Warrener, M J Hickey, F S Brinkman, et al. 2000. <span>“Complete Genome Sequence of Pseudomonas Aeruginosa <span>PAO1</span>, an Opportunistic Pathogen.”</span> <em>Nature</em> 406 (6799): 959–64.
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -946,13 +809,13 @@ Stover, C K, X Q Pham, A L Erwin, S D Mizoguchi, P Warrener, M J Hickey, F S Bri
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./join-session.html" class="pagination-link" aria-label="Log In To Galaxy">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Log In To Galaxy</span></span>
+      <a href="./workshop.html" class="pagination-link" aria-label="Workshop">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Workshop</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./upload-data.html" class="pagination-link" aria-label="Upload Data to Galaxy">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Upload Data to Galaxy</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./fastqc.html" class="pagination-link" aria-label="Inspect Read Quality">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Inspect Read Quality</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -964,7 +827,7 @@ Stover, C K, X Q Pham, A L Erwin, S D Mizoguchi, P Warrener, M J Hickey, F S Bri
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/download-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/edit/main/quality_control.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM327_Workshop_1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This book was built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
