@@ -30,7 +30,7 @@ The environment and water sources were also sampled after patient discharge.
 ## What did they find?
 
 ::: { .callout-important }
-## The water and environment in burns and critical care unites are frequently colonised by _P. aeruginosa_
+## The water and environment in burns and critical care units are frequently colonised by _P. aeruginosa_
 
 Around 50% of water samples, 26% of wet environment samples, and 6% of dry environment samples were positive for _P. aeruginosa_.
 
