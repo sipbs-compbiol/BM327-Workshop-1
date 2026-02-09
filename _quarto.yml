@@ -47,6 +47,8 @@ book:
         - upload-data.qmd  
 
     - part: workshop.qmd
+    
+    - part: quality_control.qmd
       chapters: 
         - fastqc.qmd
         - trimmomatic.qmd

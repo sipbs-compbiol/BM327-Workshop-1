@@ -1,0 +1,7 @@
+# Quality Control {#sec-qc .unnumbered}
+
+It is important to assess the quality of a sequencing experiment: are there enough reads to cover the genome being sequenced to sufficient depth for assembly? should we have confidence in the accuracy of the basecalls? are there any warning signs of systematic problems with the sequencing?
+
+If the input to our sequence assembly tools is low quality, we risk generating a low-quality or even incorrect assembly.
+
+In @sec-fastqc you will assess the quality of sequence read data for your isolate on a number of different measures. Then, in @sec-trimmomatic you will prepare your sequencing read data for assembly by discarding low quality reads and sections of reads.
